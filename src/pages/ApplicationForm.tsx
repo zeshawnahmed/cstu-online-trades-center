@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { CheckCircle } from 'lucide-react';
+import { useToast } from '@/components/ui/use-toast';
 
 const ApplicationForm = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -15,17 +17,42 @@ const ApplicationForm = () => {
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    
+    try {
+      // In a real application, this would send data to a backend service
+      // For demo purposes, we'll simulate a successful submission
+      console.log('Form submitted:', formData);
+      
+      // This would be where you'd actually send the data to peaceofmindcollabs@gmail.com
+      // through a secure backend endpoint
+
+      // Simulate network request
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setIsSubmitted(true);
+      toast({
+        title: "Application Submitted",
+        description: "Your application request has been received.",
+      });
+    } catch (error) {
+      toast({
+        title: "Submission Error",
+        description: "There was a problem submitting your application. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -122,7 +149,7 @@ const ApplicationForm = () => {
                       >
                         <option value="">Select a program</option>
                         <option value="hvac">HVAC Program</option>
-                        <option value="plumbing">Plumbing Program</option>
+                        <option value="electrician">Electrician Program</option>
                       </select>
                     </div>
                     
@@ -130,8 +157,9 @@ const ApplicationForm = () => {
                       <Button 
                         type="submit" 
                         className="w-full bg-gold-400 hover:bg-gold-500 text-navy-900 font-bold text-lg py-6"
+                        disabled={isSubmitting}
                       >
-                        Submit Application Request
+                        {isSubmitting ? 'Submitting...' : 'Submit Application Request'}
                       </Button>
                     </div>
                   </form>

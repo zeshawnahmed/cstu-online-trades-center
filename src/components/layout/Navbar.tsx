@@ -1,13 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [language, setLanguage] = useState('en');
   
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,11 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'es' : 'en');
+    // In a real implementation, this would trigger language changes throughout the app
+  };
+
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300",
@@ -32,8 +38,8 @@ const Navbar = () => {
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="text-3xl md:text-4xl font-extrabold tracking-tight text-navy-600">
-                <span className="text-navy-700 hidden sm:inline">California Skilled Trades University</span>
+              <span className="text-3xl md:text-4xl font-extrabold tracking-tight text-navy-600 font-serif">
+                <span className="text-navy-700 hidden sm:inline">California Skilled Trade University</span>
                 <span className="text-navy-700 sm:hidden">C</span>
                 <span className="text-gold-500 sm:hidden">STU</span>
               </span>
@@ -61,10 +67,20 @@ const Navbar = () => {
             </div>
           </nav>
           
-          <div className="hidden md:block">
-            <Button className="bg-gold-400 hover:bg-gold-500 text-navy-700 font-medium">
-              Apply Now
-            </Button>
+          <div className="hidden md:flex items-center space-x-4">
+            <button 
+              onClick={toggleLanguage}
+              className="flex items-center text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200"
+            >
+              <Globe className="h-5 w-5 mr-1" />
+              {language === 'en' ? 'EN' : 'ES'}
+            </button>
+            
+            <Link to="/apply">
+              <Button className="bg-gold-400 hover:bg-gold-500 text-navy-700 font-medium">
+                Apply Now
+              </Button>
+            </Link>
           </div>
           
           <button 
@@ -106,9 +122,18 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <Button className="w-full bg-gold-400 hover:bg-gold-500 text-navy-700 mt-2">
-              Apply Now
-            </Button>
+            <button 
+              onClick={toggleLanguage}
+              className="flex items-center py-2 text-navy-500 hover:text-navy-400"
+            >
+              <Globe className="h-5 w-5 mr-2" />
+              {language === 'en' ? 'English' : 'Español'}
+            </button>
+            <Link to="/apply" onClick={() => setMobileMenuOpen(false)}>
+              <Button className="w-full bg-gold-400 hover:bg-gold-500 text-navy-700 mt-2">
+                Apply Now
+              </Button>
+            </Link>
           </div>
         </div>
       )}

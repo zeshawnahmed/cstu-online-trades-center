@@ -85,7 +85,7 @@ const ProgramsSection = () => {
               APPLY NOW
             </motion.button>
           </Link>
-          <p className="text-sm text-gray-500 mt-3">*Externship placement assistance available upon program completion</p>
+          <p className="text-sm text-gray-500 mt-3">*Externship placement assistance available upon program completion and subject to industry demand</p>
         </div>
       </div>
     </section>

@@ -25,7 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
             </h1>
             
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              Learn High-Demand Skills Through Affordable, Self-Paced Online Programs and Hands-On Training*. Start Your Career in the Skilled Trades Today.
+              Learn High-Demand Skills Through Affordable, Self-Paced Online Programs and Hands-On Training. Start Your Career in the Skilled Trades Today.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -68,9 +68,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
               >
                 EXPLORE PROGRAMS <ArrowDown className="ml-2 h-5 w-5" />
               </Button>
-              <p className="mt-4 text-sm text-gray-300">
-                *Externship placement assistance available upon program completion
-              </p>
             </motion.div>
           </motion.div>
         </div>

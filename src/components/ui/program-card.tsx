@@ -51,7 +51,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
             onLoad={() => setImageLoaded(true)}
           />
         </div>
-        <div className="absolute top-0 right-0 bg-gold-400 text-navy-800 font-bold px-4 py-2 rounded-bl-lg text-lg">
+        <div className="absolute top-0 right-0 bg-gold-400 text-navy-800 font-bold px-4 py-2 rounded-bl-lg">
           {price}
         </div>
       </div>
@@ -62,7 +62,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
         
         {/* Salary Information - Condensed */}
         <div className="bg-navy-50 p-4 rounded-lg mb-4">
-          <h4 className="font-bold text-navy-700 text-xl mb-2">2025 Job Statistics:</h4>
+          <h4 className="font-bold text-navy-700 text-lg mb-2">2025 Job Statistics:</h4>
           <div className="flex items-center gap-2 mb-1">
             <DollarSign className="h-5 w-5 text-gold-500" />
             <span className="text-base font-bold text-navy-700">Median Annual Salary: {salaryInfo?.median}</span>
