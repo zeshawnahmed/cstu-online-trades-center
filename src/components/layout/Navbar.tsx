@@ -29,6 +29,21 @@ const Navbar = () => {
     setLanguage(language === 'en' ? 'es' : 'en');
   };
 
+  // Function to underline first letter of each word
+  const UnderlinedFirstLetters = ({ text }: { text: string }) => {
+    return (
+      <span>
+        {text.split(' ').map((word, index) => (
+          <span key={index}>
+            {index > 0 && ' '}
+            <span className="underline decoration-gold-400 decoration-2">{word.charAt(0)}</span>
+            {word.slice(1)}
+          </span>
+        ))}
+      </span>
+    );
+  };
+
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300",
@@ -39,7 +54,9 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-3xl md:text-4xl font-extrabold tracking-tight text-navy-600 font-serif">
-                <span className="text-navy-700 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl">California Skilled Trade University</span>
+                <span className="text-navy-700 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl">
+                  <UnderlinedFirstLetters text="California Skilled Trade University" />
+                </span>
               </span>
             </Link>
           </div>

@@ -39,12 +39,12 @@ const Index = () => {
 
   // SEO Helmet data with translations and enhanced for local search
   const seoTitle = language === 'en' 
-    ? 'HVAC & Electrician Training in Sacramento | California Skilled Trade University'
-    : 'Capacitación de HVAC y Electricista en Sacramento | Universidad de Oficios Especializados de California';
+    ? 'Best HVAC & Electrician School in Sacramento | California Skilled Trade University (CSTU)'
+    : 'Mejor Escuela de HVAC y Electricista en Sacramento | Universidad de Oficios Especializados de California';
   
   const seoDescription = language === 'en'
-    ? 'California Skilled Trade University offers affordable HVAC training and Electrician training in Sacramento. Learn essential skills through self-paced online programs with hands-on training. Sacramento\'s premier trade school for HVAC and Electrician career training. The best HVAC school near you and top electrician school in Sacramento.'
-    : 'Universidad de Oficios Especializados de California ofrece capacitación asequible de HVAC y Electricista en Sacramento. Aprende habilidades esenciales a través de programas en línea a tu propio ritmo con capacitación práctica.';
+    ? 'California Skilled Trade University (CSTU) offers affordable HVAC training and Electrician training in Sacramento. Find the best HVAC school near me and top Electrician school in Sacramento with hands-on training. Sacramento\'s #1 trade school for HVAC and Electrician career training.'
+    : 'Universidad de Oficios Especializados de California ofrece capacitación asequible de HVAC y Electricista en Sacramento. La mejor escuela de HVAC y de Electricista cerca de ti con capacitación práctica.';
 
   return (
     <Layout>
@@ -52,8 +52,8 @@ const Index = () => {
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
         <meta name="keywords" content={language === 'en' 
-          ? "HVAC training Sacramento, Electrician training Sacramento, HVAC school near me, Electrician school near me, Sacramento HVAC school, Sacramento Electrician school, Sacramento trade school, trade school near me, affordable trade school Sacramento"
-          : "Capacitación de HVAC Sacramento, Capacitación de Electricista Sacramento, escuela de HVAC cerca de mí, escuela de Electricista cerca de mí, escuela de oficios Sacramento"
+          ? "HVAC school near me, Electrician school near me, Sacramento HVAC school, Sacramento Electrician school, HVAC training Sacramento, Electrician training Sacramento, Sacramento trade school, CSTU, California Skilled Trade University, best HVAC school, top Electrician school, trade school near me, affordable trade school Sacramento"
+          : "Escuela de HVAC cerca de mí, Escuela de Electricista cerca de mí, Escuela de HVAC Sacramento, Escuela de Electricista Sacramento, Capacitación de HVAC, Capacitación de Electricista, Escuela de oficios Sacramento"
         } />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
@@ -67,6 +67,7 @@ const Index = () => {
               "@context": "https://schema.org",
               "@type": "TechnicalSchool",
               "name": "California Skilled Trade University",
+              "alternateName": "CSTU",
               "image": "https://www.californiaskilledtradeuniversity.edu/og-image.png",
               "address": {
                 "@type": "PostalAddress",
@@ -77,7 +78,38 @@ const Index = () => {
               "url": "https://www.californiaskilledtradeuniversity.edu",
               "telephone": "(916) 365-6907",
               "priceRange": "$$$",
-              "description": "California Skilled Trade University offers affordable HVAC training and Electrician training in Sacramento with hands-on experience and job-ready skills.",
+              "description": "California Skilled Trade University (CSTU) offers affordable HVAC training and Electrician training in Sacramento with hands-on experience and job-ready skills. The best HVAC and Electrician school near you.",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "38.575764",
+                "longitude": "-121.478851"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Trade Programs",
+                "itemListElement": [
+                  {
+                    "@type": "Course",
+                    "name": "HVAC Technician Training",
+                    "description": "Learn essential skills to become job-ready in heating, ventilation, and air conditioning systems.",
+                    "provider": {
+                      "@type": "Organization",
+                      "name": "California Skilled Trade University",
+                      "sameAs": "https://www.californiaskilledtradeuniversity.edu"
+                    }
+                  },
+                  {
+                    "@type": "Course",
+                    "name": "Electrician Training",
+                    "description": "Learn essential skills to become job-ready for electrical installation, maintenance, and repair.",
+                    "provider": {
+                      "@type": "Organization",
+                      "name": "California Skilled Trade University",
+                      "sameAs": "https://www.californiaskilledtradeuniversity.edu"
+                    }
+                  }
+                ]
+              },
               "sameAs": [
                 "https://www.facebook.com/californiaskilledtradeuniversity",
                 "https://www.instagram.com/cstuniversity"

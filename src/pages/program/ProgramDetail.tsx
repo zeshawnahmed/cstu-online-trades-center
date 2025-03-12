@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Clock, Award, Users, DollarSign, TrendingUp } from 'lucide-react';
@@ -181,15 +180,6 @@ const ProgramDetail = () => {
     <Layout>
       {/* Hero Section */}
       <section className="relative pt-16 pb-20 bg-navy-700 text-white">
-        <div className="absolute inset-0 overflow-hidden opacity-20">
-          <img 
-            src={program.imageUrl} 
-            alt={program.title} 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-navy-700 opacity-80"></div>
-        </div>
-        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Link to="/" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
             <ArrowLeft className="h-4 w-4 mr-2" />
@@ -230,6 +220,11 @@ const ProgramDetail = () => {
                     {t('applyNow')}
                   </Button>
                 </Link>
+                <Link to="/contact">
+                  <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-8 py-6 text-lg">
+                    {language === 'en' ? 'Financial Aid Available' : 'Ayuda Financiera Disponible'}
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -239,81 +234,69 @@ const ProgramDetail = () => {
       {/* Program Overview */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <SectionHeading
-                subtitle={t('programOverview')}
-                title={`${t('aboutOurProgram')} ${program.title}`}
-                className="mb-6"
-              />
-              
-              <div className="space-y-4">
-                {program.fullDescription.map((paragraph, index) => (
-                  <p key={index} className="text-navy-600">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-              
-              <div className="mt-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
-                <h3 className="text-lg font-semibold text-navy-700 mb-4">{t('programHighlightsTitle')}</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-navy-600">{language === 'en' ? 'Learn Essential Skills To Become Job-Ready for entry level positions' : 'Aprende habilidades esenciales para estar listo para trabajar en puestos de nivel inicial'}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-navy-600">{language === 'en' ? 'Self Paced, Online Learning' : 'Aprendizaje en línea a tu propio ritmo'}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-navy-600">{language === 'en' ? 'Connect with Local Cohort' : 'Conéctate con grupos locales'}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-navy-600">{language === 'en' ? 'Hands-On Externship with Local Professional*' : 'Prácticas presenciales con profesionales locales*'}</span>
-                  </li>
-                </ul>
-              </div>
+          <div className="max-w-3xl mx-auto">
+            <SectionHeading
+              subtitle={t('programOverview')}
+              title={`${t('aboutOurProgram')} ${program.title}`}
+              className="mb-6"
+            />
+            
+            <div className="space-y-4">
+              {program.fullDescription.map((paragraph, index) => (
+                <p key={index} className="text-navy-600">
+                  {paragraph}
+                </p>
+              ))}
             </div>
             
-            <div>
-              <div className="sticky top-24">
-                <img 
-                  src={program.imageUrl} 
-                  alt={program.title}
-                  className="w-full h-auto rounded-xl mb-8 shadow-lg"
-                />
+            <div className="mt-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
+              <h3 className="text-lg font-semibold text-navy-700 mb-4">{t('programHighlightsTitle')}</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-navy-600">{language === 'en' ? 'Learn Essential Skills To Become Job-Ready for entry level positions' : 'Aprende habilidades esenciales para estar listo para trabajar en puestos de nivel inicial'}</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-navy-600">{language === 'en' ? 'Self Paced, Online Learning' : 'Aprendizaje en línea a tu propio ritmo'}</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-navy-600">{language === 'en' ? 'Connect with Local Cohort' : 'Conéctate con grupos locales'}</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-navy-600">{language === 'en' ? 'Hands-On Externship with Local Professional*' : 'Prácticas presenciales con profesionales locales*'}</span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Job Market Information */}
+            <div className="mt-8 bg-navy-50 p-6 rounded-xl border border-navy-100">
+              <h3 className="text-xl font-bold text-navy-700 mb-4">{t('jobMarketOutlook')}</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <DollarSign className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-navy-700">{t('medianAnnualSalary')}</p>
+                    <p className="text-navy-600 text-xl font-bold">{program.salaryInfo.median} <span className="text-sm font-normal">{language === 'en' ? '(Median Annual Salary for Professionals)' : '(Salario Anual Medio para Profesionales)'}</span></p>
+                  </div>
+                </div>
                 
-                {/* Job Market Information */}
-                <div className="bg-navy-50 p-6 rounded-xl border border-navy-100">
-                  <h3 className="text-xl font-bold text-navy-700 mb-4">{t('jobMarketOutlook')}</h3>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <DollarSign className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold text-navy-700">{t('medianAnnualSalary')}</p>
-                        <p className="text-navy-600 text-xl font-bold">{program.salaryInfo.median}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start">
-                      <TrendingUp className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold text-navy-700">{t('industryGrowth')}</p>
-                        <p className="text-navy-600">{program.salaryInfo.growth} ({program.salaryInfo.period})</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start">
-                      <Users className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold text-navy-700">{t('jobDemand')}</p>
-                        <p className="text-navy-600">{program.salaryInfo.demand}</p>
-                      </div>
-                    </div>
+                <div className="flex items-start">
+                  <TrendingUp className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-navy-700">{t('industryGrowth')}</p>
+                    <p className="text-navy-600">{program.salaryInfo.growth} ({program.salaryInfo.period})</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Users className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-navy-700">{t('jobDemand')}</p>
+                    <p className="text-navy-600">{program.salaryInfo.demand}</p>
                   </div>
                 </div>
               </div>
@@ -368,10 +351,15 @@ const ProgramDetail = () => {
               {t('applyNowFor')} {program.title} {t('gainEssentialSkills')}
             </p>
             
-            <div className="flex justify-center">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/apply">
-                <Button className="bg-gold-400 hover:bg-gold-500 text-navy-900 font-medium px-8 py-6 text-lg">
+                <Button className="bg-gold-400 hover:bg-gold-500 text-navy-900 font-medium px-8 py-6 text-lg w-full sm:w-auto">
                   {t('applyNow')}
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-8 py-6 text-lg w-full sm:w-auto">
+                  {language === 'en' ? 'Financial Aid Available' : 'Ayuda Financiera Disponible'}
                 </Button>
               </Link>
             </div>
