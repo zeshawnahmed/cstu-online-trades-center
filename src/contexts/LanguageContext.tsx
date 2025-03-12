@@ -38,11 +38,11 @@ export const translations = {
     // Application Form
     applyToCStu: "Apply to CSTU",
     applicationFormText: "Complete this form to receive an application and begin your journey in the skilled trades.",
-    firstName: "First Name*",
-    lastName: "Last Name*",
-    emailAddress: "Email Address*",
-    phoneNumber: "Phone Number*",
-    programOfInterest: "Program of Interest*",
+    firstName: "First Name",
+    lastName: "Last Name",
+    emailAddress: "Email Address",
+    phoneNumber: "Phone Number",
+    programOfInterest: "Program of Interest",
     selectProgram: "Select a program",
     hvacProgram: "HVAC Program",
     electricianProgram: "Electrician Program",
@@ -73,7 +73,18 @@ export const translations = {
     
     // Program Not Found
     programNotFound: "Program Not Found",
-    programNotFoundDesc: "The program you are looking for doesn't exist or has been moved."
+    programNotFoundDesc: "The program you are looking for doesn't exist or has been moved.",
+    
+    // Contact Form
+    contactUs: "Contact Us",
+    contactFormText: "Have questions about our programs? Send us a message and we'll get back to you as soon as possible.",
+    yourName: "Your Name",
+    message: "Message",
+    sendMessage: "Send Message",
+    sending: "Sending...",
+    messageSent: "Message Sent",
+    messageReceived: "Your message has been received. We'll get back to you soon.",
+    returnHome: "Return to Home"
   },
   es: {
     // Navbar
@@ -110,11 +121,11 @@ export const translations = {
     // Application Form
     applyToCStu: "Aplicar a CSTU",
     applicationFormText: "Completa este formulario para recibir una solicitud y comenzar tu viaje en los oficios especializados.",
-    firstName: "Nombre*",
-    lastName: "Apellido*",
-    emailAddress: "Correo Electrónico*",
-    phoneNumber: "Número de Teléfono*",
-    programOfInterest: "Programa de Interés*",
+    firstName: "Nombre",
+    lastName: "Apellido",
+    emailAddress: "Correo Electrónico",
+    phoneNumber: "Número de Teléfono",
+    programOfInterest: "Programa de Interés",
     selectProgram: "Selecciona un programa",
     hvacProgram: "Programa de HVAC",
     electricianProgram: "Programa de Electricista",
@@ -145,7 +156,18 @@ export const translations = {
     
     // Program Not Found
     programNotFound: "Programa No Encontrado",
-    programNotFoundDesc: "El programa que estás buscando no existe o ha sido movido."
+    programNotFoundDesc: "El programa que estás buscando no existe o ha sido movido.",
+    
+    // Contact Form
+    contactUs: "Contáctanos",
+    contactFormText: "¿Tienes preguntas sobre nuestros programas? Envíanos un mensaje y te responderemos lo antes posible.",
+    yourName: "Tu Nombre",
+    message: "Mensaje",
+    sendMessage: "Enviar Mensaje",
+    sending: "Enviando...",
+    messageSent: "Mensaje Enviado",
+    messageReceived: "Tu mensaje ha sido recibido. Nos pondremos en contacto contigo pronto.",
+    returnHome: "Volver al Inicio"
   }
 };
 

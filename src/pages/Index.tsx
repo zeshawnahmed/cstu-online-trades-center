@@ -39,11 +39,11 @@ const Index = () => {
 
   // SEO Helmet data with translations
   const seoTitle = language === 'en' 
-    ? 'California Skilled Trade University | HVAC & Electrician Training Sacramento'
+    ? 'California Skilled Trade University | HVAC & Electrician Training in Sacramento'
     : 'Universidad de Oficios Especializados de California | Capacitación de HVAC y Electricista en Sacramento';
   
   const seoDescription = language === 'en'
-    ? 'California Skilled Trade University offers affordable entry-level HVAC training and Electrician training in Sacramento. Learn essential skills through self-paced online programs with hands-on training. Best HVAC and Electrician training near you.'
+    ? 'California Skilled Trade University offers affordable entry-level HVAC training and Electrician training in Sacramento. Learn essential skills through self-paced online programs with hands-on training. Sacramento\'s premier trade school for HVAC and Electrician career training.'
     : 'Universidad de Oficios Especializados de California ofrece capacitación asequible de HVAC y Electricista de nivel inicial en Sacramento. Aprende habilidades esenciales a través de programas en línea a tu propio ritmo con capacitación práctica.';
 
   return (
@@ -52,8 +52,8 @@ const Index = () => {
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
         <meta name="keywords" content={language === 'en' 
-          ? "HVAC training Sacramento, Electrician training Sacramento, HVAC training near me, Electrician training near me"
-          : "Capacitación de HVAC Sacramento, Capacitación de Electricista Sacramento, capacitación de HVAC cerca de mí, capacitación de Electricista cerca de mí"
+          ? "HVAC training Sacramento, Electrician training Sacramento, HVAC training near me, Electrician training near me, Sacramento trade school, Sacramento vocational training"
+          : "Capacitación de HVAC Sacramento, Capacitación de Electricista Sacramento, capacitación de HVAC cerca de mí, capacitación de Electricista cerca de mí, escuela de oficios Sacramento"
         } />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />

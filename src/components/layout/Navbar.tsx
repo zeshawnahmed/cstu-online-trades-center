@@ -65,6 +65,9 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+            <Link to="/contact" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
+              {language === 'en' ? 'Contact Us' : 'Contáctanos'}
+            </Link>
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
@@ -127,6 +130,13 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
+            <Link 
+              to="/contact" 
+              className="block py-2 text-navy-500 hover:text-navy-400"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {language === 'en' ? 'Contact Us' : 'Contáctanos'}
+            </Link>
             <button 
               onClick={toggleLanguage}
               className="flex items-center py-2 text-navy-500 hover:text-navy-400"

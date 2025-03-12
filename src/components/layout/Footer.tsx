@@ -2,9 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { language } = useLanguage();
   
   return (
     <footer className="bg-navy-500 text-white">
@@ -14,8 +16,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">CSTU</h3>
             <p className="text-gray-300 mb-4">
-              California Skilled Trade University offers affordable, self-paced online programs 
-              with hands-on training via externships.
+              {language === 'en' 
+                ? "California Skilled Trade University offers affordable, self-paced online programs with hands-on training via externships."
+                : "Universidad de Oficios Especializados de California ofrece programas en línea asequibles y a tu propio ritmo con capacitación práctica a través de pasantías."}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-gold-400 transition-colors">
@@ -35,7 +38,7 @@ const Footer = () => {
           
           {/* Column 2 - Programs */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Programs</h3>
+            <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Programs" : "Programas"}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/programs/hvac" className="text-gray-300 hover:text-gold-400 transition-colors">
@@ -44,7 +47,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/programs/electrician" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  Electrician
+                  {language === 'en' ? "Electrician" : "Electricista"}
                 </Link>
               </li>
             </ul>
@@ -52,16 +55,16 @@ const Footer = () => {
           
           {/* Column 3 - Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Quick Links" : "Enlaces Rápidos"}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  About Us
+                  {language === 'en' ? "About Us" : "Sobre Nosotros"}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  Contact Us
+                  {language === 'en' ? "Contact Us" : "Contacto"}
                 </Link>
               </li>
               <li>
@@ -71,12 +74,12 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/privacy" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  Privacy Policy
+                  {language === 'en' ? "Privacy Policy" : "Política de Privacidad"}
                 </Link>
               </li>
               <li>
                 <Link to="/terms" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  Terms of Service
+                  {language === 'en' ? "Terms of Service" : "Términos de Servicio"}
                 </Link>
               </li>
             </ul>
@@ -84,7 +87,7 @@ const Footer = () => {
           
           {/* Column 4 - Contact */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+            <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Contact Us" : "Contáctanos"}</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 mt-1 text-gold-400" />
@@ -96,6 +99,11 @@ const Footer = () => {
                   (916) 365-6907
                 </a>
               </li>
+              <li className="mt-3">
+                <Link to="/contact" className="bg-gold-400 hover:bg-gold-500 text-navy-800 px-4 py-2 rounded-lg font-medium inline-block">
+                  {language === 'en' ? "Contact Us" : "Contáctanos"}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -106,10 +114,10 @@ const Footer = () => {
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy" className="text-gray-400 hover:text-gold-400 text-sm transition-colors">
-              Privacy Policy
+              {language === 'en' ? "Privacy Policy" : "Política de Privacidad"}
             </Link>
             <Link to="/terms" className="text-gray-400 hover:text-gold-400 text-sm transition-colors">
-              Terms of Service
+              {language === 'en' ? "Terms of Service" : "Términos de Servicio"}
             </Link>
           </div>
         </div>

@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ProgramDetail from "./pages/program/ProgramDetail";
 import ApplicationForm from "./pages/ApplicationForm";
+import ContactForm from "./pages/ContactForm";
 import { motion, AnimatePresence } from "framer-motion";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
@@ -25,6 +26,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/programs/:slug" element={<ProgramDetail />} />
               <Route path="/apply" element={<ApplicationForm />} />
+              <Route path="/contact" element={<ContactForm />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
