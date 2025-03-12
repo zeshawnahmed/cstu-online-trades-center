@@ -30,8 +30,8 @@ const programs: Record<string, ProgramDetail> = {
     description: 'Learn essential skills to become job-ready in heating, ventilation, and air conditioning systems.',
     fullDescription: [
       'Our HVAC program focuses on teaching the essential skills needed to succeed in entry-level positions in the heating, ventilation, and air conditioning industry.',
-      'Through our self-paced online learning platform, you'll develop a foundational understanding of HVAC systems, troubleshooting techniques, and industry best practices.',
-      'Upon program completion, you'll be prepared for entry-level HVAC positions with the core skills employers are looking for in new technicians.'
+      "Through our self-paced online learning platform, you'll develop a foundational understanding of HVAC systems, troubleshooting techniques, and industry best practices.",
+      "Upon program completion, you'll be prepared for entry-level HVAC positions with the core skills employers are looking for in new technicians."
     ],
     price: '$2,500',
     duration: 'Self-paced',
@@ -59,8 +59,8 @@ const programs: Record<string, ProgramDetail> = {
     description: 'Learn essential skills to become job-ready for electrical installation, maintenance, and repair.',
     fullDescription: [
       'Our Electrician program provides comprehensive training in the fundamental skills needed to begin a career in the electrical field.',
-      'Students will learn about electrical systems, wiring, safety procedures, and code requirements through our flexible online platform and externship opportunities.',
-      'Graduates will be prepared with the essential skills needed to pursue entry-level positions in residential and commercial electrical work.'
+      "Students will learn about electrical systems, wiring, safety procedures, and code requirements through our flexible online platform and externship opportunities.",
+      "Graduates will be prepared with the essential skills needed to pursue entry-level positions in residential and commercial electrical work."
     ],
     price: '$2,500',
     duration: 'Self-paced',
