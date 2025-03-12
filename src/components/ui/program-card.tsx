@@ -1,8 +1,9 @@
 
 import React, { useState } from 'react';
-import { ChevronRight, Clock, Award, Users } from 'lucide-react';
+import { ChevronRight, Clock, Award, Users, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 interface ProgramCardProps {
   title: string;
@@ -12,6 +13,12 @@ interface ProgramCardProps {
   certification: string;
   imageUrl: string;
   slug: string;
+  keyFeatures?: string[];
+  salaryInfo?: {
+    median: string;
+    growth: string;
+    period: string;
+  };
   className?: string;
 }
 
@@ -23,13 +30,14 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
   certification,
   imageUrl,
   slug,
+  keyFeatures,
   className,
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <div className={cn(
-      "group rounded-xl overflow-hidden bg-white border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md",
+      "group rounded-xl overflow-hidden bg-white border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col h-full",
       className
     )}>
       <div className="relative h-48 overflow-hidden">
@@ -49,9 +57,22 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
         </div>
       </div>
       
-      <div className="p-5">
+      <div className="p-5 flex-grow flex flex-col">
         <h3 className="text-xl font-bold text-navy-700 mb-2">{title}</h3>
         <p className="text-navy-600 mb-4 line-clamp-2">{description}</p>
+        
+        {/* Highlighted Features */}
+        <div className="bg-navy-50 p-4 rounded-lg mb-4">
+          <h4 className="font-semibold text-navy-700 mb-2">Program Highlights:</h4>
+          <ul className="space-y-2">
+            {keyFeatures?.map((feature, index) => (
+              <li key={index} className="flex items-start">
+                <CheckCircle className="h-5 w-5 mr-2 text-gold-500 flex-shrink-0 mt-0.5" />
+                <span className="text-navy-600">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
         
         <div className="space-y-2 mb-5">
           <div className="flex items-center text-sm text-navy-600">
@@ -68,13 +89,14 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
           </div>
         </div>
         
-        <Link 
-          to={`/programs/${slug}`}
-          className="inline-flex items-center text-gold-500 hover:text-gold-600 font-medium transition-colors"
-        >
-          Learn More
-          <ChevronRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
-        </Link>
+        <div className="mt-auto">
+          <Link to={`/programs/${slug}`}>
+            <Button className="w-full bg-gold-400 hover:bg-gold-500 text-navy-700">
+              Learn More
+              <ChevronRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

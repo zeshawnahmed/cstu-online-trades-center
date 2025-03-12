@@ -32,7 +32,10 @@ const Navbar = () => {
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-navy-500">CSTU</span>
+              <span className="text-3xl md:text-4xl font-extrabold tracking-tight text-navy-600">
+                <span className="text-navy-700">C</span>
+                <span className="text-gold-500">STU</span>
+              </span>
             </Link>
           </div>
           

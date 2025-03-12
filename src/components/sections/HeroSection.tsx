@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Clock, Award, Briefcase } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -31,6 +31,22 @@ const HeroSection = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl">
                 Learn HVAC, Plumbing, or Welding through affordable, self-paced online programs with hands-on externships. Start your career in the skilled trades today.
               </p>
+              
+              {/* Key Feature Badges */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                <div className="bg-white/10 border border-white/20 rounded-lg p-4 text-center backdrop-blur-sm">
+                  <Briefcase className="h-6 w-6 text-gold-400 mx-auto mb-2" />
+                  <h3 className="text-white font-bold text-xl">Become Job Ready</h3>
+                </div>
+                <div className="bg-white/10 border border-white/20 rounded-lg p-4 text-center backdrop-blur-sm">
+                  <Clock className="h-6 w-6 text-gold-400 mx-auto mb-2" />
+                  <h3 className="text-white font-bold text-xl">Self Paced</h3>
+                </div>
+                <div className="bg-white/10 border border-white/20 rounded-lg p-4 text-center backdrop-blur-sm">
+                  <Award className="h-6 w-6 text-gold-400 mx-auto mb-2" />
+                  <h3 className="text-white font-bold text-xl">Hands-on Training</h3>
+                </div>
+              </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="bg-gold-400 hover:bg-gold-500 text-navy-900 font-medium px-8 py-6 text-lg rounded-lg">
