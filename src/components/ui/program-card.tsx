@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ChevronRight, Clock, Award, Users, CheckCircle } from 'lucide-react';
+import { CheckCircle, DollarSign, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -26,18 +26,17 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
   title,
   description,
   price,
-  duration,
-  certification,
   imageUrl,
   slug,
   keyFeatures,
+  salaryInfo,
   className,
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <div className={cn(
-      "group rounded-xl overflow-hidden bg-white border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col h-full",
+      "rounded-xl overflow-hidden bg-white border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl h-full flex flex-col",
       className
     )}>
       <div className="relative h-48 overflow-hidden">
@@ -48,52 +47,49 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
           <img 
             src={imageUrl} 
             alt={title} 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-full object-cover"
             onLoad={() => setImageLoaded(true)}
           />
         </div>
-        <div className="absolute top-0 right-0 bg-gold-400 text-navy-800 font-semibold px-3 py-1 rounded-bl-lg">
+        <div className="absolute top-0 right-0 bg-gold-400 text-navy-800 font-bold px-4 py-2 rounded-bl-lg text-lg">
           {price}
         </div>
       </div>
       
-      <div className="p-5 flex-grow flex flex-col">
-        <h3 className="text-xl font-bold text-navy-700 mb-2">{title}</h3>
-        <p className="text-navy-600 mb-4 line-clamp-2">{description}</p>
+      <div className="p-6 flex-grow flex flex-col">
+        <h3 className="text-2xl font-bold text-navy-700 mb-3">{title}</h3>
+        <p className="text-navy-600 mb-5">{description}</p>
         
-        {/* Highlighted Features */}
-        <div className="bg-navy-50 p-4 rounded-lg mb-4">
-          <h4 className="font-semibold text-navy-700 mb-2">Program Highlights:</h4>
-          <ul className="space-y-2">
+        {/* Salary Information */}
+        <div className="bg-navy-50 p-5 rounded-lg mb-6">
+          <h4 className="font-bold text-navy-700 text-xl mb-3">2025 Job Statistics:</h4>
+          <div className="flex items-center gap-2 mb-3">
+            <DollarSign className="h-6 w-6 text-gold-500" />
+            <span className="text-lg font-bold text-navy-700">Median Annual Salary: {salaryInfo?.median}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <TrendingUp className="h-6 w-6 text-gold-500" />
+            <span className="text-navy-600">Projected Growth: {salaryInfo?.growth} ({salaryInfo?.period})</span>
+          </div>
+        </div>
+        
+        {/* Program Highlights */}
+        <div className="mb-6">
+          <h4 className="font-bold text-navy-700 text-xl mb-3">Program Highlights:</h4>
+          <ul className="space-y-3">
             {keyFeatures?.map((feature, index) => (
               <li key={index} className="flex items-start">
-                <CheckCircle className="h-5 w-5 mr-2 text-gold-500 flex-shrink-0 mt-0.5" />
-                <span className="text-navy-600">{feature}</span>
+                <CheckCircle className="h-6 w-6 mr-3 text-gold-500 flex-shrink-0 mt-0.5" />
+                <span className="text-navy-600 text-lg">{feature}</span>
               </li>
             ))}
           </ul>
         </div>
         
-        <div className="space-y-2 mb-5">
-          <div className="flex items-center text-sm text-navy-600">
-            <Clock className="h-4 w-4 mr-2 text-gold-500" />
-            <span>{duration}</span>
-          </div>
-          <div className="flex items-center text-sm text-navy-600">
-            <Award className="h-4 w-4 mr-2 text-gold-500" />
-            <span>{certification}</span>
-          </div>
-          <div className="flex items-center text-sm text-navy-600">
-            <Users className="h-4 w-4 mr-2 text-gold-500" />
-            <span>Hands-on Externship</span>
-          </div>
-        </div>
-        
         <div className="mt-auto">
           <Link to={`/programs/${slug}`}>
-            <Button className="w-full bg-gold-400 hover:bg-gold-500 text-navy-700">
+            <Button className="w-full bg-gold-400 hover:bg-gold-500 text-navy-700 font-bold text-lg py-6">
               Learn More
-              <ChevronRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
           </Link>
         </div>
