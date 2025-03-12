@@ -375,6 +375,11 @@ const ProgramDetail = () => {
                 </Button>
               </Link>
             </div>
+            
+            {/* Added disclaimer */}
+            <p className="text-xs text-gray-400 mt-8">
+              *{language === 'en' ? 'Externship placement assistance available upon program completion and subject to industry demand' : 'Asistencia para colocación en prácticas disponible al completar el programa y sujeta a la demanda de la industria'}
+            </p>
           </div>
         </div>
       </section>
