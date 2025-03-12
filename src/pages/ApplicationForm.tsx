@@ -5,9 +5,12 @@ import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { CheckCircle } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ApplicationForm = () => {
   const { toast } = useToast();
+  const { t, language } = useLanguage();
+  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -29,7 +32,7 @@ const ApplicationForm = () => {
     setIsSubmitting(true);
     
     try {
-      // In a real application, this would send data to a backend service
+      // In a real application, this would send data to a backend service that emails peaceofmindcollabs@gmail.com
       // For demo purposes, we'll simulate a successful submission
       console.log('Form submitted:', formData);
       
@@ -41,13 +44,15 @@ const ApplicationForm = () => {
       
       setIsSubmitted(true);
       toast({
-        title: "Application Submitted",
-        description: "Your application request has been received.",
+        title: language === 'en' ? "Application Submitted" : "Solicitud Enviada",
+        description: language === 'en' ? "Your application request has been received." : "Tu solicitud ha sido recibida.",
       });
     } catch (error) {
       toast({
-        title: "Submission Error",
-        description: "There was a problem submitting your application. Please try again.",
+        title: language === 'en' ? "Submission Error" : "Error de Envío",
+        description: language === 'en' 
+          ? "There was a problem submitting your application. Please try again." 
+          : "Hubo un problema al enviar tu solicitud. Por favor, inténtalo de nuevo.",
         variant: "destructive",
       });
     } finally {
@@ -67,16 +72,16 @@ const ApplicationForm = () => {
             >
               {!isSubmitted ? (
                 <>
-                  <h1 className="text-3xl font-bold text-navy-700 mb-6 text-center">Apply to CSTU</h1>
+                  <h1 className="text-3xl font-bold text-navy-700 mb-6 text-center">{t('applyToCStu')}</h1>
                   <p className="text-navy-600 mb-8 text-center">
-                    Complete this form to receive an application and more information about our programs.
+                    {t('applicationFormText')}
                   </p>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="firstName" className="block text-navy-700 font-medium mb-2">
-                          First Name*
+                          {t('firstName')}
                         </label>
                         <input
                           type="text"
@@ -91,7 +96,7 @@ const ApplicationForm = () => {
                       
                       <div>
                         <label htmlFor="lastName" className="block text-navy-700 font-medium mb-2">
-                          Last Name*
+                          {t('lastName')}
                         </label>
                         <input
                           type="text"
@@ -107,7 +112,7 @@ const ApplicationForm = () => {
                     
                     <div>
                       <label htmlFor="email" className="block text-navy-700 font-medium mb-2">
-                        Email Address*
+                        {t('emailAddress')}
                       </label>
                       <input
                         type="email"
@@ -122,7 +127,7 @@ const ApplicationForm = () => {
                     
                     <div>
                       <label htmlFor="phone" className="block text-navy-700 font-medium mb-2">
-                        Phone Number*
+                        {t('phoneNumber')}
                       </label>
                       <input
                         type="tel"
@@ -137,7 +142,7 @@ const ApplicationForm = () => {
                     
                     <div>
                       <label htmlFor="program" className="block text-navy-700 font-medium mb-2">
-                        Program of Interest*
+                        {t('programOfInterest')}
                       </label>
                       <select
                         id="program"
@@ -147,9 +152,9 @@ const ApplicationForm = () => {
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                       >
-                        <option value="">Select a program</option>
-                        <option value="hvac">HVAC Program</option>
-                        <option value="electrician">Electrician Program</option>
+                        <option value="">{t('selectProgram')}</option>
+                        <option value="hvac">{t('hvacProgram')}</option>
+                        <option value="electrician">{t('electricianProgram')}</option>
                       </select>
                     </div>
                     
@@ -159,7 +164,7 @@ const ApplicationForm = () => {
                         className="w-full bg-gold-400 hover:bg-gold-500 text-navy-900 font-bold text-lg py-6"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? 'Submitting...' : 'Submit Application Request'}
+                        {isSubmitting ? t('submitting') : t('submitApplication')}
                       </Button>
                     </div>
                   </form>
@@ -169,15 +174,15 @@ const ApplicationForm = () => {
                   <div className="flex justify-center mb-6">
                     <CheckCircle className="h-20 w-20 text-green-500" />
                   </div>
-                  <h2 className="text-3xl font-bold text-navy-700 mb-4">Thank You!</h2>
+                  <h2 className="text-3xl font-bold text-navy-700 mb-4">{t('thankYou')}</h2>
                   <p className="text-xl text-navy-600 mb-8">
-                    Your application request has been submitted. We'll send you the complete application package via email shortly.
+                    {t('applicationSubmitted')}
                   </p>
                   <Button 
                     onClick={() => window.location.href = '/'}
                     className="bg-navy-600 hover:bg-navy-700 text-white font-medium"
                   >
-                    Return to Home
+                    {t('returnToHome')}
                   </Button>
                 </div>
               )}

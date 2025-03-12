@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('en');
+  const { language, setLanguage, t } = useLanguage();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +27,6 @@ const Navbar = () => {
 
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'es' : 'en');
-    // In a real implementation, this would trigger language changes throughout the app
   };
 
   return (
@@ -48,11 +48,11 @@ const Navbar = () => {
           
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
-              Home
+              {t('home')}
             </Link>
             <div className="relative group">
               <button className="flex items-center text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
-                Programs <ChevronDown className="ml-1 h-4 w-4" />
+                {t('programs')} <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className="absolute left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
                 <div className="py-2 bg-white rounded-md shadow-xl border border-gray-100">
@@ -60,7 +60,7 @@ const Navbar = () => {
                     HVAC
                   </Link>
                   <Link to="/programs/electrician" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
-                    Electrician
+                    {language === 'en' ? 'Electrician' : 'Electricista'}
                   </Link>
                 </div>
               </div>
@@ -68,17 +68,22 @@ const Navbar = () => {
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
-            <button 
-              onClick={toggleLanguage}
-              className="flex items-center text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200"
-            >
-              <Globe className="h-5 w-5 mr-1" />
-              {language === 'en' ? 'EN' : 'ES'}
-            </button>
+            <div className="flex items-center">
+              <span className="mr-2 text-navy-500 text-sm font-medium">
+                {language === 'en' ? '¿Habla Español?' : 'English?'}
+              </span>
+              <button 
+                onClick={toggleLanguage}
+                className="flex items-center px-3 py-1 rounded-full bg-navy-100 text-navy-700 hover:bg-navy-200 font-medium transition-colors duration-200"
+              >
+                <Globe className="h-4 w-4 mr-1" />
+                {language === 'en' ? 'Español' : 'English'}
+              </button>
+            </div>
             
             <Link to="/apply">
               <Button className="bg-gold-400 hover:bg-gold-500 text-navy-700 font-medium">
-                Apply Now
+                {t('applyNow')}
               </Button>
             </Link>
           </div>
@@ -101,10 +106,10 @@ const Navbar = () => {
               className="block py-2 text-navy-500 hover:text-navy-400"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Home
+              {t('home')}
             </Link>
             <div>
-              <div className="py-2 text-navy-500">Programs</div>
+              <div className="py-2 text-navy-500">{t('programs')}</div>
               <div className="pl-4 space-y-2">
                 <Link 
                   to="/programs/hvac" 
@@ -118,7 +123,7 @@ const Navbar = () => {
                   className="block py-1 text-navy-500 hover:text-navy-400"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Electrician
+                  {language === 'en' ? 'Electrician' : 'Electricista'}
                 </Link>
               </div>
             </div>
@@ -127,11 +132,11 @@ const Navbar = () => {
               className="flex items-center py-2 text-navy-500 hover:text-navy-400"
             >
               <Globe className="h-5 w-5 mr-2" />
-              {language === 'en' ? 'English' : 'Español'}
+              {language === 'en' ? '¿Habla Español?' : 'English?'}
             </button>
             <Link to="/apply" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full bg-gold-400 hover:bg-gold-500 text-navy-700 mt-2">
-                Apply Now
+                {t('applyNow')}
               </Button>
             </Link>
           </div>
