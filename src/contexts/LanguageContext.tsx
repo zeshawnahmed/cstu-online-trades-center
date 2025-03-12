@@ -20,16 +20,16 @@ export const translations = {
     // Programs Section
     programsTitle: "Industry-Leading Skilled Trades Training",
     programsSubtitle: "Our Programs",
-    programsDescription: "Our comprehensive, affordable programs prepare you for high-demand entry-level careers in the skilled trades with a unique blend of online learning and hands-on experience.",
+    programsDescription: "Our comprehensive, affordable programs prepare you for high-demand entry level careers in the skilled trades with a unique blend of online learning and hands-on experience.",
     learnMore: "Learn More",
     applyNowButton: "APPLY NOW",
     externshipNote: "*Externship placement assistance available upon program completion and subject to industry demand",
     
     // Program Cards
     hvacTitle: "HVAC Program",
-    hvacDescription: "Learn essential skills to become job-ready in heating, ventilation, and air conditioning systems for entry-level positions.",
+    hvacDescription: "Learn essential skills to become job-ready in heating, ventilation, and air conditioning systems for entry level positions.",
     electricianTitle: "Electrician Program",
-    electricianDescription: "Learn essential skills to become job-ready for electrical installation, maintenance, and repair in entry-level positions.",
+    electricianDescription: "Learn essential skills to become job-ready for electrical installation, maintenance, and repair in entry level positions.",
     programHighlights: "Program Highlights:",
     jobStatistics: "2025 Job Statistics:",
     medianSalary: "Median Annual Salary:",
@@ -56,7 +56,6 @@ export const translations = {
     
     // Program Detail
     backToPrograms: "Back to Programs",
-    professionalCertification: "Professional Certification Program",
     handsOnExternship: "Hands-on Externship",
     programOverview: "Program Overview",
     aboutOurProgram: "About Our",
@@ -67,10 +66,10 @@ export const translations = {
     jobDemand: "Job Demand",
     whatYouWillLearn: "What You'll Learn",
     programCurriculum: "Program Curriculum",
-    curriculumDescription: "Our focused curriculum is designed to provide the essential skills needed to become job-ready for entry-level positions.",
+    curriculumDescription: "Our focused curriculum is designed to provide the essential skills needed to become job-ready for entry level positions.",
     readyToStartCareer: "Ready to Start Your Career?",
     applyNowFor: "Apply now for our",
-    gainEssentialSkills: "program and gain the essential skills needed for entry-level positions.",
+    gainEssentialSkills: "program and gain the essential skills needed for entry level positions.",
     
     // Program Not Found
     programNotFound: "Program Not Found",
@@ -129,7 +128,6 @@ export const translations = {
     
     // Program Detail
     backToPrograms: "Volver a Programas",
-    professionalCertification: "Programa de Certificación Profesional",
     handsOnExternship: "Prácticas Presenciales",
     programOverview: "Descripción del Programa",
     aboutOurProgram: "Sobre Nuestro Programa de",

@@ -20,7 +20,7 @@ const ProgramsSection = () => {
       slug: 'hvac',
       keyFeatures: [
         language === 'en' 
-          ? 'Learn Essential Skills To Become Job-Ready in HVAC for entry-level positions'
+          ? 'Learn Essential Skills To Become Job-Ready in HVAC for entry level positions'
           : 'Aprende habilidades esenciales para estar listo para trabajar en HVAC en puestos de nivel inicial',
         language === 'en' ? 'Self Paced, Online Learning' : 'Aprendizaje en línea a tu propio ritmo',
         language === 'en' ? 'Connect with Local Cohort' : 'Conéctate con grupos locales',
@@ -42,7 +42,7 @@ const ProgramsSection = () => {
       slug: 'electrician',
       keyFeatures: [
         language === 'en' 
-          ? 'Learn Essential Skills To Become Job-Ready in Electrical for entry-level positions'
+          ? 'Learn Essential Skills To Become Job-Ready in Electrical for entry level positions'
           : 'Aprende habilidades esenciales para estar listo para trabajar en electricidad en puestos de nivel inicial',
         language === 'en' ? 'Self Paced, Online Learning' : 'Aprendizaje en línea a tu propio ritmo',
         language === 'en' ? 'Connect with Local Cohort' : 'Conéctate con grupos locales',

@@ -41,35 +41,12 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
       "rounded-xl overflow-hidden bg-white border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl h-full flex flex-col",
       className
     )}>
-      <div className="relative h-48 overflow-hidden">
-        <div className={cn(
-          "absolute inset-0 bg-gray-200",
-          imageLoaded && "bg-transparent"
-        )}>
-          <img 
-            src={imageUrl} 
-            alt={title} 
-            className="w-full h-full object-cover"
-            onLoad={() => setImageLoaded(true)}
-          />
-        </div>
-        {/* Price tag moved closer to program title */}
-        <div className="absolute top-0 right-0 m-2 bg-gold-400 text-navy-800 font-bold px-3 py-1 rounded-lg text-sm">
+      <div className="p-6 flex-grow flex flex-col">
+        <div className="bg-gold-400 text-navy-800 font-bold px-3 py-1 rounded-lg text-sm self-start mb-2">
           {price}
         </div>
-      </div>
-      
-      <div className="p-6 flex-grow flex flex-col">
         <h3 className="text-2xl font-bold text-navy-700 mb-2">{title}</h3>
-        <p className="text-navy-600 mb-4">
-          {description.includes('entry-level') ? (
-            <>
-              {description.split('entry-level')[0]}
-              <span className="font-semibold bg-yellow-100 px-1 rounded">entry-level</span>
-              {description.split('entry-level')[1]}
-            </>
-          ) : description}
-        </p>
+        <p className="text-navy-600 mb-4">{description}</p>
         
         {/* Salary Information - Condensed */}
         <div className="bg-navy-50 p-4 rounded-lg mb-4">
@@ -91,15 +68,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
             {keyFeatures?.map((feature, index) => (
               <li key={index} className="flex items-start">
                 <CheckCircle className="h-5 w-5 mr-2 text-gold-500 flex-shrink-0 mt-0.5" />
-                <span className="text-navy-600">
-                  {feature.includes('entry-level') ? (
-                    <>
-                      {feature.split('entry-level')[0]}
-                      <span className="font-semibold bg-yellow-100 px-1 rounded">entry-level</span>
-                      {feature.split('entry-level')[1]}
-                    </>
-                  ) : feature}
-                </span>
+                <span className="text-navy-600">{feature}</span>
               </li>
             ))}
           </ul>

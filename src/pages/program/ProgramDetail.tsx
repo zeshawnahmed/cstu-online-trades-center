@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import SectionHeading from '@/components/ui/section-heading';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-// Note: Using double quotes for strings with apostrophes to fix the syntax error
 interface ProgramDetail {
   title: string;
   description: string;
@@ -31,11 +30,11 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
     return {
       hvac: {
         title: 'HVAC Technician',
-        description: 'Learn essential skills to become job-ready in heating, ventilation, and air conditioning systems for entry-level positions.',
+        description: 'Learn essential skills to become job-ready in heating, ventilation, and air conditioning systems for entry level positions.',
         fullDescription: [
-          "Our HVAC program focuses on teaching the essential skills needed to succeed in entry-level positions in the heating, ventilation, and air conditioning industry.",
+          "Our HVAC program focuses on teaching the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
           "Through our self-paced online learning platform, you'll develop a foundational understanding of HVAC systems, troubleshooting techniques, and industry best practices.",
-          "Upon program completion, you'll be prepared for entry-level HVAC positions with the core skills employers are looking for in new technicians."
+          "Upon program completion, you'll be prepared for entry level HVAC positions with the core skills employers are looking for in new technicians."
         ],
         price: '$2,500',
         duration: 'Self-paced',
@@ -60,11 +59,11 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
       },
       electrician: {
         title: 'Electrician',
-        description: 'Learn essential skills to become job-ready for electrical installation, maintenance, and repair for entry-level positions.',
+        description: 'Learn essential skills to become job-ready for electrical installation, maintenance, and repair for entry level positions.',
         fullDescription: [
           "Our Electrician program provides comprehensive training in the fundamental skills needed to begin a career in the electrical field.",
           "Students will learn about electrical systems, wiring, safety procedures, and code requirements through our flexible online platform and externship opportunities.",
-          "Graduates will be prepared with the essential skills needed to pursue entry-level positions in residential and commercial electrical work."
+          "Graduates will be prepared with the essential skills needed to pursue entry level positions in residential and commercial electrical work."
         ],
         price: '$2,500',
         duration: 'Self-paced',
@@ -178,29 +177,6 @@ const ProgramDetail = () => {
     );
   }
   
-  const highlightEntryLevel = (text: string) => {
-    if (language === 'en' && text.includes('entry-level')) {
-      const parts = text.split('entry-level');
-      return (
-        <>
-          {parts[0]}
-          <span className="font-semibold bg-yellow-100 px-1 rounded">entry-level</span>
-          {parts[1]}
-        </>
-      );
-    } else if (language === 'es' && text.includes('nivel inicial')) {
-      const parts = text.split('nivel inicial');
-      return (
-        <>
-          {parts[0]}
-          <span className="font-semibold bg-yellow-100 px-1 rounded">nivel inicial</span>
-          {parts[1]}
-        </>
-      );
-    }
-    return text;
-  };
-  
   return (
     <Layout>
       {/* Hero Section */}
@@ -226,14 +202,11 @@ const ProgramDetail = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-block px-3 py-1 text-sm font-medium tracking-wider text-navy-900 uppercase bg-gold-400 rounded-full mb-4">
-                {t('professionalCertification')}
-              </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 {program.title}
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                {highlightEntryLevel(program.description)}
+                {program.description}
               </p>
               
               <div className="flex flex-wrap gap-6 mb-8">
@@ -244,10 +217,6 @@ const ProgramDetail = () => {
                 <div className="flex items-center">
                   <Clock className="h-5 w-5 mr-2 text-gold-400" />
                   <span>{program.duration}</span>
-                </div>
-                <div className="flex items-center">
-                  <Award className="h-5 w-5 mr-2 text-gold-400" />
-                  <span>{program.certification}</span>
                 </div>
                 <div className="flex items-center">
                   <Users className="h-5 w-5 mr-2 text-gold-400" />
@@ -281,7 +250,7 @@ const ProgramDetail = () => {
               <div className="space-y-4">
                 {program.fullDescription.map((paragraph, index) => (
                   <p key={index} className="text-navy-600">
-                    {highlightEntryLevel(paragraph)}
+                    {paragraph}
                   </p>
                 ))}
               </div>
@@ -291,7 +260,7 @@ const ProgramDetail = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-navy-600">{highlightEntryLevel(language === 'en' ? 'Learn Essential Skills To Become Job-Ready for entry-level positions' : 'Aprende habilidades esenciales para estar listo para trabajar en puestos de nivel inicial')}</span>
+                    <span className="text-navy-600">{language === 'en' ? 'Learn Essential Skills To Become Job-Ready for entry level positions' : 'Aprende habilidades esenciales para estar listo para trabajar en puestos de nivel inicial'}</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
