@@ -37,14 +37,14 @@ const Index = () => {
     });
   }, []);
 
-  // SEO Helmet data with translations
+  // SEO Helmet data with translations and enhanced for local search
   const seoTitle = language === 'en' 
-    ? 'California Skilled Trade University | HVAC & Electrician Training in Sacramento'
-    : 'Universidad de Oficios Especializados de California | Capacitación de HVAC y Electricista en Sacramento';
+    ? 'HVAC & Electrician Training in Sacramento | California Skilled Trade University'
+    : 'Capacitación de HVAC y Electricista en Sacramento | Universidad de Oficios Especializados de California';
   
   const seoDescription = language === 'en'
-    ? 'California Skilled Trade University offers affordable entry-level HVAC training and Electrician training in Sacramento. Learn essential skills through self-paced online programs with hands-on training. Sacramento\'s premier trade school for HVAC and Electrician career training.'
-    : 'Universidad de Oficios Especializados de California ofrece capacitación asequible de HVAC y Electricista de nivel inicial en Sacramento. Aprende habilidades esenciales a través de programas en línea a tu propio ritmo con capacitación práctica.';
+    ? 'California Skilled Trade University offers affordable HVAC training and Electrician training in Sacramento. Learn essential skills through self-paced online programs with hands-on training. Sacramento\'s premier trade school for HVAC and Electrician career training. The best HVAC school near you and top electrician school in Sacramento.'
+    : 'Universidad de Oficios Especializados de California ofrece capacitación asequible de HVAC y Electricista en Sacramento. Aprende habilidades esenciales a través de programas en línea a tu propio ritmo con capacitación práctica.';
 
   return (
     <Layout>
@@ -52,13 +52,39 @@ const Index = () => {
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
         <meta name="keywords" content={language === 'en' 
-          ? "HVAC training Sacramento, Electrician training Sacramento, HVAC training near me, Electrician training near me, Sacramento trade school, Sacramento vocational training"
-          : "Capacitación de HVAC Sacramento, Capacitación de Electricista Sacramento, capacitación de HVAC cerca de mí, capacitación de Electricista cerca de mí, escuela de oficios Sacramento"
+          ? "HVAC training Sacramento, Electrician training Sacramento, HVAC school near me, Electrician school near me, Sacramento HVAC school, Sacramento Electrician school, Sacramento trade school, trade school near me, affordable trade school Sacramento"
+          : "Capacitación de HVAC Sacramento, Capacitación de Electricista Sacramento, escuela de HVAC cerca de mí, escuela de Electricista cerca de mí, escuela de oficios Sacramento"
         } />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://www.californiaskilledtradeuniversity.edu" />
+        
+        {/* Structured data for local business - helps with local SEO */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "TechnicalSchool",
+              "name": "California Skilled Trade University",
+              "image": "https://www.californiaskilledtradeuniversity.edu/og-image.png",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Sacramento",
+                "addressRegion": "CA",
+                "addressCountry": "US"
+              },
+              "url": "https://www.californiaskilledtradeuniversity.edu",
+              "telephone": "(916) 365-6907",
+              "priceRange": "$$$",
+              "description": "California Skilled Trade University offers affordable HVAC training and Electrician training in Sacramento with hands-on experience and job-ready skills.",
+              "sameAs": [
+                "https://www.facebook.com/californiaskilledtradeuniversity",
+                "https://www.instagram.com/cstuniversity"
+              ]
+            }
+          `}
+        </script>
       </Helmet>
       <HeroSection scrollToPrograms={scrollToPrograms} />
       <ProgramsSection />

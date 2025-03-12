@@ -5,6 +5,7 @@ import SectionHeading from '@/components/ui/section-heading';
 import ProgramCard from '@/components/ui/program-card';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const ProgramsSection = () => {
   const { t, language } = useLanguage();
@@ -13,7 +14,7 @@ const ProgramsSection = () => {
     {
       title: t('hvacTitle'),
       description: t('hvacDescription'),
-      price: '$2,500',
+      price: language === 'en' ? 'Flat Rate Tuition: $2,500' : 'Matrícula de Tarifa Plana: $2,500',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'HVAC Certification' : 'Certificación HVAC',
       imageUrl: '/hvac-program.jpg',
@@ -29,13 +30,14 @@ const ProgramsSection = () => {
       salaryInfo: {
         median: '$60,590',
         growth: language === 'en' ? '5%' : '5%',
-        period: '2022-2032'
+        period: '2022-2032',
+        clarification: language === 'en' ? 'Median Annual Salary for HVAC Professionals' : 'Salario Anual Medio para Profesionales de HVAC'
       }
     },
     {
       title: t('electricianTitle'),
       description: t('electricianDescription'),
-      price: '$2,500',
+      price: language === 'en' ? 'Flat Rate Tuition: $2,500' : 'Matrícula de Tarifa Plana: $2,500',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'Electrician Certification' : 'Certificación de Electricista',
       imageUrl: '/plumbing-program.jpg', // Reusing the image for now
@@ -51,7 +53,8 @@ const ProgramsSection = () => {
       salaryInfo: {
         median: '$60,240',
         growth: language === 'en' ? '7%' : '7%',
-        period: '2022-2032'
+        period: '2022-2032',
+        clarification: language === 'en' ? 'Median Annual Salary for Electrician Professionals' : 'Salario Anual Medio para Profesionales Electricistas'
       }
     }
   ];
@@ -82,15 +85,27 @@ const ProgramsSection = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <Link to="/apply">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-navy-600 hover:bg-navy-700 text-white font-bold px-8 py-4 rounded-lg text-xl"
-            >
-              {t('applyNowButton')}
-            </motion.button>
-          </Link>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
+            <Link to="/apply">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-navy-600 hover:bg-navy-700 text-white font-bold px-8 py-4 rounded-lg text-xl w-full md:w-auto"
+              >
+                {t('applyNowButton')}
+              </motion.button>
+            </Link>
+            
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gold-400 hover:bg-gold-500 text-navy-800 font-bold px-8 py-4 rounded-lg text-xl w-full md:w-auto"
+              >
+                {language === 'en' ? 'Financial Aid Available' : 'Ayuda Financiera Disponible'}
+              </motion.button>
+            </Link>
+          </div>
           <p className="text-sm text-gray-500 mt-3">{t('externshipNote')}</p>
         </div>
       </div>

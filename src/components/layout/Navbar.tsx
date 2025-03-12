@@ -39,9 +39,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-3xl md:text-4xl font-extrabold tracking-tight text-navy-600 font-serif">
-                <span className="text-navy-700 hidden sm:inline">California Skilled Trade University</span>
-                <span className="text-navy-700 sm:hidden">C</span>
-                <span className="text-gold-500 sm:hidden">STU</span>
+                <span className="text-navy-700 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl">California Skilled Trade University</span>
               </span>
             </Link>
           </div>
@@ -65,6 +63,9 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+            <Link to="/about" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
+              {language === 'en' ? 'About Us' : 'Acerca de Nosotros'}
+            </Link>
             <Link to="/contact" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
               {language === 'en' ? 'Contact Us' : 'Contáctanos'}
             </Link>
@@ -131,6 +132,13 @@ const Navbar = () => {
               </div>
             </div>
             <Link 
+              to="/about" 
+              className="block py-2 text-navy-500 hover:text-navy-400"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {language === 'en' ? 'About Us' : 'Acerca de Nosotros'}
+            </Link>
+            <Link 
               to="/contact" 
               className="block py-2 text-navy-500 hover:text-navy-400"
               onClick={() => setMobileMenuOpen(false)}
@@ -138,15 +146,23 @@ const Navbar = () => {
               {language === 'en' ? 'Contact Us' : 'Contáctanos'}
             </Link>
             <button 
-              onClick={toggleLanguage}
+              onClick={() => {
+                toggleLanguage();
+                // Don't close the mobile menu when switching languages
+              }}
               className="flex items-center py-2 text-navy-500 hover:text-navy-400"
             >
               <Globe className="h-5 w-5 mr-2" />
-              {language === 'en' ? '¿Habla Español?' : 'English?'}
+              {language === 'en' ? 'Cambiar a Español' : 'Switch to English'}
             </button>
             <Link to="/apply" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full bg-gold-400 hover:bg-gold-500 text-navy-700 mt-2">
                 {t('applyNow')}
+              </Button>
+            </Link>
+            <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+              <Button className="w-full bg-navy-600 hover:bg-navy-700 text-white mt-2">
+                {language === 'en' ? 'Financial Aid Available' : 'Ayuda Financiera Disponible'}
               </Button>
             </Link>
           </div>

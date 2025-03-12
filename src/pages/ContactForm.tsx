@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Info } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -16,6 +16,7 @@ const ContactForm = () => {
     email: '',
     phone: '',
     message: '',
+    interestedInFinancialAid: false
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -24,6 +25,11 @@ const ContactForm = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+  };
+  
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target;
+    setFormData(prev => ({ ...prev, [name]: checked }));
   };
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -75,6 +81,16 @@ const ContactForm = () => {
                       ? "Have questions about our programs? Send us a message and we'll get back to you as soon as possible."
                       : "¿Tienes preguntas sobre nuestros programas? Envíanos un mensaje y te responderemos lo antes posible."}
                   </p>
+                  
+                  {/* Financial Aid Info Alert */}
+                  <div className="bg-gold-50 border border-gold-200 rounded-lg p-4 mb-8 flex items-start">
+                    <Info className="h-5 w-5 text-gold-500 mt-0.5 mr-3 flex-shrink-0" />
+                    <p className="text-navy-700">
+                      {language === 'en' 
+                        ? "Interested in Financial Aid? Let us know and we'll provide you with all available options."
+                        : "¿Interesado en ayuda financiera? Háganoslo saber y le proporcionaremos todas las opciones disponibles."}
+                    </p>
+                  </div>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
@@ -131,6 +147,22 @@ const ContactForm = () => {
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                       />
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="interestedInFinancialAid"
+                        name="interestedInFinancialAid"
+                        checked={formData.interestedInFinancialAid}
+                        onChange={handleCheckboxChange}
+                        className="h-5 w-5 text-gold-500 rounded border-gray-300 focus:ring-gold-400 mt-1"
+                      />
+                      <label htmlFor="interestedInFinancialAid" className="ml-3 block text-navy-700">
+                        {language === 'en' 
+                          ? "I'm interested in learning about financial aid options"
+                          : "Estoy interesado en conocer las opciones de ayuda financiera"}
+                      </label>
                     </div>
                     
                     <div className="pt-4">

@@ -1,0 +1,326 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import Layout from '@/components/layout/Layout';
+import { Helmet } from 'react-helmet';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { CheckCircle, DollarSign, Clock, BarChart3, MapPin, Target } from 'lucide-react';
+
+const AboutUs = () => {
+  const { t, language } = useLanguage();
+  
+  return (
+    <Layout>
+      <Helmet>
+        <title>
+          {language === 'en' 
+            ? 'About Us | Sacramento Trade School | California Skilled Trade University' 
+            : 'Sobre Nosotros | Escuela de Oficios Sacramento | Universidad de Oficios Especializados de California'}
+        </title>
+        <meta 
+          name="description" 
+          content={language === 'en'
+            ? "Learn about California Skilled Trade University - Sacramento's premier affordable trade school for HVAC and Electrician training. Our cost-effective programs prepare you for lucrative careers without the debt of traditional colleges."
+            : "Conozca sobre la Universidad de Oficios Especializados de California - La principal escuela de oficios asequible de Sacramento para capacitación de HVAC y Electricista."}
+        />
+        <meta 
+          name="keywords" 
+          content={language === 'en'
+            ? "Sacramento trade school, Sacramento HVAC training, Sacramento Electrician training, trade school vs college, affordable trade school Sacramento"
+            : "escuela de oficios Sacramento, capacitación de HVAC Sacramento, capacitación de Electricista Sacramento"}
+        />
+      </Helmet>
+      
+      <section className="pt-32 pb-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-navy-700 mb-4">
+              {t('aboutUsTitle')}
+            </h1>
+            <p className="text-xl text-navy-600 mb-10">
+              {t('aboutUsSubtitle')}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      
+      {/* Our Story Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-navy-700 mb-6">
+              {t('ourStoryTitle')}
+            </h2>
+            <p className="text-lg text-navy-600 mb-8 leading-relaxed">
+              {t('ourStoryContent')}
+            </p>
+            
+            <div className="bg-navy-50 border-l-4 border-navy-500 pl-6 py-4 rounded-r-lg mb-10">
+              <p className="text-navy-800 font-medium italic">
+                {language === 'en'
+                  ? "Our mission is simple: provide affordable, job-focused training that creates pathways to high-paying careers in the skilled trades without saddling students with unnecessary debt."
+                  : "Nuestra misión es simple: proporcionar capacitación asequible y enfocada en el trabajo que cree vías hacia carreras bien remuneradas en los oficios especializados sin cargar a los estudiantes con deudas innecesarias."}
+              </p>
+            </div>
+            
+            <div className="flex items-center justify-center mb-12">
+              <MapPin className="h-8 w-8 text-gold-500 mr-3" />
+              <p className="text-xl font-semibold text-navy-700">
+                {language === 'en'
+                  ? "Proudly serving the Sacramento community and beyond"
+                  : "Sirviendo con orgullo a la comunidad de Sacramento y más allá"}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Why Trade School Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-navy-700 mb-10 text-center">
+              {t('whyTradeSchoolTitle')}
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Cost Effective */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+              >
+                <div className="flex items-center mb-4">
+                  <DollarSign className="h-8 w-8 text-gold-500 mr-3" />
+                  <h3 className="text-xl font-bold text-navy-700">{t('costEffective')}</h3>
+                </div>
+                <p className="text-navy-600">
+                  {t('costEffectiveContent')}
+                </p>
+                <div className="mt-5 pt-5 border-t border-gray-100">
+                  <div className="flex justify-between">
+                    <div className="text-left">
+                      <p className="text-sm text-gray-500">{language === 'en' ? '4-Year College' : 'Universidad de 4 años'}</p>
+                      <p className="text-lg font-bold text-red-500">$30,000+ / {language === 'en' ? 'year' : 'año'}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-gray-500">CSTU</p>
+                      <p className="text-lg font-bold text-green-500">$2,500 {language === 'en' ? 'total' : 'total'}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+              
+              {/* Time Efficient */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+              >
+                <div className="flex items-center mb-4">
+                  <Clock className="h-8 w-8 text-gold-500 mr-3" />
+                  <h3 className="text-xl font-bold text-navy-700">{t('timeEfficient')}</h3>
+                </div>
+                <p className="text-navy-600">
+                  {t('timeEfficientContent')}
+                </p>
+                <div className="mt-5 pt-5 border-t border-gray-100">
+                  <div className="flex justify-between">
+                    <div className="text-left">
+                      <p className="text-sm text-gray-500">{language === 'en' ? '4-Year College' : 'Universidad de 4 años'}</p>
+                      <p className="text-lg font-bold text-red-500">4+ {language === 'en' ? 'years' : 'años'}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-gray-500">CSTU</p>
+                      <p className="text-lg font-bold text-green-500">{language === 'en' ? 'Months' : 'Meses'}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+              
+              {/* In-Demand Skills */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+              >
+                <div className="flex items-center mb-4">
+                  <BarChart3 className="h-8 w-8 text-gold-500 mr-3" />
+                  <h3 className="text-xl font-bold text-navy-700">{t('inDemandSkills')}</h3>
+                </div>
+                <p className="text-navy-600">
+                  {t('inDemandSkillsContent')}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <span className="bg-navy-50 text-navy-600 px-3 py-1 rounded-full text-sm font-medium">HVAC</span>
+                  <span className="bg-navy-50 text-navy-600 px-3 py-1 rounded-full text-sm font-medium">{language === 'en' ? 'Electrical' : 'Eléctrico'}</span>
+                  <span className="bg-navy-50 text-navy-600 px-3 py-1 rounded-full text-sm font-medium">{language === 'en' ? 'Job Security' : 'Seguridad Laboral'}</span>
+                </div>
+              </motion.div>
+              
+              {/* Sacramento Roots */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+              >
+                <div className="flex items-center mb-4">
+                  <MapPin className="h-8 w-8 text-gold-500 mr-3" />
+                  <h3 className="text-xl font-bold text-navy-700">{t('sacramentoRoots')}</h3>
+                </div>
+                <p className="text-navy-600">
+                  {t('sacramentoRootsContent')}
+                </p>
+                <div className="mt-4 text-center">
+                  <span className="inline-block bg-navy-600 text-white px-4 py-2 rounded-lg font-medium">
+                    {language === 'en' ? 'Sacramento\'s Premier Trade School' : 'Escuela de Oficios Principal de Sacramento'}
+                  </span>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Earning Potential Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-navy-700 mb-8 text-center">
+              {t('earningPotentialTitle')}
+            </h2>
+            
+            <p className="text-lg text-navy-600 mb-10 leading-relaxed">
+              {t('earningPotentialContent')}
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-10">
+              <div className="bg-navy-50 p-6 rounded-xl text-center">
+                <h3 className="font-bold text-navy-700 mb-3">{language === 'en' ? 'HVAC Professionals' : 'Profesionales de HVAC'}</h3>
+                <p className="text-3xl font-bold text-navy-600">$60,590</p>
+                <p className="text-sm text-navy-500 mt-1">{language === 'en' ? 'Median Annual Salary' : 'Salario Anual Medio'}</p>
+              </div>
+              <div className="bg-navy-50 p-6 rounded-xl text-center">
+                <h3 className="font-bold text-navy-700 mb-3">{language === 'en' ? 'Electrician Professionals' : 'Profesionales Electricistas'}</h3>
+                <p className="text-3xl font-bold text-navy-600">$60,240</p>
+                <p className="text-sm text-navy-500 mt-1">{language === 'en' ? 'Median Annual Salary' : 'Salario Anual Medio'}</p>
+              </div>
+            </div>
+            
+            <div className="bg-gold-50 border-l-4 border-gold-500 pl-6 py-4 rounded-r-lg">
+              <p className="text-navy-800 font-medium">
+                {language === 'en'
+                  ? "Unlike many college graduates who face years of student loan debt, our graduates can start earning a great income immediately after completing their training."
+                  : "A diferencia de muchos graduados universitarios que enfrentan años de deuda de préstamos estudiantiles, nuestros graduados pueden comenzar a ganar un gran ingreso inmediatamente después de completar su capacitación."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Our Approach Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-navy-700 mb-10 text-center">
+              {t('ourApproachTitle')}
+            </h2>
+            
+            <div className="space-y-8">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="flex items-start"
+              >
+                <div className="bg-navy-100 p-3 rounded-full mr-5">
+                  <CheckCircle className="h-6 w-6 text-navy-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-navy-700 mb-2">{t('blendedLearning')}</h3>
+                  <p className="text-navy-600">{t('blendedLearningContent')}</p>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start"
+              >
+                <div className="bg-navy-100 p-3 rounded-full mr-5">
+                  <CheckCircle className="h-6 w-6 text-navy-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-navy-700 mb-2">{t('affordableEducation')}</h3>
+                  <p className="text-navy-600">{t('affordableEducationContent')}</p>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="flex items-start"
+              >
+                <div className="bg-navy-100 p-3 rounded-full mr-5">
+                  <CheckCircle className="h-6 w-6 text-navy-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-navy-700 mb-2">{t('careerFocused')}</h3>
+                  <p className="text-navy-600">{t('careerFocusedContent')}</p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* CTA Section */}
+      <section className="py-16 bg-navy-600 text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              {t('joiningCSTUTitle')}
+            </h2>
+            <p className="text-xl mb-10 text-navy-100">
+              {t('joiningCSTUContent')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/apply">
+                <Button className="bg-gold-400 hover:bg-gold-500 text-navy-800 text-lg px-8 py-6 w-full sm:w-auto">
+                  {language === 'en' ? 'Apply Now' : 'Aplicar Ahora'}
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button className="bg-white hover:bg-navy-50 text-navy-800 text-lg px-8 py-6 w-full sm:w-auto">
+                  {language === 'en' ? 'Contact Us' : 'Contáctanos'}
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default AboutUs;
