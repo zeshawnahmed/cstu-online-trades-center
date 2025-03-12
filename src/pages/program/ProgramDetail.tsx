@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, Clock, Award, Users, BookOpen, Calendar, DollarSign } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Clock, Award, Users, BookOpen, DollarSign, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -16,17 +16,22 @@ interface ProgramDetail {
   certification: string;
   imageUrl: string;
   curriculum: string[];
-  career: string[];
+  salaryInfo: {
+    median: string;
+    growth: string;
+    period: string;
+    demand: string;
+  };
 }
 
 const programs: Record<string, ProgramDetail> = {
   hvac: {
     title: 'HVAC Technician',
-    description: 'Learn to install, maintain, and repair heating, ventilation, and air conditioning systems.',
+    description: 'Learn essential skills to become job-ready in heating, ventilation, and air conditioning systems.',
     fullDescription: [
-      'Our comprehensive HVAC program provides the knowledge and skills needed to excel in heating, ventilation, and air conditioning installation, maintenance, and repair.',
-      'Through a combination of online theoretical learning and hands-on externship experience, students will develop a deep understanding of HVAC systems, troubleshooting techniques, and industry best practices.',
-      'Graduates will be prepared for entry-level positions in residential and commercial HVAC services with the foundational skills employers are looking for.'
+      'Our HVAC program focuses on teaching the essential skills needed to succeed in entry-level positions in the heating, ventilation, and air conditioning industry.',
+      'Through our self-paced online learning platform, you'll develop a foundational understanding of HVAC systems, troubleshooting techniques, and industry best practices.',
+      'Upon program completion, you'll be prepared for entry-level HVAC positions with the core skills employers are looking for in new technicians.'
     ],
     price: '$2,500',
     duration: 'Self-paced',
@@ -42,73 +47,41 @@ const programs: Record<string, ProgramDetail> = {
       'Energy Efficiency and Green Technology',
       'Customer Service and Business Operations'
     ],
-    career: [
-      'HVAC Technician',
-      'HVAC Installer',
-      'HVAC Service Technician',
-      'Refrigeration Technician',
-      'HVAC Maintenance Specialist'
-    ]
+    salaryInfo: {
+      median: '$60,590',
+      growth: '5%',
+      period: '2022-2032',
+      demand: 'High demand across residential and commercial sectors'
+    }
   },
-  plumbing: {
-    title: 'Plumbing',
-    description: 'Master the skills to install and repair pipes, fixtures, and other plumbing systems.',
+  electrician: {
+    title: 'Electrician',
+    description: 'Learn essential skills to become job-ready for electrical installation, maintenance, and repair.',
     fullDescription: [
-      'The plumbing program at CSTU provides comprehensive training in the installation, maintenance, and repair of plumbing systems for residential and commercial buildings.',
-      'Students will learn about pipe system design, plumbing fixtures, water distribution, drainage systems, and plumbing codes and regulations.',
-      'Through our combination of online coursework and hands-on externship experience, graduates will develop the technical skills needed to begin a rewarding career in the plumbing industry.'
+      'Our Electrician program provides comprehensive training in the fundamental skills needed to begin a career in the electrical field.',
+      'Students will learn about electrical systems, wiring, safety procedures, and code requirements through our flexible online platform and externship opportunities.',
+      'Graduates will be prepared with the essential skills needed to pursue entry-level positions in residential and commercial electrical work.'
     ],
     price: '$2,500',
     duration: 'Self-paced',
-    certification: 'Plumbing Technology Certification',
+    certification: 'Electrical Technology Certification',
     imageUrl: '/plumbing-program.jpg',
     curriculum: [
-      'Plumbing Safety and Tools',
-      'Blueprint Reading and Math for Plumbers',
-      'Pipe Systems and Materials',
-      'Fixture Installation and Repair',
-      'Water Distribution Systems',
-      'Drainage and Vent Systems',
-      'Plumbing Codes and Regulations',
-      'Troubleshooting and Emergency Repairs'
+      'Electrical Safety and OSHA Regulations',
+      'Basic Electrical Theory and Concepts',
+      'Residential Wiring and Installation',
+      'Commercial Electrical Systems',
+      'Electrical Code Requirements',
+      'Troubleshooting and Repair',
+      'Electrical Controls and Motors',
+      'Green Energy and Solar Installations'
     ],
-    career: [
-      'Residential Plumber',
-      'Commercial Plumber',
-      'Plumbing Service Technician',
-      'Pipefitter Assistant',
-      'Plumbing Maintenance Technician'
-    ]
-  },
-  welding: {
-    title: 'Welding',
-    description: 'Learn various welding techniques and metal fabrication skills for a career in manufacturing and construction.',
-    fullDescription: [
-      'The welding program at CSTU provides students with the knowledge and skills needed to perform various welding techniques used in manufacturing, construction, and repair environments.',
-      'Students will learn about different welding processes, metal properties, blueprint reading, and safety practices through our online curriculum and hands-on externship experience.',
-      'Graduates will be prepared to pursue entry-level positions in a variety of industries that require skilled welders, including construction, manufacturing, and fabrication.'
-    ],
-    price: '$2,500',
-    duration: 'Self-paced',
-    certification: 'Welding Technology Certification',
-    imageUrl: '/welding-program.jpg',
-    curriculum: [
-      'Welding Safety and Equipment',
-      'Blueprint Reading for Welders',
-      'Shielded Metal Arc Welding (SMAW)',
-      'Gas Metal Arc Welding (GMAW/MIG)',
-      'Gas Tungsten Arc Welding (GTAW/TIG)',
-      'Flux Cored Arc Welding (FCAW)',
-      'Metal Cutting and Fabrication',
-      'Welding Inspection and Testing'
-    ],
-    career: [
-      'Production Welder',
-      'MIG/TIG Welder',
-      'Fabrication Welder',
-      'Welding Technician',
-      'Metal Fabricator'
-    ]
+    salaryInfo: {
+      median: '$60,240',
+      growth: '7%',
+      period: '2022-2032',
+      demand: 'Strong demand for qualified electricians in construction and maintenance'
+    }
   }
 };
 
@@ -191,12 +164,11 @@ const ProgramDetail = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-gold-400 hover:bg-gold-500 text-navy-900 font-medium px-8 py-6 text-lg">
-                  Apply Now
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
-                  Download Brochure
-                </Button>
+                <Link to="/apply">
+                  <Button className="bg-gold-400 hover:bg-gold-500 text-navy-900 font-medium px-8 py-6 text-lg">
+                    Apply Now
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -227,23 +199,19 @@ const ProgramDetail = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-navy-600">Self-paced online learning that fits your schedule</span>
+                    <span className="text-navy-600">Learn Essential Skills To Become Job-Ready</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-navy-600">Comprehensive curriculum covering theory and practical applications</span>
+                    <span className="text-navy-600">Self Paced, Online Learning</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-navy-600">Hands-on externship with industry partners</span>
+                    <span className="text-navy-600">Connect with Local Cohort</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-navy-600">Industry-recognized certification preparation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-navy-600">Career services and job placement assistance</span>
+                    <span className="text-navy-600">Hands-On Externship with Local Professional*</span>
                   </li>
                 </ul>
               </div>
@@ -257,25 +225,34 @@ const ProgramDetail = () => {
                   className="w-full h-auto rounded-xl mb-8 shadow-lg"
                 />
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-navy-50 p-5 rounded-xl">
-                    <div className="flex items-center mb-3">
-                      <Calendar className="h-6 w-6 text-navy-600 mr-3" />
-                      <h3 className="font-semibold text-navy-700">Enrollment</h3>
-                    </div>
-                    <p className="text-navy-600">
-                      Open enrollment - start anytime
-                    </p>
-                  </div>
+                {/* Job Market Information */}
+                <div className="bg-navy-50 p-6 rounded-xl border border-navy-100">
+                  <h3 className="text-xl font-bold text-navy-700 mb-4">2025 Job Market Outlook</h3>
                   
-                  <div className="bg-navy-50 p-5 rounded-xl">
-                    <div className="flex items-center mb-3">
-                      <BookOpen className="h-6 w-6 text-navy-600 mr-3" />
-                      <h3 className="font-semibold text-navy-700">Format</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <DollarSign className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-navy-700">Median Annual Salary</p>
+                        <p className="text-navy-600 text-xl font-bold">{program.salaryInfo.median}</p>
+                      </div>
                     </div>
-                    <p className="text-navy-600">
-                      Online + hands-on externship
-                    </p>
+                    
+                    <div className="flex items-start">
+                      <TrendingUp className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-navy-700">Industry Growth</p>
+                        <p className="text-navy-600">{program.salaryInfo.growth} ({program.salaryInfo.period})</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <Users className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-navy-700">Job Demand</p>
+                        <p className="text-navy-600">{program.salaryInfo.demand}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -290,7 +267,7 @@ const ProgramDetail = () => {
           <SectionHeading
             subtitle="What You'll Learn"
             title="Program Curriculum"
-            description="Our comprehensive curriculum is designed to provide both theoretical knowledge and practical skills needed for success in the field."
+            description="Our focused curriculum is designed to provide the essential skills needed to become job-ready for entry-level positions."
             centered={true}
             className="mb-12"
           />
@@ -319,54 +296,23 @@ const ProgramDetail = () => {
         </div>
       </section>
       
-      {/* Career Opportunities */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            subtitle="Career Paths"
-            title="Your Future in the Industry"
-            description="Graduates of our program will be prepared for a variety of entry-level positions within the industry."
-            centered={true}
-            className="mb-12"
-          />
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {program.career.map((career, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="p-5 bg-navy-50 rounded-xl text-center"
-                >
-                  <h3 className="font-medium text-navy-700">{career}</h3>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      
       {/* CTA */}
       <section className="py-16 bg-navy-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
-              Ready to Start Your Journey?
+              Ready to Start Your Career?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Enrollment is open now for our {program.title} program. Take the first step toward your new career today.
+              Apply now for our {program.title} program and gain the essential skills needed for entry-level positions.
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button className="bg-gold-400 hover:bg-gold-500 text-navy-900 font-medium px-8 py-6 text-lg">
-                Apply Now
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
-                Contact an Advisor
-              </Button>
+            <div className="flex justify-center">
+              <Link to="/apply">
+                <Button className="bg-gold-400 hover:bg-gold-500 text-navy-900 font-medium px-8 py-6 text-lg">
+                  Apply Now
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

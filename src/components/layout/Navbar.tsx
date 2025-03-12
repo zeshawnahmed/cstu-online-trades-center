@@ -33,8 +33,9 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-3xl md:text-4xl font-extrabold tracking-tight text-navy-600">
-                <span className="text-navy-700">C</span>
-                <span className="text-gold-500">STU</span>
+                <span className="text-navy-700 hidden sm:inline">California Skilled Trades University</span>
+                <span className="text-navy-700 sm:hidden">C</span>
+                <span className="text-gold-500 sm:hidden">STU</span>
               </span>
             </Link>
           </div>
@@ -52,21 +53,12 @@ const Navbar = () => {
                   <Link to="/programs/hvac" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
                     HVAC
                   </Link>
-                  <Link to="/programs/plumbing" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
-                    Plumbing
-                  </Link>
-                  <Link to="/programs/welding" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
-                    Welding
+                  <Link to="/programs/electrician" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
+                    Electrician
                   </Link>
                 </div>
               </div>
             </div>
-            <Link to="/about" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
-              About
-            </Link>
-            <Link to="/contact" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
-              Contact
-            </Link>
           </nav>
           
           <div className="hidden md:block">
@@ -106,35 +98,14 @@ const Navbar = () => {
                   HVAC
                 </Link>
                 <Link 
-                  to="/programs/plumbing" 
+                  to="/programs/electrician" 
                   className="block py-1 text-navy-500 hover:text-navy-400"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Plumbing
-                </Link>
-                <Link 
-                  to="/programs/welding" 
-                  className="block py-1 text-navy-500 hover:text-navy-400"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Welding
+                  Electrician
                 </Link>
               </div>
             </div>
-            <Link 
-              to="/about" 
-              className="block py-2 text-navy-500 hover:text-navy-400"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link 
-              to="/contact" 
-              className="block py-2 text-navy-500 hover:text-navy-400"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
             <Button className="w-full bg-gold-400 hover:bg-gold-500 text-navy-700 mt-2">
               Apply Now
             </Button>

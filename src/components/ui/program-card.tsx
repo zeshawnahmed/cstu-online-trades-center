@@ -57,30 +57,30 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
       </div>
       
       <div className="p-6 flex-grow flex flex-col">
-        <h3 className="text-2xl font-bold text-navy-700 mb-3">{title}</h3>
-        <p className="text-navy-600 mb-5">{description}</p>
+        <h3 className="text-2xl font-bold text-navy-700 mb-2">{title}</h3>
+        <p className="text-navy-600 mb-4">{description}</p>
         
-        {/* Salary Information */}
-        <div className="bg-navy-50 p-5 rounded-lg mb-6">
-          <h4 className="font-bold text-navy-700 text-xl mb-3">2025 Job Statistics:</h4>
-          <div className="flex items-center gap-2 mb-3">
-            <DollarSign className="h-6 w-6 text-gold-500" />
-            <span className="text-lg font-bold text-navy-700">Median Annual Salary: {salaryInfo?.median}</span>
+        {/* Salary Information - Condensed */}
+        <div className="bg-navy-50 p-4 rounded-lg mb-4">
+          <h4 className="font-bold text-navy-700 text-xl mb-2">2025 Job Statistics:</h4>
+          <div className="flex items-center gap-2 mb-1">
+            <DollarSign className="h-5 w-5 text-gold-500" />
+            <span className="text-base font-bold text-navy-700">Median Annual Salary: {salaryInfo?.median}</span>
           </div>
           <div className="flex items-center gap-2">
-            <TrendingUp className="h-6 w-6 text-gold-500" />
+            <TrendingUp className="h-5 w-5 text-gold-500" />
             <span className="text-navy-600">Projected Growth: {salaryInfo?.growth} ({salaryInfo?.period})</span>
           </div>
         </div>
         
-        {/* Program Highlights */}
-        <div className="mb-6">
-          <h4 className="font-bold text-navy-700 text-xl mb-3">Program Highlights:</h4>
-          <ul className="space-y-3">
+        {/* Program Highlights - More compact */}
+        <div className="mb-4">
+          <h4 className="font-bold text-navy-700 text-lg mb-2">Program Highlights:</h4>
+          <ul className="space-y-2">
             {keyFeatures?.map((feature, index) => (
               <li key={index} className="flex items-start">
-                <CheckCircle className="h-6 w-6 mr-3 text-gold-500 flex-shrink-0 mt-0.5" />
-                <span className="text-navy-600 text-lg">{feature}</span>
+                <CheckCircle className="h-5 w-5 mr-2 text-gold-500 flex-shrink-0 mt-0.5" />
+                <span className="text-navy-600">{feature}</span>
               </li>
             ))}
           </ul>
@@ -88,7 +88,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
         
         <div className="mt-auto">
           <Link to={`/programs/${slug}`}>
-            <Button className="w-full bg-gold-400 hover:bg-gold-500 text-navy-700 font-bold text-lg py-6">
+            <Button className="w-full bg-gold-400 hover:bg-gold-500 text-navy-700 font-bold py-4">
               Learn More
             </Button>
           </Link>
