@@ -11,6 +11,21 @@ const Footer = () => {
   return (
     <footer className="bg-navy-500 text-white">
       <div className="container mx-auto px-4 py-12 md:py-16">
+        {/* Prominent Admissions Contact at top */}
+        <div className="text-center mb-12">
+          <div className="bg-gold-400 text-navy-800 font-bold px-8 py-6 rounded-lg inline-block border-2 border-white">
+            <p className="text-xl font-bold mb-2">
+              {language === 'en' ? 'ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES'}
+            </p>
+            <div className="flex items-center justify-center gap-2">
+              <Phone className="h-6 w-6" />
+              <p className="text-3xl font-bold">
+                (916) 365-6907
+              </p>
+            </div>
+          </div>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1 - About */}
           <div>

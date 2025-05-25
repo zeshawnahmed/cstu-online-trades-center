@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 
@@ -24,6 +24,23 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
+            {/* Prominent Admissions Contact */}
+            <div className="mb-8">
+              <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white">
+                <div className="flex items-center justify-center gap-2">
+                  <Phone className="h-5 w-5" />
+                  <div>
+                    <p className="text-sm font-bold mb-1">
+                      {language === 'en' ? 'ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES'}
+                    </p>
+                    <p className="text-xl font-bold">
+                      (916) 365-6907
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
               {language === 'en' 
                 ? 'Skilled Trade Mastery and Your Prosperous Future Begins Here.'

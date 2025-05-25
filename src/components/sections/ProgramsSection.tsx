@@ -16,7 +16,7 @@ const ProgramsSection = () => {
       description: language === 'en' 
         ? 'Learn essential skills to become job-ready in commercial truck driving with CDL Class A or B license, plus optional Hazmat Endorsement - FMCSA-Approved Program'
         : 'Aprende habilidades esenciales para estar listo para trabajar en el manejo de camiones comerciales con licencia CDL Clase A o B, más Endoso Hazmat opcional - Programa Aprobado por FMCSA',
-      price: language === 'en' ? 'Flat Rate Tuition: $3,500' : 'Matrícula de Tarifa Plana: $3,500',
+      price: language === 'en' ? 'Flat Rate Tuition: $2,499' : 'Matrícula de Tarifa Plana: $2,499',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'CDL Class A/B License' : 'Licencia CDL Clase A/B',
       imageUrl: '/truck-driving-program.jpg',
@@ -53,6 +53,18 @@ const ProgramsSection = () => {
           centered={true}
           className="mb-8"
         />
+        
+        {/* Prominent Admissions Contact */}
+        <div className="text-center mb-8">
+          <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-navy-600">
+            <p className="text-lg font-bold mb-1">
+              {language === 'en' ? 'ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES'}
+            </p>
+            <p className="text-2xl font-bold">
+              (916) 365-6907
+            </p>
+          </div>
+        </div>
         
         <div className="max-w-3xl mx-auto">
           {programs.map((program, index) => (

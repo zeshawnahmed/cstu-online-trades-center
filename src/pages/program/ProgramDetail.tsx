@@ -35,7 +35,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "Through our comprehensive FMCSA-recognized training, you'll develop expertise in safe driving practices, vehicle inspection, cargo handling, and transportation regulations.",
           "Upon program completion, you'll be prepared for entry level commercial driving positions with CDL Class A or B license and optional Hazmat Endorsement."
         ],
-        price: '$3,500',
+        price: '$2,499',
         duration: 'Self-paced',
         certification: 'CDL Class A/B License',
         curriculum: [
@@ -66,7 +66,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "A través de nuestra capacitación integral reconocida por FMCSA, desarrollarás experiencia en prácticas de manejo seguro, inspección de vehículos, manejo de carga y regulaciones de transporte.",
           "Al completar el programa, estarás preparado para puestos de manejo comercial de nivel inicial con licencia CDL Clase A o B y Endoso Hazmat opcional."
         ],
-        price: '$3,500',
+        price: '$2,499',
         duration: 'A tu ritmo',
         certification: 'Licencia CDL Clase A/B',
         curriculum: [
@@ -125,6 +125,18 @@ const ProgramDetail = () => {
             <ArrowLeft className="h-4 w-4 mr-2" />
             {t('backToPrograms')}
           </Link>
+          
+          {/* Prominent Admissions Contact */}
+          <div className="text-center mb-8">
+            <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white">
+              <p className="text-lg font-bold mb-1">
+                {language === 'en' ? 'ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES'}
+              </p>
+              <p className="text-2xl font-bold">
+                (916) 365-6907
+              </p>
+            </div>
+          </div>
           
           <div className="max-w-3xl">
             <motion.div
@@ -260,7 +272,7 @@ const ProgramDetail = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            subtitle={t('whatYouWillLearn')}
+            subtitle={language === 'en' ? 'FMCSA-Approved Program Curriculum' : 'Plan de Estudios del Programa Aprobado por FMCSA'}
             title={t('programCurriculum')}
             description={t('curriculumDescription')}
             centered={true}
@@ -295,6 +307,18 @@ const ProgramDetail = () => {
       <section className="py-16 bg-navy-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
+            {/* Prominent Admissions Contact */}
+            <div className="mb-8">
+              <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white">
+                <p className="text-lg font-bold mb-1">
+                  {language === 'en' ? 'ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES'}
+                </p>
+                <p className="text-2xl font-bold">
+                  (916) 365-6907
+                </p>
+              </div>
+            </div>
+            
             <h2 className="text-3xl font-bold mb-6">
               {t('readyToStartCareer')}
             </h2>
