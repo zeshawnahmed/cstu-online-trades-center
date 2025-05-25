@@ -12,10 +12,10 @@ const ProgramsSection = () => {
 
   const programs = [
     {
-      title: language === 'en' ? 'Commercial Truck Driving & CDL' : 'Manejo de Camiones Comerciales y CDL',
+      title: language === 'en' ? 'Commercial Truck Driving Program (CDL Class A and/or B with optional Hazmat Endorsement)' : 'Programa de Manejo de Camiones Comerciales (CDL Clase A y/o B con Endoso Hazmat Opcional)',
       description: language === 'en' 
-        ? 'Learn essential skills to become job-ready in commercial truck driving with CDL Class A or B license, plus optional Hazmat Endorsement'
-        : 'Aprende habilidades esenciales para estar listo para trabajar en el manejo de camiones comerciales con licencia CDL Clase A o B, más Endoso Hazmat opcional',
+        ? 'Learn essential skills to become job-ready in commercial truck driving with CDL Class A or B license, plus optional Hazmat Endorsement - FMCSA-Approved Program'
+        : 'Aprende habilidades esenciales para estar listo para trabajar en el manejo de camiones comerciales con licencia CDL Clase A o B, más Endoso Hazmat opcional - Programa Aprobado por FMCSA',
       price: language === 'en' ? 'Flat Rate Tuition: $3,500' : 'Matrícula de Tarifa Plana: $3,500',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'CDL Class A/B License' : 'Licencia CDL Clase A/B',
@@ -23,13 +23,13 @@ const ProgramsSection = () => {
       slug: 'commercial-truck-driving',
       keyFeatures: [
         language === 'en' 
-          ? 'Learn Essential Skills To Become Job-Ready in Commercial Truck Driving for entry level positions'
-          : 'Aprende habilidades esenciales para estar listo para trabajar en Manejo de Camiones Comerciales en puestos de nivel inicial',
+          ? 'FMCSA-Approved Program - Learn Essential Skills To Become Job-Ready in Commercial Truck Driving for entry level positions'
+          : 'Programa Aprobado por FMCSA - Aprende habilidades esenciales para estar listo para trabajar en Manejo de Camiones Comerciales en puestos de nivel inicial',
         language === 'en' ? 'CDL Class A or B License Training' : 'Capacitación para Licencia CDL Clase A o B',
         language === 'en' ? 'Optional Hazmat Endorsement' : 'Endoso Hazmat Opcional',
-        language === 'en' ? 'Self Paced, Online Learning' : 'Aprendizaje en línea a tu propio ritmo',
-        language === 'en' ? 'Connect with Local Cohort' : 'Conéctate con grupos locales',
-        language === 'en' ? 'Hands-On Externship with Local Professional*' : 'Prácticas presenciales con profesionales locales*'
+        language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
+        language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos locales a través de experiencias divertidas',
+        language === 'en' ? 'Hands-On Behind-The-Wheel-Training With Trained Professional' : 'Entrenamiento práctico al volante con profesionales capacitados'
       ],
       salaryInfo: {
         median: '$70,000',
@@ -47,8 +47,8 @@ const ProgramsSection = () => {
           subtitle={language === 'en' ? 'Our Program' : 'Nuestro Programa'}
           title={language === 'en' ? 'Commercial Truck Driving Training' : 'Capacitación en Manejo de Camiones Comerciales'}
           description={language === 'en' 
-            ? 'Master the skills needed for a successful career in commercial truck driving with comprehensive CDL training'
-            : 'Domina las habilidades necesarias para una carrera exitosa en el manejo de camiones comerciales con capacitación integral de CDL'
+            ? 'Master the Skills Needed for a Successful Career in Commercial Truck Driving with Comprehensive CDL training for Class A and/or B License with Optional Hazmat Endorsement. FMCSA-Approved Program.'
+            : 'Domina las habilidades necesarias para una carrera exitosa en el manejo de camiones comerciales con capacitación integral de CDL para Licencia Clase A y/o B con Endoso Hazmat Opcional. Programa Aprobado por FMCSA.'
           }
           centered={true}
           className="mb-8"
@@ -92,8 +92,8 @@ const ProgramsSection = () => {
           </div>
           <p className="text-sm text-gray-500 mt-3">
             *{language === 'en' 
-              ? 'Externship placement assistance available upon program completion and subject to industry demand'
-              : 'Asistencia para colocación en prácticas disponible al completar el programa y sujeta a la demanda de la industria'
+              ? 'FMCSA-Approved Program - Training assistance available upon program completion and subject to industry demand'
+              : 'Programa Aprobado por FMCSA - Asistencia de capacitación disponible al completar el programa y sujeta a la demanda de la industria'
             }
           </p>
         </div>

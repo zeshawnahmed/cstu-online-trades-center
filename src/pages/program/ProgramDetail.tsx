@@ -28,18 +28,18 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
   if (language === 'en') {
     return {
       'commercial-truck-driving': {
-        title: 'Commercial Truck Driving & CDL',
-        description: 'Learn essential skills to become job-ready in commercial truck driving with CDL Class A or B license, plus optional Hazmat Endorsement.',
+        title: 'Commercial Truck Driving Program (CDL Class A and/or B with optional Hazmat Endorsement)',
+        description: 'Learn essential skills to become job-ready in commercial truck driving with CDL Class A or B license, plus optional Hazmat Endorsement - FMCSA-Approved Program.',
         fullDescription: [
-          "Our Commercial Truck Driving program focuses on teaching the essential skills needed to succeed in entry level positions in the trucking and transportation industry.",
-          "Through our comprehensive training, you'll develop expertise in safe driving practices, vehicle inspection, cargo handling, and transportation regulations.",
+          "Our FMCSA-Approved Commercial Truck Driving program focuses on teaching the essential skills needed to succeed in entry level positions in the trucking and transportation industry.",
+          "Through our comprehensive FMCSA-recognized training, you'll develop expertise in safe driving practices, vehicle inspection, cargo handling, and transportation regulations.",
           "Upon program completion, you'll be prepared for entry level commercial driving positions with CDL Class A or B license and optional Hazmat Endorsement."
         ],
         price: '$3,500',
         duration: 'Self-paced',
         certification: 'CDL Class A/B License',
         curriculum: [
-          'Commercial Driving Fundamentals and Safety',
+          'Commercial Driving Fundamentals and Safety (FMCSA-Approved)',
           'Vehicle Inspection and Maintenance',
           'Cargo Handling and Securing',
           'Transportation Regulations and Compliance',
@@ -59,18 +59,18 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
   } else {
     return {
       'commercial-truck-driving': {
-        title: 'Manejo de Camiones Comerciales y CDL',
-        description: 'Aprende habilidades esenciales para estar listo para trabajar en el manejo de camiones comerciales con licencia CDL Clase A o B, más Endoso Hazmat opcional.',
+        title: 'Programa de Manejo de Camiones Comerciales (CDL Clase A y/o B con Endoso Hazmat Opcional)',
+        description: 'Aprende habilidades esenciales para estar listo para trabajar en el manejo de camiones comerciales con licencia CDL Clase A o B, más Endoso Hazmat opcional - Programa Aprobado por FMCSA.',
         fullDescription: [
-          "Nuestro programa de Manejo de Camiones Comerciales se enfoca en enseñar las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria del transporte.",
-          "A través de nuestra capacitación integral, desarrollarás experiencia en prácticas de manejo seguro, inspección de vehículos, manejo de carga y regulaciones de transporte.",
+          "Nuestro programa de Manejo de Camiones Comerciales aprobado por FMCSA se enfoca en enseñar las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria del transporte.",
+          "A través de nuestra capacitación integral reconocida por FMCSA, desarrollarás experiencia en prácticas de manejo seguro, inspección de vehículos, manejo de carga y regulaciones de transporte.",
           "Al completar el programa, estarás preparado para puestos de manejo comercial de nivel inicial con licencia CDL Clase A o B y Endoso Hazmat opcional."
         ],
         price: '$3,500',
         duration: 'A tu ritmo',
         certification: 'Licencia CDL Clase A/B',
         curriculum: [
-          'Fundamentos y Seguridad del Manejo Comercial',
+          'Fundamentos y Seguridad del Manejo Comercial (Aprobado por FMCSA)',
           'Inspección y Mantenimiento de Vehículos',
           'Manejo y Aseguramiento de Carga',
           'Regulaciones de Transporte y Cumplimiento',
@@ -132,6 +132,9 @@ const ProgramDetail = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
+              <div className="bg-gold-400 text-navy-900 font-bold px-3 py-1 rounded-lg text-sm inline-block mb-4">
+                FMCSA-Approved Program
+              </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 {program.title}
               </h1>
@@ -150,7 +153,7 @@ const ProgramDetail = () => {
                 </div>
                 <div className="flex items-center">
                   <Users className="h-5 w-5 mr-2 text-gold-400" />
-                  <span>{t('handsOnExternship')}</span>
+                  <span>{language === 'en' ? 'Hands-On Behind-The-Wheel-Training' : 'Entrenamiento práctico al volante'}</span>
                 </div>
               </div>
               
@@ -194,7 +197,7 @@ const ProgramDetail = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-navy-600">{language === 'en' ? 'Learn Essential Skills To Become Job-Ready for entry level positions' : 'Aprende habilidades esenciales para estar listo para trabajar en puestos de nivel inicial'}</span>
+                  <span className="text-navy-600">{language === 'en' ? 'FMCSA-Approved Program - Learn Essential Skills To Become Job-Ready for entry level positions' : 'Programa Aprobado por FMCSA - Aprende habilidades esenciales para estar listo para trabajar en puestos de nivel inicial'}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -206,15 +209,15 @@ const ProgramDetail = () => {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-navy-600">{language === 'en' ? 'Self Paced, Online Learning' : 'Aprendizaje en línea a tu propio ritmo'}</span>
+                  <span className="text-navy-600">{language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados'}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-navy-600">{language === 'en' ? 'Connect with Local Cohort' : 'Conéctate con grupos locales'}</span>
+                  <span className="text-navy-600">{language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos locales a través de experiencias divertidas'}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-navy-600">{language === 'en' ? 'Hands-On Externship with Local Professional*' : 'Prácticas presenciales con profesionales locales*'}</span>
+                  <span className="text-navy-600">{language === 'en' ? 'Hands-On Behind-The-Wheel-Training With Trained Professional' : 'Entrenamiento práctico al volante con profesionales capacitados'}</span>
                 </li>
               </ul>
             </div>
@@ -314,7 +317,7 @@ const ProgramDetail = () => {
             
             {/* Added disclaimer */}
             <p className="text-xs text-gray-400 mt-8">
-              *{language === 'en' ? 'Externship placement assistance available upon program completion and subject to industry demand' : 'Asistencia para colocación en prácticas disponible al completar el programa y sujeta a la demanda de la industria'}
+              *{language === 'en' ? 'FMCSA-Approved Program - Training assistance available upon program completion and subject to industry demand' : 'Programa Aprobado por FMCSA - Asistencia de capacitación disponible al completar el programa y sujeta a la demanda de la industria'}
             </p>
           </div>
         </div>

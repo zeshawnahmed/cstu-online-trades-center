@@ -26,24 +26,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
               {language === 'en' 
-                ? 'Skilled Trade Mastery and Your Prosperous Future Begins Here'
-                : 'El Dominio de Oficios Especializados y Tu Futuro Próspero Comienza Aquí'
+                ? 'Skilled Trade Mastery and Your Prosperous Future Begins Here.'
+                : 'El Dominio de Oficios Especializados y Tu Futuro Próspero Comienza Aquí.'
               }
             </h1>
             
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
               {language === 'en'
-                ? 'Launch your career in Commercial Truck Driving with CDL Class A or B license training, plus optional Hazmat Endorsement'
-                : 'Lanza tu carrera en el Manejo de Camiones Comerciales con capacitación para licencia CDL Clase A o B, más Endoso Hazmat opcional'
+                ? 'We Offer Specialized, Hands-On Career Training For You to Level Up Your Financial Future By Mastering In-Demand Skilled Trades.'
+                : 'Ofrecemos Capacitación Especializada y Práctica para que Mejores tu Futuro Financiero al Dominar Oficios Especializados en Demanda.'
               }
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <div className="flex flex-wrap justify-center gap-3 mb-10">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.3 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-5 py-3 rounded-lg backdrop-blur-sm"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm"
               >
                 {t('becomeJobReady')}
               </motion.div>
@@ -52,7 +52,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.5 }}
-                className="bg-navy-400/80 text-white font-semibold px-5 py-3 rounded-lg backdrop-blur-sm"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm"
               >
                 {t('onlineSelfPaced')}
               </motion.div>
@@ -61,9 +61,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.7 }}
-                className="bg-navy-400/80 text-white font-semibold px-5 py-3 rounded-lg backdrop-blur-sm"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm"
               >
                 {t('handsOnTraining')}
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.9 }}
+                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm"
+              >
+                {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
               </motion.div>
             </div>
             
