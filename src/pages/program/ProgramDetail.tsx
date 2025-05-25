@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Clock, Award, Users, DollarSign, TrendingUp } from 'lucide-react';
@@ -14,7 +15,6 @@ interface ProgramDetail {
   price: string;
   duration: string;
   certification: string;
-  imageUrl: string;
   curriculum: string[];
   salaryInfo: {
     median: string;
@@ -27,123 +27,63 @@ interface ProgramDetail {
 const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> => {
   if (language === 'en') {
     return {
-      hvac: {
-        title: 'HVAC Technician',
-        description: 'Learn essential skills to become job-ready in heating, ventilation, and air conditioning systems for entry level positions.',
+      'commercial-truck-driving': {
+        title: 'Commercial Truck Driving & CDL',
+        description: 'Learn essential skills to become job-ready in commercial truck driving with CDL Class A or B license, plus optional Hazmat Endorsement.',
         fullDescription: [
-          "Our HVAC program focuses on teaching the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
-          "Through our self-paced online learning platform, you'll develop a foundational understanding of HVAC systems, troubleshooting techniques, and industry best practices.",
-          "Upon program completion, you'll be prepared for entry level HVAC positions with the core skills employers are looking for in new technicians."
+          "Our Commercial Truck Driving program focuses on teaching the essential skills needed to succeed in entry level positions in the trucking and transportation industry.",
+          "Through our comprehensive training, you'll develop expertise in safe driving practices, vehicle inspection, cargo handling, and transportation regulations.",
+          "Upon program completion, you'll be prepared for entry level commercial driving positions with CDL Class A or B license and optional Hazmat Endorsement."
         ],
-        price: '$2,500',
+        price: '$3,500',
         duration: 'Self-paced',
-        certification: 'HVAC Technician Certification',
-        imageUrl: '/hvac-program.jpg',
+        certification: 'CDL Class A/B License',
         curriculum: [
-          'HVAC Fundamentals and Safety',
-          'Heating Systems Installation and Service',
-          'Air Conditioning and Refrigeration',
-          'Ventilation Systems',
-          'Electrical Components and Controls',
-          'Troubleshooting and Maintenance',
-          'Energy Efficiency and Green Technology',
-          'Customer Service and Business Operations'
+          'Commercial Driving Fundamentals and Safety',
+          'Vehicle Inspection and Maintenance',
+          'Cargo Handling and Securing',
+          'Transportation Regulations and Compliance',
+          'Defensive Driving Techniques',
+          'Electronic Logging Devices (ELD)',
+          'Hazmat Endorsement Training (Optional)',
+          'Customer Service and Professional Conduct'
         ],
         salaryInfo: {
-          median: '$60,590',
-          growth: '5%',
+          median: '$70,000',
+          growth: '6%',
           period: '2022-2032',
-          demand: 'High demand across residential and commercial sectors in Sacramento and surrounding areas'
-        }
-      },
-      electrician: {
-        title: 'Electrician',
-        description: 'Learn essential skills to become job-ready for electrical installation, maintenance, and repair for entry level positions.',
-        fullDescription: [
-          "Our Electrician program provides comprehensive training in the fundamental skills needed to begin a career in the electrical field.",
-          "Students will learn about electrical systems, wiring, safety procedures, and code requirements through our flexible online platform and externship opportunities.",
-          "Graduates will be prepared with the essential skills needed to pursue entry level positions in residential and commercial electrical work."
-        ],
-        price: '$2,500',
-        duration: 'Self-paced',
-        certification: 'Electrical Technology Certification',
-        imageUrl: '/plumbing-program.jpg',
-        curriculum: [
-          'Electrical Safety and OSHA Regulations',
-          'Basic Electrical Theory and Concepts',
-          'Residential Wiring and Installation',
-          'Commercial Electrical Systems',
-          'Electrical Code Requirements',
-          'Troubleshooting and Repair',
-          'Electrical Controls and Motors',
-          'Green Energy and Solar Installations'
-        ],
-        salaryInfo: {
-          median: '$60,240',
-          growth: '7%',
-          period: '2022-2032',
-          demand: 'Strong demand for qualified electricians in construction and maintenance in Sacramento and surrounding areas'
+          demand: 'High demand for qualified commercial drivers across freight and logistics in Sacramento and surrounding areas'
         }
       }
     };
   } else {
     return {
-      hvac: {
-        title: 'Técnico de HVAC',
-        description: 'Aprende habilidades esenciales para estar listo para trabajar en sistemas de calefacción, ventilación y aire acondicionado en puestos de nivel inicial.',
+      'commercial-truck-driving': {
+        title: 'Manejo de Camiones Comerciales y CDL',
+        description: 'Aprende habilidades esenciales para estar listo para trabajar en el manejo de camiones comerciales con licencia CDL Clase A o B, más Endoso Hazmat opcional.',
         fullDescription: [
-          "Nuestro programa de HVAC se enfoca en enseñar las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
-          "A través de nuestra plataforma de aprendizaje en línea a tu propio ritmo, desarrollarás una comprensión fundamental de los sistemas HVAC, técnicas de solución de problemas y mejores prácticas de la industria.",
-          "Al completar el programa, estarás preparado para puestos de HVAC de nivel inicial con las habilidades básicas que los empleadores buscan en nuevos técnicos."
+          "Nuestro programa de Manejo de Camiones Comerciales se enfoca en enseñar las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria del transporte.",
+          "A través de nuestra capacitación integral, desarrollarás experiencia en prácticas de manejo seguro, inspección de vehículos, manejo de carga y regulaciones de transporte.",
+          "Al completar el programa, estarás preparado para puestos de manejo comercial de nivel inicial con licencia CDL Clase A o B y Endoso Hazmat opcional."
         ],
-        price: '$2,500',
+        price: '$3,500',
         duration: 'A tu ritmo',
-        certification: 'Certificación de Técnico HVAC',
-        imageUrl: '/hvac-program.jpg',
+        certification: 'Licencia CDL Clase A/B',
         curriculum: [
-          'Fundamentos y Seguridad de HVAC',
-          'Instalación y Servicio de Sistemas de Calefacción',
-          'Aire Acondicionado y Refrigeración',
-          'Sistemas de Ventilación',
-          'Componentes Eléctricos y Controles',
-          'Solución de Problemas y Mantenimiento',
-          'Eficiencia Energética y Tecnología Verde',
-          'Servicio al Cliente y Operaciones Comerciales'
+          'Fundamentos y Seguridad del Manejo Comercial',
+          'Inspección y Mantenimiento de Vehículos',
+          'Manejo y Aseguramiento de Carga',
+          'Regulaciones de Transporte y Cumplimiento',
+          'Técnicas de Manejo Defensivo',
+          'Dispositivos de Registro Electrónico (ELD)',
+          'Capacitación de Endoso Hazmat (Opcional)',
+          'Servicio al Cliente y Conducta Profesional'
         ],
         salaryInfo: {
-          median: '$60,590',
-          growth: '5%',
+          median: '$70,000',
+          growth: '6%',
           period: '2022-2032',
-          demand: 'Alta demanda en sectores residenciales y comerciales en Sacramento y áreas circundantes'
-        }
-      },
-      electrician: {
-        title: 'Electricista',
-        description: 'Aprende habilidades esenciales para estar listo para la instalación, mantenimiento y reparación eléctrica en puestos de nivel inicial.',
-        fullDescription: [
-          "Nuestro programa de Electricista proporciona capacitación integral en las habilidades fundamentales necesarias para comenzar una carrera en el campo eléctrico.",
-          "Los estudiantes aprenderán sobre sistemas eléctricos, cableado, procedimientos de seguridad y requisitos de códigos a través de nuestra plataforma en línea flexible y oportunidades de prácticas.",
-          "Los graduados estarán preparados con las habilidades esenciales necesarias para buscar puestos de nivel inicial en trabajo eléctrico residencial y comercial."
-        ],
-        price: '$2,500',
-        duration: 'A tu ritmo',
-        certification: 'Certificación en Tecnología Eléctrica',
-        imageUrl: '/plumbing-program.jpg',
-        curriculum: [
-          'Seguridad Eléctrica y Regulaciones OSHA',
-          'Teoría y Conceptos Eléctricos Básicos',
-          'Cableado e Instalación Residencial',
-          'Sistemas Eléctricos Comerciales',
-          'Requisitos del Código Eléctrico',
-          'Solución de Problemas y Reparación',
-          'Controles Eléctricos y Motores',
-          'Energía Verde e Instalaciones Solares'
-        ],
-        salaryInfo: {
-          median: '$60,240',
-          growth: '7%',
-          period: '2022-2032',
-          demand: 'Fuerte demanda de electricistas calificados en construcción y mantenimiento en Sacramento y áreas circundantes'
+          demand: 'Alta demanda de conductores comerciales calificados en transporte de carga y logística en Sacramento y áreas circundantes'
         }
       }
     };
@@ -202,7 +142,7 @@ const ProgramDetail = () => {
               <div className="flex flex-wrap gap-6 mb-8">
                 <div className="flex items-center">
                   <DollarSign className="h-5 w-5 mr-2 text-gold-400" />
-                  <span>{program.price}</span>
+                  <span>Flat Rate Tuition: {program.price}</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="h-5 w-5 mr-2 text-gold-400" />
@@ -222,7 +162,7 @@ const ProgramDetail = () => {
                 </Link>
                 <Link to="/contact">
                   <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-8 py-6 text-lg">
-                    {language === 'en' ? 'Financial Aid Available' : 'Ayuda Financiera Disponible'}
+                    {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
                   </Button>
                 </Link>
               </div>
@@ -258,6 +198,14 @@ const ProgramDetail = () => {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-navy-600">{language === 'en' ? 'CDL Class A or B License Training' : 'Capacitación para Licencia CDL Clase A o B'}</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-navy-600">{language === 'en' ? 'Optional Hazmat Endorsement' : 'Endoso Hazmat Opcional'}</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-navy-600">{language === 'en' ? 'Self Paced, Online Learning' : 'Aprendizaje en línea a tu propio ritmo'}</span>
                 </li>
                 <li className="flex items-start">
@@ -280,7 +228,7 @@ const ProgramDetail = () => {
                   <DollarSign className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-navy-700">{t('medianAnnualSalary')}</p>
-                    <p className="text-navy-600 text-xl font-bold">{program.salaryInfo.median} <span className="text-sm font-normal">{language === 'en' ? '(Median Annual Salary for Professionals)' : '(Salario Anual Medio para Profesionales)'}</span></p>
+                    <p className="text-navy-600 text-xl font-bold">{program.salaryInfo.median} <span className="text-sm font-normal">{language === 'en' ? '(Median Annual Salary for Commercial Truck Drivers)' : '(Salario Anual Medio para Conductores de Camiones Comerciales)'}</span></p>
                   </div>
                 </div>
                 
@@ -359,7 +307,7 @@ const ProgramDetail = () => {
               </Link>
               <Link to="/contact">
                 <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-8 py-6 text-lg w-full sm:w-auto">
-                  {language === 'en' ? 'Financial Aid Available' : 'Ayuda Financiera Disponible'}
+                  {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
                 </Button>
               </Link>
             </div>

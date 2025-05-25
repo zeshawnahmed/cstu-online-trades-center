@@ -4,13 +4,14 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 interface HeroSectionProps {
   scrollToPrograms: () => void;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section className="relative min-h-screen flex items-center bg-hero-pattern bg-cover bg-center text-white pt-20">
@@ -24,11 +25,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-              {t('heroTitle')}
+              {language === 'en' 
+                ? 'Skilled Trade Mastery and Your Prosperous Future Begins Here'
+                : 'El Dominio de Oficios Especializados y Tu Futuro Próspero Comienza Aquí'
+              }
             </h1>
             
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              {t('heroSubtitle')}
+              {language === 'en'
+                ? 'Launch your career in Commercial Truck Driving with CDL Class A or B license training, plus optional Hazmat Endorsement'
+                : 'Lanza tu carrera en el Manejo de Camiones Comerciales con capacitación para licencia CDL Clase A o B, más Endoso Hazmat opcional'
+              }
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -64,6 +71,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.9 }}
+              className="flex flex-col sm:flex-row justify-center gap-4"
             >
               <Button 
                 onClick={scrollToPrograms}
@@ -71,6 +79,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
               >
                 {t('explorePrograms')} <ArrowDown className="ml-2 h-5 w-5" />
               </Button>
+              
+              <Link to="/contact">
+                <Button className="bg-white/90 hover:bg-white text-navy-900 font-bold px-8 py-6 text-xl">
+                  {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>

@@ -14,11 +14,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1 - About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">CSTU</h3>
+            <h3 className="text-xl font-bold mb-4">ASTU</h3>
             <p className="text-gray-300 mb-4">
               {language === 'en' 
-                ? "California Skilled Trade University offers affordable, self-paced online programs with hands-on training via externships."
-                : "Universidad de Oficios Especializados de California ofrece programas en línea asequibles y a tu propio ritmo con capacitación práctica a través de pasantías."}
+                ? "American Skilled Trade University offers affordable, self-paced Commercial Truck Driving and CDL training with hands-on experience."
+                : "Universidad de Oficios Especializados Americana ofrece capacitación asequible y a tu propio ritmo en Manejo de Camiones Comerciales y CDL con experiencia práctica."}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-gold-400 transition-colors">
@@ -38,16 +38,11 @@ const Footer = () => {
           
           {/* Column 2 - Programs */}
           <div>
-            <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Programs" : "Programas"}</h3>
+            <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Our Program" : "Nuestro Programa"}</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/programs/hvac" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  HVAC
-                </Link>
-              </li>
-              <li>
-                <Link to="/programs/electrician" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  {language === 'en' ? "Electrician" : "Electricista"}
+                <Link to="/programs/commercial-truck-driving" className="text-gray-300 hover:text-gold-400 transition-colors">
+                  {language === 'en' ? "Commercial Truck Driving & CDL" : "Manejo de Camiones Comerciales y CDL"}
                 </Link>
               </li>
             </ul>
@@ -110,7 +105,7 @@ const Footer = () => {
         
         <div className="border-t border-navy-400 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} California Skilled Trade University. All rights reserved.
+            &copy; {currentYear} American Skilled Trade University. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy" className="text-gray-400 hover:text-gold-400 text-sm transition-colors">

@@ -55,7 +55,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-3xl md:text-4xl font-extrabold tracking-tight text-navy-600 font-serif">
                 <span className="text-navy-700 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl">
-                  <UnderlinedFirstLetters text="California Skilled Trade University" />
+                  <UnderlinedFirstLetters text="American Skilled Trade University" />
                 </span>
               </span>
             </Link>
@@ -71,11 +71,8 @@ const Navbar = () => {
               </button>
               <div className="absolute left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
                 <div className="py-2 bg-white rounded-md shadow-xl border border-gray-100">
-                  <Link to="/programs/hvac" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
-                    HVAC
-                  </Link>
-                  <Link to="/programs/electrician" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
-                    {language === 'en' ? 'Electrician' : 'Electricista'}
+                  <Link to="/programs/commercial-truck-driving" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
+                    {language === 'en' ? 'Commercial Truck Driving & CDL' : 'Manejo de Camiones Comerciales y CDL'}
                   </Link>
                 </div>
               </div>
@@ -133,18 +130,11 @@ const Navbar = () => {
               <div className="py-2 text-navy-500">{t('programs')}</div>
               <div className="pl-4 space-y-2">
                 <Link 
-                  to="/programs/hvac" 
+                  to="/programs/commercial-truck-driving" 
                   className="block py-1 text-navy-500 hover:text-navy-400"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  HVAC
-                </Link>
-                <Link 
-                  to="/programs/electrician" 
-                  className="block py-1 text-navy-500 hover:text-navy-400"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {language === 'en' ? 'Electrician' : 'Electricista'}
+                  {language === 'en' ? 'Commercial Truck Driving & CDL' : 'Manejo de Camiones Comerciales y CDL'}
                 </Link>
               </div>
             </div>
@@ -179,7 +169,7 @@ const Navbar = () => {
             </Link>
             <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full bg-navy-600 hover:bg-navy-700 text-white mt-2">
-                {language === 'en' ? 'Financial Aid Available' : 'Ayuda Financiera Disponible'}
+                {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
               </Button>
             </Link>
           </div>

@@ -8,53 +8,34 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
 const ProgramsSection = () => {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
 
   const programs = [
     {
-      title: t('hvacTitle'),
-      description: t('hvacDescription'),
-      price: language === 'en' ? 'Flat Rate Tuition: $2,500' : 'Matrícula de Tarifa Plana: $2,500',
+      title: language === 'en' ? 'Commercial Truck Driving & CDL' : 'Manejo de Camiones Comerciales y CDL',
+      description: language === 'en' 
+        ? 'Learn essential skills to become job-ready in commercial truck driving with CDL Class A or B license, plus optional Hazmat Endorsement'
+        : 'Aprende habilidades esenciales para estar listo para trabajar en el manejo de camiones comerciales con licencia CDL Clase A o B, más Endoso Hazmat opcional',
+      price: language === 'en' ? 'Flat Rate Tuition: $3,500' : 'Matrícula de Tarifa Plana: $3,500',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
-      certification: language === 'en' ? 'HVAC Certification' : 'Certificación HVAC',
-      imageUrl: '/hvac-program.jpg',
-      slug: 'hvac',
+      certification: language === 'en' ? 'CDL Class A/B License' : 'Licencia CDL Clase A/B',
+      imageUrl: '/truck-driving-program.jpg',
+      slug: 'commercial-truck-driving',
       keyFeatures: [
         language === 'en' 
-          ? 'Learn Essential Skills To Become Job-Ready in HVAC for entry level positions'
-          : 'Aprende habilidades esenciales para estar listo para trabajar en HVAC en puestos de nivel inicial',
+          ? 'Learn Essential Skills To Become Job-Ready in Commercial Truck Driving for entry level positions'
+          : 'Aprende habilidades esenciales para estar listo para trabajar en Manejo de Camiones Comerciales en puestos de nivel inicial',
+        language === 'en' ? 'CDL Class A or B License Training' : 'Capacitación para Licencia CDL Clase A o B',
+        language === 'en' ? 'Optional Hazmat Endorsement' : 'Endoso Hazmat Opcional',
         language === 'en' ? 'Self Paced, Online Learning' : 'Aprendizaje en línea a tu propio ritmo',
         language === 'en' ? 'Connect with Local Cohort' : 'Conéctate con grupos locales',
         language === 'en' ? 'Hands-On Externship with Local Professional*' : 'Prácticas presenciales con profesionales locales*'
       ],
       salaryInfo: {
-        median: '$60,590',
-        growth: language === 'en' ? '5%' : '5%',
+        median: '$70,000',
+        growth: language === 'en' ? '6%' : '6%',
         period: '2022-2032',
-        clarification: language === 'en' ? 'Median Annual Salary for HVAC Professionals' : 'Salario Anual Medio para Profesionales de HVAC'
-      }
-    },
-    {
-      title: t('electricianTitle'),
-      description: t('electricianDescription'),
-      price: language === 'en' ? 'Flat Rate Tuition: $2,500' : 'Matrícula de Tarifa Plana: $2,500',
-      duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
-      certification: language === 'en' ? 'Electrician Certification' : 'Certificación de Electricista',
-      imageUrl: '/plumbing-program.jpg', // Reusing the image for now
-      slug: 'electrician',
-      keyFeatures: [
-        language === 'en' 
-          ? 'Learn Essential Skills To Become Job-Ready in Electrical for entry level positions'
-          : 'Aprende habilidades esenciales para estar listo para trabajar en electricidad en puestos de nivel inicial',
-        language === 'en' ? 'Self Paced, Online Learning' : 'Aprendizaje en línea a tu propio ritmo',
-        language === 'en' ? 'Connect with Local Cohort' : 'Conéctate con grupos locales',
-        language === 'en' ? 'Hands-On Externship with Local Professional*' : 'Prácticas presenciales con profesionales locales*'
-      ],
-      salaryInfo: {
-        median: '$60,240',
-        growth: language === 'en' ? '7%' : '7%',
-        period: '2022-2032',
-        clarification: language === 'en' ? 'Median Annual Salary for Electrician Professionals' : 'Salario Anual Medio para Profesionales Electricistas'
+        clarification: language === 'en' ? 'Median Annual Salary for Commercial Truck Drivers' : 'Salario Anual Medio para Conductores de Camiones Comerciales'
       }
     }
   ];
@@ -63,14 +44,17 @@ const ProgramsSection = () => {
     <section id="programs-section" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          subtitle={t('programsSubtitle')}
-          title={t('programsTitle')}
-          description={t('programsDescription')}
+          subtitle={language === 'en' ? 'Our Program' : 'Nuestro Programa'}
+          title={language === 'en' ? 'Commercial Truck Driving Training' : 'Capacitación en Manejo de Camiones Comerciales'}
+          description={language === 'en' 
+            ? 'Master the skills needed for a successful career in commercial truck driving with comprehensive CDL training'
+            : 'Domina las habilidades necesarias para una carrera exitosa en el manejo de camiones comerciales con capacitación integral de CDL'
+          }
           centered={true}
           className="mb-8"
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           {programs.map((program, index) => (
             <motion.div
               key={program.slug}
@@ -92,7 +76,7 @@ const ProgramsSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-navy-600 hover:bg-navy-700 text-white font-bold px-8 py-4 rounded-lg text-xl w-full md:w-auto"
               >
-                {t('applyNowButton')}
+                {language === 'en' ? 'Apply Now' : 'Aplicar Ahora'}
               </motion.button>
             </Link>
             
@@ -102,11 +86,16 @@ const ProgramsSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-gold-400 hover:bg-gold-500 text-navy-800 font-bold px-8 py-4 rounded-lg text-xl w-full md:w-auto"
               >
-                {language === 'en' ? 'Financial Aid Available' : 'Ayuda Financiera Disponible'}
+                {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
               </motion.button>
             </Link>
           </div>
-          <p className="text-sm text-gray-500 mt-3">{t('externshipNote')}</p>
+          <p className="text-sm text-gray-500 mt-3">
+            *{language === 'en' 
+              ? 'Externship placement assistance available upon program completion and subject to industry demand'
+              : 'Asistencia para colocación en prácticas disponible al completar el programa y sujeta a la demanda de la industria'
+            }
+          </p>
         </div>
       </div>
     </section>
