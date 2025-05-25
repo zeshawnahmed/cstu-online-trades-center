@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                   <Phone className="h-5 w-5" />
                   <div>
                     <p className="text-sm font-bold mb-1">
-                      {language === 'en' ? 'ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES'}
+                      {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
                     </p>
                     <p className="text-xl font-bold">
                       (916) 365-6907

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Clock, Award, Users, DollarSign, TrendingUp } from 'lucide-react';
@@ -130,7 +129,7 @@ const ProgramDetail = () => {
           <div className="text-center mb-8">
             <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white">
               <p className="text-lg font-bold mb-1">
-                {language === 'en' ? 'ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES'}
+                {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
               </p>
               <p className="text-2xl font-bold">
                 (916) 365-6907
@@ -170,11 +169,6 @@ const ProgramDetail = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/apply">
-                  <Button className="bg-gold-400 hover:bg-gold-500 text-navy-900 font-medium px-8 py-6 text-lg">
-                    {t('applyNow')}
-                  </Button>
-                </Link>
                 <Link to="/contact">
                   <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-8 py-6 text-lg">
                     {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
@@ -311,7 +305,7 @@ const ProgramDetail = () => {
             <div className="mb-8">
               <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white">
                 <p className="text-lg font-bold mb-1">
-                  {language === 'en' ? 'ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES'}
+                  {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
                 </p>
                 <p className="text-2xl font-bold">
                   (916) 365-6907
@@ -327,11 +321,6 @@ const ProgramDetail = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/apply">
-                <Button className="bg-gold-400 hover:bg-gold-500 text-navy-900 font-medium px-8 py-6 text-lg w-full sm:w-auto">
-                  {t('applyNow')}
-                </Button>
-              </Link>
               <Link to="/contact">
                 <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-8 py-6 text-lg w-full sm:w-auto">
                   {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}

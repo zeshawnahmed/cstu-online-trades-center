@@ -98,12 +98,6 @@ const Navbar = () => {
                 {language === 'en' ? 'Español' : 'English'}
               </button>
             </div>
-            
-            <Link to="/apply">
-              <Button className="bg-gold-400 hover:bg-gold-500 text-navy-700 font-medium">
-                {t('applyNow')}
-              </Button>
-            </Link>
           </div>
           
           <button 
@@ -162,11 +156,6 @@ const Navbar = () => {
               <Globe className="h-5 w-5 mr-2" />
               {language === 'en' ? 'Cambiar a Español' : 'Switch to English'}
             </button>
-            <Link to="/apply" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full bg-gold-400 hover:bg-gold-500 text-navy-700 mt-2">
-                {t('applyNow')}
-              </Button>
-            </Link>
             <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full bg-navy-600 hover:bg-navy-700 text-white mt-2">
                 {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}

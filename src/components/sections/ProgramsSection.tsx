@@ -58,7 +58,7 @@ const ProgramsSection = () => {
         <div className="text-center mb-8">
           <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-navy-600">
             <p className="text-lg font-bold mb-1">
-              {language === 'en' ? 'ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES'}
+              {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
             </p>
             <p className="text-2xl font-bold">
               (916) 365-6907
@@ -82,16 +82,6 @@ const ProgramsSection = () => {
         
         <div className="mt-12 text-center">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
-            <Link to="/apply">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-navy-600 hover:bg-navy-700 text-white font-bold px-8 py-4 rounded-lg text-xl w-full md:w-auto"
-              >
-                {language === 'en' ? 'Apply Now' : 'Aplicar Ahora'}
-              </motion.button>
-            </Link>
-            
             <Link to="/contact">
               <motion.button
                 whileHover={{ scale: 1.05 }}
