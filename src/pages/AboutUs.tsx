@@ -52,8 +52,8 @@ const AboutUs = () => {
             </h1>
             <p className="text-xl text-navy-600 mb-10">
               {language === 'en' 
-                ? 'Empowering students to become the most confident, empowered versions of themselves to financially prosper with mastery in in-demand skilled trades.'
-                : 'Capacitando a los estudiantes para convertirse en las versiones más confiadas y empoderadas de sí mismos para prosperar financieramente con dominio en oficios especializados en demanda.'
+                ? 'Skip the crushing debt of expensive 4-year degrees. ASTU puts you on a direct path to high-paying careers in the modern economy without the financial burden.'
+                : 'Evita la deuda aplastante de costosos títulos de 4 años. ASTU te pone en el camino directo hacia carreras bien remuneradas en la economía moderna sin la carga financiera.'
               }
             </p>
           </motion.div>
@@ -69,16 +69,16 @@ const AboutUs = () => {
             </h2>
             <p className="text-lg text-navy-600 mb-8 leading-relaxed">
               {language === 'en'
-                ? "Founded in Sacramento, American Skilled Trade University (ASTU) was born from a simple yet powerful mission: to make students the most confident, empowered versions of themselves so they may financially prosper with mastery in in-demand skilled trades. We believe that everyone deserves access to high-quality, affordable education that leads directly to well-paying careers."
-                : "Fundada en Sacramento, la Universidad de Oficios Especializados Americana (ASTU) nació de una misión simple pero poderosa: hacer que los estudiantes se conviertan en las versiones más confiadas y empoderadas de sí mismos para que puedan prosperar financieramente con dominio en oficios especializados en demanda."
+                ? "Founded in Sacramento, American Skilled Trade University (ASTU) was born from a simple yet powerful mission: to provide a smart alternative to overpriced 4-year degrees that leave students drowning in debt with unmarketable skills. While traditional colleges charge $30,000+ per year for degrees that may never pay off, ASTU prepares you for high-demand careers at a fraction of the cost."
+                : "Fundada en Sacramento, la Universidad de Oficios Especializados Americana (ASTU) nació de una misión simple pero poderosa: proporcionar una alternativa inteligente a los títulos universitarios sobrevalorados de 4 años que dejan a los estudiantes ahogándose en deudas."
               }
             </p>
             
             <div className="bg-navy-50 border-l-4 border-navy-500 pl-6 py-4 rounded-r-lg mb-10">
               <p className="text-navy-800 font-medium italic">
                 {language === 'en'
-                  ? "Our mission is simple: provide affordable, job-focused training that creates pathways to high-paying careers in the skilled trades without saddling students with unnecessary debt."
-                  : "Nuestra misión es simple: proporcionar capacitación asequible y enfocada en el trabajo que cree vías hacia carreras bien remuneradas en los oficios especializados sin cargar a los estudiantes con deudas innecesarias."}
+                  ? "Why spend 4+ years and $120,000+ on a degree that might not even get you a job? ASTU gets you job-ready in months, not years, for just $2,499 total."
+                  : "¿Por qué gastar 4+ años y $120,000+ en un título que tal vez ni siquiera te consiga trabajo? ASTU te prepara para el trabajo en meses, no años, por solo $2,499 en total."}
               </p>
             </div>
             
@@ -86,8 +86,8 @@ const AboutUs = () => {
               <MapPin className="h-8 w-8 text-gold-500 mr-3" />
               <p className="text-xl font-semibold text-navy-700">
                 {language === 'en'
-                  ? "Proudly serving the Sacramento community and beyond"
-                  : "Sirviendo con orgullo a la comunidad de Sacramento y más allá"}
+                  ? "Proudly serving the Sacramento community with practical education"
+                  : "Sirviendo con orgullo a la comunidad de Sacramento con educación práctica"}
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ const AboutUs = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-navy-700 mb-10 text-center">
-              {language === 'en' ? 'Why Choose ASTU?' : '¿Por qué elegir ASTU?'}
+              {language === 'en' ? 'Why Choose ASTU Over Traditional College?' : '¿Por qué elegir ASTU sobre la universidad tradicional?'}
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -113,23 +113,23 @@ const AboutUs = () => {
               >
                 <div className="flex items-center mb-4">
                   <DollarSign className="h-8 w-8 text-gold-500 mr-3" />
-                  <h3 className="text-xl font-bold text-navy-700">{language === 'en' ? 'Affordable Education' : 'Educación Asequible'}</h3>
+                  <h3 className="text-xl font-bold text-navy-700">{language === 'en' ? 'Smart Financial Choice' : 'Elección Financiera Inteligente'}</h3>
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'Our programs cost a fraction of traditional college, allowing you to start your career without crushing debt.'
-                    : 'Nuestros programas cuestan una fracción de la universidad tradicional, permitiéndote comenzar tu carrera sin deudas abrumadoras.'
+                    ? 'Skip the crushing debt. While college graduates average $37,000+ in student loans, our graduates start earning immediately with zero debt burden.'
+                    : 'Evita la deuda aplastante. Mientras los graduados universitarios promedian $37,000+ en préstamos estudiantiles, nuestros graduados comienzan a ganar inmediatamente sin carga de deuda.'
                   }
                 </p>
                 <div className="mt-5 pt-5 border-t border-gray-100">
                   <div className="flex justify-between">
                     <div className="text-left">
                       <p className="text-sm text-gray-500">{language === 'en' ? '4-Year College' : 'Universidad de 4 años'}</p>
-                      <p className="text-lg font-bold text-red-500">$30,000+ / {language === 'en' ? 'year' : 'año'}</p>
+                      <p className="text-lg font-bold text-red-500">$120,000+</p>
                     </div>
                     <div className="text-right">
                       <p className="text-sm text-gray-500">ASTU</p>
-                      <p className="text-lg font-bold text-green-500">$2,499 {language === 'en' ? 'total' : 'total'}</p>
+                      <p className="text-lg font-bold text-green-500">$2,499</p>
                     </div>
                   </div>
                 </div>
@@ -145,12 +145,12 @@ const AboutUs = () => {
               >
                 <div className="flex items-center mb-4">
                   <Clock className="h-8 w-8 text-gold-500 mr-3" />
-                  <h3 className="text-xl font-bold text-navy-700">{language === 'en' ? 'Self-Paced Learning' : 'Aprendizaje a Tu Ritmo'}</h3>
+                  <h3 className="text-xl font-bold text-navy-700">{language === 'en' ? 'Start Earning Faster' : 'Comienza a Ganar Más Rápido'}</h3>
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'Get job-ready in months, not years. Our flexible, self-paced format works around your schedule.'
-                    : 'Prepárate para el trabajo en meses, no años. Nuestro formato flexible y a tu ritmo se adapta a tu horario.'
+                    ? 'Get job-ready in months, not years. While others spend 4+ years in classrooms, you\'ll be earning $70,000+ annually in the skilled trades.'
+                    : 'Prepárate para el trabajo en meses, no años. Mientras otros pasan 4+ años en aulas, tú estarás ganando $70,000+ anualmente en oficios especializados.'
                   }
                 </p>
               </motion.div>
@@ -169,13 +169,13 @@ const AboutUs = () => {
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'Our Commercial Truck Driving program is FMCSA-approved, ensuring you meet industry standards and regulations.'
-                    : 'Nuestro programa de Manejo de Camiones Comerciales está aprobado por FMCSA, asegurando que cumplas con los estándares y regulaciones de la industria.'
+                    ? 'Our Commercial Truck Driving program is FMCSA-approved, ensuring you meet industry standards and have guaranteed job opportunities upon completion.'
+                    : 'Nuestro programa de Manejo de Camiones Comerciales está aprobado por FMCSA, asegurando que cumplas con los estándares de la industria.'
                   }
                 </p>
               </motion.div>
               
-              {/* Sacramento Roots */}
+              {/* Mission Driven */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -185,12 +185,12 @@ const AboutUs = () => {
               >
                 <div className="flex items-center mb-4">
                   <Target className="h-8 w-8 text-gold-500 mr-3" />
-                  <h3 className="text-xl font-bold text-navy-700">{language === 'en' ? 'Mission-Driven' : 'Impulsado por la Misión'}</h3>
+                  <h3 className="text-xl font-bold text-navy-700">{language === 'en' ? 'Real-World Results' : 'Resultados del Mundo Real'}</h3>
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'We are dedicated to making our students the most confident, empowered versions of themselves for financial prosperity.'
-                    : 'Estamos dedicados a hacer que nuestros estudiantes sean las versiones más confiadas y empoderadas de sí mismos para la prosperidad financiera.'
+                    ? 'ASTU focuses on practical skills that employers actually want. No theoretical fluff - just hands-on training that gets you hired fast.'
+                    : 'ASTU se enfoca en habilidades prácticas que los empleadores realmente quieren. Sin relleno teórico - solo capacitación práctica que te hace contratado rápido.'
                   }
                 </p>
               </motion.div>
@@ -209,8 +209,8 @@ const AboutUs = () => {
             
             <p className="text-lg text-navy-600 mb-10 leading-relaxed text-center">
               {language === 'en'
-                ? 'ASTU graduates are equipped with the skills and confidence to command competitive salaries in high-demand fields. Start earning immediately after graduation.'
-                : 'Los graduados de ASTU están equipados con las habilidades y la confianza para obtener salarios competitivos en campos de alta demanda. Comienza a ganar inmediatamente después de la graduación.'
+                ? 'ASTU graduates enter high-paying careers immediately, while college graduates often struggle to find work that justifies their massive debt load.'
+                : 'Los graduados de ASTU entran en carreras bien pagadas inmediatamente, mientras que los graduados universitarios a menudo luchan por encontrar trabajo que justifique su carga masiva de deuda.'
               }
             </p>
             
@@ -225,8 +225,8 @@ const AboutUs = () => {
             <div className="bg-gold-50 border-l-4 border-gold-500 pl-6 py-4 rounded-r-lg">
               <p className="text-navy-800 font-medium">
                 {language === 'en'
-                  ? "Unlike many college graduates who face years of student loan debt, our graduates can start earning a great income immediately after completing their training."
-                  : "A diferencia de muchos graduados universitarios que enfrentan años de deuda de préstamos estudiantiles, nuestros graduados pueden comenzar a ganar un gran ingreso inmediatamente después de completar su capacitación."}
+                  ? "The math is simple: Start earning $70,000 immediately vs. spending $120,000+ and 4+ years for a degree that might not even get you a job."
+                  : "Las matemáticas son simples: Comienza a ganar $70,000 inmediatamente vs. gastar $120,000+ y 4+ años por un título que tal vez ni siquiera te consiga trabajo."}
               </p>
             </div>
           </div>
@@ -250,12 +250,12 @@ const AboutUs = () => {
             </div>
             
             <h2 className="text-3xl font-bold mb-6">
-              {language === 'en' ? 'Ready to Transform Your Future?' : '¿Listo para Transformar tu Futuro?'}
+              {language === 'en' ? 'Ready to Make a Smart Financial Choice?' : '¿Listo para Hacer una Elección Financiera Inteligente?'}
             </h2>
             <p className="text-xl mb-10 text-navy-100">
               {language === 'en'
-                ? 'Join ASTU and become the most confident, empowered version of yourself while mastering in-demand skilled trades.'
-                : 'Únete a ASTU y conviértete en la versión más confiada y empoderada de ti mismo mientras dominas oficios especializados en demanda.'
+                ? 'Skip the debt trap of traditional college. Join ASTU and start earning immediately with skills that employers actually need.'
+                : 'Evita la trampa de deuda de la universidad tradicional. Únete a ASTU y comienza a ganar inmediatamente con habilidades que los empleadores realmente necesitan.'
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

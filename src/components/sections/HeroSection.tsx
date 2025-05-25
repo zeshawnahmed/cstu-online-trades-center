@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
 
 interface HeroSectionProps {
   scrollToPrograms: () => void;
@@ -97,7 +96,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.9 }}
-              className="flex flex-col sm:flex-row justify-center gap-4"
+              className="flex justify-center"
             >
               <Button 
                 onClick={scrollToPrograms}
@@ -105,12 +104,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
               >
                 {t('explorePrograms')} <ArrowDown className="ml-2 h-5 w-5" />
               </Button>
-              
-              <Link to="/contact">
-                <Button className="bg-white/90 hover:bg-white text-navy-900 font-bold px-8 py-6 text-xl">
-                  {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
-                </Button>
-              </Link>
             </motion.div>
           </motion.div>
         </div>

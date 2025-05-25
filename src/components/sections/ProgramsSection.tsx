@@ -92,12 +92,6 @@ const ProgramsSection = () => {
               </motion.button>
             </Link>
           </div>
-          <p className="text-sm text-gray-500 mt-3">
-            *{language === 'en' 
-              ? 'FMCSA-Approved Program - Training assistance available upon program completion and subject to industry demand'
-              : 'Programa Aprobado por FMCSA - Asistencia de capacitación disponible al completar el programa y sujeta a la demanda de la industria'
-            }
-          </p>
         </div>
       </div>
     </section>
