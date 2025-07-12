@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Clock, Award, Users, DollarSign, TrendingUp } from 'lucide-react';
@@ -21,6 +22,8 @@ interface ProgramDetail {
     period: string;
     demand: string;
   };
+  keyFeatures: string[];
+  approvalBadge: string;
 }
 
 const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> => {
@@ -52,7 +55,16 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           growth: '6%',
           period: '2022-2032',
           demand: 'High demand for qualified commercial drivers across freight and logistics in Sacramento and surrounding areas'
-        }
+        },
+        keyFeatures: [
+          'FMCSA-Approved Program - Learn Essential Skills To Become Job-Ready in Commercial Truck Driving for entry level positions',
+          'CDL Class A or B License Training',
+          'Optional Hazmat Endorsement',
+          'Self Paced, Online Learning Format for Busy Professionals',
+          'Connect with Local Cohort Through Fun Experiences',
+          'Hands-On Behind-The-Wheel-Training With Trained Professional'
+        ],
+        approvalBadge: 'FMCSA-Approved Program'
       },
       'hvac-technician': {
         title: 'HVAC Technician Program (EPA 608 Certification Included)',
@@ -62,7 +74,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "Through our comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
           "Upon program completion, you'll be prepared for entry level HVAC technician positions with EPA 608 certification and hands-on experience with industry equipment."
         ],
-        price: '$2,799',
+        price: '$2,499',
         duration: 'Self-paced',
         certification: 'EPA 608 Certification',
         curriculum: [
@@ -80,7 +92,16 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           growth: '5%',
           period: '2022-2032',
           demand: 'High demand for skilled HVAC technicians in residential and commercial sectors in Sacramento and surrounding areas'
-        }
+        },
+        keyFeatures: [
+          'Industry-Approved Program - Learn Essential Skills To Become Job-Ready in HVAC for entry level positions',
+          'EPA 608 Certification Training Included',
+          'Residential and Commercial HVAC Systems',
+          'Self Paced, Online Learning Format for Busy Professionals',
+          'Connect with Local Cohort Through Fun Experiences',
+          'Hands-On Training With Industry Equipment'
+        ],
+        approvalBadge: 'Industry-Approved Program'
       }
     };
   } else {
@@ -111,7 +132,16 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           growth: '6%',
           period: '2022-2032',
           demand: 'Alta demanda de conductores comerciales calificados en transporte de carga y logística en Sacramento y áreas circundantes'
-        }
+        },
+        keyFeatures: [
+          'Programa Aprobado por FMCSA - Aprende habilidades esenciales para estar listo para trabajar en Manejo de Camiones Comerciales en puestos de nivel inicial',
+          'Capacitación para Licencia CDL Clase A o B',
+          'Endoso Hazmat Opcional',
+          'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
+          'Conéctate con grupos locales a través de experiencias divertidas',
+          'Entrenamiento práctico al volante con profesionales capacitados'
+        ],
+        approvalBadge: 'Programa Aprobado por FMCSA'
       },
       'hvac-technician': {
         title: 'Programa de Técnico HVAC (Certificación EPA 608 Incluida)',
@@ -121,7 +151,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "A través de nuestra capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
           "Al completar el programa, estarás preparado para puestos de técnico HVAC de nivel inicial con certificación EPA 608 y experiencia práctica con equipos de la industria."
         ],
-        price: '$2,799',
+        price: '$2,499',
         duration: 'A tu ritmo',
         certification: 'Certificación EPA 608',
         curriculum: [
@@ -139,7 +169,16 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           growth: '5%',
           period: '2022-2032',
           demand: 'Alta demanda de técnicos HVAC capacitados en sectores residenciales y comerciales en Sacramento y áreas circundantes'
-        }
+        },
+        keyFeatures: [
+          'Programa Aprobado por la Industria - Aprende habilidades esenciales para estar listo para trabajar en HVAC en puestos de nivel inicial',
+          'Capacitación de Certificación EPA 608 Incluida',
+          'Sistemas HVAC Residenciales y Comerciales',
+          'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
+          'Conéctate con grupos locales a través de experiencias divertidas',
+          'Entrenamiento práctico con equipos de la industria'
+        ],
+        approvalBadge: 'Programa Aprobado por la Industria'
       }
     };
   }
@@ -200,7 +239,7 @@ const ProgramDetail = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="bg-gold-400 text-navy-900 font-bold px-3 py-1 rounded-lg text-sm inline-block mb-4">
-                FMCSA-Approved Program
+                {program.approvalBadge}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 {program.title}
@@ -220,7 +259,7 @@ const ProgramDetail = () => {
                 </div>
                 <div className="flex items-center">
                   <Users className="h-5 w-5 mr-2 text-gold-400" />
-                  <span>{language === 'en' ? 'Hands-On Behind-The-Wheel-Training' : 'Entrenamiento práctico al volante'}</span>
+                  <span>{language === 'en' ? 'Hands-On Training With Industry Equipment' : 'Entrenamiento práctico con equipos de la industria'}</span>
                 </div>
               </div>
               
@@ -257,30 +296,12 @@ const ProgramDetail = () => {
             <div className="mt-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
               <h3 className="text-lg font-semibold text-navy-700 mb-4">{t('programHighlightsTitle')}</h3>
               <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-navy-600">{language === 'en' ? 'FMCSA-Approved Program - Learn Essential Skills To Become Job-Ready for entry level positions' : 'Programa Aprobado por FMCSA - Aprende habilidades esenciales para estar listo para trabajar en puestos de nivel inicial'}</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-navy-600">{language === 'en' ? 'CDL Class A or B License Training' : 'Capacitación para Licencia CDL Clase A o B'}</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-navy-600">{language === 'en' ? 'Optional Hazmat Endorsement' : 'Endoso Hazmat Opcional'}</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-navy-600">{language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados'}</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-navy-600">{language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos locales a través de experiencias divertidas'}</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-navy-600">{language === 'en' ? 'Hands-On Behind-The-Wheel-Training With Trained Professional' : 'Entrenamiento práctico al volante con profesionales capacitados'}</span>
-                </li>
+                {program.keyFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-navy-600">{feature}</span>
+                  </li>
+                ))}
               </ul>
             </div>
             
@@ -293,7 +314,7 @@ const ProgramDetail = () => {
                   <DollarSign className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-navy-700">{t('medianAnnualSalary')}</p>
-                    <p className="text-navy-600 text-xl font-bold">{program.salaryInfo.median} <span className="text-sm font-normal">{language === 'en' ? '(Median Annual Salary for Commercial Truck Drivers)' : '(Salario Anual Medio para Conductores de Camiones Comerciales)'}</span></p>
+                    <p className="text-navy-600 text-xl font-bold">{program.salaryInfo.median} <span className="text-sm font-normal">({slug === 'commercial-truck-driving' ? (language === 'en' ? 'Median Annual Salary for Commercial Truck Drivers' : 'Salario Anual Medio para Conductores de Camiones Comerciales') : (language === 'en' ? 'Median Annual Salary for HVAC Technicians' : 'Salario Anual Medio para Técnicos HVAC')})</span></p>
                   </div>
                 </div>
                 
@@ -322,7 +343,7 @@ const ProgramDetail = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            subtitle={language === 'en' ? 'FMCSA-Approved Program Curriculum' : 'Plan de Estudios del Programa Aprobado por FMCSA'}
+            subtitle={`${program.approvalBadge} Curriculum`}
             title={t('programCurriculum')}
             description={t('curriculumDescription')}
             centered={true}
@@ -386,7 +407,7 @@ const ProgramDetail = () => {
             
             {/* Added disclaimer */}
             <p className="text-xs text-gray-400 mt-8">
-              *{language === 'en' ? 'FMCSA-Approved Program - Training assistance available upon program completion and subject to industry demand' : 'Programa Aprobado por FMCSA - Asistencia de capacitación disponible al completar el programa y sujeta a la demanda de la industria'}
+              *{program.approvalBadge} - {language === 'en' ? 'Training assistance available upon program completion and subject to industry demand' : 'Asistencia de capacitación disponible al completar el programa y sujeta a la demanda de la industria'}
             </p>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '@/components/ui/section-heading';
@@ -43,7 +42,7 @@ const ProgramsSection = () => {
       description: language === 'en' 
         ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification - Industry-Approved Program'
         : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo certificación EPA 608 - Programa Aprobado por la Industria',
-      price: language === 'en' ? 'Flat Rate Tuition: $2,799' : 'Matrícula de Tarifa Plana: $2,799',
+      price: language === 'en' ? 'Flat Rate Tuition: $2,499' : 'Matrícula de Tarifa Plana: $2,499',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',
       imageUrl: '/hvac-technician-program.jpg',

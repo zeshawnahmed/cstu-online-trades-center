@@ -7,14 +7,14 @@ const NewsTicker = () => {
 
   const newsItems = [
     language === 'en' 
-      ? "ASTU officially recognized by the California Bureau of Post Secondary Education (Exemption)"
-      : "ASTU oficialmente reconocida por la Oficina de Educación Post Secundaria de California (Exención)",
+      ? "ASTU officially recognized by the California Bureau of Post Secondary Education"
+      : "ASTU oficialmente reconocida por la Oficina de Educación Post Secundaria de California",
     language === 'en'
       ? "UC Davis and UC Berkeley Alumni come together to form ASTU"
       : "Exalumnos de UC Davis y UC Berkeley se unen para formar ASTU",
     language === 'en'
-      ? "Fall Cohort Launching, Apply Now"
-      : "Cohorte de Otoño Iniciando, Aplica Ahora"
+      ? "Fall Cohort Launching, Call or Text Admissions Today"
+      : "Cohorte de Otoño Iniciando, Llama o Envía Texto a Admisiones Hoy"
   ];
 
   return (
