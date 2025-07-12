@@ -1,8 +1,8 @@
-
 import React, { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/sections/HeroSection';
 import ProgramsSection from '@/components/sections/ProgramsSection';
+import NewsTicker from '@/components/sections/NewsTicker';
 import { Helmet } from 'react-helmet';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -107,6 +107,7 @@ const Index = () => {
           `}
         </script>
       </Helmet>
+      <NewsTicker />
       <HeroSection scrollToPrograms={scrollToPrograms} />
       <ProgramsSection />
     </Layout>
