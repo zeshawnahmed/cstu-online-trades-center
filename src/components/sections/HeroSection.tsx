@@ -32,7 +32,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                     <p className="text-sm font-bold mb-1">
                       {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
                     </p>
-                    <p className="text-xl font-bold">
+                    <p className="text-xl font-bold underline">
                       (916) 365-6907
                     </p>
                   </div>
