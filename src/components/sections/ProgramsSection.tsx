@@ -37,6 +37,33 @@ const ProgramsSection = () => {
         period: '2022-2032',
         clarification: language === 'en' ? 'Median Annual Salary for Commercial Truck Drivers' : 'Salario Anual Medio para Conductores de Camiones Comerciales'
       }
+    },
+    {
+      title: language === 'en' ? 'HVAC Technician Program (EPA 608 Certification Included)' : 'Programa de Técnico HVAC (Certificación EPA 608 Incluida)',
+      description: language === 'en' 
+        ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification - Industry-Approved Program'
+        : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo certificación EPA 608 - Programa Aprobado por la Industria',
+      price: language === 'en' ? 'Flat Rate Tuition: $2,799' : 'Matrícula de Tarifa Plana: $2,799',
+      duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
+      certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',
+      imageUrl: '/hvac-technician-program.jpg',
+      slug: 'hvac-technician',
+      keyFeatures: [
+        language === 'en' 
+          ? 'Industry-Approved Program - Learn Essential Skills To Become Job-Ready in HVAC for entry level positions'
+          : 'Programa Aprobado por la Industria - Aprende habilidades esenciales para estar listo para trabajar en HVAC en puestos de nivel inicial',
+        language === 'en' ? 'EPA 608 Certification Training Included' : 'Capacitación de Certificación EPA 608 Incluida',
+        language === 'en' ? 'Residential and Commercial HVAC Systems' : 'Sistemas HVAC Residenciales y Comerciales',
+        language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
+        language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos locales a través de experiencias divertidas',
+        language === 'en' ? 'Hands-On Training With Industry Equipment' : 'Entrenamiento práctico con equipos de la industria'
+      ],
+      salaryInfo: {
+        median: '$75,000',
+        growth: language === 'en' ? '5%' : '5%',
+        period: '2022-2032',
+        clarification: language === 'en' ? 'Median Annual Salary for HVAC Technicians' : 'Salario Anual Medio para Técnicos HVAC'
+      }
     }
   ];
 
@@ -44,11 +71,11 @@ const ProgramsSection = () => {
     <section id="programs-section" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          subtitle={language === 'en' ? 'Our Program' : 'Nuestro Programa'}
-          title={language === 'en' ? 'Commercial Truck Driving Training' : 'Capacitación en Manejo de Camiones Comerciales'}
+          subtitle={language === 'en' ? 'Our Programs' : 'Nuestros Programas'}
+          title={language === 'en' ? 'Trade Skills Training Programs' : 'Programas de Capacitación en Oficios'}
           description={language === 'en' 
-            ? 'Master the Skills Needed for a Successful Career in Commercial Truck Driving with Comprehensive CDL training for Class A and/or B License with Optional Hazmat Endorsement. FMCSA-Approved Program.'
-            : 'Domina las habilidades necesarias para una carrera exitosa en el manejo de camiones comerciales con capacitación integral de CDL para Licencia Clase A y/o B con Endoso Hazmat Opcional. Programa Aprobado por FMCSA.'
+            ? 'Master the Skills Needed for Successful Careers in High-Demand Trade Industries with Comprehensive Training Programs.'
+            : 'Domina las habilidades necesarias para carreras exitosas en industrias de oficios de alta demanda con programas de capacitación integral.'
           }
           centered={true}
           className="mb-8"
@@ -60,13 +87,13 @@ const ProgramsSection = () => {
             <p className="text-lg font-bold mb-1">
               {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
             </p>
-            <p className="text-2xl font-bold">
+            <p className="text-2xl font-bold underline decoration-2">
               (916) 365-6907
             </p>
           </div>
         </div>
         
-        <div className="max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {programs.map((program, index) => (
             <motion.div
               key={program.slug}

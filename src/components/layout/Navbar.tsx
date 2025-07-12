@@ -69,10 +69,13 @@ const Navbar = () => {
               <button className="flex items-center text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
                 {t('programs')} <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+              <div className="absolute left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
                 <div className="py-2 bg-white rounded-md shadow-xl border border-gray-100">
                   <Link to="/programs/commercial-truck-driving" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
                     {language === 'en' ? 'Commercial Truck Driving & CDL' : 'Manejo de Camiones Comerciales y CDL'}
+                  </Link>
+                  <Link to="/programs/hvac-technician" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
+                    {language === 'en' ? 'HVAC Technician & EPA 608' : 'Técnico HVAC y EPA 608'}
                   </Link>
                 </div>
               </div>
@@ -129,6 +132,13 @@ const Navbar = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {language === 'en' ? 'Commercial Truck Driving & CDL' : 'Manejo de Camiones Comerciales y CDL'}
+                </Link>
+                <Link 
+                  to="/programs/hvac-technician" 
+                  className="block py-1 text-navy-500 hover:text-navy-400"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {language === 'en' ? 'HVAC Technician & EPA 608' : 'Técnico HVAC y EPA 608'}
                 </Link>
               </div>
             </div>

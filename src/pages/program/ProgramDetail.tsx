@@ -53,6 +53,34 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           period: '2022-2032',
           demand: 'High demand for qualified commercial drivers across freight and logistics in Sacramento and surrounding areas'
         }
+      },
+      'hvac-technician': {
+        title: 'HVAC Technician Program (EPA 608 Certification Included)',
+        description: 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification - Industry-Approved Program.',
+        fullDescription: [
+          "Our Industry-Approved HVAC Technician program focuses on teaching the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
+          "Through our comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
+          "Upon program completion, you'll be prepared for entry level HVAC technician positions with EPA 608 certification and hands-on experience with industry equipment."
+        ],
+        price: '$2,799',
+        duration: 'Self-paced',
+        certification: 'EPA 608 Certification',
+        curriculum: [
+          'HVAC Fundamentals and Safety Protocols',
+          'Refrigeration Principles and Cycle Theory',
+          'Electrical Components and Wiring',
+          'EPA 608 Certification Preparation',
+          'Residential HVAC Systems Installation',
+          'Commercial HVAC Systems Maintenance',
+          'Troubleshooting and Repair Techniques',
+          'Customer Service and Professional Conduct'
+        ],
+        salaryInfo: {
+          median: '$75,000',
+          growth: '5%',
+          period: '2022-2032',
+          demand: 'High demand for skilled HVAC technicians in residential and commercial sectors in Sacramento and surrounding areas'
+        }
       }
     };
   } else {
@@ -83,6 +111,34 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           growth: '6%',
           period: '2022-2032',
           demand: 'Alta demanda de conductores comerciales calificados en transporte de carga y logística en Sacramento y áreas circundantes'
+        }
+      },
+      'hvac-technician': {
+        title: 'Programa de Técnico HVAC (Certificación EPA 608 Incluida)',
+        description: 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo certificación EPA 608 - Programa Aprobado por la Industria.',
+        fullDescription: [
+          "Nuestro programa de Técnico HVAC aprobado por la industria se enfoca en enseñar las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
+          "A través de nuestra capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
+          "Al completar el programa, estarás preparado para puestos de técnico HVAC de nivel inicial con certificación EPA 608 y experiencia práctica con equipos de la industria."
+        ],
+        price: '$2,799',
+        duration: 'A tu ritmo',
+        certification: 'Certificación EPA 608',
+        curriculum: [
+          'Fundamentos HVAC y Protocolos de Seguridad',
+          'Principios de Refrigeración y Teoría del Ciclo',
+          'Componentes Eléctricos y Cableado',
+          'Preparación para Certificación EPA 608',
+          'Instalación de Sistemas HVAC Residenciales',
+          'Mantenimiento de Sistemas HVAC Comerciales',
+          'Técnicas de Diagnóstico y Reparación',
+          'Servicio al Cliente y Conducta Profesional'
+        ],
+        salaryInfo: {
+          median: '$75,000',
+          growth: '5%',
+          period: '2022-2032',
+          demand: 'Alta demanda de técnicos HVAC capacitados en sectores residenciales y comerciales en Sacramento y áreas circundantes'
         }
       }
     };
