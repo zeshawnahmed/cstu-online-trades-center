@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, TrendingUp, Wrench, Truck } from 'lucide-react';
+import { Calendar, Clock, Wrench, Truck } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const ResearchHub = () => {
@@ -13,74 +13,30 @@ const ResearchHub = () => {
     {
       id: 1,
       category: 'HVAC',
-      title: language === 'en' ? 'Revolutionary Heat Pump Technology Achieves 95% Efficiency' : 'Tecnología Revolucionaria de Bomba de Calor Alcanza 95% de Eficiencia',
-      excerpt: language === 'en' 
-        ? 'New variable-speed compressor technology is transforming residential and commercial heating systems with unprecedented efficiency ratings.'
-        : 'La nueva tecnología de compresor de velocidad variable está transformando los sistemas de calefacción residenciales y comerciales con niveles de eficiencia sin precedentes.',
+      title: 'Cooling Without Refrigerants? It\'s Happening Now',
+      content: `Traditional air conditioners rely on refrigerants like Freon or R-410A—chemicals that, if leaked, contribute to global warming. But what if you could cool a building without refrigerants at all?
+
+That's the promise of solid-state cooling. Instead of using compressors and gases, these systems rely on advanced materials—like magnetocaloric or electrocaloric compounds—that heat up or cool down when exposed to magnetic or electric fields. No moving parts. No leaks. Just clean, compact, and whisper-quiet cooling.
+
+Researchers at MIT and Oak Ridge National Laboratory are leading the charge. Meanwhile, startups like Blue Frontier are piloting early-stage systems that promise to reduce HVAC energy use by 60% or more.
+
+If you've ever wished your A/C was cheaper to run, more sustainable, and less prone to breakdowns—this is the tech to watch.`,
       date: '2024-01-15',
-      readTime: '5 min',
-      trending: true,
-      image: '/placeholder.svg'
+      readTime: '3 min'
     },
     {
       id: 2,
       category: 'Trucking',
-      title: language === 'en' ? 'Electric Semi-Trucks Reach 500-Mile Range Milestone' : 'Camiones Eléctricos Alcanzan Hito de 500 Millas de Alcance',
-      excerpt: language === 'en'
-        ? 'Major breakthrough in battery technology enables long-haul electric trucking, reducing emissions and operational costs significantly.'
-        : 'Gran avance en tecnología de baterías permite el transporte eléctrico de larga distancia, reduciendo significativamente las emisiones y costos operativos.',
+      title: 'Hydrogen Semi-Trucks Are Rolling Out in California',
+      content: `Electric trucks have gotten most of the headlines lately, but hydrogen fuel cell trucks are quickly becoming the heavyweight contender—especially for long-haul freight.
+
+Companies like Nikola, Hyundai, and Toyota are building and testing hydrogen-powered big rigs capable of traveling 500 to 750 miles on a single tank. Even better? They can refuel in about 15 minutes, unlike electric trucks which can take hours to charge.
+
+Hydrogen trucks still use electric motors—but they generate their own electricity onboard using fuel cells. The only emission? Water vapor. That makes them perfect for states like California, which is rapidly building out a statewide hydrogen fueling network.
+
+For fleet operators, hydrogen offers the range and refueling speed of diesel—with none of the emissions or noise.`,
       date: '2024-01-12',
-      readTime: '7 min',
-      trending: true,
-      image: '/placeholder.svg'
-    },
-    {
-      id: 3,
-      category: 'HVAC',
-      title: language === 'en' ? 'Smart HVAC Systems Reduce Energy Costs by 40%' : 'Sistemas HVAC Inteligentes Reducen Costos de Energía en 40%',
-      excerpt: language === 'en'
-        ? 'AI-powered climate control systems are learning building patterns to optimize heating and cooling automatically.'
-        : 'Los sistemas de control climático impulsados por IA están aprendiendo patrones de edificios para optimizar automáticamente la calefacción y refrigeración.',
-      date: '2024-01-10',
-      readTime: '4 min',
-      trending: false,
-      image: '/placeholder.svg'
-    },
-    {
-      id: 4,
-      category: 'Trucking',
-      title: language === 'en' ? 'Autonomous Trucking Pilots Show 98% Safety Improvement' : 'Pilotos de Camiones Autónomos Muestran 98% de Mejora en Seguridad',
-      excerpt: language === 'en'
-        ? 'Latest autonomous driving technology demonstrates remarkable safety improvements in controlled highway environments.'
-        : 'La última tecnología de conducción autónoma demuestra mejoras notables de seguridad en entornos controlados de autopistas.',
-      date: '2024-01-08',
-      readTime: '6 min',
-      trending: false,
-      image: '/placeholder.svg'
-    },
-    {
-      id: 5,
-      category: 'HVAC',
-      title: language === 'en' ? 'New Refrigerant R-454B Approved for Commercial Use' : 'Nuevo Refrigerante R-454B Aprobado para Uso Comercial',
-      excerpt: language === 'en'
-        ? 'EPA approves new low-GWP refrigerant that provides better performance while meeting environmental regulations.'
-        : 'EPA aprueba nuevo refrigerante de bajo GWP que proporciona mejor rendimiento mientras cumple con las regulaciones ambientales.',
-      date: '2024-01-05',
-      readTime: '3 min',
-      trending: false,
-      image: '/placeholder.svg'
-    },
-    {
-      id: 6,
-      category: 'Trucking',
-      title: language === 'en' ? 'Hydrogen Fuel Cell Trucks Enter Mass Production' : 'Camiones de Celda de Combustible de Hidrógeno Entran en Producción Masiva',
-      excerpt: language === 'en'
-        ? 'Major manufacturers announce plans for large-scale production of hydrogen-powered commercial vehicles.'
-        : 'Los principales fabricantes anuncian planes para la producción a gran escala de vehículos comerciales propulsados por hidrógeno.',
-      date: '2024-01-03',
-      readTime: '5 min',
-      trending: false,
-      image: '/placeholder.svg'
+      readTime: '3 min'
     }
   ];
 
@@ -94,51 +50,32 @@ const ResearchHub = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 {language === 'en' ? 'Research Hub' : 'Centro de Investigación'}
               </h1>
-              <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto mb-8">
                 {language === 'en' 
                   ? 'Stay updated with the latest breakthroughs and innovations in HVAC technology and commercial trucking industry'
                   : 'Mantente actualizado con los últimos avances e innovaciones en tecnología HVAC y la industria del transporte comercial'}
               </p>
+              
+              {/* Innovation Commitment Paragraph */}
+              <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-6 text-left">
+                <p className="text-lg opacity-95 leading-relaxed">
+                  {language === 'en'
+                    ? 'At California Skilled Trade University, we are committed to innovation and preparing our students with the most cutting-edge knowledge in their field. Our Research Hub was launched to keep you informed about the latest technological breakthroughs and industry developments that are shaping the future of skilled trades. Stay ahead of the curve with insights that matter to your career.'
+                    : 'En la Universidad de Oficios Especializados de California, estamos comprometidos con la innovación y preparar a nuestros estudiantes con el conocimiento más vanguardista en su campo. Nuestro Centro de Investigación fue lanzado para mantenerlo informado sobre los últimos avances tecnológicos y desarrollos de la industria que están dando forma al futuro de los oficios especializados. Manténgase a la vanguardia con conocimientos que importan para su carrera.'}
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Filter Tabs */}
-        <section className="py-8 bg-white border-b">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Badge variant="default" className="px-6 py-2 text-sm">
-                {language === 'en' ? 'All Articles' : 'Todos los Artículos'}
-              </Badge>
-              <Badge variant="outline" className="px-6 py-2 text-sm hover:bg-navy-50 cursor-pointer">
-                <Wrench className="h-4 w-4 mr-2" />
-                HVAC
-              </Badge>
-              <Badge variant="outline" className="px-6 py-2 text-sm hover:bg-navy-50 cursor-pointer">
-                <Truck className="h-4 w-4 mr-2" />
-                {language === 'en' ? 'Trucking' : 'Transporte'}
-              </Badge>
-              <Badge variant="outline" className="px-6 py-2 text-sm hover:bg-navy-50 cursor-pointer">
-                <TrendingUp className="h-4 w-4 mr-2" />
-                {language === 'en' ? 'Trending' : 'Tendencia'}
-              </Badge>
-            </div>
-          </div>
-        </section>
-
-        {/* Articles Grid */}
+        {/* Articles Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="max-w-4xl mx-auto space-y-12">
               {articles.map((article) => (
-                <Card key={article.id} className="group hover:shadow-xl transition-all duration-300 cursor-pointer">
-                  <div className="relative">
-                    <img 
-                      src={article.image} 
-                      alt={article.title}
-                      className="w-full h-48 object-cover rounded-t-lg"
-                    />
-                    <div className="absolute top-4 left-4">
+                <Card key={article.id} className="overflow-hidden">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center gap-4 mb-3">
                       <Badge 
                         variant={article.category === 'HVAC' ? 'default' : 'secondary'}
                         className="flex items-center gap-1"
@@ -150,30 +87,8 @@ const ResearchHub = () => {
                         )}
                         {article.category}
                       </Badge>
-                    </div>
-                    {article.trending && (
-                      <div className="absolute top-4 right-4">
-                        <Badge variant="destructive" className="flex items-center gap-1">
-                          <TrendingUp className="h-3 w-3" />
-                          {language === 'en' ? 'Trending' : 'Tendencia'}
-                        </Badge>
-                      </div>
-                    )}
-                  </div>
-
-                  <CardHeader>
-                    <CardTitle className="text-xl group-hover:text-navy-600 transition-colors line-clamp-2">
-                      {article.title}
-                    </CardTitle>
-                  </CardHeader>
-
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4 line-clamp-3">
-                      {article.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center justify-between text-sm text-muted-foreground">
-                      <div className="flex items-center gap-4">
+                      
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
                         <div className="flex items-center gap-1">
                           <Calendar className="h-4 w-4" />
                           {new Date(article.date).toLocaleDateString(language === 'en' ? 'en-US' : 'es-ES')}
@@ -183,6 +98,19 @@ const ResearchHub = () => {
                           {article.readTime}
                         </div>
                       </div>
+                    </div>
+                    <CardTitle className="text-2xl md:text-3xl text-navy-700 leading-tight">
+                      {article.title}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent>
+                    <div className="prose prose-lg max-w-none text-navy-600/90 leading-relaxed">
+                      {article.content.split('\n\n').map((paragraph, index) => (
+                        <p key={index} className="mb-4 last:mb-0">
+                          {paragraph}
+                        </p>
+                      ))}
                     </div>
                   </CardContent>
                 </Card>
