@@ -80,6 +80,9 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+            <Link to="/research-hub" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
+              {language === 'en' ? 'Research Hub' : 'Centro de Investigación'}
+            </Link>
             <Link to="/about" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
               {language === 'en' ? 'About Us' : 'Acerca de Nosotros'}
             </Link>
@@ -142,6 +145,13 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
+            <Link 
+              to="/research-hub" 
+              className="block py-2 text-navy-500 hover:text-navy-400"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {language === 'en' ? 'Research Hub' : 'Centro de Investigación'}
+            </Link>
             <Link 
               to="/about" 
               className="block py-2 text-navy-500 hover:text-navy-400"

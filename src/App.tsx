@@ -10,6 +10,7 @@ import ProgramDetail from "./pages/program/ProgramDetail";
 import ApplicationForm from "./pages/ApplicationForm";
 import ContactForm from "./pages/ContactForm";
 import AboutUs from "./pages/AboutUs";
+import ResearchHub from "./pages/ResearchHub";
 import { motion, AnimatePresence } from "framer-motion";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
@@ -29,6 +30,7 @@ const App = () => (
               <Route path="/apply" element={<ApplicationForm />} />
               <Route path="/contact" element={<ContactForm />} />
               <Route path="/about" element={<AboutUs />} />
+              <Route path="/research-hub" element={<ResearchHub />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
