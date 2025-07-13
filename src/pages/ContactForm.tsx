@@ -37,11 +37,26 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // In a real application, this would send data to a backend service that emails peaceofmindcollabs@gmail.com
-      console.log('Contact form submitted:', formData);
-      
-      // Simulate network request
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch('https://nlaxxynsulaytdstazmz.supabase.co/functions/v1/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          interestedInFinancialAid: formData.interestedInFinancialAid,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      const result = await response.json();
+      console.log('Contact form submitted successfully:', result);
       
       setIsSubmitted(true);
       toast({
@@ -49,6 +64,7 @@ const ContactForm = () => {
         description: language === 'en' ? "Your message has been received. We'll get back to you soon." : "Tu mensaje ha sido recibido. Nos pondremos en contacto contigo pronto.",
       });
     } catch (error) {
+      console.error('Contact form submission error:', error);
       toast({
         title: language === 'en' ? "Submission Error" : "Error de Envío",
         description: language === 'en' 
