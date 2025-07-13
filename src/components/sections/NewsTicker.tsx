@@ -24,7 +24,7 @@ const NewsTicker = () => {
     <div className="bg-navy-700 text-white py-2 overflow-hidden relative">
       <div className="flex items-center">
         <div className="bg-gold-400 text-navy-900 px-4 py-1 font-bold text-sm whitespace-nowrap">
-          {language === 'en' ? 'ASTU IN THE NEWS' : 'ASTU EN LAS NOTICIAS'}
+          {language === 'en' ? 'ASTU NEWS' : 'NOTICIAS ASTU'}
         </div>
         <div className="flex-1 overflow-hidden">
           <div className="animate-scroll flex whitespace-nowrap" style={{ animationDuration: '20s' }}>

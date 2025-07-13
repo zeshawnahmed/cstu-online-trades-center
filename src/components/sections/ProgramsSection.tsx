@@ -84,7 +84,7 @@ const ProgramsSection = () => {
         <div className="text-center mb-8">
           <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-navy-600">
             <p className="text-lg font-bold mb-1">
-              {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
+              {language === 'en' ? 'Call or Text Admissions to Get Started' : 'Llama o Envía Texto a Admisiones para Comenzar'}
             </p>
             <p className="text-2xl font-bold underline decoration-2">
               (916) 365-6907

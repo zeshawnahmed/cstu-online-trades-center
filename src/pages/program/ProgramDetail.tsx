@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Clock, Award, Users, DollarSign, TrendingUp } from 'lucide-react';
@@ -78,14 +77,18 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         duration: 'Self-paced',
         certification: 'EPA 608 Certification',
         curriculum: [
-          'HVAC Fundamentals and Safety Protocols',
-          'Refrigeration Principles and Cycle Theory',
-          'Electrical Components and Wiring',
-          'EPA 608 Certification Preparation',
-          'Residential HVAC Systems Installation',
-          'Commercial HVAC Systems Maintenance',
-          'Troubleshooting and Repair Techniques',
-          'Customer Service and Professional Conduct'
+          '🧰 Precision Use of Specialized HVAC Diagnostic and Service Tools',
+          'High-accuracy refrigerant gauges',
+          'Multi-port manifold sets',
+          'Industrial-grade vacuum pumps',
+          'Digital multimeters for electrical diagnostics',
+          'Electronic and ultrasonic leak detection instruments',
+          '❄️ Thermodynamic Principles and Refrigeration Cycle Mastery',
+          '🔌 Complex Electrical Systems Troubleshooting and Control Wiring',
+          '📐 Technical Blueprint Analysis and HVAC System Design Engineering',
+          '📋 Client-Facing Technical Communication and Service Documentation',
+          '📜 Regulatory Compliance and Environmental Safety Standards (OSHA & EPA 608)',
+          '🛠 Workforce Integration and Professional Readiness for the HVAC Industry'
         ],
         salaryInfo: {
           median: '$75,000',
@@ -155,14 +158,18 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         duration: 'A tu ritmo',
         certification: 'Certificación EPA 608',
         curriculum: [
-          'Fundamentos HVAC y Protocolos de Seguridad',
-          'Principios de Refrigeración y Teoría del Ciclo',
-          'Componentes Eléctricos y Cableado',
-          'Preparación para Certificación EPA 608',
-          'Instalación de Sistemas HVAC Residenciales',
-          'Mantenimiento de Sistemas HVAC Comerciales',
-          'Técnicas de Diagnóstico y Reparación',
-          'Servicio al Cliente y Conducta Profesional'
+          '🧰 Uso Preciso de Herramientas Especializadas de Diagnóstico y Servicio HVAC',
+          'Medidores de refrigerante de alta precisión',
+          'Conjuntos de colectores multipuerto',
+          'Bombas de vacío de grado industrial',
+          'Multímetros digitales para diagnósticos eléctricos',
+          'Instrumentos de detección de fugas electrónicos y ultrasónicos',
+          '❄️ Principios Termodinámicos y Dominio del Ciclo de Refrigeración',
+          '🔌 Solución de Problemas de Sistemas Eléctricos Complejos y Cableado de Control',
+          '📐 Análisis de Planos Técnicos e Ingeniería de Diseño de Sistemas HVAC',
+          '📋 Comunicación Técnica con Clientes y Documentación de Servicios',
+          '📜 Cumplimiento Regulatorio y Estándares de Seguridad Ambiental (OSHA y EPA 608)',
+          '🛠 Integración Laboral y Preparación Profesional para la Industria HVAC'
         ],
         salaryInfo: {
           median: '$75,000',
@@ -224,7 +231,7 @@ const ProgramDetail = () => {
           <div className="text-center mb-8">
             <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white">
               <p className="text-lg font-bold mb-1">
-                {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
+                {language === 'en' ? 'Call or Text Admissions to Get Started' : 'Llama o Envía Texto a Admisiones para Comenzar'}
               </p>
               <p className="text-2xl font-bold">
                 (916) 365-6907
@@ -370,6 +377,11 @@ const ProgramDetail = () => {
                 </motion.div>
               ))}
             </div>
+            
+            {/* Curriculum disclaimer */}
+            <p className="text-xs text-gray-500 mt-6 text-center italic">
+              *Curriculum subject to change
+            </p>
           </div>
         </div>
       </section>
@@ -382,7 +394,7 @@ const ProgramDetail = () => {
             <div className="mb-8">
               <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white">
                 <p className="text-lg font-bold mb-1">
-                  {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
+                  {language === 'en' ? 'Call or Text Admissions to Get Started' : 'Llama o Envía Texto a Admisiones para Comenzar'}
                 </p>
                 <p className="text-2xl font-bold">
                   (916) 365-6907
