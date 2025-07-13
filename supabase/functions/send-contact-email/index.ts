@@ -27,10 +27,10 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, phone, message, interestedInFinancialAid }: ContactEmailRequest = await req.json();
 
-    // Initialize Supabase client
+    // Initialize Supabase client with service role key to bypass RLS
     const supabaseClient = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
-      Deno.env.get("SUPABASE_ANON_KEY") ?? "",
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
     );
 
     // Store the contact submission in the database
