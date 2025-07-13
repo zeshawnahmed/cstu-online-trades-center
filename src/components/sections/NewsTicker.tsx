@@ -7,16 +7,16 @@ const NewsTicker = () => {
 
   const newsItems = [
     language === 'en' 
-      ? "ASTU officially recognized by the California Bureau of Post Secondary Education"
+      ? "ASTU officially recognized by California Bureau of Post Secondary Education"
       : "ASTU oficialmente reconocida por la Oficina de Educación Post Secundaria de California",
     language === 'en'
-      ? "UC Davis and UC Berkeley Alumni come together to launch ASTU"
+      ? "UC Davis, UC Berkeley Alumni come together to launch ASTU"
       : "Exalumnos de UC Davis y UC Berkeley se unen para lanzar ASTU",
     language === 'en'
       ? "Fall 2025 Cohort Launching"
       : "Cohorte de Otoño 2025 Iniciando",
     language === 'en'
-      ? "Proudly Serving the Greater Sacramento Region"
+      ? "Proudly Serving Greater Sacramento Region"
       : "Orgullosamente Sirviendo a la Gran Región de Sacramento"
   ];
 
