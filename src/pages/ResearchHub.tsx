@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Wrench, Truck } from 'lucide-react';
+import { Wrench, Truck } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const ResearchHub = () => {
@@ -13,15 +13,14 @@ const ResearchHub = () => {
     {
       id: 1,
       category: 'HVAC',
-      title: 'Cooling Without Refrigerants? It\'s Happening Now',
+      title: "Cooling Without Refrigerants? It's Happening Now",
       content: `Traditional air conditioners rely on refrigerants like Freon or R-410A—chemicals that, if leaked, contribute to global warming. But what if you could cool a building without refrigerants at all?
 
 That's the promise of solid-state cooling. Instead of using compressors and gases, these systems rely on advanced materials—like magnetocaloric or electrocaloric compounds—that heat up or cool down when exposed to magnetic or electric fields. No moving parts. No leaks. Just clean, compact, and whisper-quiet cooling.
 
 Researchers at MIT and Oak Ridge National Laboratory are leading the charge. Meanwhile, startups like Blue Frontier are piloting early-stage systems that promise to reduce HVAC energy use by 60% or more.
 
-If you've ever wished your A/C was cheaper to run, more sustainable, and less prone to breakdowns—this is the tech to watch.`,
-      date: '2024-01-15'
+If you've ever wished your A/C was cheaper to run, more sustainable, and less prone to breakdowns—this is the tech to watch.`
     },
     {
       id: 2,
@@ -33,8 +32,7 @@ Companies like Nikola, Hyundai, and Toyota are building and testing hydrogen-pow
 
 Hydrogen trucks still use electric motors—but they generate their own electricity onboard using fuel cells. The only emission? Water vapor. That makes them perfect for states like California, which is rapidly building out a statewide hydrogen fueling network.
 
-For fleet operators, hydrogen offers the range and refueling speed of diesel—with none of the emissions or noise.`,
-      date: '2024-01-12'
+For fleet operators, hydrogen offers the range and refueling speed of diesel—with none of the emissions or noise.`
     }
   ];
 
@@ -50,8 +48,8 @@ For fleet operators, hydrogen offers the range and refueling speed of diesel—w
               </h1>
               <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto mb-8">
                 {language === 'en' 
-                  ? 'Stay updated with the latest breakthroughs and innovations in HVAC technology and commercial trucking industry'
-                  : 'Mantente actualizado con los últimos avances e innovaciones en tecnología HVAC y la industria del transporte comercial'}
+                  ? 'Stay updated with the latest breakthroughs and innovations'
+                  : 'Mantente actualizado con los últimos avances e innovaciones'}
               </p>
               
               {/* Innovation Commitment Paragraph */}
@@ -85,13 +83,6 @@ For fleet operators, hydrogen offers the range and refueling speed of diesel—w
                         )}
                         {article.category}
                       </Badge>
-                      
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4" />
-                          {new Date(article.date).toLocaleDateString(language === 'en' ? 'en-US' : 'es-ES')}
-                        </div>
-                      </div>
                     </div>
                     <CardTitle className="text-2xl md:text-3xl text-navy-700 leading-tight">
                       {article.title}
