@@ -69,8 +69,8 @@ const AboutUs = () => {
             </h2>
             <p className="text-lg text-navy-600 mb-8 leading-relaxed">
               {language === 'en'
-                ? "Founded in Sacramento, American Skilled Trade University (ASTU) was born from a simple yet powerful mission: to provide a smart alternative to overpriced 4-year degrees that leave students drowning in debt with unmarketable skills. While traditional colleges charge $30,000+ per year for degrees that may never pay off, ASTU prepares you for high-demand careers at a fraction of the cost."
-                : "Fundada en Sacramento, la Universidad de Oficios Especializados Americana (ASTU) nació de una misión simple pero poderosa: proporcionar una alternativa inteligente a los títulos universitarios sobrevalorados de 4 años que dejan a los estudiantes ahogándose en deudas."
+                ? "Founded in Sacramento by UC Berkeley and UC Davis Alumni, American Skilled Trade University (ASTU) was born from a simple yet powerful mission: to provide a smart alternative to overpriced 4-year degrees that leave students drowning in debt with unmarketable skills. While traditional colleges charge $30,000+ per year for degrees that may never pay off, ASTU prepares you for high-demand careers at a fraction of the cost."
+                : "Fundada en Sacramento por exalumnos de UC Berkeley y UC Davis, la Universidad de Oficios Especializados Americana (ASTU) nació de una misión simple pero poderosa: proporcionar una alternativa inteligente a los títulos universitarios sobrevalorados de 4 años que dejan a los estudiantes ahogándose en deudas."
               }
             </p>
             
@@ -86,8 +86,8 @@ const AboutUs = () => {
               <MapPin className="h-8 w-8 text-gold-500 mr-3" />
               <p className="text-xl font-semibold text-navy-700">
                 {language === 'en'
-                  ? "Proudly serving the Sacramento community with practical education"
-                  : "Sirviendo con orgullo a la comunidad de Sacramento con educación práctica"}
+                  ? "Proudly serving the Greater Sacramento Region with Practical Education"
+                  : "Sirviendo con orgullo a la Gran Región de Sacramento con Educación Práctica"}
               </p>
             </div>
           </div>
@@ -165,12 +165,12 @@ const AboutUs = () => {
               >
                 <div className="flex items-center mb-4">
                   <BarChart3 className="h-8 w-8 text-gold-500 mr-3" />
-                  <h3 className="text-xl font-bold text-navy-700">{language === 'en' ? 'FMCSA-Approved Training' : 'Capacitación Aprobada por FMCSA'}</h3>
+                  <h3 className="text-xl font-bold text-navy-700">{language === 'en' ? 'High-Demand Skills' : 'Habilidades de Alta Demanda'}</h3>
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'Our Commercial Truck Driving program is FMCSA-approved, ensuring you meet industry standards and have guaranteed job opportunities upon completion.'
-                    : 'Nuestro programa de Manejo de Camiones Comerciales está aprobado por FMCSA, asegurando que cumplas con los estándares de la industria.'
+                    ? 'Our programs focus on skills that are in high demand and cannot be outsourced or automated, ensuring long-term career security and growth potential.'
+                    : 'Nuestros programas se enfocan en habilidades de alta demanda que no pueden ser subcontratadas o automatizadas, asegurando seguridad profesional a largo plazo.'
                   }
                 </p>
               </motion.div>
@@ -209,18 +209,11 @@ const AboutUs = () => {
             
             <p className="text-lg text-navy-600 mb-10 leading-relaxed text-center">
               {language === 'en'
-                ? 'ASTU graduates enter high-paying careers immediately, while college graduates often struggle to find work that justifies their massive debt load.'
-                : 'Los graduados de ASTU entran en carreras bien pagadas inmediatamente, mientras que los graduados universitarios a menudo luchan por encontrar trabajo que justifique su carga masiva de deuda.'
+                ? 'ASTU graduates are positioned to enter high-paying careers immediately, while college graduates often struggle to find work that justifies their massive debt load.'
+                : 'Los graduados de ASTU están posicionados para entrar en carreras bien pagadas inmediatamente, mientras que los graduados universitarios a menudo luchan por encontrar trabajo que justifique su carga masiva de deuda.'
               }
             </p>
             
-            <div className="grid md:grid-cols-1 gap-8 mb-10">
-              <div className="bg-navy-50 p-6 rounded-xl text-center">
-                <h3 className="font-bold text-navy-700 mb-3">{language === 'en' ? 'Commercial Truck Drivers' : 'Conductores de Camiones Comerciales'}</h3>
-                <p className="text-3xl font-bold text-navy-600">$70,000</p>
-                <p className="text-sm text-navy-500 mt-1">{language === 'en' ? 'Median Annual Salary' : 'Salario Anual Medio'}</p>
-              </div>
-            </div>
             
             <div className="bg-gold-50 border-l-4 border-gold-500 pl-6 py-4 rounded-r-lg">
               <p className="text-navy-800 font-medium">
@@ -261,7 +254,7 @@ const AboutUs = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button className="bg-gold-400 hover:bg-gold-500 text-navy-800 text-lg px-8 py-6 w-full sm:w-auto">
-                  {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
+                  {language === 'en' ? 'Financial Aid Assistance' : 'Asistencia de Ayuda Financiera'}
                 </Button>
               </Link>
               <Link to="/contact">

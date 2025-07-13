@@ -32,8 +32,8 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">ASTU</h3>
             <p className="text-gray-300 mb-4">
               {language === 'en' 
-                ? "American Skilled Trade University offers affordable, self-paced Commercial Truck Driving and CDL training with hands-on experience."
-                : "Universidad de Oficios Especializados Americana ofrece capacitación asequible y a tu propio ritmo en Manejo de Camiones Comerciales y CDL con experiencia práctica."}
+                ? "American Skilled Trade University offers affordable, self-paced, hands on training in high demand skilled trades."
+                : "Universidad de Oficios Especializados Americana ofrece capacitación asequible, a tu propio ritmo y práctica en oficios especializados de alta demanda."}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-gold-400 transition-colors">
@@ -53,11 +53,16 @@ const Footer = () => {
           
           {/* Column 2 - Programs */}
           <div>
-            <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Our Program" : "Nuestro Programa"}</h3>
+            <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Programs" : "Programas"}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/programs/commercial-truck-driving" className="text-gray-300 hover:text-gold-400 transition-colors">
                   {language === 'en' ? "Commercial Truck Driving & CDL" : "Manejo de Camiones Comerciales y CDL"}
+                </Link>
+              </li>
+              <li>
+                <Link to="/programs/hvac-technician" className="text-gray-300 hover:text-gold-400 transition-colors">
+                  {language === 'en' ? "HVAC Technician Program" : "Programa de Técnico HVAC"}
                 </Link>
               </li>
             </ul>

@@ -30,7 +30,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                   <Phone className="h-5 w-5" />
                   <div>
                     <p className="text-sm font-bold mb-1">
-                      {language === 'en' ? 'Call or Text Admissions to Get Started' : 'Llama o Envía Texto a Admisiones para Comenzar'}
+                      {language === 'en' ? 'CALL OR TEXT ADMISSIONS TO GET STARTED' : 'LLAMA O ENVÍA TEXTO A ADMISIONES PARA COMENZAR'}
                     </p>
                     <p className="text-xl font-bold underline">
                       (916) 365-6907
@@ -54,12 +54,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
               }
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-10 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-10 max-w-5xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.3 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-3 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
               >
                 {t('becomeJobReady')}
               </motion.div>
@@ -68,7 +68,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.5 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-3 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
               >
                 {t('onlineSelfPaced')}
               </motion.div>
@@ -77,7 +77,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.7 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-3 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
               >
                 {t('handsOnTraining')}
               </motion.div>
@@ -86,19 +86,29 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.9 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-3 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
               >
-                {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
+                {language === 'en' ? 'Financial Aid Assistance' : 'Asistencia de Ayuda Financiera'}
               </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 1.1 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm text-center sm:col-span-2 lg:col-span-4"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-3 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
               >
-                {language === 'en' ? 'Job Placement Assistance Available' : 'Asistencia de Colocación Laboral Disponible'}
+                {language === 'en' ? 'Job Placement Assistance*' : 'Asistencia de Colocación Laboral*'}
               </motion.div>
+            </div>
+            
+            {/* Footnote */}
+            <div className="text-center mb-8">
+              <p className="text-xs text-gray-300">
+                {language === 'en' 
+                  ? '*ASTU does not guarantee job placement however offers extensive Job Search Support'
+                  : '*ASTU no garantiza la colocación laboral, sin embargo, ofrece amplio apoyo en la búsqueda de empleo'
+                }
+              </p>
             </div>
             
             <motion.div

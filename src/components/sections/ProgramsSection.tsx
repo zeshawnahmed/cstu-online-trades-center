@@ -27,12 +27,12 @@ const ProgramsSection = () => {
         language === 'en' ? 'CDL Class A or B License Training' : 'Capacitación para Licencia CDL Clase A o B',
         language === 'en' ? 'Optional Hazmat Endorsement' : 'Endoso Hazmat Opcional',
         language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
-        language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos locales a través de experiencias divertidas',
-        language === 'en' ? 'Hands-On Behind-The-Wheel-Training With Trained Professional' : 'Entrenamiento práctico al volante con profesionales capacitados'
+        language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos localess a través de experiencias divertidas',
+        language === 'en' ? 'Hands-On Training With Licensed Professionals' : 'Entrenamiento práctico con profesionales licenciados'
       ],
       salaryInfo: {
         median: '$70,000',
-        growth: language === 'en' ? '6%' : '6%',
+        growth: language === 'en' ? '12%' : '12%',
         period: '2022-2032',
         clarification: language === 'en' ? 'Median Annual Salary for Commercial Truck Drivers' : 'Salario Anual Medio para Conductores de Camiones Comerciales'
       }
@@ -48,18 +48,15 @@ const ProgramsSection = () => {
       imageUrl: '/hvac-technician-program.jpg',
       slug: 'hvac-technician',
       keyFeatures: [
-        language === 'en' 
-          ? 'Industry-Approved Program - Learn Essential Skills To Become Job-Ready in HVAC for entry level positions'
-          : 'Programa Aprobado por la Industria - Aprende habilidades esenciales para estar listo para trabajar en HVAC en puestos de nivel inicial',
         language === 'en' ? 'EPA 608 Certification Training Included' : 'Capacitación de Certificación EPA 608 Incluida',
         language === 'en' ? 'Residential and Commercial HVAC Systems' : 'Sistemas HVAC Residenciales y Comerciales',
         language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
         language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos locales a través de experiencias divertidas',
-        language === 'en' ? 'Hands-On Training With Industry Equipment' : 'Entrenamiento práctico con equipos de la industria'
+        language === 'en' ? 'Hands-On Training With Licensed Professional' : 'Entrenamiento práctico con profesional licenciado'
       ],
       salaryInfo: {
         median: '$75,000',
-        growth: language === 'en' ? '5%' : '5%',
+        growth: language === 'en' ? '13%' : '13%',
         period: '2022-2032',
         clarification: language === 'en' ? 'Median Annual Salary for HVAC Technicians' : 'Salario Anual Medio para Técnicos HVAC'
       }
@@ -70,12 +67,7 @@ const ProgramsSection = () => {
     <section id="programs-section" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          subtitle={language === 'en' ? 'Our Programs' : 'Nuestros Programas'}
-          title={language === 'en' ? 'Trade Skills Training Programs' : 'Programas de Capacitación en Oficios'}
-          description={language === 'en' 
-            ? 'Master the Skills Needed for Successful Careers in High-Demand Trade Industries with Comprehensive Training Programs.'
-            : 'Domina las habilidades necesarias para carreras exitosas en industrias de oficios de alta demanda con programas de capacitación integral.'
-          }
+          title={language === 'en' ? 'Current Program Offerings' : 'Ofertas de Programas Actuales'}
           centered={true}
           className="mb-8"
         />
@@ -84,7 +76,7 @@ const ProgramsSection = () => {
         <div className="text-center mb-8">
           <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-navy-600">
             <p className="text-lg font-bold mb-1">
-              {language === 'en' ? 'Call or Text Admissions to Get Started' : 'Llama o Envía Texto a Admisiones para Comenzar'}
+              {language === 'en' ? 'CALL OR TEXT ADMISSIONS TO GET STARTED' : 'LLAMA O ENVÍA TEXTO A ADMISIONES PARA COMENZAR'}
             </p>
             <p className="text-2xl font-bold underline decoration-2">
               (916) 365-6907
@@ -114,7 +106,7 @@ const ProgramsSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-gold-400 hover:bg-gold-500 text-navy-800 font-bold px-8 py-4 rounded-lg text-xl w-full md:w-auto"
               >
-                {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
+                {language === 'en' ? 'Financial Aid Assistance' : 'Asistencia de Ayuda Financiera'}
               </motion.button>
             </Link>
           </div>
