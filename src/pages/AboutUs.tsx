@@ -215,13 +215,6 @@ const AboutUs = () => {
             </p>
             
             
-            <div className="bg-gold-50 border-l-4 border-gold-500 pl-6 py-4 rounded-r-lg">
-              <p className="text-navy-800 font-medium">
-                {language === 'en'
-                  ? "The math is simple: Start earning $70,000 immediately vs. spending $120,000+ and 4+ years for a degree that might not even get you a job."
-                  : "Las matemáticas son simples: Comienza a ganar $70,000 inmediatamente vs. gastar $120,000+ y 4+ años por un título que tal vez ni siquiera te consiga trabajo."}
-              </p>
-            </div>
           </div>
         </div>
       </section>

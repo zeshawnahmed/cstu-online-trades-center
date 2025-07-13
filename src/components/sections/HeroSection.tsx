@@ -101,15 +101,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
               </motion.div>
             </div>
             
-            {/* Footnote */}
-            <div className="text-center mb-8">
-              <p className="text-xs text-gray-300">
-                {language === 'en' 
-                  ? '*ASTU does not guarantee job placement however offers extensive Job Search Support'
-                  : '*ASTU no garantiza la colocación laboral, sin embargo, ofrece amplio apoyo en la búsqueda de empleo'
-                }
-              </p>
-            </div>
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -124,6 +115,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 {t('explorePrograms')} <ArrowDown className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
+            
+            {/* Footnote moved to bottom */}
+            <div className="text-center mt-12">
+              <p className="text-sm text-gray-300">
+                {language === 'en' 
+                  ? '*ASTU does not guarantee job placement however offers extensive Job Search Support'
+                  : '*ASTU no garantiza la colocación laboral, sin embargo, ofrece amplio apoyo en la búsqueda de empleo'
+                }
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>

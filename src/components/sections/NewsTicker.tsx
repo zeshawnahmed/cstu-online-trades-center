@@ -27,9 +27,9 @@ const NewsTicker = () => {
           {language === 'en' ? 'ASTU NEWS' : 'NOTICIAS ASTU'}
         </div>
         <div className="flex-1 overflow-hidden">
-          <div className="animate-scroll flex whitespace-nowrap" style={{ animationDuration: '10s' }}>
-            {/* Duplicate the news items to create seamless loop */}
-            {[...newsItems, ...newsItems].map((item, index) => (
+          <div className="animate-scroll flex whitespace-nowrap" style={{ animationDuration: '6s' }}>
+            {/* Duplicate the news items multiple times to create seamless loop */}
+            {[...newsItems, ...newsItems, ...newsItems].map((item, index) => (
               <span key={index} className="inline-block px-8 text-sm font-medium">
                 • {item}
               </span>
