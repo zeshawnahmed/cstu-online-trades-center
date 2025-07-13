@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, Wrench, Truck } from 'lucide-react';
+import { Calendar, Wrench, Truck } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const ResearchHub = () => {
@@ -21,8 +21,7 @@ That's the promise of solid-state cooling. Instead of using compressors and gase
 Researchers at MIT and Oak Ridge National Laboratory are leading the charge. Meanwhile, startups like Blue Frontier are piloting early-stage systems that promise to reduce HVAC energy use by 60% or more.
 
 If you've ever wished your A/C was cheaper to run, more sustainable, and less prone to breakdowns—this is the tech to watch.`,
-      date: '2024-01-15',
-      readTime: '3 min'
+      date: '2024-01-15'
     },
     {
       id: 2,
@@ -35,8 +34,7 @@ Companies like Nikola, Hyundai, and Toyota are building and testing hydrogen-pow
 Hydrogen trucks still use electric motors—but they generate their own electricity onboard using fuel cells. The only emission? Water vapor. That makes them perfect for states like California, which is rapidly building out a statewide hydrogen fueling network.
 
 For fleet operators, hydrogen offers the range and refueling speed of diesel—with none of the emissions or noise.`,
-      date: '2024-01-12',
-      readTime: '3 min'
+      date: '2024-01-12'
     }
   ];
 
@@ -60,8 +58,8 @@ For fleet operators, hydrogen offers the range and refueling speed of diesel—w
               <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-6 text-left">
                 <p className="text-lg opacity-95 leading-relaxed">
                   {language === 'en'
-                    ? 'At California Skilled Trade University, we are committed to innovation and preparing our students with the most cutting-edge knowledge in their field. Our Research Hub was launched to keep you informed about the latest technological breakthroughs and industry developments that are shaping the future of skilled trades. Stay ahead of the curve with insights that matter to your career.'
-                    : 'En la Universidad de Oficios Especializados de California, estamos comprometidos con la innovación y preparar a nuestros estudiantes con el conocimiento más vanguardista en su campo. Nuestro Centro de Investigación fue lanzado para mantenerlo informado sobre los últimos avances tecnológicos y desarrollos de la industria que están dando forma al futuro de los oficios especializados. Manténgase a la vanguardia con conocimientos que importan para su carrera.'}
+                    ? 'At ASTU, we are committed to innovation and preparing our students with the most cutting-edge knowledge in their field. Our Research Hub was launched to keep you informed about the latest technological breakthroughs and industry developments that are shaping the future of skilled trades. Stay ahead of the curve with insights that matter to your career.'
+                    : 'En ASTU, estamos comprometidos con la innovación y preparar a nuestros estudiantes con el conocimiento más vanguardista en su campo. Nuestro Centro de Investigación fue lanzado para mantenerlo informado sobre los últimos avances tecnológicos y desarrollos de la industria que están dando forma al futuro de los oficios especializados. Manténgase a la vanguardia con conocimientos que importan para su carrera.'}
                 </p>
               </div>
             </div>
@@ -92,10 +90,6 @@ For fleet operators, hydrogen offers the range and refueling speed of diesel—w
                         <div className="flex items-center gap-1">
                           <Calendar className="h-4 w-4" />
                           {new Date(article.date).toLocaleDateString(language === 'en' ? 'en-US' : 'es-ES')}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="h-4 w-4" />
-                          {article.readTime}
                         </div>
                       </div>
                     </div>

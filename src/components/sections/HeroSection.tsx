@@ -30,7 +30,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                   <Phone className="h-5 w-5" />
                   <div>
                     <p className="text-sm font-bold mb-1">
-                      {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
+                      {language === 'en' ? 'SACRAMENTO ADMISSIONS - CALL OR TEXT' : 'ADMISIONES DE SACRAMENTO - LLAMA O ENVÍA TEXTO'}
                     </p>
                     <p className="text-xl font-bold underline">
                       (916) 365-6907
@@ -54,12 +54,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
               }
             </p>
             
-            <div className="flex flex-wrap justify-center gap-3 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-10 max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.3 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
               >
                 {t('becomeJobReady')}
               </motion.div>
@@ -68,7 +68,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.5 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
               >
                 {t('onlineSelfPaced')}
               </motion.div>
@@ -77,7 +77,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.7 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
               >
                 {t('handsOnTraining')}
               </motion.div>
@@ -86,9 +86,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.9 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm"
+                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
               >
                 {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 1.1 }}
+                className="bg-gold-400/90 text-navy-900 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm text-sm text-center sm:col-span-2 lg:col-span-4"
+              >
+                {language === 'en' ? 'Job Placement Assistance Available' : 'Asistencia de Colocación Laboral Disponible'}
               </motion.div>
             </div>
             
