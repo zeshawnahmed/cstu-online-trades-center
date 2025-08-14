@@ -52,10 +52,11 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Customer Service and Professional Conduct'
         ],
         salaryInfo: {
-          median: '$70,000',
-          growth: '6%',
-          period: '2022-2032',
-          demand: 'High demand for qualified commercial drivers across freight and logistics in Sacramento and surrounding areas'
+          median: '$103,663',
+          growth: '9% above national average',
+          period: '2025',
+          demand: 'Average salary for truck drivers in California',
+          source: 'According to Indeed.com'
         },
         keyFeatures: [
           'FMCSA-Approved Program - Learn Essential Skills To Become Job-Ready in Commercial Truck Driving for entry level positions',
@@ -135,10 +136,11 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Servicio al Cliente y Conducta Profesional'
         ],
         salaryInfo: {
-          median: '$70,000',
-          growth: '6%',
-          period: '2022-2032',
-          demand: 'Alta demanda de conductores comerciales calificados en transporte de carga y logística en Sacramento y áreas circundantes'
+          median: '$103,663',
+          growth: '9% por encima del promedio nacional',
+          period: '2025',
+          demand: 'Salario promedio para conductores de camiones en California',
+          source: 'Según Indeed.com'
         },
         keyFeatures: [
           'Programa Aprobado por FMCSA - Aprende habilidades esenciales para estar listo para trabajar en Manejo de Camiones Comerciales en puestos de nivel inicial',

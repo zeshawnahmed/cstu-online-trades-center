@@ -31,10 +31,10 @@ const ProgramsSection = () => {
         language === 'en' ? 'Hands-On Training With Licensed Professionals' : 'Entrenamiento práctico con profesionales licenciados'
       ],
       salaryInfo: {
-        median: '$70,000',
-        growth: language === 'en' ? '12%' : '12%',
-        period: '2022-2032',
-        clarification: language === 'en' ? 'Median Annual Salary for Commercial Truck Drivers' : 'Salario Anual Medio para Conductores de Camiones Comerciales'
+        median: '$103,663',
+        growth: language === 'en' ? '9% above national average' : '9% por encima del promedio nacional',
+        period: '2025',
+        clarification: language === 'en' ? 'According to Indeed.com' : 'Según Indeed.com'
       }
     },
     {
