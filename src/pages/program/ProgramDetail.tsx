@@ -353,15 +353,18 @@ const ProgramDetail = () => {
                   </div>
                 )}
                 
-                <div className="flex items-start">
-                  <TrendingUp className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-navy-700">
-                      {language === 'en' ? 'Job Growth' : 'Crecimiento Laboral'}
-                    </p>
-                    <p className="text-navy-600">{program.salaryInfo.growth} {program.salaryInfo.period}</p>
+                {/* Only show Job Growth for HVAC program */}
+                {slug === 'hvac-technician' && (
+                  <div className="flex items-start">
+                    <TrendingUp className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-navy-700">
+                        {language === 'en' ? 'Job Growth' : 'Crecimiento Laboral'}
+                      </p>
+                      <p className="text-navy-600">{program.salaryInfo.growth} {program.salaryInfo.period}</p>
+                    </div>
                   </div>
-                </div>
+                )}
                 
                 {program.salaryInfo.source && (
                   <div className="mt-4 pt-4 border-t border-navy-200">
