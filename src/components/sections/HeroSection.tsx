@@ -49,8 +49,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
             
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
               {language === 'en'
-                ? 'We Offer Specialized, Hands-On Career Training For You to Level Up Your Financial Future By Mastering In-Demand Skilled Trades.'
-                : 'Ofrecemos Capacitación Especializada y Práctica para que Mejores tu Futuro Financiero al Dominar Oficios Especializados en Demanda.'
+                ? 'We Offer Specialized, Hands-On Career Training For You to Level Up by Mastering In-Demand Skilled Trades.'
+                : 'Ofrecemos Capacitación Especializada y Práctica para que Mejores al Dominar Oficios Especializados en Demanda.'
               }
             </p>
             
@@ -97,7 +97,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 transition={{ duration: 0.4, delay: 1.1 }}
                 className="bg-gold-400/90 text-navy-900 font-semibold px-3 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
               >
-                {language === 'en' ? 'Job Search Coaching*' : 'Orientación en Búsqueda de Empleo*'}
+                {language === 'en' ? 'Job Search Coaching' : 'Orientación en Búsqueda de Empleo'}
               </motion.div>
             </div>
             
