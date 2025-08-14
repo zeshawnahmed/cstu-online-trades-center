@@ -55,10 +55,10 @@ const ProgramsSection = () => {
         language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos locales a través de experiencias divertidas'
       ],
       salaryInfo: {
-        median: '$75,000',
-        growth: language === 'en' ? '13%' : '13%',
-        period: '2022-2032',
-        clarification: language === 'en' ? 'Median Annual Salary for HVAC Technicians' : 'Salario Anual Medio para Técnicos HVAC'
+        median: '$63,420',
+        growth: language === 'en' ? '+13%' : '+13%',
+        period: language === 'en' ? 'projected by 2030' : 'proyectado para 2030',
+        clarification: language === 'en' ? 'According to TradeCareerPath' : 'Según TradeCareerPath'
       }
     }
   ];

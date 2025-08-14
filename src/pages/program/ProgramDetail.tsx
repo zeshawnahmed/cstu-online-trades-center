@@ -98,7 +98,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           period: 'projected by 2030',
           demand: 'Quick Salary Snapshot - HVAC Technicians in California (2025)',
           hourlyRate: '$30.49',
-          source: 'Source: TradeCareerPath'
+          source: 'According to TradeCareerPath'
         },
         keyFeatures: [
           'Hands-On Experience Makes You Job-Ready in HVAC for entry level positions',
@@ -181,7 +181,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           period: 'proyectado para 2030',
           demand: 'Instantánea Rápida de Salario - Técnicos HVAC en California (2025)',
           hourlyRate: '$30.49',
-          source: 'Fuente: TradeCareerPath'
+          source: 'Según TradeCareerPath'
         },
         keyFeatures: [
           'Experiencia práctica te hace estar listo para trabajar en HVAC en puestos de nivel inicial',
