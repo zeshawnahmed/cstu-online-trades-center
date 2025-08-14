@@ -461,10 +461,6 @@ const ProgramDetail = () => {
               </Link>
             </div>
             
-            {/* Added disclaimer */}
-            <p className="text-xs text-gray-400 mt-8">
-              *{program.approvalBadge} - {language === 'en' ? 'Training assistance available upon program completion and subject to industry demand' : 'Asistencia de capacitación disponible al completar el programa y sujeta a la demanda de la industria'}
-            </p>
           </div>
         </div>
       </section>
