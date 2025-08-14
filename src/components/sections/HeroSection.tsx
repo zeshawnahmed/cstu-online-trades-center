@@ -120,8 +120,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
             <div className="text-center mt-12">
               <p className="text-sm text-gray-300">
                 {language === 'en' 
-                  ? '*ASTU does not guarantee job placement however offers extensive Job Search Support'
-                  : '*ASTU no garantiza la colocación laboral, sin embargo, ofrece amplio apoyo en la búsqueda de empleo'
+                  ? '*ASTU does not guarantee job placement however offers Job Search Support'
+                  : '*ASTU no garantiza la colocación laboral, sin embargo, ofrece apoyo en la búsqueda de empleo'
                 }
               </p>
             </div>
