@@ -52,8 +52,8 @@ const AboutUs = () => {
             </h1>
             <p className="text-xl text-navy-600 mb-10">
               {language === 'en' 
-                ? 'Skip the crushing debt of expensive 4-year degrees. ASTU puts you on a direct path to high-paying careers in the modern economy without the financial burden.'
-                : 'Evita la deuda aplastante de costosos títulos de 4 años. ASTU te pone en el camino directo hacia carreras bien remuneradas en la economía moderna sin la carga financiera.'
+                ? 'Skip the crushing debt of expensive 4-year degrees. ASTU prepares you for careers with high earning potential.'
+                : 'Evita la deuda aplastante de costosos títulos de 4 años. ASTU te prepara para carreras con alto potencial de ingresos.'
               }
             </p>
           </motion.div>
