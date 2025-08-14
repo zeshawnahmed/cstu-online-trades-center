@@ -97,7 +97,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 transition={{ duration: 0.4, delay: 1.1 }}
                 className="bg-gold-400/90 text-navy-900 font-semibold px-3 py-2 rounded-lg backdrop-blur-sm text-sm text-center"
               >
-                {language === 'en' ? 'Job Placement Assistance*' : 'Asistencia de Colocación Laboral*'}
+                {language === 'en' ? 'Job Search Coaching*' : 'Orientación en Búsqueda de Empleo*'}
               </motion.div>
             </div>
             
