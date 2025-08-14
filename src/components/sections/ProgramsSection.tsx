@@ -32,9 +32,9 @@ const ProgramsSection = () => {
       ],
       salaryInfo: {
         median: '$103,663',
-        growth: language === 'en' ? '9% above national average' : '9% por encima del promedio nacional',
-        period: '2025',
-        clarification: language === 'en' ? 'According to Indeed.com' : 'Según Indeed.com'
+        growth: '',
+        period: language === 'en' ? 'According to Indeed.com' : 'Según Indeed.com',
+        clarification: language === 'en' ? 'Median Annual Salary' : 'Salario Anual Mediano'
       }
     },
     {
@@ -57,8 +57,8 @@ const ProgramsSection = () => {
       salaryInfo: {
         median: '$63,420',
         growth: language === 'en' ? '+13%' : '+13%',
-        period: language === 'en' ? 'projected by 2030' : 'proyectado para 2030',
-        clarification: language === 'en' ? 'According to TradeCareerPath' : 'Según TradeCareerPath'
+        period: language === 'en' ? 'projected by 2030 - According to TradeCareerPath' : 'proyectado para 2030 - Según TradeCareerPath',
+        clarification: language === 'en' ? 'Median Annual Salary' : 'Salario Anual Mediano'
       }
     }
   ];
