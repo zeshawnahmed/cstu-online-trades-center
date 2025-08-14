@@ -342,6 +342,19 @@ const ProgramDetail = () => {
                 </div>
               </div>
             </div>
+            
+            {/* Job Readiness & Support Section */}
+            <div className="mt-8 bg-gold-50 p-6 rounded-xl border border-gold-200">
+              <h3 className="text-xl font-bold text-navy-700 mb-4">
+                {language === 'en' ? 'Your Path to Career Success' : 'Tu Camino al Éxito Profesional'}
+              </h3>
+              <p className="text-navy-600 leading-relaxed">
+                {language === 'en' 
+                  ? "Employers often seek candidates who bring both experience and initiative to the table. While we can't guarantee job placement, our program is designed to provide you with hands-on learning, skill-building opportunities, and the resources needed to help you stand out in the competitive job market. With our support, you'll gain the experience and confidence to take your next career step."
+                  : "Los empleadores a menudo buscan candidatos que aporten tanto experiencia como iniciativa. Aunque no podemos garantizar la colocación laboral, nuestro programa está diseñado para brindarte aprendizaje práctico, oportunidades de desarrollo de habilidades y los recursos necesarios para ayudarte a destacar en el competitivo mercado laboral. Con nuestro apoyo, obtendrás la experiencia y confianza para dar tu siguiente paso profesional."
+                }
+              </p>
+            </div>
           </div>
         </div>
       </section>
