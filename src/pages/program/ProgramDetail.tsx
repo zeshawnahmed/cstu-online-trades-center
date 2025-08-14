@@ -66,12 +66,12 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         approvalBadge: 'FMCSA-Approved Program'
       },
       'hvac-technician': {
-        title: 'HVAC Technician Program (EPA 608 Certification Included)',
-        description: 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification - Industry-Approved Program.',
+        title: 'HVAC Technician Program (EPA 608 Certification Training Included)',
+        description: 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training.',
         fullDescription: [
-          "Our Industry-Approved HVAC Technician program focuses on teaching the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
+          "Our HVAC Technician program focuses on teaching the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
           "Through our comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
-          "Upon program completion, you'll be prepared for entry level HVAC technician positions with EPA 608 certification and hands-on experience with industry equipment."
+          "Upon program completion, you'll be prepared for entry level HVAC technician positions with EPA 608 certification training and hands-on experience with industry equipment."
         ],
         price: '$2,499',
         duration: 'Self-paced',
@@ -97,14 +97,14 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           demand: 'High demand for skilled HVAC technicians in residential and commercial sectors in Sacramento and surrounding areas'
         },
         keyFeatures: [
-          'Industry-Approved Program - Learn Essential Skills To Become Job-Ready in HVAC for entry level positions',
+          'Hands-On Experience Makes You Job-Ready in HVAC for entry level positions',
           'EPA 608 Certification Training Included',
           'Residential and Commercial HVAC Systems',
           'Self Paced, Online Learning Format for Busy Professionals',
           'Connect with Local Cohort Through Fun Experiences',
           'Hands-On Training With Industry Equipment'
         ],
-        approvalBadge: 'Industry-Approved Program'
+        approvalBadge: 'HVAC Program'
       }
     };
   } else {
@@ -147,12 +147,12 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         approvalBadge: 'Programa Aprobado por FMCSA'
       },
       'hvac-technician': {
-        title: 'Programa de Técnico HVAC (Certificación EPA 608 Incluida)',
-        description: 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo certificación EPA 608 - Programa Aprobado por la Industria.',
+        title: 'Programa de Técnico HVAC (Capacitación de Certificación EPA 608 Incluida)',
+        description: 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608.',
         fullDescription: [
-          "Nuestro programa de Técnico HVAC aprobado por la industria se enfoca en enseñar las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
+          "Nuestro programa de Técnico HVAC se enfoca en enseñar las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
           "A través de nuestra capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
-          "Al completar el programa, estarás preparado para puestos de técnico HVAC de nivel inicial con certificación EPA 608 y experiencia práctica con equipos de la industria."
+          "Al completar el programa, estarás preparado para puestos de técnico HVAC de nivel inicial con capacitación de certificación EPA 608 y experiencia práctica con equipos de la industria."
         ],
         price: '$2,499',
         duration: 'A tu ritmo',
@@ -178,14 +178,14 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           demand: 'Alta demanda de técnicos HVAC capacitados en sectores residenciales y comerciales en Sacramento y áreas circundantes'
         },
         keyFeatures: [
-          'Programa Aprobado por la Industria - Aprende habilidades esenciales para estar listo para trabajar en HVAC en puestos de nivel inicial',
+          'Experiencia práctica te hace estar listo para trabajar en HVAC en puestos de nivel inicial',
           'Capacitación de Certificación EPA 608 Incluida',
           'Sistemas HVAC Residenciales y Comerciales',
           'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
           'Conéctate con grupos locales a través de experiencias divertidas',
           'Entrenamiento práctico con equipos de la industria'
         ],
-        approvalBadge: 'Programa Aprobado por la Industria'
+        approvalBadge: 'Programa HVAC'
       }
     };
   }
