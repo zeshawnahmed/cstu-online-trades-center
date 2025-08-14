@@ -259,6 +259,15 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+      
+      {/* Disclaimer */}
+      <div className="py-4 bg-gray-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs text-gray-500 text-center italic">
+            *ASTU does not guarantee financial outcomes
+          </p>
+        </div>
+      </div>
     </Layout>
   );
 };
