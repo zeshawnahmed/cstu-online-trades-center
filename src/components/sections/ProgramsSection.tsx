@@ -38,7 +38,7 @@ const ProgramsSection = () => {
       }
     },
     {
-      title: language === 'en' ? 'HVAC Technician Program (EPA 608 Certification Included)' : 'Programa de Técnico HVAC (Certificación EPA 608 Incluida)',
+      title: language === 'en' ? 'HVAC Technician Program (EPA 608 Certification Training Included)' : 'Programa de Técnico HVAC (Entrenamiento de Certificación EPA 608 Incluido)',
       description: language === 'en' 
         ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification - Hands-On Experience Makes You Job-Ready'
         : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo certificación EPA 608 - La Experiencia Práctica Te Prepara Para El Trabajo',
