@@ -55,10 +55,17 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
             <DollarSign className="h-5 w-5 text-gold-500" />
             <span className="text-base font-bold text-navy-700">{t('medianSalary')} {salaryInfo?.median}</span>
           </div>
-          <div className="flex items-center gap-2">
-            <TrendingUp className="h-5 w-5 text-gold-500" />
-            <span className="text-navy-600">{t('projectedGrowth')} {salaryInfo?.growth} ({salaryInfo?.period})</span>
-          </div>
+          {salaryInfo?.growth && (
+            <div className="flex items-center gap-2">
+              <TrendingUp className="h-5 w-5 text-gold-500" />
+              <span className="text-navy-600">{t('projectedGrowth')} {salaryInfo?.growth} ({salaryInfo?.period})</span>
+            </div>
+          )}
+          {salaryInfo?.period && !salaryInfo?.growth && (
+            <div className="text-navy-600 text-sm">
+              {salaryInfo.period}
+            </div>
+          )}
         </div>
         
         {/* Program Highlights - More compact */}

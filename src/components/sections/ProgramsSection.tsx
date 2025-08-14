@@ -32,8 +32,8 @@ const ProgramsSection = () => {
       ],
       salaryInfo: {
         median: '$103,663',
-        growth: language === 'en' ? 'Source: Indeed.com' : 'Fuente: Indeed.com',
-        period: '',
+        growth: '',
+        period: language === 'en' ? 'Source: Indeed.com' : 'Fuente: Indeed.com',
         clarification: language === 'en' ? 'Median Annual Salary' : 'Salario Anual Mediano'
       }
     },
