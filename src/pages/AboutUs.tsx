@@ -207,11 +207,15 @@ const AboutUs = () => {
               {language === 'en' ? 'Your Financial Future' : 'Tu Futuro Financiero'}
             </h2>
             
-            <p className="text-lg text-navy-600 mb-10 leading-relaxed text-center">
+            <p className="text-lg text-navy-600 mb-4 leading-relaxed text-center">
               {language === 'en'
                 ? 'ASTU graduates are positioned to enter high-paying careers immediately, while college graduates often struggle to find work that justifies their massive debt load.'
                 : 'Los graduados de ASTU están posicionados para entrar en carreras bien pagadas inmediatamente, mientras que los graduados universitarios a menudo luchan por encontrar trabajo que justifique su carga masiva de deuda.'
               }
+            </p>
+            
+            <p className="text-xs text-gray-500 text-center italic mb-10">
+              *ASTU does not guarantee financial outcomes
             </p>
             
             
@@ -259,15 +263,6 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      
-      {/* Disclaimer */}
-      <div className="py-4 bg-gray-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs text-gray-500 text-center italic">
-            *ASTU does not guarantee financial outcomes
-          </p>
-        </div>
-      </div>
     </Layout>
   );
 };
