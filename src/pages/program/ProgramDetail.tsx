@@ -20,6 +20,8 @@ interface ProgramDetail {
     growth: string;
     period: string;
     demand: string;
+    hourlyRate?: string;
+    source?: string;
   };
   keyFeatures: string[];
   approvalBadge: string;
@@ -91,10 +93,12 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           '🛠 Workforce Integration and Professional Readiness for the HVAC Industry'
         ],
         salaryInfo: {
-          median: '$75,000',
-          growth: '5%',
-          period: '2022-2032',
-          demand: 'High demand for skilled HVAC technicians in residential and commercial sectors in Sacramento and surrounding areas'
+          median: '$63,420',
+          growth: '+13%',
+          period: 'projected by 2030',
+          demand: 'Quick Salary Snapshot - HVAC Technicians in California (2025)',
+          hourlyRate: '$30.49',
+          source: 'Source: TradeCareerPath'
         },
         keyFeatures: [
           'Hands-On Experience Makes You Job-Ready in HVAC for entry level positions',
@@ -172,10 +176,12 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           '🛠 Integración Laboral y Preparación Profesional para la Industria HVAC'
         ],
         salaryInfo: {
-          median: '$75,000',
-          growth: '5%',
-          period: '2022-2032',
-          demand: 'Alta demanda de técnicos HVAC capacitados en sectores residenciales y comerciales en Sacramento y áreas circundantes'
+          median: '$63,420',
+          growth: '+13%',
+          period: 'proyectado para 2030',
+          demand: 'Instantánea Rápida de Salario - Técnicos HVAC en California (2025)',
+          hourlyRate: '$30.49',
+          source: 'Fuente: TradeCareerPath'
         },
         keyFeatures: [
           'Experiencia práctica te hace estar listo para trabajar en HVAC en puestos de nivel inicial',
@@ -314,32 +320,52 @@ const ProgramDetail = () => {
             
             {/* Job Market Information */}
             <div className="mt-8 bg-navy-50 p-6 rounded-xl border border-navy-100">
-              <h3 className="text-xl font-bold text-navy-700 mb-4">{t('jobMarketOutlook')}</h3>
+              <h3 className="text-xl font-bold text-navy-700 mb-4">
+                {language === 'en' ? '2025 Job Market Statistics' : 'Estadísticas del Mercado Laboral 2025'}
+              </h3>
+              
+              <div className="mb-4">
+                <p className="font-semibold text-navy-700 text-lg">{program.salaryInfo.demand}</p>
+              </div>
               
               <div className="space-y-4">
                 <div className="flex items-start">
                   <DollarSign className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-navy-700">{t('medianAnnualSalary')}</p>
-                    <p className="text-navy-600 text-xl font-bold">{program.salaryInfo.median} <span className="text-sm font-normal">({slug === 'commercial-truck-driving' ? (language === 'en' ? 'Median Annual Salary for Commercial Truck Drivers' : 'Salario Anual Medio para Conductores de Camiones Comerciales') : (language === 'en' ? 'Median Annual Salary for HVAC Technicians' : 'Salario Anual Medio para Técnicos HVAC')})</span></p>
+                    <p className="font-semibold text-navy-700">
+                      {language === 'en' ? 'Average Salary' : 'Salario Promedio'}
+                    </p>
+                    <p className="text-navy-600 text-xl font-bold">{program.salaryInfo.median}/year</p>
                   </div>
                 </div>
+                
+                {program.salaryInfo.hourlyRate && (
+                  <div className="flex items-start">
+                    <Clock className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-navy-700">
+                        {language === 'en' ? 'Hourly Rate' : 'Tarifa por Hora'}
+                      </p>
+                      <p className="text-navy-600 text-xl font-bold">{program.salaryInfo.hourlyRate}</p>
+                    </div>
+                  </div>
+                )}
                 
                 <div className="flex items-start">
                   <TrendingUp className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-navy-700">{t('industryGrowth')}</p>
-                    <p className="text-navy-600">{program.salaryInfo.growth} ({program.salaryInfo.period})</p>
+                    <p className="font-semibold text-navy-700">
+                      {language === 'en' ? 'Job Growth' : 'Crecimiento Laboral'}
+                    </p>
+                    <p className="text-navy-600">{program.salaryInfo.growth} {program.salaryInfo.period}</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <Users className="h-6 w-6 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-navy-700">{t('jobDemand')}</p>
-                    <p className="text-navy-600">{program.salaryInfo.demand}</p>
+                {program.salaryInfo.source && (
+                  <div className="mt-4 pt-4 border-t border-navy-200">
+                    <p className="text-sm text-navy-500 italic">{program.salaryInfo.source}</p>
                   </div>
-                </div>
+                )}
               </div>
             </div>
             
