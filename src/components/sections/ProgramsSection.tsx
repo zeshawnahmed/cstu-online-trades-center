@@ -28,7 +28,7 @@ const ProgramsSection = () => {
         language === 'en' ? 'Optional Hazmat Endorsement' : 'Endoso Hazmat Opcional',
         language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
         language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos localess a través de experiencias divertidas',
-        language === 'en' ? 'Job Site/Field Training With Licensed Professionals' : 'Entrenamiento práctico con profesionales licenciados'
+        language === 'en' ? 'Job Site/Field Experiences With Licensed Professionals' : 'Entrenamiento práctico con profesionales licenciados'
       ],
       salaryInfo: {
         median: '$103,663',
@@ -48,7 +48,7 @@ const ProgramsSection = () => {
       imageUrl: '/hvac-technician-program.jpg',
       slug: 'hvac-technician',
       keyFeatures: [
-        language === 'en' ? 'Job Site/Field Training With Licensed Professional' : 'Entrenamiento práctico con profesional licenciado',
+        language === 'en' ? 'Job Site/Field Experiences With Licensed Professional' : 'Entrenamiento práctico con profesional licenciado',
         language === 'en' ? 'EPA 608 Certification Training Included' : 'Capacitación de Certificación EPA 608 Incluida',
         language === 'en' ? 'Learn Residential and Commercial HVAC Systems' : 'Aprende Sistemas HVAC Residenciales y Comerciales',
         language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',

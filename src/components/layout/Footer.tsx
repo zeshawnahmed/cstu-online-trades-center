@@ -32,7 +32,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">AIT</h3>
             <p className="text-gray-300 mb-4">
               {language === 'en' 
-                ? "American Institute of Trades offers affordable, self-paced, hands on training in high demand skilled trades."
+                ? "American Institute of Trades offers affordable, self-paced, Job Site/Field experiences in high demand skilled trades."
                 : "Instituto Americano de Oficios ofrece capacitación asequible, a tu propio ritmo y práctica en oficios especializados de alta demanda."}
             </p>
             <div className="flex space-x-4">
