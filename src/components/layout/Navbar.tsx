@@ -29,15 +29,28 @@ const Navbar = () => {
     setLanguage(language === 'en' ? 'es' : 'en');
   };
 
-  // Function to underline first letter of each word
-  const UnderlinedFirstLetters = ({ text }: { text: string }) => {
+  // Function to underline A, I, T letters only
+  const UnderlinedAcronym = ({ text }: { text: string }) => {
+    const words = text.split(' ');
+    const acronymLetters = ['A', 'I', 'T'];
+    let letterIndex = 0;
+    
     return (
       <span>
-        {text.split(' ').map((word, index) => (
-          <span key={index}>
-            {index > 0 && ' '}
-            <span className="underline decoration-gold-400 decoration-2">{word.charAt(0)}</span>
-            {word.slice(1)}
+        {words.map((word, wordIndex) => (
+          <span key={wordIndex}>
+            {wordIndex > 0 && ' '}
+            {word.split('').map((letter, charIndex) => {
+              if (charIndex === 0 && letterIndex < acronymLetters.length) {
+                letterIndex++;
+                return (
+                  <span key={charIndex} className="underline decoration-navy-800 decoration-2">
+                    {letter}
+                  </span>
+                );
+              }
+              return <span key={charIndex}>{letter}</span>;
+            })}
           </span>
         ))}
       </span>
@@ -55,7 +68,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-3xl md:text-4xl font-extrabold tracking-tight text-navy-600 font-serif">
                 <span className="text-navy-700 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl">
-                  <UnderlinedFirstLetters text="American Institute of Trades" />
+                  <UnderlinedAcronym text="American Institute of Trades" />
                 </span>
               </span>
             </Link>
