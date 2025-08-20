@@ -29,11 +29,9 @@ const Navbar = () => {
     setLanguage(language === 'en' ? 'es' : 'en');
   };
 
-  // Function to underline A, I, T letters only
+  // Function to underline A, I, T letters only (A from American, I from Institute, T from Trades)
   const UnderlinedAcronym = ({ text }: { text: string }) => {
     const words = text.split(' ');
-    const acronymLetters = ['A', 'I', 'T'];
-    let letterIndex = 0;
     
     return (
       <span>
@@ -41,8 +39,8 @@ const Navbar = () => {
           <span key={wordIndex}>
             {wordIndex > 0 && ' '}
             {word.split('').map((letter, charIndex) => {
-              if (charIndex === 0 && letterIndex < acronymLetters.length) {
-                letterIndex++;
+              // Underline first letter of "American", "Institute", and "Trades"
+              if (charIndex === 0 && (word === 'American' || word === 'Institute' || word === 'Trades')) {
                 return (
                   <span key={charIndex} className="underline decoration-navy-800 decoration-2">
                     {letter}
