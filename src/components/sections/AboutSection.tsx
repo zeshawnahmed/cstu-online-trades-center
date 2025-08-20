@@ -17,7 +17,7 @@ const AboutSection = () => {
     },
     {
       icon: <Users className="h-5 w-5 text-gold-500" />,
-      text: 'Job Site/Field experiences through externships'
+      text: 'Job Site/Field training through externships'
     },
     {
       icon: <Award className="h-5 w-5 text-gold-500" />,

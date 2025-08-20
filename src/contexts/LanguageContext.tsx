@@ -11,10 +11,10 @@ export const translations = {
     
     // Hero Section
     heroTitle: "Skilled Trade Mastery Begins Here. Build Your Future.",
-    heroSubtitle: "Learn High-Demand Skills Through Affordable, Self-Paced Online Programs and Job Site/Field Experiences. Start Your Career in the Skilled Trades Today.",
+    heroSubtitle: "Learn High-Demand Skills Through Affordable, Self-Paced Online Programs and Job Site/Field Training. Start Your Career in the Skilled Trades Today.",
     becomeJobReady: "BECOME JOB READY",
     onlineSelfPaced: "ONLINE SELF PACED",
-    handsOnTraining: "JOB SITE/FIELD EXPERIENCES",
+    handsOnTraining: "JOB SITE/FIELD TRAINING",
     explorePrograms: "EXPLORE PROGRAMS",
     financialAid: "FINANCIAL AID AVAILABLE",
     

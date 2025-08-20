@@ -42,7 +42,7 @@ const Index = () => {
     : 'Skilled Trade Mastery and Your Prosperous Future Begins Here.';
   
   const seoDescription = language === 'en'
-    ? 'American Skilled Trade University (ASTU) offers affordable Commercial Truck Driving and CDL training in Sacramento. Find the best CDL school near me and top Commercial Truck Driving school in Sacramento with Job Site/Field experiences. Sacramento\'s #1 trade school for CDL and Commercial Driving career training.'
+    ? 'American Skilled Trade University (ASTU) offers affordable Commercial Truck Driving and CDL training in Sacramento. Find the best CDL school near me and top Commercial Truck Driving school in Sacramento with Job Site/Field training. Sacramento\'s #1 trade school for CDL and Commercial Driving career training.'
     : 'Universidad de Oficios Especializados Americana ofrece capacitación asequible de Manejo de Camiones Comerciales y CDL en Sacramento. La mejor escuela de CDL y de Manejo de Camiones cerca de ti con capacitación práctica.';
 
   return (
