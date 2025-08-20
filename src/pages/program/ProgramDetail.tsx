@@ -107,7 +107,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Residential and Commercial HVAC Systems',
           'Self Paced, Online Learning Format for Busy Professionals',
           'Connect with Local Cohort Through Fun Experiences',
-          'Hands-On Training With Industry Equipment'
+          'Job Site/Field Training With Industry Equipment'
         ],
         approvalBadge: 'HVAC Program'
       }
@@ -274,7 +274,7 @@ const ProgramDetail = () => {
                 </div>
                 <div className="flex items-center">
                   <Users className="h-5 w-5 mr-2 text-gold-400" />
-                  <span>{language === 'en' ? 'Hands-On Training With Licensed Professional' : 'Entrenamiento Práctico con Profesional Licenciado'}</span>
+                  <span>{language === 'en' ? 'Job Site/Field Training With Licensed Professional' : 'Entrenamiento Práctico con Profesional Licenciado'}</span>
                 </div>
               </div>
               

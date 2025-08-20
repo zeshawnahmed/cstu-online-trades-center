@@ -189,7 +189,7 @@ const AboutUs = () => {
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'AIT focuses on practical skills that employers actually want. No theoretical fluff - just hands-on training that gets you hired fast.'
+                    ? 'AIT focuses on practical skills that employers actually want. No theoretical fluff - just Job Site/Field training that gets you hired fast.'
                     : 'AIT se enfoca en habilidades prácticas que los empleadores realmente quieren. Sin relleno teórico - solo capacitación práctica que te hace contratado rápido.'
                   }
                 </p>
