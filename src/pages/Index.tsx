@@ -51,7 +51,7 @@ const Index = () => {
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
         <meta name="keywords" content={language === 'en' 
-          ? "CDL school near me, Commercial Truck Driving school near me, Sacramento CDL school, Sacramento Truck Driving school, CDL training Sacramento, Commercial Driving training Sacramento, Sacramento trade school, ASTU, American Skilled Trade University, best CDL school, top Truck Driving school, trade school near me, affordable trade school Sacramento"
+          ? "CDL school near me, Commercial Truck Driving school near me, Sacramento CDL school, Sacramento Truck Driving school, CDL training Sacramento, Commercial Driving training Sacramento, Sacramento trade school, AIT, American Institute of Trades, best CDL school, top Truck Driving school, trade school near me, affordable trade school Sacramento"
           : "Escuela de CDL cerca de mí, Escuela de Manejo de Camiones cerca de mí, Escuela de CDL Sacramento, Escuela de Manejo de Camiones Sacramento, Capacitación de CDL, Capacitación de Manejo Comercial, Escuela de oficios Sacramento"
         } />
         <meta property="og:title" content={seoTitle} />
@@ -65,8 +65,8 @@ const Index = () => {
             {
               "@context": "https://schema.org",
               "@type": "TechnicalSchool",
-              "name": "American Skilled Trade University",
-              "alternateName": "ASTU",
+               "name": "American Institute of Trades",
+               "alternateName": "AIT",
               "image": "https://www.americanskilledtradeuniversity.edu/og-image.png",
               "address": {
                 "@type": "PostalAddress",
@@ -77,7 +77,7 @@ const Index = () => {
               "url": "https://www.americanskilledtradeuniversity.edu",
               "telephone": "(916) 365-6907",
               "priceRange": "$$$",
-              "description": "American Skilled Trade University (ASTU) offers affordable Commercial Truck Driving and CDL training in Sacramento with hands-on experience and job-ready skills. The best CDL and Commercial Truck Driving school near you.",
+              "description": "American Institute of Trades (AIT) offers affordable Commercial Truck Driving and CDL training in Sacramento with hands-on experience and job-ready skills. The best CDL and Commercial Truck Driving school near you.",
               "geo": {
                 "@type": "GeoCoordinates",
                 "latitude": "38.575764",
@@ -93,7 +93,7 @@ const Index = () => {
                     "description": "Learn essential skills to become job-ready in commercial truck driving with CDL Class A or B license, plus optional Hazmat Endorsement.",
                     "provider": {
                       "@type": "Organization",
-                      "name": "American Skilled Trade University",
+                      "name": "American Institute of Trades",
                       "sameAs": "https://www.americanskilledtradeuniversity.edu"
                     }
                   }

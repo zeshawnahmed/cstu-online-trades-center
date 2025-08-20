@@ -29,11 +29,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1 - About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">ASTU</h3>
+            <h3 className="text-xl font-bold mb-4">AIT</h3>
             <p className="text-gray-300 mb-4">
               {language === 'en' 
-                ? "American Skilled Trade University offers affordable, self-paced, hands on training in high demand skilled trades."
-                : "Universidad de Oficios Especializados Americana ofrece capacitación asequible, a tu propio ritmo y práctica en oficios especializados de alta demanda."}
+                ? "American Institute of Trades offers affordable, self-paced, hands on training in high demand skilled trades."
+                : "Instituto Americano de Oficios ofrece capacitación asequible, a tu propio ritmo y práctica en oficios especializados de alta demanda."}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-gold-400 transition-colors">
@@ -125,7 +125,7 @@ const Footer = () => {
         
         <div className="border-t border-navy-400 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} American Skilled Trade University. All rights reserved.
+            &copy; {currentYear} American Institute of Trades. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy" className="text-gray-400 hover:text-gold-400 text-sm transition-colors">

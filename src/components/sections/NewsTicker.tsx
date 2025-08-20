@@ -7,11 +7,11 @@ const NewsTicker = () => {
 
     const newsItems = [
       language === 'en' 
-        ? "ASTU officially recognized by California Bureau of Post Secondary Education"
-        : "ASTU oficialmente reconocida por la Oficina de Educación Post Secundaria de California",
+        ? "AIT officially recognized by California Bureau of Post Secondary Education"
+        : "AIT oficialmente reconocida por la Oficina de Educación Post Secundaria de California",
       language === 'en'
-        ? "UC Berkeley and Sac State Alumni Come Together to Launch ASTU"
-        : "Exalumnos de UC Berkeley y Sac State se unen para lanzar ASTU",
+        ? "UC Berkeley and Sac State Alumni Come Together to Launch AIT"
+        : "Exalumnos de UC Berkeley y Sac State se unen para lanzar AIT",
       language === 'en'
         ? "Fall 2025 Cohort Launching, Contact Admissions Today"
         : "Cohorte de Otoño 2025 Iniciando, Contacta Admisiones Hoy",
@@ -24,7 +24,7 @@ const NewsTicker = () => {
     <div className="bg-navy-700 text-white py-2 overflow-hidden relative">
       <div className="flex items-center">
         <div className="bg-gold-400 text-navy-900 px-4 py-1 font-bold text-sm whitespace-nowrap">
-          {language === 'en' ? 'ASTU NEWS' : 'NOTICIAS ASTU'}
+          {language === 'en' ? 'AIT NEWS' : 'NOTICIAS AIT'}
         </div>
         <div className="flex-1 overflow-hidden">
           <div className="animate-scroll flex whitespace-nowrap">

@@ -16,14 +16,14 @@ const AboutUs = () => {
       <Helmet>
         <title>
           {language === 'en' 
-            ? 'About Us | Sacramento Trade School | American Skilled Trade University (ASTU)' 
-            : 'Sobre Nosotros | Escuela de Oficios Sacramento | Universidad de Oficios Especializados Americana'}
+            ? 'About Us | Sacramento Trade School | American Institute of Trades (AIT)' 
+            : 'Sobre Nosotros | Escuela de Oficios Sacramento | Instituto Americano de Oficios'}
         </title>
         <meta 
           name="description" 
           content={language === 'en'
-            ? "Learn about American Skilled Trade University - Sacramento's premier affordable trade school for Commercial Truck Driving and CDL training. Our cost-effective programs prepare you for lucrative careers without the debt of traditional colleges."
-            : "Conozca sobre la Universidad de Oficios Especializados Americana - La principal escuela de oficios asequible de Sacramento para capacitación de Manejo de Camiones Comerciales y CDL."}
+            ? "Learn about American Institute of Trades - Sacramento's premier affordable trade school for Commercial Truck Driving and CDL training. Our cost-effective programs prepare you for lucrative careers without the debt of traditional colleges."
+            : "Conozca sobre el Instituto Americano de Oficios - La principal escuela de oficios asequible de Sacramento para capacitación de Manejo de Camiones Comerciales y CDL."}
         />
       </Helmet>
       
@@ -48,12 +48,12 @@ const AboutUs = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-navy-700 mb-4">
-              {language === 'en' ? 'About American Skilled Trade University' : 'Sobre la Universidad de Oficios Especializados Americana'}
+              {language === 'en' ? 'About American Institute of Trades' : 'Sobre el Instituto Americano de Oficios'}
             </h1>
             <p className="text-xl text-navy-600 mb-10">
               {language === 'en' 
-                ? 'Skip the crushing debt of expensive 4-year degrees. ASTU prepares you for careers with high earning potential.'
-                : 'Evita la deuda aplastante de costosos títulos de 4 años. ASTU te prepara para carreras con alto potencial de ingresos.'
+                ? 'Skip the crushing debt of expensive 4-year degrees. AIT prepares you for careers with high earning potential.'
+                : 'Evita la deuda aplastante de costosos títulos de 4 años. AIT te prepara para carreras con alto potencial de ingresos.'
               }
             </p>
           </motion.div>
@@ -69,16 +69,16 @@ const AboutUs = () => {
             </h2>
             <p className="text-lg text-navy-600 mb-8 leading-relaxed">
               {language === 'en'
-                ? "Founded in Sacramento by UC Berkeley and UC Davis Alumni, American Skilled Trade University (ASTU) was born from a simple yet powerful mission: to provide a smart alternative to overpriced 4-year degrees that leave students drowning in debt with unmarketable skills. While traditional colleges charge $30,000+ per year for degrees that may never pay off, ASTU prepares you for high-demand careers at a fraction of the cost."
-                : "Fundada en Sacramento por exalumnos de UC Berkeley y UC Davis, la Universidad de Oficios Especializados Americana (ASTU) nació de una misión simple pero poderosa: proporcionar una alternativa inteligente a los títulos universitarios sobrevalorados de 4 años que dejan a los estudiantes ahogándose en deudas."
+                ? "Founded in Sacramento by UC Berkeley and UC Davis Alumni, American Institute of Trades (AIT) was born from a simple yet powerful mission: to provide a smart alternative to overpriced 4-year degrees that leave students drowning in debt with unmarketable skills. While traditional colleges charge $30,000+ per year for degrees that may never pay off, AIT prepares you for high-demand careers at a fraction of the cost."
+                : "Fundada en Sacramento por exalumnos de UC Berkeley y UC Davis, el Instituto Americano de Oficios (AIT) nació de una misión simple pero poderosa: proporcionar una alternativa inteligente a los títulos universitarios sobrevalorados de 4 años que dejan a los estudiantes ahogándose en deudas."
               }
             </p>
             
             <div className="bg-navy-50 border-l-4 border-navy-500 pl-6 py-4 rounded-r-lg mb-10">
               <p className="text-navy-800 font-medium italic">
                 {language === 'en'
-                  ? "Why spend 4+ years and $120,000+ on a degree that might not even get you a job? ASTU gets you job-ready in months, not years, for just $2,499 total."
-                  : "¿Por qué gastar 4+ años y $120,000+ en un título que tal vez ni siquiera te consiga trabajo? ASTU te prepara para el trabajo en meses, no años, por solo $2,499 en total."}
+                  ? "Why spend 4+ years and $120,000+ on a degree that might not even get you a job? AIT gets you job-ready in months, not years, for just $2,499 total."
+                  : "¿Por qué gastar 4+ años y $120,000+ en un título que tal vez ni siquiera te consiga trabajo? AIT te prepara para el trabajo en meses, no años, por solo $2,499 en total."}
               </p>
             </div>
             
@@ -99,7 +99,7 @@ const AboutUs = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-navy-700 mb-10 text-center">
-              {language === 'en' ? 'Why Choose ASTU Over Traditional College?' : '¿Por qué elegir ASTU sobre la universidad tradicional?'}
+              {language === 'en' ? 'Why Choose AIT Over Traditional College?' : '¿Por qué elegir AIT sobre la universidad tradicional?'}
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -128,7 +128,7 @@ const AboutUs = () => {
                       <p className="text-lg font-bold text-red-500">$120,000+</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-sm text-gray-500">ASTU</p>
+                      <p className="text-sm text-gray-500">AIT</p>
                       <p className="text-lg font-bold text-green-500">$2,499</p>
                     </div>
                   </div>
@@ -189,8 +189,8 @@ const AboutUs = () => {
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'ASTU focuses on practical skills that employers actually want. No theoretical fluff - just hands-on training that gets you hired fast.'
-                    : 'ASTU se enfoca en habilidades prácticas que los empleadores realmente quieren. Sin relleno teórico - solo capacitación práctica que te hace contratado rápido.'
+                    ? 'AIT focuses on practical skills that employers actually want. No theoretical fluff - just hands-on training that gets you hired fast.'
+                    : 'AIT se enfoca en habilidades prácticas que los empleadores realmente quieren. Sin relleno teórico - solo capacitación práctica que te hace contratado rápido.'
                   }
                 </p>
               </motion.div>
@@ -209,13 +209,13 @@ const AboutUs = () => {
             
             <p className="text-lg text-navy-600 mb-4 leading-relaxed text-center">
               {language === 'en'
-                ? 'ASTU graduates are positioned to enter high-paying careers immediately, while college graduates often struggle to find work that justifies their massive debt load.'
-                : 'Los graduados de ASTU están posicionados para entrar en carreras bien pagadas inmediatamente, mientras que los graduados universitarios a menudo luchan por encontrar trabajo que justifique su carga masiva de deuda.'
+                ? 'AIT graduates are positioned to enter high-paying careers immediately, while college graduates often struggle to find work that justifies their massive debt load.'
+                : 'Los graduados de AIT están posicionados para entrar en carreras bien pagadas inmediatamente, mientras que los graduados universitarios a menudo luchan por encontrar trabajo que justifique su carga masiva de deuda.'
               }
             </p>
             
             <p className="text-xs text-gray-500 text-center italic mb-10">
-              *ASTU does not guarantee financial outcomes
+              *AIT does not guarantee financial outcomes
             </p>
             
             
@@ -244,8 +244,8 @@ const AboutUs = () => {
             </h2>
             <p className="text-xl mb-10 text-navy-100">
               {language === 'en'
-                ? 'Skip the debt trap of traditional college. Join ASTU and start earning immediately with skills that employers actually need.'
-                : 'Evita la trampa de deuda de la universidad tradicional. Únete a ASTU y comienza a ganar inmediatamente con habilidades que los empleadores realmente necesitan.'
+                ? 'Skip the debt trap of traditional college. Join AIT and start earning immediately with skills that employers actually need.'
+                : 'Evita la trampa de deuda de la universidad tradicional. Únete a AIT y comienza a ganar inmediatamente con habilidades que los empleadores realmente necesitan.'
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -55,7 +55,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-3xl md:text-4xl font-extrabold tracking-tight text-navy-600 font-serif">
                 <span className="text-navy-700 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl">
-                  <UnderlinedFirstLetters text="American Skilled Trade University" />
+                  <UnderlinedFirstLetters text="American Institute of Trades" />
                 </span>
               </span>
             </Link>
