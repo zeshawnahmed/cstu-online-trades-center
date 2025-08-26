@@ -13,8 +13,8 @@ const ProgramsSection = () => {
     {
       title: language === 'en' ? 'HVAC Technician Program (EPA 608 Certification Training Included)' : 'Programa de Técnico HVAC (Entrenamiento de Certificación EPA 608 Incluido)',
       description: language === 'en' 
-        ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification - Practical Field/Job Site Experiences Make You Job-Ready'
-        : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo certificación EPA 608 - Las Experiencias Prácticas de Campo/Lugar de Trabajo Te Preparan Para El Trabajo',
+        ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification and Field Experiences To Make You Job-Ready'
+        : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo certificación EPA 608 y Experiencias de Campo Para Prepararte Para El Trabajo',
       price: language === 'en' ? 'Flat Rate Tuition: $2,499' : 'Matrícula de Tarifa Plana: $2,499',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',
