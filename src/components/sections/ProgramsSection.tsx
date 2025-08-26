@@ -21,10 +21,11 @@ const ProgramsSection = () => {
       imageUrl: '/hvac-technician-program.jpg',
       slug: 'hvac-technician',
       keyFeatures: [
-        language === 'en' ? 'Job Site/Field Training With Licensed Professional' : 'Entrenamiento práctico con profesional licenciado',
+        language === 'en' ? 'Job Site/Field Training With Qualified Industry Professional' : 'Entrenamiento práctico con profesional calificado de la industria',
         language === 'en' ? 'EPA 608 Certification Training Included' : 'Capacitación de Certificación EPA 608 Incluida',
         language === 'en' ? 'Learn Residential and Commercial HVAC Systems' : 'Aprende Sistemas HVAC Residenciales y Comerciales',
         language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
+        language === 'en' ? 'Access to Accountability/Learning Coach' : 'Acceso a Entrenador de Responsabilidad/Aprendizaje',
         language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos locales a través de experiencias divertidas'
       ],
       salaryInfo: {

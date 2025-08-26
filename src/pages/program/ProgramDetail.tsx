@@ -198,7 +198,7 @@ const ProgramDetail = () => {
                 </div>
                 <div className="flex items-center">
                   <Users className="h-5 w-5 mr-2 text-gold-400" />
-                  <span>{language === 'en' ? 'Job Site/Field Training With Licensed Professional' : 'Entrenamiento Práctico con Profesional Licenciado'}</span>
+                  <span>{language === 'en' ? 'Job Site/Field Training With Qualified Industry Professional' : 'Entrenamiento Práctico con Profesional Calificado de la Industria'}</span>
                 </div>
               </div>
               
