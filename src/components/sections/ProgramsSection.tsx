@@ -46,39 +46,41 @@ const ProgramsSection = () => {
           className="mb-8"
         />
         
-        {/* Prominent Admissions Contact */}
+        {/* Prominent Admissions Contact - Mobile Optimized */}
         <div className="text-center mb-8">
-          <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-navy-600">
-            <p className="text-lg font-bold mb-1">
+          <div className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-navy-600">
+            <p className="text-base sm:text-lg font-bold mb-1">
               {language === 'en' ? 'CALL OR TEXT ADMISSIONS TO GET STARTED' : 'LLAMA O ENVÍA TEXTO A ADMISIONES PARA COMENZAR'}
             </p>
-            <p className="text-2xl font-bold underline decoration-2">
+            <p className="text-xl sm:text-2xl font-bold underline decoration-2">
               (916) 365-6907
             </p>
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {programs.map((program, index) => (
-            <motion.div
-              key={program.slug}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <ProgramCard {...program} />
-            </motion.div>
-          ))}
+        <div className="flex justify-center">
+          <div className="max-w-lg w-full">
+            {programs.map((program, index) => (
+              <motion.div
+                key={program.slug}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <ProgramCard {...program} />
+              </motion.div>
+            ))}
+          </div>
         </div>
         
-        <div className="mt-12 text-center">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
+        <div className="mt-8 sm:mt-12 text-center">
+          <div className="flex flex-col items-center justify-center gap-4 mb-6">
             <Link to="/contact">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gold-400 hover:bg-gold-500 text-navy-800 font-bold px-8 py-4 rounded-lg text-xl w-full md:w-auto"
+                className="bg-gold-400 hover:bg-gold-500 text-navy-800 font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-lg sm:text-xl w-full sm:w-auto min-w-[280px]"
               >
                 {language === 'en' ? 'Financial Aid Assistance' : 'Asistencia de Ayuda Financiera'}
               </motion.button>
