@@ -36,7 +36,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         fullDescription: [
           "Our HVAC Technician program focuses on teaching the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
           "Through our comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
-          "Upon program completion, you'll be prepared for entry level HVAC technician positions with EPA 608 certification training and practical Field/Job Site Experiences with industry equipment."
+          "Upon program completion, you'll be prepared for entry level HVAC technician positions with EPA 608 certification training and practical Field Experiences to make you job ready."
         ],
         price: '$2,499',
         duration: 'Self-paced',
