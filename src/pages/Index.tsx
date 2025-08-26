@@ -42,8 +42,8 @@ const Index = () => {
     : 'Skilled Trade Mastery and Your Prosperous Future Begins Here.';
   
   const seoDescription = language === 'en'
-    ? 'American Skilled Trade University (ASTU) offers affordable Commercial Truck Driving and CDL training in Sacramento. Find the best CDL school near me and top Commercial Truck Driving school in Sacramento with Job Site/Field training. Sacramento\'s #1 trade school for CDL and Commercial Driving career training.'
-    : 'Universidad de Oficios Especializados Americana ofrece capacitación asequible de Manejo de Camiones Comerciales y CDL en Sacramento. La mejor escuela de CDL y de Manejo de Camiones cerca de ti con capacitación práctica.';
+    ? 'American Skilled Trade University (ASTU) offers affordable HVAC training in Sacramento. Find the best HVAC school near me with Job Site/Field training. Sacramento\'s #1 trade school for HVAC career training.'
+    : 'Universidad de Oficios Especializados Americana ofrece capacitación asequible de HVAC en Sacramento. La mejor escuela de HVAC cerca de ti con capacitación práctica.';
 
   return (
     <Layout>
@@ -51,8 +51,8 @@ const Index = () => {
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
         <meta name="keywords" content={language === 'en' 
-          ? "CDL school near me, Commercial Truck Driving school near me, Sacramento CDL school, Sacramento Truck Driving school, CDL training Sacramento, Commercial Driving training Sacramento, Sacramento trade school, AIT, American Institute of Trades, best CDL school, top Truck Driving school, trade school near me, affordable trade school Sacramento"
-          : "Escuela de CDL cerca de mí, Escuela de Manejo de Camiones cerca de mí, Escuela de CDL Sacramento, Escuela de Manejo de Camiones Sacramento, Capacitación de CDL, Capacitación de Manejo Comercial, Escuela de oficios Sacramento"
+          ? "HVAC school near me, HVAC training Sacramento, EPA 608 certification, Sacramento trade school, AIT, American Institute of Trades, best HVAC school, trade school near me, affordable trade school Sacramento"
+          : "Escuela de HVAC cerca de mí, Capacitación de HVAC Sacramento, Certificación EPA 608, Escuela de oficios Sacramento"
         } />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
@@ -77,7 +77,7 @@ const Index = () => {
               "url": "https://www.americanskilledtradeuniversity.edu",
               "telephone": "(916) 365-6907",
               "priceRange": "$$$",
-              "description": "American Institute of Trades (AIT) offers affordable Commercial Truck Driving and CDL training in Sacramento with hands-on experience and job-ready skills. The best CDL and Commercial Truck Driving school near you.",
+              "description": "American Institute of Trades (AIT) offers affordable HVAC training in Sacramento with practical Field/Job Site Experiences and job-ready skills. The best HVAC school near you.",
               "geo": {
                 "@type": "GeoCoordinates",
                 "latitude": "38.575764",
@@ -87,16 +87,16 @@ const Index = () => {
                 "@type": "OfferCatalog",
                 "name": "Trade Programs",
                 "itemListElement": [
-                  {
-                    "@type": "Course",
-                    "name": "Commercial Truck Driving & CDL Training",
-                    "description": "Learn essential skills to become job-ready in commercial truck driving with CDL Class A or B license, plus optional Hazmat Endorsement.",
-                    "provider": {
-                      "@type": "Organization",
-                      "name": "American Institute of Trades",
-                      "sameAs": "https://www.americanskilledtradeuniversity.edu"
-                    }
-                  }
+                   {
+                     "@type": "Course",
+                     "name": "HVAC Technician & EPA 608 Training",
+                     "description": "Learn essential skills to become job-ready in HVAC systems with EPA 608 certification training.",
+                     "provider": {
+                       "@type": "Organization",
+                       "name": "American Institute of Trades",
+                       "sameAs": "https://www.americanskilledtradeuniversity.edu"
+                     }
+                   }
                 ]
               },
               "sameAs": [
@@ -110,6 +110,18 @@ const Index = () => {
       <NewsTicker />
       <HeroSection scrollToPrograms={scrollToPrograms} />
       <ProgramsSection />
+      
+      {/* Disclaimer */}
+      <div className="bg-gray-100 py-4">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-600 text-sm">
+            {language === 'en'
+              ? "AIT does not guarantee job placement or salary listed on site"
+              : "AIT no garantiza la colocación laboral o el salario listado en el sitio"
+            }
+          </p>
+        </div>
+      </div>
     </Layout>
   );
 };

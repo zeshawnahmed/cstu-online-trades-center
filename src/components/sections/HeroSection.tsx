@@ -49,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
             
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
               {language === 'en'
-                ? 'We Offer Specialized, Hands-On Career Training For You to Level Up by Mastering In-Demand Skilled Trades.'
+                ? 'We Offer Specialized, Practical Career Training For You to Level Up by Mastering In-Demand Skilled Trades.'
                 : 'Ofrecemos Capacitación Especializada y Práctica para que Mejores al Dominar Oficios Especializados en Demanda.'
               }
             </p>

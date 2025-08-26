@@ -11,37 +11,10 @@ const ProgramsSection = () => {
 
   const programs = [
     {
-      title: language === 'en' ? 'Commercial Truck Driving Program (CDL Class A and/or B with optional Hazmat Endorsement)' : 'Programa de Manejo de Camiones Comerciales (CDL Clase A y/o B con Endoso Hazmat Opcional)',
-      description: language === 'en' 
-        ? 'Learn essential skills to become job-ready in commercial truck driving with CDL Class A or B license, plus optional Hazmat Endorsement - FMCSA-Approved Program'
-        : 'Aprende habilidades esenciales para estar listo para trabajar en el manejo de camiones comerciales con licencia CDL Clase A o B, más Endoso Hazmat opcional - Programa Aprobado por FMCSA',
-      price: language === 'en' ? 'Flat Rate Tuition: $2,499' : 'Matrícula de Tarifa Plana: $2,499',
-      duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
-      certification: language === 'en' ? 'CDL Class A/B License' : 'Licencia CDL Clase A/B',
-      imageUrl: '/truck-driving-program.jpg',
-      slug: 'commercial-truck-driving',
-      keyFeatures: [
-        language === 'en' 
-          ? 'FMCSA-Approved Program - Learn Essential Skills To Become Job-Ready in Commercial Truck Driving for entry level positions'
-          : 'Programa Aprobado por FMCSA - Aprende habilidades esenciales para estar listo para trabajar en Manejo de Camiones Comerciales en puestos de nivel inicial',
-        language === 'en' ? 'CDL Class A or B License Training' : 'Capacitación para Licencia CDL Clase A o B',
-        language === 'en' ? 'Optional Hazmat Endorsement' : 'Endoso Hazmat Opcional',
-        language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
-        language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos localess a través de experiencias divertidas',
-        language === 'en' ? 'Job Site/Field Training With Licensed Professionals' : 'Entrenamiento práctico con profesionales licenciados'
-      ],
-      salaryInfo: {
-        median: '$103,663',
-        growth: '',
-        period: language === 'en' ? 'Source: Indeed.com' : 'Fuente: Indeed.com',
-        clarification: language === 'en' ? 'Median Annual Salary' : 'Salario Anual Mediano'
-      }
-    },
-    {
       title: language === 'en' ? 'HVAC Technician Program (EPA 608 Certification Training Included)' : 'Programa de Técnico HVAC (Entrenamiento de Certificación EPA 608 Incluido)',
       description: language === 'en' 
-        ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification - Hands-On Experience Makes You Job-Ready'
-        : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo certificación EPA 608 - La Experiencia Práctica Te Prepara Para El Trabajo',
+        ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification - Practical Field/Job Site Experiences Make You Job-Ready'
+        : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo certificación EPA 608 - Las Experiencias Prácticas de Campo/Lugar de Trabajo Te Preparan Para El Trabajo',
       price: language === 'en' ? 'Flat Rate Tuition: $2,499' : 'Matrícula de Tarifa Plana: $2,499',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',

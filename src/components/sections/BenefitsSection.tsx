@@ -29,7 +29,7 @@ const BenefitsSection = () => {
     },
     {
       icon: Users,
-      title: 'Hands-On Externships',
+      title: 'Practical Externships',
       description: 'Gain real-world experience through our partnered externship program with local businesses.',
     },
     {

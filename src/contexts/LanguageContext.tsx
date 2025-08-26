@@ -21,7 +21,7 @@ export const translations = {
     // Programs Section
     programsTitle: "Industry-Leading Skilled Trades Training",
     programsSubtitle: "Our Programs",
-    programsDescription: "Our comprehensive, affordable programs prepare you for high-demand entry level careers in the skilled trades with a unique blend of online learning and hands-on experience.",
+    programsDescription: "Our comprehensive, affordable programs prepare you for high-demand entry level careers in the skilled trades with a unique blend of online learning and practical Field/Job Site Experiences.",
     learnMore: "Learn More",
     applyNowButton: "APPLY NOW",
     externshipNote: "*Externship placement assistance available upon program completion and subject to industry demand",
@@ -57,7 +57,7 @@ export const translations = {
     
     // Program Detail
     backToPrograms: "Back to Programs",
-    handsOnExternship: "Hands-on Externship",
+    handsOnExternship: "Practical Externship",
     programOverview: "Program Overview",
     aboutOurProgram: "About Our",
     programHighlightsTitle: "Program Highlights",
@@ -106,7 +106,7 @@ export const translations = {
     earningPotentialContent: "While many 4-year degrees lead to entry-level positions with modest salaries and significant debt, skilled trades professionals can earn substantial incomes. HVAC technicians in the Sacramento area earn median salaries around $60,590, while electricians earn approximately $60,240 annually - often with opportunities for overtime, advancement, and even business ownership.",
     ourApproachTitle: "Our Approach",
     blendedLearning: "Blended Learning Model",
-    blendedLearningContent: "We combine self-paced online learning with hands-on practical training through our externship program, giving you both theoretical knowledge and real-world skills.",
+    blendedLearningContent: "We combine self-paced online learning with practical Field/Job Site Experiences through our externship program, giving you both theoretical knowledge and real-world skills.",
     affordableEducation: "Affordable Education",
     affordableEducationContent: "Our flat-rate tuition of $2,500 makes quality training accessible, with financial aid options available for those who qualify.",
     careerFocused: "Career-Focused Curriculum",

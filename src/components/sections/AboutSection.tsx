@@ -67,7 +67,7 @@ const AboutSection = () => {
             <SectionHeading
               subtitle="About CSTU"
               title="California's Leading Online Trade School"
-              description="Founded in Sacramento, California Skilled Trades University (CSTU) is committed to providing affordable, flexible education in high-demand trade skills. Our unique model combines comprehensive online learning with hands-on externship experiences."
+              description="Founded in Sacramento, California Skilled Trades University (CSTU) is committed to providing affordable, flexible education in high-demand trade skills. Our unique model combines comprehensive online learning with practical Field/Job Site Experiences."
               className="mb-6"
             />
             

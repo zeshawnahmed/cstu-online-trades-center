@@ -21,7 +21,7 @@ const TestimonialsSection = () => {
       avatar: "/testimonial-2.jpg",
     },
     {
-      quote: "The welding curriculum was exactly what I needed to start my career. The online portion was convenient, and the hands-on externship gave me real-world experience that employers value.",
+      quote: "The welding curriculum was exactly what I needed to start my career. The online portion was convenient, and the practical externship gave me real-world experience that employers value.",
       name: "David Wilson",
       role: "Certified Welder",
       company: "Central Valley Manufacturing",

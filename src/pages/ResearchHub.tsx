@@ -24,7 +24,7 @@ If you've ever wished your A/C was cheaper to run, more sustainable, and less pr
     },
     {
       id: 2,
-      category: 'Trucking',
+      category: 'HVAC',
       title: 'Hydrogen Semi-Trucks Are Rolling Out in California',
       content: `Electric trucks have gotten most of the headlines lately, but hydrogen fuel cell trucks are quickly becoming the heavyweight contender—especially for long-haul freight.
 

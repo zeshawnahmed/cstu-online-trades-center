@@ -22,8 +22,8 @@ const AboutUs = () => {
         <meta 
           name="description" 
           content={language === 'en'
-            ? "Learn about American Institute of Trades - Sacramento's premier affordable trade school for Commercial Truck Driving and CDL training. Our cost-effective programs prepare you for lucrative careers without the debt of traditional colleges."
-            : "Conozca sobre el Instituto Americano de Oficios - La principal escuela de oficios asequible de Sacramento para capacitación de Manejo de Camiones Comerciales y CDL."}
+            ? "Learn about American Institute of Trades - Sacramento's premier affordable trade school for HVAC training. Our cost-effective programs prepare you for lucrative careers without the debt of traditional colleges."
+            : "Conozca sobre el Instituto Americano de Oficios - La principal escuela de oficios asequible de Sacramento para capacitación de HVAC."}
         />
       </Helmet>
       
@@ -189,7 +189,7 @@ const AboutUs = () => {
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'AIT focuses on practical skills that employers actually want. No theoretical fluff - just Job Site/Field training that gets you hired fast.'
+                    ? 'AIT focuses on practical skills that employers actually want. No theoretical fluff - just Job Site/Field Training that gets you hired fast.'
                     : 'AIT se enfoca en habilidades prácticas que los empleadores realmente quieren. Sin relleno teórico - solo capacitación práctica que te hace contratado rápido.'
                   }
                 </p>

@@ -30,51 +30,13 @@ interface ProgramDetail {
 const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> => {
   if (language === 'en') {
     return {
-      'commercial-truck-driving': {
-        title: 'Commercial Truck Driving Program (CDL Class A and/or B with optional Hazmat Endorsement)',
-        description: 'Learn essential skills to become job-ready in commercial truck driving with CDL Class A or B license, plus optional Hazmat Endorsement - FMCSA-Approved Program.',
-        fullDescription: [
-          "Our FMCSA-Approved Commercial Truck Driving program focuses on teaching the essential skills needed to succeed in entry level positions in the trucking and transportation industry.",
-          "Through our comprehensive FMCSA-recognized training, you'll develop expertise in safe driving practices, vehicle inspection, cargo handling, and transportation regulations.",
-          "Upon program completion, you'll be prepared for entry level commercial driving positions with CDL Class A or B license and optional Hazmat Endorsement."
-        ],
-        price: '$2,499',
-        duration: 'Self-paced',
-        certification: 'CDL Class A/B License',
-        curriculum: [
-          'Commercial Driving Fundamentals and Safety (FMCSA-Approved)',
-          'Vehicle Inspection and Maintenance',
-          'Cargo Handling and Securing',
-          'Transportation Regulations and Compliance',
-          'Defensive Driving Techniques',
-          'Electronic Logging Devices (ELD)',
-          'Hazmat Endorsement Training (Optional)',
-          'Customer Service and Professional Conduct'
-        ],
-        salaryInfo: {
-          median: '$103,663',
-          growth: '9% above national average',
-          period: '2025',
-          demand: 'Average salary for truck drivers in California',
-          source: 'According to Indeed.com'
-        },
-        keyFeatures: [
-          'FMCSA-Approved Program - Learn Essential Skills To Become Job-Ready in Commercial Truck Driving for entry level positions',
-          'CDL Class A or B License Training',
-          'Optional Hazmat Endorsement',
-          'Self Paced, Online Learning Format for Busy Professionals',
-          'Connect with Local Cohort Through Fun Experiences',
-          'Hands-On Behind-The-Wheel-Training With Trained Professional'
-        ],
-        approvalBadge: 'FMCSA-Approved Program'
-      },
       'hvac-technician': {
         title: 'HVAC Technician Program (EPA 608 Certification Training Included)',
         description: 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training.',
         fullDescription: [
           "Our HVAC Technician program focuses on teaching the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
           "Through our comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
-          "Upon program completion, you'll be prepared for entry level HVAC technician positions with EPA 608 certification training and hands-on experience with industry equipment."
+          "Upon program completion, you'll be prepared for entry level HVAC technician positions with EPA 608 certification training and practical Field/Job Site Experiences with industry equipment."
         ],
         price: '$2,499',
         duration: 'Self-paced',
@@ -102,7 +64,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'According to TradeCareerPath'
         },
         keyFeatures: [
-          'Hands-On Experience Makes You Job-Ready in HVAC for entry level positions',
+          'Practical Field/Job Site Experiences Make You Job-Ready in HVAC for entry level positions',
           'EPA 608 Certification Training Included',
           'Residential and Commercial HVAC Systems',
           'Self Paced, Online Learning Format for Busy Professionals',
@@ -114,51 +76,13 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
     };
   } else {
     return {
-      'commercial-truck-driving': {
-        title: 'Programa de Manejo de Camiones Comerciales (CDL Clase A y/o B con Endoso Hazmat Opcional)',
-        description: 'Aprende habilidades esenciales para estar listo para trabajar en el manejo de camiones comerciales con licencia CDL Clase A o B, más Endoso Hazmat opcional - Programa Aprobado por FMCSA.',
-        fullDescription: [
-          "Nuestro programa de Manejo de Camiones Comerciales aprobado por FMCSA se enfoca en enseñar las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria del transporte.",
-          "A través de nuestra capacitación integral reconocida por FMCSA, desarrollarás experiencia en prácticas de manejo seguro, inspección de vehículos, manejo de carga y regulaciones de transporte.",
-          "Al completar el programa, estarás preparado para puestos de manejo comercial de nivel inicial con licencia CDL Clase A o B y Endoso Hazmat opcional."
-        ],
-        price: '$2,499',
-        duration: 'A tu ritmo',
-        certification: 'Licencia CDL Clase A/B',
-        curriculum: [
-          'Fundamentos y Seguridad del Manejo Comercial (Aprobado por FMCSA)',
-          'Inspección y Mantenimiento de Vehículos',
-          'Manejo y Aseguramiento de Carga',
-          'Regulaciones de Transporte y Cumplimiento',
-          'Técnicas de Manejo Defensivo',
-          'Dispositivos de Registro Electrónico (ELD)',
-          'Capacitación de Endoso Hazmat (Opcional)',
-          'Servicio al Cliente y Conducta Profesional'
-        ],
-        salaryInfo: {
-          median: '$103,663',
-          growth: '9% por encima del promedio nacional',
-          period: '2025',
-          demand: 'Salario promedio para conductores de camiones en California',
-          source: 'Según Indeed.com'
-        },
-        keyFeatures: [
-          'Programa Aprobado por FMCSA - Aprende habilidades esenciales para estar listo para trabajar en Manejo de Camiones Comerciales en puestos de nivel inicial',
-          'Capacitación para Licencia CDL Clase A o B',
-          'Endoso Hazmat Opcional',
-          'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
-          'Conéctate con grupos locales a través de experiencias divertidas',
-          'Entrenamiento práctico al volante con profesionales capacitados'
-        ],
-        approvalBadge: 'Programa Aprobado por FMCSA'
-      },
       'hvac-technician': {
         title: 'Programa de Técnico HVAC (Capacitación de Certificación EPA 608 Incluida)',
         description: 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608.',
         fullDescription: [
           "Nuestro programa de Técnico HVAC se enfoca en enseñar las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
           "A través de nuestra capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
-          "Al completar el programa, estarás preparado para puestos de técnico HVAC de nivel inicial con capacitación de certificación EPA 608 y experiencia práctica con equipos de la industria."
+          "Al completar el programa, estarás preparado para puestos de técnico HVAC de nivel inicial con capacitación de certificación EPA 608 y experiencias prácticas de campo/lugar de trabajo con equipos de la industria."
         ],
         price: '$2,499',
         duration: 'A tu ritmo',
@@ -186,7 +110,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'Según TradeCareerPath'
         },
         keyFeatures: [
-          'Experiencia práctica te hace estar listo para trabajar en HVAC en puestos de nivel inicial',
+          'Experiencias prácticas de campo/lugar de trabajo te hacen estar listo para trabajar en HVAC en puestos de nivel inicial',
           'Capacitación de Certificación EPA 608 Incluida',
           'Sistemas HVAC Residenciales y Comerciales',
           'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
@@ -381,8 +305,8 @@ const ProgramDetail = () => {
               </h3>
               <p className="text-navy-600 leading-relaxed">
                 {language === 'en' 
-                  ? "Employers often seek candidates who bring both experience and initiative to the table. While we can't guarantee job placement, our program is designed to provide you with hands-on learning, skill-building opportunities, and the resources needed to help you stand out in the competitive job market. With our support, you'll gain the experience and confidence to take your next career step."
-                  : "Los empleadores a menudo buscan candidatos que aporten tanto experiencia como iniciativa. Aunque no podemos garantizar la colocación laboral, nuestro programa está diseñado para brindarte aprendizaje práctico, oportunidades de desarrollo de habilidades y los recursos necesarios para ayudarte a destacar en el competitivo mercado laboral. Con nuestro apoyo, obtendrás la experiencia y confianza para dar tu siguiente paso profesional."
+                  ? "Employers often seek candidates who bring both experience and initiative to the table. While we can't guarantee job placement, our program is designed to provide you with practical Field/Job Site Experiences, skill-building opportunities, and the resources needed to help you stand out in the competitive job market. With our support, you'll gain the experience and confidence to take your next career step."
+                  : "Los empleadores a menudo buscan candidatos que aporten tanto experiencia como iniciativa. Aunque no podemos garantizar la colocación laboral, nuestro programa está diseñado para brindarte experiencias prácticas de campo/lugar de trabajo, oportunidades de desarrollo de habilidades y los recursos necesarios para ayudarte a destacar en el competitivo mercado laboral. Con nuestro apoyo, obtendrás la experiencia y confianza para dar tu siguiente paso profesional."
                 }
               </p>
             </div>

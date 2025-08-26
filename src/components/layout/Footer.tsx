@@ -56,9 +56,6 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Programs" : "Programas"}</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/programs/commercial-truck-driving" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  {language === 'en' ? "Commercial Truck Driving & CDL" : "Manejo de Camiones Comerciales y CDL"}
-                </Link>
               </li>
               <li>
                 <Link to="/programs/hvac-technician" className="text-gray-300 hover:text-gold-400 transition-colors">
