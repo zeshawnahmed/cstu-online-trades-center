@@ -64,7 +64,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'According to TradeCareerPath'
         },
         keyFeatures: [
-          'Practical Field/Job Site Experiences Included',
+          'Practical Field Experiences With Qualified Industry Professionals',
           'EPA 608 Certification Training Included',
           'Residential and Commercial HVAC Systems',
           'Self Paced, Online Learning Format for Busy Professionals',
