@@ -82,7 +82,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         fullDescription: [
           "Nuestro programa de Técnico HVAC se enfoca en enseñar las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
           "A través de nuestra capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
-          "Al completar el programa, estarás preparado para puestos de técnico HVAC de nivel inicial con capacitación de certificación EPA 608 y experiencias prácticas de campo/lugar de trabajo con equipos de la industria."
+          "Al completar el programa, estarás preparado para puestos de técnico HVAC de nivel inicial con capacitación de certificación EPA 608 y experiencias prácticas de campo para hacerte listo para el trabajo."
         ],
         price: '$2,499',
         duration: 'A tu ritmo',
@@ -110,7 +110,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'Según TradeCareerPath'
         },
         keyFeatures: [
-          'Experiencias prácticas de campo/lugar de trabajo te hacen estar listo para trabajar en HVAC en puestos de nivel inicial',
+          'Experiencias Prácticas de Campo con Profesionales Calificados de la Industria',
           'Capacitación de Certificación EPA 608 Incluida',
           'Sistemas HVAC Residenciales y Comerciales',
           'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
@@ -306,7 +306,7 @@ const ProgramDetail = () => {
               <p className="text-navy-600 leading-relaxed">
                 {language === 'en' 
                   ? "Employers seek candidates who bring both experience and initiative to the table. Our program is designed to provide you with practical Field/Job Site Experiences, skill-building opportunities, and the resources needed to help you stand out in the competitive job market. Our goal is to help you gain the experience and CONFIDENCE to take your next career step."
-                  : "Los empleadores a menudo buscan candidatos que aporten tanto experiencia como iniciativa. Aunque no podemos garantizar la colocación laboral, nuestro programa está diseñado para brindarte experiencias prácticas de campo/lugar de trabajo, oportunidades de desarrollo de habilidades y los recursos necesarios para ayudarte a destacar en el competitivo mercado laboral. Con nuestro apoyo, obtendrás la experiencia y confianza para dar tu siguiente paso profesional."
+                  : "Los empleadores buscan candidatos que aporten tanto experiencia como iniciativa. Nuestro programa está diseñado para brindarte experiencias prácticas de campo/lugar de trabajo, oportunidades de desarrollo de habilidades y los recursos necesarios para ayudarte a destacar en el competitivo mercado laboral. Nuestro objetivo es ayudarte a obtener la experiencia y CONFIANZA para dar tu siguiente paso profesional."
                 }
               </p>
             </div>
