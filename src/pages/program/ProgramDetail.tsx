@@ -69,7 +69,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Residential and Commercial HVAC Systems',
           'Self Paced, Online Learning Format for Busy Professionals',
           'Connect with Local Cohort Through Fun Experiences',
-          'Job Site/Field Training With Industry Equipment'
+          'Structured Learning with real Accountability/Learning Coach'
         ],
         approvalBadge: 'HVAC Program'
       }
@@ -115,7 +115,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Sistemas HVAC Residenciales y Comerciales',
           'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
           'Conéctate con grupos locales a través de experiencias divertidas',
-          'Entrenamiento práctico con equipos de la industria'
+          'Aprendizaje estructurado con entrenador de responsabilidad/aprendizaje real'
         ],
         approvalBadge: 'Programa HVAC'
       }
@@ -198,7 +198,7 @@ const ProgramDetail = () => {
                 </div>
                 <div className="flex items-center">
                   <Users className="h-5 w-5 mr-2 text-gold-400" />
-                  <span>{language === 'en' ? 'Job Site/Field Training With Qualified Industry Professional' : 'Entrenamiento Práctico con Profesional Calificado de la Industria'}</span>
+                  <span>{language === 'en' ? 'Structured Learning with real Accountability/Learning Coach' : 'Aprendizaje estructurado con entrenador de responsabilidad/aprendizaje real'}</span>
                 </div>
               </div>
               
