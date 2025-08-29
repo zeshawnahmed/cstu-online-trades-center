@@ -39,7 +39,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "Upon program completion, you'll be prepared for entry level HVAC technician positions with EPA 608 certification training and practical Field Experiences to make you job ready."
         ],
         price: '$2,499',
-        duration: 'Self-paced',
+        duration: 'Online Self Paced, 12 Weeks',
         certification: 'EPA 608 Certification',
         curriculum: [
           '🧰 Precision Use of Specialized HVAC Diagnostic and Service Tools',
@@ -69,7 +69,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Residential and Commercial HVAC Systems',
           'Self Paced, Online Learning Format for Busy Professionals',
           'Connect with Local Cohort Through Fun Experiences',
-          'Structured Learning with real Accountability/Learning Coach'
+          'Practical Field Experiences with Qualified Industry Professionals'
         ],
         approvalBadge: 'HVAC Program'
       }
@@ -85,7 +85,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "Al completar el programa, estarás preparado para puestos de técnico HVAC de nivel inicial con capacitación de certificación EPA 608 y experiencias prácticas de campo para hacerte listo para el trabajo."
         ],
         price: '$2,499',
-        duration: 'A tu ritmo',
+        duration: 'En línea a tu ritmo, 12 semanas',
         certification: 'Certificación EPA 608',
         curriculum: [
           '🧰 Uso Preciso de Herramientas Especializadas de Diagnóstico y Servicio HVAC',
@@ -115,7 +115,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Sistemas HVAC Residenciales y Comerciales',
           'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
           'Conéctate con grupos locales a través de experiencias divertidas',
-          'Aprendizaje estructurado con entrenador de responsabilidad/aprendizaje real'
+          'Experiencias Prácticas de Campo con Profesionales Calificados de la Industria'
         ],
         approvalBadge: 'Programa HVAC'
       }
@@ -198,7 +198,7 @@ const ProgramDetail = () => {
                 </div>
                 <div className="flex items-center">
                   <Users className="h-5 w-5 mr-2 text-gold-400" />
-                  <span>{language === 'en' ? 'Structured Learning with real Accountability/Learning Coach' : 'Aprendizaje estructurado con entrenador de responsabilidad/aprendizaje real'}</span>
+                  <span>{language === 'en' ? 'Practical Field Experiences with Qualified Industry Professionals' : 'Experiencias Prácticas de Campo con Profesionales Calificados de la Industria'}</span>
                 </div>
               </div>
               
