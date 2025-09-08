@@ -77,8 +77,8 @@ const AboutUs = () => {
             <div className="bg-navy-50 border-l-4 border-navy-500 pl-6 py-4 rounded-r-lg mb-10">
               <p className="text-navy-800 font-medium italic">
                 {language === 'en'
-                  ? "Why spend 4+ years and $120,000+ on a degree that might not even get you a job? AIT gets you job-ready in months, not years, for just $2,499 total."
-                  : "¿Por qué gastar 4+ años y $120,000+ en un título que tal vez ni siquiera te consiga trabajo? AIT te prepara para el trabajo en meses, no años, por solo $2,499 en total."}
+                  ? "Why spend 4+ years and $120,000+ on a degree that might not even get you a job? AIT gets you job-ready in months, not years, with affordable flat-rate tuition."
+                  : "¿Por qué gastar 4+ años y $120,000+ en un título que tal vez ni siquiera te consiga trabajo? AIT te prepara para el trabajo en meses, no años, con matrícula de tarifa plana asequible."}
               </p>
             </div>
             
@@ -129,7 +129,7 @@ const AboutUs = () => {
                     </div>
                     <div className="text-right">
                       <p className="text-sm text-gray-500">AIT</p>
-                      <p className="text-lg font-bold text-green-500">$2,499</p>
+                      <p className="text-lg font-bold text-green-500">Call for Pricing</p>
                     </div>
                   </div>
                 </div>

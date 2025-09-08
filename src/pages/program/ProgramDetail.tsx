@@ -38,7 +38,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "Through our comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
           "Upon program completion, you'll be prepared for entry level HVAC technician positions with EPA 608 certification training and practical Field Experiences to make you job ready."
         ],
-        price: '$2,499',
+        price: 'Affordable Flat Rate Tuition - Call to Learn More',
         duration: 'Online Self Paced, 12 Weeks',
         certification: 'EPA 608 Certification',
         curriculum: [
@@ -84,7 +84,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "A través de nuestra capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
           "Al completar el programa, estarás preparado para puestos de técnico HVAC de nivel inicial con capacitación de certificación EPA 608 y experiencias prácticas de campo para hacerte listo para el trabajo."
         ],
-        price: '$2,499',
+        price: 'Matrícula de Tarifa Plana Asequible - Llama para Obtener Más Información',
         duration: 'En línea a tu ritmo, 12 semanas',
         certification: 'Certificación EPA 608',
         curriculum: [
@@ -190,7 +190,7 @@ const ProgramDetail = () => {
               <div className="flex flex-wrap gap-6 mb-8">
                 <div className="flex items-center">
                   <DollarSign className="h-5 w-5 mr-2 text-gold-400" />
-                  <span>Flat Rate Tuition: {program.price}</span>
+                  <span>{program.price}</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="h-5 w-5 mr-2 text-gold-400" />

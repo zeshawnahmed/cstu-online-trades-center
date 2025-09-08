@@ -108,7 +108,7 @@ export const translations = {
     blendedLearning: "Blended Learning Model",
     blendedLearningContent: "We combine self-paced online learning with practical Field/Job Site Experiences through our externship program, giving you both theoretical knowledge and real-world skills.",
     affordableEducation: "Affordable Education",
-    affordableEducationContent: "Our flat-rate tuition of $2,500 makes quality training accessible, with financial aid options available for those who qualify.",
+    affordableEducationContent: "Our affordable flat-rate tuition makes quality training accessible, with financial aid options available for those who qualify. Call to learn more about pricing.",
     careerFocused: "Career-Focused Curriculum",
     careerFocusedContent: "Every aspect of our programs is designed with one goal in mind: preparing you for immediate employment in your chosen trade.",
     joiningCSTUTitle: "Ready to Join CSTU?",
