@@ -398,7 +398,7 @@ const ProgramDetail = () => {
                 </div>
                 <div className="flex items-center">
                   <Users className="h-5 w-5 mr-2 text-gold-400" />
-                  <span>{language === 'en' ? 'Practical Field Experiences with Qualified Industry Professionals' : 'Experiencias Prácticas de Campo con Profesionales Calificados de la Industria'}</span>
+                  <span>{language === 'en' ? 'Complementary Hands-On Skills Training with Qualified HVAC Professional' : 'Capacitación Complementaria de Habilidades Prácticas con Profesional HVAC Calificado'}</span>
                 </div>
               </div>
               
