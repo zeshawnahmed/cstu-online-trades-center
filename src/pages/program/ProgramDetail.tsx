@@ -64,7 +64,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'According to TradeCareerPath'
         },
         keyFeatures: [
-          '*Hands-On Training Workshops with Qualified Industry Professional',
+          '*Complementary Hands-On Training Workshops with Qualified Industry Professional',
           'EPA 608 Certification Training Included',
           'Residential and Commercial HVAC Systems',
           'Self Paced, Online Learning Format for Busy Professionals',
@@ -110,7 +110,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'Según TradeCareerPath'
         },
         keyFeatures: [
-          '*Talleres de Capacitación Práctica con Profesional Calificado de la Industria',
+          '*Talleres Complementarios de Capacitación Práctica con Profesional Calificado de la Industria',
           'Capacitación de Certificación EPA 608 Incluida',
           'Sistemas HVAC Residenciales y Comerciales',
           'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
