@@ -64,30 +64,39 @@ const AboutUs = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-navy-700 mb-6">
-              {language === 'en' ? 'Our Story' : 'Nuestra Historia'}
-            </h2>
-            <p className="text-lg text-navy-600 mb-8 leading-relaxed">
-              {language === 'en'
-                ? "Founded in Sacramento by UC Berkeley and UC Davis Alumni, American Institute of Trades (AIT) was born from a simple yet powerful mission: to provide a smart alternative to overpriced 4-year degrees that leave students drowning in debt with unmarketable skills. While traditional colleges charge $30,000+ per year for degrees that may never pay off, AIT prepares you for high-demand careers at a fraction of the cost."
-                : "Fundada en Sacramento por exalumnos de UC Berkeley y UC Davis, el Instituto Americano de Oficios (AIT) nació de una misión simple pero poderosa: proporcionar una alternativa inteligente a los títulos universitarios sobrevalorados de 4 años que dejan a los estudiantes ahogándose en deudas."
-              }
-            </p>
-            
-            <div className="bg-navy-50 border-l-4 border-navy-500 pl-6 py-4 rounded-r-lg mb-10">
-              <p className="text-navy-800 font-medium italic">
-                {language === 'en'
-                  ? "Why spend 4+ years and $120,000+ on a degree that might not even get you a job? AIT gets you job-ready in months, not years, with affordable flat-rate tuition."
-                  : "¿Por qué gastar 4+ años y $120,000+ en un título que tal vez ni siquiera te consiga trabajo? AIT te prepara para el trabajo en meses, no años, con matrícula de tarifa plana asequible."}
+            <div className="text-center mb-8">
+              <p className="text-xl font-bold text-gold-600 mb-4">
+                {language === 'en' 
+                  ? 'Proudly Serving the Greater Sacramento Community'
+                  : 'Sirviendo con Orgullo a la Gran Comunidad de Sacramento'
+                }
               </p>
             </div>
             
-            <div className="flex items-center justify-center mb-12">
-              <MapPin className="h-8 w-8 text-gold-500 mr-3" />
-              <p className="text-xl font-semibold text-navy-700">
+            <h2 className="text-3xl font-bold text-navy-700 mb-6">
+              {language === 'en' ? 'Our Story' : 'Nuestra Historia'}
+            </h2>
+            
+            <p className="text-lg text-navy-600 mb-6 leading-relaxed">
+              {language === 'en'
+                ? "We're a grassroots trade school founded right here in Sacramento by UC Berkeley and UC Davis alumni who believe education should be both excellent and enjoyable. Our mission is simple: deliver top-tier training that gets you job-ready while making learning fun again."
+                : "Somos una escuela de oficios de base fundada aquí en Sacramento por exalumnos de UC Berkeley y UC Davis que creen que la educación debe ser excelente y agradable. Nuestra misión es simple: brindar capacitación de primer nivel que te prepare para el trabajo mientras hacemos que el aprendizaje sea divertido nuevamente."
+              }
+            </p>
+            
+            <p className="text-lg text-navy-600 mb-8 leading-relaxed">
+              {language === 'en'
+                ? "Excellence in training is our foundation. We combine rigorous, hands-on instruction with an engaging learning environment that keeps you motivated. No boring lectures—just practical skills, expert guidance, and a community that supports your success."
+                : "La excelencia en la capacitación es nuestra base. Combinamos instrucción rigurosa y práctica con un ambiente de aprendizaje atractivo que te mantiene motivado. Sin conferencias aburridas, solo habilidades prácticas, orientación experta y una comunidad que apoya tu éxito."
+              }
+            </p>
+            
+            <div className="bg-gold-50 border-l-4 border-gold-500 pl-6 py-4 rounded-r-lg mb-8">
+              <p className="text-navy-800 font-semibold">
                 {language === 'en'
-                  ? "Proudly serving the Greater Sacramento Region with Practical Education"
-                  : "Sirviendo con orgullo a la Gran Región de Sacramento con Educación Práctica"}
+                  ? "Our values: Excellence in training + Making education fun again = Careers that pay well"
+                  : "Nuestros valores: Excelencia en capacitación + Hacer que la educación sea divertida nuevamente = Carreras que pagan bien"
+                }
               </p>
             </div>
           </div>
