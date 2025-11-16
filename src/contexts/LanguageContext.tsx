@@ -10,7 +10,7 @@ export const translations = {
     applyNow: "Apply Now",
     
     // Hero Section
-    heroTitle: "Skilled Trade Mastery Begins Here. Build Your Future.",
+    heroTitle: "Skilled Trade Mastery and Prosperity Begins Here.",
     heroSubtitle: "Learn High-Demand Skills Through Affordable, Self-Paced Online Programs and Job Site/Field Training. Start Your Career in the Skilled Trades Today.",
     becomeJobReady: "BECOME JOB READY",
     onlineSelfPaced: "ONLINE SELF-PACED & STRUCTURED",
