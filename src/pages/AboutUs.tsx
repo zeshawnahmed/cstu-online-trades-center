@@ -86,8 +86,8 @@ const AboutUs = () => {
             
             <p className="text-lg text-navy-600 mb-8 leading-relaxed">
               {language === 'en'
-                ? "Excellence in training is our foundation. We combine rigorous, hands-on instruction with an engaging learning environment that keeps you motivated. No boring lectures—just practical skills, expert guidance, and a community that supports your success."
-                : "La excelencia en la capacitación es nuestra base. Combinamos instrucción rigurosa y práctica con un ambiente de aprendizaje atractivo que te mantiene motivado. Sin conferencias aburridas, solo habilidades prácticas, orientación experta y una comunidad que apoya tu éxito."
+                ? "Excellence in training is our foundation. We combine rigorous instruction with an engaging learning environment that keeps you motivated. No boring lectures—just practical skills, expert guidance, and a community that supports your success."
+                : "La excelencia en la capacitación es nuestra base. Combinamos instrucción rigurosa con un ambiente de aprendizaje atractivo que te mantiene motivado. Sin conferencias aburridas, solo habilidades prácticas, orientación experta y una comunidad que apoya tu éxito."
               }
             </p>
             
