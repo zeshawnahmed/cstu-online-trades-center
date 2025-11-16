@@ -52,8 +52,8 @@ const AboutUs = () => {
             </h1>
             <p className="text-xl text-navy-600 mb-10">
               {language === 'en' 
-                ? 'Skip the crushing debt of expensive 4-year degrees. AIT prepares you for careers with high earning potential.'
-                : 'Evita la deuda aplastante de costosos títulos de 4 años. AIT te prepara para carreras con alto potencial de ingresos.'
+                ? 'Quality trade education that prepares you for in-demand careers.'
+                : 'Educación de calidad en oficios que te prepara para carreras en demanda.'
               }
             </p>
           </motion.div>
@@ -79,23 +79,23 @@ const AboutUs = () => {
             
             <p className="text-lg text-navy-600 mb-6 leading-relaxed">
               {language === 'en'
-                ? "We're a grassroots trade school founded right here in Sacramento by UC Berkeley and UC Davis alumni who believe education should be both excellent and enjoyable. Our mission is simple: deliver top-tier training that gets you job-ready while making learning fun again."
-                : "Somos una escuela de oficios de base fundada aquí en Sacramento por exalumnos de UC Berkeley y UC Davis que creen que la educación debe ser excelente y agradable. Nuestra misión es simple: brindar capacitación de primer nivel que te prepare para el trabajo mientras hacemos que el aprendizaje sea divertido nuevamente."
+                ? "We're a grassroots trade school founded right here in Sacramento by UC Berkeley and UC Davis alumni who believe education should be both excellent and enjoyable. Our mission is simple: deliver specialized training - rooted in excellence - that gets you job-ready while making learning fun again."
+                : "Somos una escuela de oficios de base fundada aquí en Sacramento por exalumnos de UC Berkeley y UC Davis que creen que la educación debe ser excelente y agradable. Nuestra misión es simple: brindar capacitación especializada - arraigada en la excelencia - que te prepare para el trabajo mientras hacemos que el aprendizaje sea divertido nuevamente."
               }
             </p>
             
             <p className="text-lg text-navy-600 mb-8 leading-relaxed">
               {language === 'en'
-                ? "Excellence in training is our foundation. We combine rigorous instruction with an engaging learning environment that keeps you motivated. No boring lectures—just practical skills, expert guidance, and a community that supports your success."
-                : "La excelencia en la capacitación es nuestra base. Combinamos instrucción rigurosa con un ambiente de aprendizaje atractivo que te mantiene motivado. Sin conferencias aburridas, solo habilidades prácticas, orientación experta y una comunidad que apoya tu éxito."
+                ? "Excellence in training is our foundation. We combine rigorous instruction with an engaging learning environment that keeps you motivated. No more boring lectures and hoops to jump through—just practical skills, expert guidance, and a community that supports your success."
+                : "La excelencia en la capacitación es nuestra base. Combinamos instrucción rigurosa con un ambiente de aprendizaje atractivo que te mantiene motivado. No más conferencias aburridas y obstáculos que superar, solo habilidades prácticas, orientación experta y una comunidad que apoya tu éxito."
               }
             </p>
             
             <div className="bg-gold-50 border-l-4 border-gold-500 pl-6 py-4 rounded-r-lg mb-8">
               <p className="text-navy-800 font-semibold">
                 {language === 'en'
-                  ? "Our values: Excellence in training + Making education fun again = Careers that pay well"
-                  : "Nuestros valores: Excelencia en capacitación + Hacer que la educación sea divertida nuevamente = Carreras que pagan bien"
+                  ? "Our values: Excellence in training + Making education fun again"
+                  : "Nuestros valores: Excelencia en capacitación + Hacer que la educación sea divertida nuevamente"
                 }
               </p>
             </div>
@@ -126,8 +126,8 @@ const AboutUs = () => {
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'Skip the crushing debt. While college graduates average $37,000+ in student loans, our graduates start earning immediately with zero debt burden.'
-                    : 'Evita la deuda aplastante. Mientras los graduados universitarios promedian $37,000+ en préstamos estudiantiles, nuestros graduados comienzan a ganar inmediatamente sin carga de deuda.'
+                    ? 'Affordable, flat-rate tuition with no hidden fees. Get quality training without the crushing debt of traditional college.'
+                    : 'Matrícula asequible de tarifa plana sin tarifas ocultas. Obtén capacitación de calidad sin la deuda aplastante de la universidad tradicional.'
                   }
                 </p>
                 <div className="mt-5 pt-5 border-t border-gray-100">
@@ -154,12 +154,12 @@ const AboutUs = () => {
               >
                 <div className="flex items-center mb-4">
                   <Clock className="h-8 w-8 text-gold-500 mr-3" />
-                  <h3 className="text-xl font-bold text-navy-700">{language === 'en' ? 'Start Earning Faster' : 'Comienza a Ganar Más Rápido'}</h3>
+                  <h3 className="text-xl font-bold text-navy-700">{language === 'en' ? 'Get Job-Ready Faster' : 'Prepárate para el Trabajo Más Rápido'}</h3>
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'Get job-ready in months, not years. While others spend 4+ years in classrooms, you\'ll be earning $70,000+ annually in the skilled trades.'
-                    : 'Prepárate para el trabajo en meses, no años. Mientras otros pasan 4+ años en aulas, tú estarás ganando $70,000+ anualmente en oficios especializados.'
+                    ? 'Complete your training in months, not years. Our focused programs get you job-ready quickly with in-demand skills.'
+                    : 'Completa tu capacitación en meses, no años. Nuestros programas enfocados te preparan para el trabajo rápidamente con habilidades en demanda.'
                   }
                 </p>
               </motion.div>
@@ -208,26 +208,20 @@ const AboutUs = () => {
         </div>
       </section>
       
-      {/* Earning Potential Section */}
+      {/* Career Readiness Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-navy-700 mb-8 text-center">
-              {language === 'en' ? 'Your Financial Future' : 'Tu Futuro Financiero'}
+              {language === 'en' ? 'Career-Focused Training' : 'Capacitación Enfocada en la Carrera'}
             </h2>
             
             <p className="text-lg text-navy-600 mb-4 leading-relaxed text-center">
               {language === 'en'
-                ? 'AIT graduates are positioned to enter high-paying careers immediately, while college graduates often struggle to find work that justifies their massive debt load.'
-                : 'Los graduados de AIT están posicionados para entrar en carreras bien pagadas inmediatamente, mientras que los graduados universitarios a menudo luchan por encontrar trabajo que justifique su carga masiva de deuda.'
+                ? 'Our programs are designed to prepare you for in-demand careers in the skilled trades. We focus on practical skills that employers value.'
+                : 'Nuestros programas están diseñados para prepararte para carreras en demanda en oficios especializados. Nos enfocamos en habilidades prácticas que los empleadores valoran.'
               }
             </p>
-            
-            <p className="text-xs text-gray-500 text-center italic mb-10">
-              *AIT does not guarantee financial outcomes
-            </p>
-            
-            
           </div>
         </div>
       </section>
@@ -249,12 +243,12 @@ const AboutUs = () => {
             </div>
             
             <h2 className="text-3xl font-bold mb-6">
-              {language === 'en' ? 'Ready to Make a Smart Financial Choice?' : '¿Listo para Hacer una Elección Financiera Inteligente?'}
+              {language === 'en' ? 'Ready to Start Your Journey?' : '¿Listo para Comenzar tu Viaje?'}
             </h2>
             <p className="text-xl mb-10 text-navy-100">
               {language === 'en'
-                ? 'Skip the debt trap of traditional college. Join AIT and start earning immediately with skills that employers actually need.'
-                : 'Evita la trampa de deuda de la universidad tradicional. Únete a AIT y comienza a ganar inmediatamente con habilidades que los empleadores realmente necesitan.'
+                ? 'Join AIT and get the specialized training you need to launch your career in the skilled trades.'
+                : 'Únete a AIT y obtén la capacitación especializada que necesitas para lanzar tu carrera en oficios especializados.'
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
