@@ -48,11 +48,11 @@ const AboutUs = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-navy-700 mb-4">
-              {language === 'en' ? 'About American Institute of Trades' : 'Sobre el Instituto Americano de Oficios'}
+              {language === 'en' ? 'About A.I.T.' : 'Sobre el Instituto Americano de Oficios'}
             </h1>
-            <p className="text-xl text-navy-600 mb-10">
+            <p className="text-xl text-navy-600 mb-10 italic">
               {language === 'en' 
-                ? 'Quality trade education that prepares you for in-demand careers.'
+                ? '"We are what we repeatedly do. Excellence, then, is not an act, but a habit," - Aristotle'
                 : 'Educación de calidad en oficios que te prepara para carreras en demanda.'
               }
             </p>
@@ -64,13 +64,13 @@ const AboutUs = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <p className="text-xl font-bold text-gold-600 mb-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gold-600 mb-4">
                 {language === 'en' 
                   ? 'Proudly Serving the Greater Sacramento Community'
                   : 'Sirviendo con Orgullo a la Gran Comunidad de Sacramento'
                 }
-              </p>
+              </h2>
             </div>
             
             <h2 className="text-3xl font-bold text-navy-700 mb-6">
@@ -178,8 +178,8 @@ const AboutUs = () => {
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'Our programs focus on skills that are in high demand and cannot be outsourced or automated, ensuring long-term career security and growth potential.'
-                    : 'Nuestros programas se enfocan en habilidades de alta demanda que no pueden ser subcontratadas o automatizadas, asegurando seguridad profesional a largo plazo.'
+                    ? 'Our programs focus on skills that are in high demand and less likely to be fully automated by AI'
+                    : 'Nuestros programas se enfocan en habilidades de alta demanda y menos propensas a ser completamente automatizadas por IA'
                   }
                 </p>
               </motion.div>
@@ -198,30 +198,12 @@ const AboutUs = () => {
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'AIT focuses on practical skills that employers actually want. No theoretical fluff - just Job Site/Field Training that gets you hired fast.'
-                    : 'AIT se enfoca en habilidades prácticas que los empleadores realmente quieren. Sin relleno teórico - solo capacitación práctica que te hace contratado rápido.'
+                    ? 'AIT focuses on practical skills that employers actually want.'
+                    : 'AIT se enfoca en habilidades prácticas que los empleadores realmente quieren.'
                   }
                 </p>
               </motion.div>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Career Readiness Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-navy-700 mb-8 text-center">
-              {language === 'en' ? 'Career-Focused Training' : 'Capacitación Enfocada en la Carrera'}
-            </h2>
-            
-            <p className="text-lg text-navy-600 mb-4 leading-relaxed text-center">
-              {language === 'en'
-                ? 'AIT focuses on practical skills that employers actually want. No theoretical fluff.'
-                : 'AIT se enfoca en habilidades prácticas que los empleadores realmente quieren. Sin teoría innecesaria.'
-              }
-            </p>
           </div>
         </div>
       </section>
