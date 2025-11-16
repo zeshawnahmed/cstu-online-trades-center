@@ -218,8 +218,8 @@ const AboutUs = () => {
             
             <p className="text-lg text-navy-600 mb-4 leading-relaxed text-center">
               {language === 'en'
-                ? 'Our programs are designed to prepare you for in-demand careers in the skilled trades. We focus on practical skills that employers value.'
-                : 'Nuestros programas están diseñados para prepararte para carreras en demanda en oficios especializados. Nos enfocamos en habilidades prácticas que los empleadores valoran.'
+                ? 'AIT focuses on practical skills that employers actually want. No theoretical fluff.'
+                : 'AIT se enfoca en habilidades prácticas que los empleadores realmente quieren. Sin teoría innecesaria.'
               }
             </p>
           </div>
