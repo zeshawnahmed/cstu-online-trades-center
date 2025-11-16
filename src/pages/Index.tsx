@@ -38,8 +38,8 @@ const Index = () => {
 
   // SEO Helmet data with translations and enhanced for local search
   const seoTitle = language === 'en' 
-    ? 'Skilled Trade Mastery and Your Prosperous Future Begins Here.'
-    : 'Skilled Trade Mastery and Your Prosperous Future Begins Here.';
+    ? 'Skilled Trade Mastery and Prosperity Begins Here.'
+    : 'Skilled Trade Mastery and Prosperity Begins Here.';
   
   const seoDescription = language === 'en'
     ? 'American Skilled Trade University (ASTU) offers affordable HVAC training in Sacramento. Find the best HVAC school near me with Job Site/Field training. Sacramento\'s #1 trade school for HVAC career training.'
