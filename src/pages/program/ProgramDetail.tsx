@@ -34,9 +34,9 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         title: 'HVAC Technician Program (EPA 608 Certification Training Included)',
         description: 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training and *hands-on training to get job ready.',
         fullDescription: [
-          "Our HVAC Technician program focuses on teaching the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
-          "Through our comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
-          "Upon program completion, you'll be prepared for entry level HVAC technician positions with EPA 608 certification training and practical Field Experiences to make you job ready."
+          "Our HVAC Technician program focuses on the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
+          "Through comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
+          "Upon completion, you'll be prepared for entry level positions with EPA 608 certification training and complementary hands-on training to make you job ready."
         ],
         price: 'Affordable Flat Rate Tuition - Call to Learn More',
         duration: 'Online Self Paced, 12 Weeks',
@@ -80,9 +80,9 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         title: 'Programa de Técnico HVAC (Capacitación de Certificación EPA 608 Incluida)',
         description: 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608 y *capacitación práctica para estar listo para el trabajo.',
         fullDescription: [
-          "Nuestro programa de Técnico HVAC se enfoca en enseñar las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
-          "A través de nuestra capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
-          "Al completar el programa, estarás preparado para puestos de técnico HVAC de nivel inicial con capacitación de certificación EPA 608 y experiencias prácticas de campo para hacerte listo para el trabajo."
+          "Nuestro programa de Técnico HVAC se enfoca en las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
+          "A través de capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
+          "Al completar, estarás preparado para puestos de nivel inicial con capacitación de certificación EPA 608 y capacitación práctica complementaria para hacerte listo para el trabajo."
         ],
         price: 'Matrícula de Tarifa Plana Asequible - Llama para Obtener Más Información',
         duration: 'En línea a tu ritmo, 12 semanas',
