@@ -7,6 +7,12 @@ import { Button } from '@/components/ui/button';
 import SectionHeading from '@/components/ui/section-heading';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+interface CurriculumItem {
+  week: string;
+  title: string;
+  topics: string[];
+}
+
 interface ProgramDetail {
   title: string;
   description: string;
@@ -14,7 +20,7 @@ interface ProgramDetail {
   price: string;
   duration: string;
   certification: string;
-  curriculum: string[];
+  curriculum: CurriculumItem[];
   salaryInfo: {
     median: string;
     growth: string;
@@ -32,7 +38,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
     return {
       'hvac-technician': {
         title: 'HVAC Technician Program (EPA 608 Certification Training Included)',
-        description: 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training and *hands-on training to get job ready.',
+        description: 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training and hands-on training to get job ready.',
         fullDescription: [
           "Our HVAC Technician program focuses on the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
           "Through comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
@@ -42,18 +48,115 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         duration: 'Online Self Paced, 12 Weeks',
         certification: 'EPA 608 Certification',
         curriculum: [
-          '🧰 Precision Use of Specialized HVAC Diagnostic and Service Tools',
-          'High-accuracy refrigerant gauges',
-          'Multi-port manifold sets',
-          'Industrial-grade vacuum pumps',
-          'Digital multimeters for electrical diagnostics',
-          'Electronic and ultrasonic leak detection instruments',
-          '❄️ Thermodynamic Principles and Refrigeration Cycle Mastery',
-          '🔌 Complex Electrical Systems Troubleshooting and Control Wiring',
-          '📐 Technical Blueprint Analysis and HVAC System Design Engineering',
-          '📋 Client-Facing Technical Communication and Service Documentation',
-          '📜 Regulatory Compliance and Environmental Safety Standards (OSHA & EPA 608)',
-          '🛠 Workforce Integration and Professional Readiness for the HVAC Industry'
+          {
+            week: 'Week 1',
+            title: 'Basic Electricity, Motors, and HVAC Controls',
+            topics: [
+              'Introduction to electrical theory',
+              'Understanding circuits, components, and safety',
+              'HVAC motor types and applications',
+              'Control systems and basic troubleshooting'
+            ]
+          },
+          {
+            week: 'Week 2',
+            title: 'Basic Refrigeration Theory and Application',
+            topics: [
+              'Refrigeration principles',
+              'Heat transfer and temperature–pressure relationships',
+              'Refrigeration components and system operation'
+            ]
+          },
+          {
+            week: 'Week 3',
+            title: 'Air Conditioning, Troubleshooting, and Heat Pump Systems',
+            topics: [
+              'Air conditioning fundamentals',
+              'Common AC faults and diagnostic techniques',
+              'Heat pump operation and service procedures'
+            ]
+          },
+          {
+            week: 'Week 4',
+            title: 'Basic Refrigeration Cycle',
+            topics: [
+              'Detailed study of the refrigeration cycle',
+              'System pressures, superheat, and subcooling',
+              'Mechanical and electrical diagnostics'
+            ]
+          },
+          {
+            week: 'Week 5',
+            title: 'Refrigerants & Charging',
+            topics: [
+              'Types of refrigerants and regulations',
+              'Recovery, recycling, and environmental safety',
+              'Proper charging methods and best practices'
+            ]
+          },
+          {
+            week: 'Week 6',
+            title: 'Airflow & Ductwork',
+            topics: [
+              'Airflow measurement and balancing',
+              'Duct design fundamentals',
+              'Identifying airflow issues and solutions'
+            ]
+          },
+          {
+            week: 'Week 7',
+            title: 'Heating Systems',
+            topics: [
+              'Gas, electric, and oil heating systems',
+              'Combustion process and safety',
+              'Heating system diagnostics and repair'
+            ]
+          },
+          {
+            week: 'Week 8',
+            title: 'Electrical for HVAC',
+            topics: [
+              'Advanced electrical concepts',
+              'Wiring diagrams and component testing',
+              'Electrical troubleshooting techniques'
+            ]
+          },
+          {
+            week: 'Week 9',
+            title: 'Advanced Refrigeration & Charging Procedures',
+            topics: [
+              'Complex refrigeration systems',
+              'Advanced charging, evacuation, and leak detection',
+              'Real-world diagnostic scenarios'
+            ]
+          },
+          {
+            week: 'Week 10',
+            title: 'Indoor Air Quality (IAQ)',
+            topics: [
+              'IAQ fundamentals and measurement',
+              'Filtration, humidity control, and ventilation',
+              'IAQ improvement solutions'
+            ]
+          },
+          {
+            week: 'Week 11',
+            title: 'System Diagnostics & Troubleshooting',
+            topics: [
+              'Comprehensive diagnostic strategies',
+              'Step-by-step troubleshooting workflows',
+              'Field simulations and hands-on practice'
+            ]
+          },
+          {
+            week: 'Week 12',
+            title: 'EPA 608 Exam Prep',
+            topics: [
+              'Review of EPA regulations',
+              'Core, Type I, II, and III exam preparation',
+              'Practice tests and certification readiness'
+            ]
+          }
         ],
         salaryInfo: {
           median: '$63,420',
@@ -64,7 +167,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'According to TradeCareerPath'
         },
         keyFeatures: [
-          '*Complementary Hands-On Training Workshops with Qualified Industry Professional',
+          '*Complementary Hands-On Skills Training with Qualified HVAC Professional',
           'EPA 608 Certification Training Included',
           'Residential and Commercial HVAC Systems',
           'Self Paced, Online Learning Format for Busy Professionals',
@@ -78,7 +181,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
     return {
       'hvac-technician': {
         title: 'Programa de Técnico HVAC (Capacitación de Certificación EPA 608 Incluida)',
-        description: 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608 y *capacitación práctica para estar listo para el trabajo.',
+        description: 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608 y capacitación práctica para estar listo para el trabajo.',
         fullDescription: [
           "Nuestro programa de Técnico HVAC se enfoca en las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
           "A través de capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
@@ -88,18 +191,115 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         duration: 'En línea a tu ritmo, 12 semanas',
         certification: 'Certificación EPA 608',
         curriculum: [
-          '🧰 Uso Preciso de Herramientas Especializadas de Diagnóstico y Servicio HVAC',
-          'Medidores de refrigerante de alta precisión',
-          'Conjuntos de colectores multipuerto',
-          'Bombas de vacío de grado industrial',
-          'Multímetros digitales para diagnósticos eléctricos',
-          'Instrumentos de detección de fugas electrónicos y ultrasónicos',
-          '❄️ Principios Termodinámicos y Dominio del Ciclo de Refrigeración',
-          '🔌 Solución de Problemas de Sistemas Eléctricos Complejos y Cableado de Control',
-          '📐 Análisis de Planos Técnicos e Ingeniería de Diseño de Sistemas HVAC',
-          '📋 Comunicación Técnica con Clientes y Documentación de Servicios',
-          '📜 Cumplimiento Regulatorio y Estándares de Seguridad Ambiental (OSHA y EPA 608)',
-          '🛠 Integración Laboral y Preparación Profesional para la Industria HVAC'
+          {
+            week: 'Semana 1',
+            title: 'Electricidad Básica, Motores y Controles HVAC',
+            topics: [
+              'Introducción a la teoría eléctrica',
+              'Comprensión de circuitos, componentes y seguridad',
+              'Tipos de motores HVAC y aplicaciones',
+              'Sistemas de control y solución de problemas básicos'
+            ]
+          },
+          {
+            week: 'Semana 2',
+            title: 'Teoría y Aplicación Básica de Refrigeración',
+            topics: [
+              'Principios de refrigeración',
+              'Transferencia de calor y relaciones temperatura-presión',
+              'Componentes de refrigeración y operación del sistema'
+            ]
+          },
+          {
+            week: 'Semana 3',
+            title: 'Aire Acondicionado, Solución de Problemas y Sistemas de Bomba de Calor',
+            topics: [
+              'Fundamentos del aire acondicionado',
+              'Fallas comunes de AC y técnicas de diagnóstico',
+              'Operación y procedimientos de servicio de bombas de calor'
+            ]
+          },
+          {
+            week: 'Semana 4',
+            title: 'Ciclo Básico de Refrigeración',
+            topics: [
+              'Estudio detallado del ciclo de refrigeración',
+              'Presiones del sistema, sobrecalentamiento y subenfriamiento',
+              'Diagnósticos mecánicos y eléctricos'
+            ]
+          },
+          {
+            week: 'Semana 5',
+            title: 'Refrigerantes y Carga',
+            topics: [
+              'Tipos de refrigerantes y regulaciones',
+              'Recuperación, reciclaje y seguridad ambiental',
+              'Métodos de carga adecuados y mejores prácticas'
+            ]
+          },
+          {
+            week: 'Semana 6',
+            title: 'Flujo de Aire y Conductos',
+            topics: [
+              'Medición y equilibrio del flujo de aire',
+              'Fundamentos del diseño de conductos',
+              'Identificación de problemas de flujo de aire y soluciones'
+            ]
+          },
+          {
+            week: 'Semana 7',
+            title: 'Sistemas de Calefacción',
+            topics: [
+              'Sistemas de calefacción de gas, eléctricos y de aceite',
+              'Proceso de combustión y seguridad',
+              'Diagnóstico y reparación de sistemas de calefacción'
+            ]
+          },
+          {
+            week: 'Semana 8',
+            title: 'Electricidad para HVAC',
+            topics: [
+              'Conceptos eléctricos avanzados',
+              'Diagramas de cableado y prueba de componentes',
+              'Técnicas de solución de problemas eléctricos'
+            ]
+          },
+          {
+            week: 'Semana 9',
+            title: 'Procedimientos Avanzados de Refrigeración y Carga',
+            topics: [
+              'Sistemas de refrigeración complejos',
+              'Carga avanzada, evacuación y detección de fugas',
+              'Escenarios de diagnóstico del mundo real'
+            ]
+          },
+          {
+            week: 'Semana 10',
+            title: 'Calidad del Aire Interior (IAQ)',
+            topics: [
+              'Fundamentos y medición de IAQ',
+              'Filtración, control de humedad y ventilación',
+              'Soluciones de mejora de IAQ'
+            ]
+          },
+          {
+            week: 'Semana 11',
+            title: 'Diagnóstico y Solución de Problemas del Sistema',
+            topics: [
+              'Estrategias de diagnóstico integrales',
+              'Flujos de trabajo de solución de problemas paso a paso',
+              'Simulaciones de campo y práctica práctica'
+            ]
+          },
+          {
+            week: 'Semana 12',
+            title: 'Preparación para el Examen EPA 608',
+            topics: [
+              'Revisión de las regulaciones de la EPA',
+              'Preparación para exámenes Core, Tipo I, II y III',
+              'Pruebas de práctica y preparación para la certificación'
+            ]
+          }
         ],
         salaryInfo: {
           median: '$63,420',
@@ -110,7 +310,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'Según TradeCareerPath'
         },
         keyFeatures: [
-          '*Talleres Complementarios de Capacitación Práctica con Profesional Calificado de la Industria',
+          '*Capacitación Complementaria de Habilidades Prácticas con Profesional HVAC Calificado',
           'Capacitación de Certificación EPA 608 Incluida',
           'Sistemas HVAC Residenciales y Comerciales',
           'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
@@ -326,7 +526,7 @@ const ProgramDetail = () => {
           />
           
           <div className="max-w-3xl mx-auto">
-            <div className="space-y-4">
+            <div className="space-y-6">
               {program.curriculum.map((item, index) => (
                 <motion.div
                   key={index}
@@ -334,13 +534,24 @@ const ProgramDetail = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="flex items-start p-4 bg-white rounded-lg border border-gray-200 shadow-sm"
+                  className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-gold-100 text-gold-600 rounded-full mr-4 font-semibold">
-                    {index + 1}
+                  <div className="bg-navy-700 text-white px-6 py-3 flex items-center justify-between">
+                    <h3 className="font-bold text-lg">{item.week}</h3>
+                    <div className="w-8 h-8 flex items-center justify-center bg-gold-400 text-navy-800 rounded-full font-semibold text-sm">
+                      {index + 1}
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-medium text-navy-700">{item}</h3>
+                  <div className="p-6">
+                    <h4 className="font-bold text-navy-700 text-xl mb-4">{item.title}</h4>
+                    <ul className="space-y-2">
+                      {item.topics.map((topic, topicIndex) => (
+                        <li key={topicIndex} className="flex items-start">
+                          <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-navy-600">{topic}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </motion.div>
               ))}
