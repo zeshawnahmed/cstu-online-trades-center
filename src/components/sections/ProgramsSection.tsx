@@ -13,15 +13,15 @@ const ProgramsSection = () => {
     {
       title: language === 'en' ? 'HVAC Technician Program (EPA 608 Certification Training Included)' : 'Programa de Técnico HVAC (Entrenamiento de Certificación EPA 608 Incluido)',
       description: language === 'en' 
-        ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification and Field Experiences To Make You Job-Ready'
-        : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo certificación EPA 608 y Experiencias de Campo Para Prepararte Para El Trabajo',
+        ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training and *complimentary hands-on training to get job ready.'
+        : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608 y *capacitación práctica complementaria para estar listo para el trabajo.',
       price: language === 'en' ? 'Affordable Flat Rate Tuition - Call to Learn More' : 'Matrícula de Tarifa Plana Asequible - Llama para Obtener Más Información',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',
       imageUrl: '/hvac-technician-program.jpg',
       slug: 'hvac-technician',
       keyFeatures: [
-        language === 'en' ? 'Job Site/Field Training With Qualified Industry Professional' : 'Entrenamiento práctico con profesional calificado de la industria',
+        language === 'en' ? '*Hands-On Training Workshops with Qualified Industry Professional' : '*Talleres de Capacitación Práctica con Profesional Calificado de la Industria',
         language === 'en' ? 'EPA 608 Certification Training Included' : 'Capacitación de Certificación EPA 608 Incluida',
         language === 'en' ? 'Learn Residential and Commercial HVAC Systems' : 'Aprende Sistemas HVAC Residenciales y Comerciales',
         language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
