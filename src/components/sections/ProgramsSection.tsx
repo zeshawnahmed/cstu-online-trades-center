@@ -13,8 +13,8 @@ const ProgramsSection = () => {
     {
       title: language === 'en' ? 'HVAC Technician Program (EPA 608 Certification Training Included)' : 'Programa de Técnico HVAC (Entrenamiento de Certificación EPA 608 Incluido)',
       description: language === 'en' 
-        ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training and *complimentary hands-on training to get job ready.'
-        : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608 y *capacitación práctica complementaria para estar listo para el trabajo.',
+        ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training and *hands-on training to get job ready.'
+        : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608 y *capacitación práctica para estar listo para el trabajo.',
       price: language === 'en' ? 'Affordable Flat Rate Tuition - Call to Learn More' : 'Matrícula de Tarifa Plana Asequible - Llama para Obtener Más Información',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',
@@ -26,7 +26,8 @@ const ProgramsSection = () => {
         language === 'en' ? 'Learn Residential and Commercial HVAC Systems' : 'Aprende Sistemas HVAC Residenciales y Comerciales',
         language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
         language === 'en' ? 'Access to Accountability/Learning Coach' : 'Acceso a Entrenador de Responsabilidad/Aprendizaje',
-        language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos locales a través de experiencias divertidas'
+        language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos locales a través de experiencias divertidas',
+        language === 'en' ? '*Although program is fully online, complementary hands-on workshops for Winter Cohort 2025 will be held bi-monthly near Downtown Sacramento, made possible through the generosity and collaboration with community HVAC Industry Professionals, providing an opportunity for students to gain hands-on practice with HVAC skills necessary for a successful career in the field.' : '*Aunque el programa es completamente en línea, los talleres prácticos complementarios para la Cohorte de Invierno 2025 se llevarán a cabo bimensualmente cerca del centro de Sacramento, posible gracias a la generosidad y colaboración con profesionales de la industria HVAC de la comunidad, brindando una oportunidad para que los estudiantes obtengan práctica con las habilidades HVAC necesarias para una carrera exitosa en el campo.'
       ],
       salaryInfo: {
         median: '$63,420',
