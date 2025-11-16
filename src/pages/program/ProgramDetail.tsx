@@ -167,12 +167,12 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'According to TradeCareerPath'
         },
         keyFeatures: [
-          '*Complementary Hands-On Skills Training with Qualified HVAC Professional',
+          '*Complementary Hands-On Skills Training with HVAC Industry Professional',
           'EPA 608 Certification Training Included',
           'Residential and Commercial HVAC Systems',
           'Self Paced, Online Learning Format for Busy Professionals',
           'Connect with Local Cohort Through Fun Experiences',
-          '*Although program is designed to be fully online, complementary hands-on workshops for Winter Cohort 2025 will be held bi-monthly near Downtown Sacramento, made possible through the generosity and collaboration with community HVAC Industry, providing an opportunity for students to gain hands-on practice with HVAC skills necessary for a successful career in the field.'
+          '*Although the program is designed to be fully online, complementary hands-on workshops for Winter Cohort 2025 will be held bi-monthly near Downtown Sacramento, made possible through the generosity and collaboration with the Sacramento HVAC Industry, providing an opportunity for students to gain hands-on practice with HVAC skills necessary for a successful career in the field.'
         ],
         approvalBadge: 'HVAC Program'
       }
