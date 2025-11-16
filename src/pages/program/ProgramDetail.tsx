@@ -505,8 +505,8 @@ const ProgramDetail = () => {
               </h3>
               <p className="text-navy-600 leading-relaxed">
                 {language === 'en' 
-                  ? "Employers seek candidates who bring both experience and initiative to the table. Our program is designed to provide you with practical Field/Job Site Experiences, skill-building opportunities, and the resources needed to help you stand out in the competitive job market. Our goal is to help you gain the experience and CONFIDENCE to take your next career step."
-                  : "Los empleadores buscan candidatos que aporten tanto experiencia como iniciativa. Nuestro programa está diseñado para brindarte experiencias prácticas de campo/lugar de trabajo, oportunidades de desarrollo de habilidades y los recursos necesarios para ayudarte a destacar en el competitivo mercado laboral. Nuestro objetivo es ayudarte a obtener la experiencia y CONFIANZA para dar tu siguiente paso profesional."
+                  ? "Our goal is to help you gain the CONFIDENCE to take your next career step."
+                  : "Nuestro objetivo es ayudarte a obtener la CONFIANZA para dar tu siguiente paso profesional."
                 }
               </p>
             </div>
