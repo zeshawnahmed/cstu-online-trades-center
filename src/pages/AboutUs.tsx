@@ -138,7 +138,7 @@ const AboutUs = () => {
                     </div>
                     <div className="text-right">
                       <p className="text-sm text-gray-500">AIT</p>
-                      <p className="text-lg font-bold text-green-500">Call for Pricing</p>
+                      <p className="text-lg font-bold text-green-500">Affordable Flat Rate Tuition</p>
                     </div>
                   </div>
                 </div>
@@ -198,8 +198,8 @@ const AboutUs = () => {
                 </div>
                 <p className="text-navy-600">
                   {language === 'en'
-                    ? 'AIT focuses on practical skills that employers actually want.'
-                    : 'AIT se enfoca en habilidades prácticas que los empleadores realmente quieren.'
+                    ? 'AIT focuses on skills that employers actually want so you can career transition with CONFIDENCE.'
+                    : 'AIT se enfoca en habilidades que los empleadores realmente quieren para que puedas hacer la transición de carrera con CONFIANZA.'
                   }
                 </p>
               </motion.div>

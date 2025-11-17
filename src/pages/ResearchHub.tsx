@@ -56,8 +56,8 @@ For fleet operators, hydrogen offers the range and refueling speed of diesel—w
               <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-6 text-left">
                 <p className="text-lg opacity-95 leading-relaxed">
                   {language === 'en'
-                    ? 'At ASTU, we are committed to innovation and preparing our students with the most cutting-edge knowledge in their field. Our Research Hub was launched to keep you informed about the latest technological breakthroughs and industry developments that are shaping the future of skilled trades. Stay ahead of the curve with insights that matter to your career.'
-                    : 'En ASTU, estamos comprometidos con la innovación y preparar a nuestros estudiantes con el conocimiento más vanguardista en su campo. Nuestro Centro de Investigación fue lanzado para mantenerlo informado sobre los últimos avances tecnológicos y desarrollos de la industria que están dando forma al futuro de los oficios especializados. Manténgase a la vanguardia con conocimientos que importan para su carrera.'}
+                    ? 'At AIT, we are committed to innovation and preparing our students with the most cutting-edge knowledge in their field. Our Research Hub was launched to keep you informed about the latest technological breakthroughs and industry developments that are shaping the future of skilled trades. Stay ahead of the curve with insights that matter to your career.'
+                    : 'En AIT, estamos comprometidos con la innovación y preparar a nuestros estudiantes con el conocimiento más vanguardista en su campo. Nuestro Centro de Investigación fue lanzado para mantenerlo informado sobre los últimos avances tecnológicos y desarrollos de la industria que están dando forma al futuro de los oficios especializados. Manténgase a la vanguardia con conocimientos que importan para su carrera.'}
                 </p>
               </div>
             </div>
