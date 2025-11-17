@@ -32,8 +32,8 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">AIT</h3>
             <p className="text-gray-300 mb-4">
               {language === 'en' 
-                ? "American Institute of Trades offers affordable, self-paced, Job Site/Field training in high demand skilled trades."
-                : "Instituto Americano de Oficios ofrece capacitación asequible, a tu propio ritmo y práctica en oficios especializados de alta demanda."}
+                ? "American Institute of Trades offers specialized training in high demand skilled trades."
+                : "Instituto Americano de Oficios ofrece capacitación especializada en oficios de alta demanda."}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-gold-400 transition-colors">
@@ -77,11 +77,6 @@ const Footer = () => {
               <li>
                 <Link to="/contact" className="text-gray-300 hover:text-gold-400 transition-colors">
                   {language === 'en' ? "Contact Us" : "Contacto"}
-                </Link>
-              </li>
-              <li>
-                <Link to="/faq" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  FAQ
                 </Link>
               </li>
               <li>
