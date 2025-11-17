@@ -67,7 +67,7 @@ export const translations = {
     jobDemand: "Job Demand",
     whatYouWillLearn: "What You'll Learn",
     programCurriculum: "Program Curriculum",
-    curriculumDescription: "Our focused curriculum is designed to provide the essential skills needed to become job-ready for entry level positions.",
+    curriculumDescription: "Our focused curriculum is designed to help you transition with CONFIDENCE into HVAC.",
     readyToStartCareer: "Ready to Start Your Career?",
     applyNowFor: "Apply now for our",
     gainEssentialSkills: "program and gain the essential skills needed for entry level positions.",
