@@ -22,7 +22,7 @@ export const translations = {
     programsTitle: "Industry-Leading Skilled Trades Training",
     programsSubtitle: "Our Programs",
     programsDescription: "Our comprehensive, affordable programs prepare you for high-demand entry level careers in the skilled trades with a unique blend of online learning and practical Field/Job Site Experiences.",
-    learnMore: "Learn More",
+    learnMore: "Explore HVAC Curriculum",
     applyNowButton: "APPLY NOW",
     externshipNote: "*Externship placement assistance available upon program completion and subject to industry demand",
     
@@ -133,7 +133,7 @@ export const translations = {
     programsTitle: "Capacitación Líder en Oficios Especializados",
     programsSubtitle: "Nuestros Programas",
     programsDescription: "Nuestros programas completos y asequibles te preparan para carreras de nivel inicial de alta demanda en oficios especializados con una combinación única de aprendizaje en línea y experiencia práctica.",
-    learnMore: "Más Información",
+    learnMore: "Explorar Currículo de HVAC",
     applyNowButton: "APLICAR AHORA",
     externshipNote: "*Asistencia para colocación en prácticas disponible al completar el programa y sujeta a la demanda de la industria",
     
