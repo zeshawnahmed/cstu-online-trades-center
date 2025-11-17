@@ -414,6 +414,57 @@ const ProgramDetail = () => {
         </div>
       </section>
       
+      {/* Curriculum */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            subtitle={`${program.approvalBadge} Curriculum`}
+            title={t('programCurriculum')}
+            description={t('curriculumDescription')}
+            centered={true}
+            className="mb-12"
+          />
+          
+          <div className="max-w-3xl mx-auto">
+            <div className="space-y-6">
+              {program.curriculum.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden"
+                >
+                  <div className="bg-navy-700 text-white px-6 py-3 flex items-center justify-between">
+                    <h3 className="font-bold text-lg">{item.week}</h3>
+                    <div className="w-8 h-8 flex items-center justify-center bg-gold-400 text-navy-800 rounded-full font-semibold text-sm">
+                      {index + 1}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h4 className="font-bold text-navy-700 text-xl mb-4">{item.title}</h4>
+                    <ul className="space-y-2">
+                      {item.topics.map((topic, topicIndex) => (
+                        <li key={topicIndex} className="flex items-start">
+                          <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-navy-600">{topic}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Curriculum disclaimer */}
+            <p className="text-xs text-gray-500 mt-6 text-center italic">
+              *Curriculum subject to change
+            </p>
+          </div>
+        </div>
+      </section>
+      
       {/* Program Overview */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -510,57 +561,6 @@ const ProgramDetail = () => {
                 }
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Curriculum */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            subtitle={`${program.approvalBadge} Curriculum`}
-            title={t('programCurriculum')}
-            description={t('curriculumDescription')}
-            centered={true}
-            className="mb-12"
-          />
-          
-          <div className="max-w-3xl mx-auto">
-            <div className="space-y-6">
-              {program.curriculum.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden"
-                >
-                  <div className="bg-navy-700 text-white px-6 py-3 flex items-center justify-between">
-                    <h3 className="font-bold text-lg">{item.week}</h3>
-                    <div className="w-8 h-8 flex items-center justify-center bg-gold-400 text-navy-800 rounded-full font-semibold text-sm">
-                      {index + 1}
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h4 className="font-bold text-navy-700 text-xl mb-4">{item.title}</h4>
-                    <ul className="space-y-2">
-                      {item.topics.map((topic, topicIndex) => (
-                        <li key={topicIndex} className="flex items-start">
-                          <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-navy-600">{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-            
-            {/* Curriculum disclaimer */}
-            <p className="text-xs text-gray-500 mt-6 text-center italic">
-              *Curriculum subject to change
-            </p>
           </div>
         </div>
       </section>
