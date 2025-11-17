@@ -79,8 +79,8 @@ const AboutUs = () => {
             
             <p className="text-lg text-navy-600 mb-6 leading-relaxed">
               {language === 'en'
-                ? "We're a grassroots trade school founded right here in Sacramento by UC Berkeley and UC Davis alumni who believe education should be both excellent and enjoyable. Our mission is simple: deliver specialized training - rooted in excellence - that gets you job-ready while making learning fun again."
-                : "Somos una escuela de oficios de base fundada aquí en Sacramento por exalumnos de UC Berkeley y UC Davis que creen que la educación debe ser excelente y agradable. Nuestra misión es simple: brindar capacitación especializada - arraigada en la excelencia - que te prepare para el trabajo mientras hacemos que el aprendizaje sea divertido nuevamente."
+                ? "We're a grassroots trade school founded right here in Sacramento by trade industry professionals who believe education should be both excellent and enjoyable. Our mission is simple: deliver specialized training - rooted in excellence - that gets you job-ready while making learning fun again."
+                : "Somos una escuela de oficios de base fundada aquí en Sacramento por profesionales de la industria de oficios que creen que la educación debe ser excelente y agradable. Nuestra misión es simple: brindar capacitación especializada - arraigada en la excelencia - que te prepare para el trabajo mientras hacemos que el aprendizaje sea divertido nuevamente."
               }
             </p>
             
@@ -94,8 +94,8 @@ const AboutUs = () => {
             <div className="bg-gold-50 border-l-4 border-gold-500 pl-6 py-4 rounded-r-lg mb-8">
               <p className="text-navy-800 font-semibold">
                 {language === 'en'
-                  ? "Our values: Excellence in training + Making education fun again"
-                  : "Nuestros valores: Excelencia en capacitación + Hacer que la educación sea divertida nuevamente"
+                  ? "Our Values = Excellence In Training + Make Education Fun Again (MEFA)"
+                  : "Nuestros Valores = Excelencia En Capacitación + Hacer Que La Educación Sea Divertida De Nuevo (MEFA)"
                 }
               </p>
             </div>
