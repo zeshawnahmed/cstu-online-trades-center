@@ -7,8 +7,8 @@ const NewsTicker = () => {
 
     const newsItems = [
       language === 'en' 
-        ? "AIT officially granted exemption status by the California Bureau of Post Secondary Education"
-        : "AIT oficialmente otorgado estatus de exención por la Oficina de Educación Post Secundaria de California",
+        ? "AIT in compliance with the California Bureau of Post Secondary Education"
+        : "AIT en cumplimiento con la Oficina de Educación Post Secundaria de California",
       language === 'en'
         ? "UC Berkeley and Sac State Alumni Come Together to Launch AIT"
         : "Exalumnos de UC Berkeley y Sac State se unen para lanzar AIT",
