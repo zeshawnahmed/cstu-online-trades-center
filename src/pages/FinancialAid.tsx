@@ -54,8 +54,8 @@ const FinancialAid = () => {
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
               <p className="text-navy-700 text-lg leading-relaxed">
                 {language === 'en'
-                  ? "At AIT we know not everyone has tuition funds upfront. Some students ask friends or family for help, others take out personal loans from trusted lenders such as Wells Fargo, U.S. Bank, Discover, or via Credible Personal Loans. In many cases funds deposit the same day you're approved. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
-                  : "En AIT sabemos que no todos tienen los fondos de matrícula por adelantado. Algunos estudiantes piden ayuda a amigos o familiares, otros obtienen préstamos personales de prestamistas de confianza como Wells Fargo, U.S. Bank, Discover, o a través de Credible Personal Loans. En muchos casos, los fondos se depositan el mismo día que eres aprobado. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
+                  ? "At AIT, we're not a Title IV school yet, so we don't offer FAFSA. However, we know not everyone has tuition funds upfront. Many students use personal loans from trusted lenders—funds often deposit the same day you're approved. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
+                  : "En AIT, aún no somos una escuela Título IV, por lo que no ofrecemos FAFSA. Sin embargo, sabemos que no todos tienen los fondos de matrícula por adelantado. Muchos estudiantes usan préstamos personales de prestamistas de confianza—los fondos a menudo se depositan el mismo día que eres aprobado. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
               </p>
             </div>
 
