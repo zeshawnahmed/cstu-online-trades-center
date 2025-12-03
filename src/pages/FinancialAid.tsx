@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { ExternalLink, DollarSign, GraduationCap, AlertCircle } from 'lucide-react';
+import { ExternalLink, GraduationCap, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -32,7 +32,7 @@ const FinancialAid = () => {
   const scholarshipLinks = [
     {
       name: 'FASTWEB Scholarships for Trade School',
-      url: 'https://www.fastweb.com/college-scholarships/scholarships-for-trade-school',
+      url: 'https://www.fastweb.com/',
     },
   ];
 
@@ -52,20 +52,16 @@ const FinancialAid = () => {
 
             {/* Introduction */}
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
-              <div className="flex items-start mb-4">
-                <DollarSign className="h-8 w-8 text-gold-500 mr-3 flex-shrink-0" />
-                <p className="text-navy-700 text-lg leading-relaxed">
-                  {language === 'en'
-                    ? "At AIT we know not everyone has tuition funds upfront. Some students ask friends or family for help, others take out personal loans from trusted lenders such as Wells Fargo, U.S. Bank, Discover, or via Credible Personal Loans. In many cases funds deposit the same day you're approved. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
-                    : "En AIT sabemos que no todos tienen los fondos de matrícula por adelantado. Algunos estudiantes piden ayuda a amigos o familiares, otros obtienen préstamos personales de prestamistas de confianza como Wells Fargo, U.S. Bank, Discover, o a través de Credible Personal Loans. En muchos casos, los fondos se depositan el mismo día que eres aprobado. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
-                </p>
-              </div>
+              <p className="text-navy-700 text-lg leading-relaxed">
+                {language === 'en'
+                  ? "At AIT we know not everyone has tuition funds upfront. Some students ask friends or family for help, others take out personal loans from trusted lenders such as Wells Fargo, U.S. Bank, Discover, or via Credible Personal Loans. In many cases funds deposit the same day you're approved. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
+                  : "En AIT sabemos que no todos tienen los fondos de matrícula por adelantado. Algunos estudiantes piden ayuda a amigos o familiares, otros obtienen préstamos personales de prestamistas de confianza como Wells Fargo, U.S. Bank, Discover, o a través de Credible Personal Loans. En muchos casos, los fondos se depositan el mismo día que eres aprobado. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
+              </p>
             </div>
 
             {/* Helpful Loan Links */}
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
-              <h2 className="text-2xl font-bold text-navy-700 mb-6 flex items-center">
-                <DollarSign className="h-6 w-6 text-gold-500 mr-2" />
+              <h2 className="text-2xl font-bold text-navy-700 mb-6">
                 {language === 'en' ? 'Helpful Loan Links' : 'Enlaces de Préstamos Útiles'}
               </h2>
               <div className="space-y-4">
