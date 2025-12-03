@@ -2,7 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Phone } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 interface HeroSectionProps {
@@ -25,19 +26,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
           >
             {/* Prominent Admissions Contact - Mobile Optimized */}
             <div className="mb-6 sm:mb-8">
-              <div className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-white">
-                <div className="flex items-center justify-center gap-2">
-                  <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
-                  <div>
-                    <p className="text-xs sm:text-sm font-bold mb-1">
-                      {language === 'en' ? 'CALL OR TEXT ADMISSIONS TO GET STARTED' : 'LLAMA O ENVÍA TEXTO A ADMISIONES PARA COMENZAR'}
-                    </p>
-                    <p className="text-lg sm:text-xl font-bold underline">
-                      (916) 365-6907
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
+                <p className="text-xs sm:text-sm font-bold mb-1">
+                  {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
+                </p>
+                <p className="text-base sm:text-lg font-bold underline">
+                  {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
+                </p>
+              </Link>
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 sm:mb-6 leading-tight">

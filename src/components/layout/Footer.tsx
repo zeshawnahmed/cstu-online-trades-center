@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
@@ -13,17 +13,14 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Prominent Admissions Contact at top */}
         <div className="text-center mb-12">
-          <div className="bg-gold-400 text-navy-800 font-bold px-8 py-6 rounded-lg inline-block border-2 border-white">
+          <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-8 py-6 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
             <p className="text-xl font-bold mb-2">
-              {language === 'en' ? 'ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES'}
+              {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
             </p>
-            <div className="flex items-center justify-center gap-2">
-              <Phone className="h-6 w-6" />
-              <p className="text-3xl font-bold">
-                (916) 365-6907
-              </p>
-            </div>
-          </div>
+            <p className="text-lg font-bold underline">
+              {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
+            </p>
+          </Link>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -100,11 +97,10 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 mr-2 mt-1 text-gold-400" />
                 <span className="text-gray-300">Sacramento, CA</span>
               </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 mr-2 text-gold-400" />
-                <a href="tel:+19163656907" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  (916) 365-6907
-                </a>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-gold-400 transition-colors underline">
+                  {language === 'en' ? 'Fill Out Contact Form' : 'Llenar Formulario de Contacto'}
+                </Link>
               </li>
               <li className="mt-3">
                 <Link to="/contact" className="bg-gold-400 hover:bg-gold-500 text-navy-800 px-4 py-2 rounded-lg font-medium inline-block">

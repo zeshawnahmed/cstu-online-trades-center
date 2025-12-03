@@ -49,14 +49,14 @@ const ProgramsSection = () => {
         
         {/* Prominent Admissions Contact - Mobile Optimized */}
         <div className="text-center mb-8">
-          <div className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-navy-600">
+          <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-navy-600 hover:bg-gold-500 transition-colors">
             <p className="text-base sm:text-lg font-bold mb-1">
-              {language === 'en' ? 'CALL OR TEXT ADMISSIONS TO GET STARTED' : 'LLAMA O ENVÍA TEXTO A ADMISIONES PARA COMENZAR'}
+              {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
             </p>
-            <p className="text-xl sm:text-2xl font-bold underline decoration-2">
-              (916) 365-6907
+            <p className="text-lg sm:text-xl font-bold underline decoration-2">
+              {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
             </p>
-          </div>
+          </Link>
         </div>
         
         <div className="flex justify-center">

@@ -31,14 +31,14 @@ const AboutUs = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Prominent Admissions Contact */}
           <div className="text-center mb-8">
-            <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-navy-600">
+            <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-navy-600 hover:bg-gold-500 transition-colors">
               <p className="text-lg font-bold mb-1">
-                {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
+                {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
               </p>
-              <p className="text-2xl font-bold">
-                (916) 365-6907
+              <p className="text-base font-bold underline">
+                {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
               </p>
-            </div>
+            </Link>
           </div>
           
           <motion.div
@@ -214,14 +214,14 @@ const AboutUs = () => {
           <div className="max-w-4xl mx-auto text-center">
             {/* Prominent Admissions Contact */}
             <div className="mb-8">
-              <div className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white">
+              <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
                 <p className="text-lg font-bold mb-1">
-                  {language === 'en' ? 'SACRAMENTO ADMISSIONS CONTACT' : 'CONTACTO DE ADMISIONES DE SACRAMENTO'}
+                  {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
                 </p>
-                <p className="text-2xl font-bold">
-                  (916) 365-6907
+                <p className="text-base font-bold underline">
+                  {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
                 </p>
-              </div>
+              </Link>
             </div>
             
             <h2 className="text-3xl font-bold mb-6">
