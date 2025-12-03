@@ -182,6 +182,7 @@ const ContactForm = () => {
                         rows={4}
                         value={formData.message}
                         onChange={handleChange}
+                        placeholder={language === 'en' ? "Please tell us more about yourself and career goals" : "Por favor cuéntanos más sobre ti y tus metas profesionales"}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                       />
                     </div>
