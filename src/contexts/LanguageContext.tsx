@@ -35,6 +35,7 @@ export const translations = {
     jobStatistics: "2025 Job Statistics:",
     medianSalary: "Median Annual Salary:",
     projectedGrowth: "Projected Growth:",
+    cantAffordIt: "Can't Afford It?",
     
     // Application Form
     applyToCStu: "Apply to CSTU",
@@ -146,6 +147,7 @@ export const translations = {
     jobStatistics: "Estadísticas Laborales 2025:",
     medianSalary: "Salario Anual Medio:",
     projectedGrowth: "Crecimiento Proyectado:",
+    cantAffordIt: "¿No Puedes Pagarlo?",
     
     // Application Form
     applyToCStu: "Aplicar a CSTU",

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Info } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useToast } from '@/components/ui/use-toast';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -124,8 +125,11 @@ const ContactForm = () => {
                     <Info className="h-5 w-5 text-gold-500 mt-0.5 mr-3 flex-shrink-0" />
                     <p className="text-navy-700">
                       {language === 'en' 
-                        ? "Interested in Financial Aid? Let us know and we'll provide you with all available options."
-                        : "¿Interesado en ayuda financiera? Háganoslo saber y le proporcionaremos todas las opciones disponibles."}
+                        ? "Interested in Financial Aid? Let us know and we'll provide you with all available options. "
+                        : "¿Interesado en ayuda financiera? Háganoslo saber y le proporcionaremos todas las opciones disponibles. "}
+                      <Link to="/financial-aid" className="text-gold-600 hover:text-gold-700 underline font-medium">
+                        {language === 'en' ? 'View Financial Aid Options' : 'Ver Opciones de Ayuda Financiera'}
+                      </Link>
                     </p>
                   </div>
                   
