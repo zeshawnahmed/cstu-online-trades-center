@@ -16,7 +16,8 @@ const ContactForm = () => {
     email: '',
     phone: '',
     message: '',
-    interestedInFinancialAid: false
+    interestedInFinancialAid: false,
+    consentToContact: false
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -48,6 +49,7 @@ const ContactForm = () => {
           phone: formData.phone,
           message: formData.message,
           interestedInFinancialAid: formData.interestedInFinancialAid,
+          consentToContact: formData.consentToContact,
         }),
       });
 
@@ -94,8 +96,8 @@ const ContactForm = () => {
                   </h1>
                   <p className="text-navy-600 mb-8 text-center">
                     {language === 'en' 
-                      ? "Have questions about our programs? Send us a message and we'll get back to you as soon as possible."
-                      : "¿Tienes preguntas sobre nuestros programas? Envíanos un mensaje y te responderemos lo antes posible."}
+                      ? "Interested in advancing your career? Please fill out the form completely below and an admissions rep will be in touch."
+                      : "¿Interesado en avanzar tu carrera? Por favor completa el formulario a continuación y un representante de admisiones se pondrá en contacto."}
                   </p>
                   
                   {/* Financial Aid Info Alert */}
@@ -178,6 +180,22 @@ const ContactForm = () => {
                         {language === 'en' 
                           ? "I'm interested in learning about financial aid options"
                           : "Estoy interesado en conocer las opciones de ayuda financiera"}
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="consentToContact"
+                        name="consentToContact"
+                        checked={formData.consentToContact}
+                        onChange={handleCheckboxChange}
+                        className="h-5 w-5 text-gold-500 rounded border-gray-300 focus:ring-gold-400 mt-1"
+                      />
+                      <label htmlFor="consentToContact" className="ml-3 block text-navy-700">
+                        {language === 'en' 
+                          ? "Can we send you important info about our programs through email or text?"
+                          : "¿Podemos enviarte información importante sobre nuestros programas por correo electrónico o mensaje de texto?"}
                       </label>
                     </div>
                     
