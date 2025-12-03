@@ -91,6 +91,9 @@ const Navbar = () => {
             <Link to="/research-hub" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
               {language === 'en' ? 'Research Hub' : 'Centro de Investigación'}
             </Link>
+            <Link to="/financial-aid" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
+              {language === 'en' ? 'Financial Aid' : 'Ayuda Financiera'}
+            </Link>
             <Link to="/about" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
               {language === 'en' ? 'About Us' : 'Acerca de Nosotros'}
             </Link>
@@ -152,6 +155,13 @@ const Navbar = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               {language === 'en' ? 'Research Hub' : 'Centro de Investigación'}
+            </Link>
+            <Link 
+              to="/financial-aid" 
+              className="block py-2 text-navy-500 hover:text-navy-400"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {language === 'en' ? 'Financial Aid' : 'Ayuda Financiera'}
             </Link>
             <Link 
               to="/about" 

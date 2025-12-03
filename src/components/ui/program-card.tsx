@@ -42,8 +42,13 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
       className
     )}>
       <div className="p-4 sm:p-6 flex-grow flex flex-col">
-        <div className="bg-gold-400 text-navy-800 font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm self-start mb-2">
-          {price}
+        <div className="flex items-center gap-2 mb-2 flex-wrap">
+          <div className="bg-gold-400 text-navy-800 font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm">
+            {price}
+          </div>
+          <Link to="/financial-aid" className="text-navy-600 hover:text-gold-500 underline text-xs sm:text-sm font-medium">
+            {t('cantAffordIt')}
+          </Link>
         </div>
         <h3 className="text-xl sm:text-2xl font-bold text-navy-700 mb-2 leading-tight">{title}</h3>
         <p className="text-sm sm:text-base text-navy-600 mb-4 leading-relaxed">{description}</p>
