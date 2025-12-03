@@ -52,10 +52,10 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Failed to store contact submission");
     }
 
-    // Send email to admin@levelupAIT.com
+    // Send email to zeshawn.a@gmail.com
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: ["admin@levelupAIT.com"],
+      to: ["zeshawn.a@gmail.com"],
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
