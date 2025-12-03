@@ -16,6 +16,7 @@ interface ContactEmailRequest {
   phone?: string;
   message: string;
   interestedInFinancialAid: boolean;
+  consentToContact?: boolean;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -25,7 +26,7 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, phone, message, interestedInFinancialAid }: ContactEmailRequest = await req.json();
+    const { name, email, phone, message, interestedInFinancialAid, consentToContact }: ContactEmailRequest = await req.json();
 
     // Initialize Supabase client with service role key to bypass RLS
     const supabaseClient = createClient(
@@ -51,10 +52,10 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Failed to store contact submission");
     }
 
-    // Send email to zeshawn.a@gmail.com
+    // Send email to admin@levelupAIT.com
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: ["zeshawn.a@gmail.com"],
+      to: ["admin@levelupAIT.com"],
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -62,6 +63,7 @@ const handler = async (req: Request): Promise<Response> => {
         <p><strong>Email:</strong> ${email}</p>
         ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
         <p><strong>Interested in Financial Aid:</strong> ${interestedInFinancialAid ? 'Yes' : 'No'}</p>
+        <p><strong>Consent to Receive Info via Email/Text:</strong> ${consentToContact ? 'Yes' : 'No'}</p>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
         <hr>
@@ -73,17 +75,17 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to the user
     await resend.emails.send({
-      from: "Peace of Mind Collaborations <onboarding@resend.dev>",
+      from: "American Institute of Trades <onboarding@resend.dev>",
       to: [email],
-      subject: "Thank you for contacting us!",
+      subject: "Thank you for contacting AIT!",
       html: `
         <h2>Thank you for your message, ${name}!</h2>
-        <p>We have received your contact form submission and will get back to you as soon as possible.</p>
+        <p>We have received your contact form submission and an admissions representative will be in touch with you soon.</p>
         <p>Here's a copy of what you sent:</p>
         <blockquote style="border-left: 4px solid #ccc; padding-left: 16px; margin: 16px 0;">
           ${message.replace(/\n/g, '<br>')}
         </blockquote>
-        <p>Best regards,<br>The Peace of Mind Collaborations Team</p>
+        <p>Best regards,<br>The American Institute of Trades Team</p>
       `,
     });
 
