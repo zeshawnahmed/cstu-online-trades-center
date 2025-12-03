@@ -44,7 +44,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "Through comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
           "Upon completion, you'll be prepared for entry level positions with EPA 608 certification training and complementary hands-on training to make you job ready."
         ],
-        price: 'Affordable Flat Rate Tuition - Call to Learn More',
+        price: 'Affordable Flat Rate Tuition - $2500',
         duration: 'Online Self Paced, 12 Weeks',
         certification: 'EPA 608 Certification',
         curriculum: [
@@ -187,7 +187,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "A través de capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
           "Al completar, estarás preparado para puestos de nivel inicial con capacitación de certificación EPA 608 y capacitación práctica complementaria para hacerte listo para el trabajo."
         ],
-        price: 'Matrícula de Tarifa Plana Asequible - Llama para Obtener Más Información',
+        price: 'Matrícula de Tarifa Plana Asequible - $2500',
         duration: 'En línea a tu ritmo, 12 semanas',
         certification: 'Certificación EPA 608',
         curriculum: [
