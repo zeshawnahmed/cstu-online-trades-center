@@ -15,7 +15,7 @@ const ProgramsSection = () => {
       description: language === 'en' 
         ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training and *hands-on training to get job ready.'
         : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608 y *capacitación práctica para estar listo para el trabajo.',
-      price: language === 'en' ? 'Affordable Flat Rate Tuition - Call to Learn More' : 'Matrícula de Tarifa Plana Asequible - Llama para Obtener Más Información',
+      price: language === 'en' ? 'Affordable Flat Rate Tuition - $2500' : 'Matrícula de Tarifa Plana Asequible - $2500',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',
       imageUrl: '/hvac-technician-program.jpg',
