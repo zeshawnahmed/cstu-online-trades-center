@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Wrench, Truck } from 'lucide-react';
+import { Wrench } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const ResearchHub = () => {
@@ -21,18 +21,6 @@ That's the promise of solid-state cooling. Instead of using compressors and gase
 Researchers at MIT and Oak Ridge National Laboratory are leading the charge. Meanwhile, startups like Blue Frontier are piloting early-stage systems that promise to reduce HVAC energy use by 60% or more.
 
 If you've ever wished your A/C was cheaper to run, more sustainable, and less prone to breakdowns—this is the tech to watch.`
-    },
-    {
-      id: 2,
-      category: 'HVAC',
-      title: 'Hydrogen Semi-Trucks Are Rolling Out in California',
-      content: `Electric trucks have gotten most of the headlines lately, but hydrogen fuel cell trucks are quickly becoming the heavyweight contender—especially for long-haul freight.
-
-Companies like Nikola, Hyundai, and Toyota are building and testing hydrogen-powered big rigs capable of traveling 500 to 750 miles on a single tank. Even better? They can refuel in about 15 minutes, unlike electric trucks which can take hours to charge.
-
-Hydrogen trucks still use electric motors—but they generate their own electricity onboard using fuel cells. The only emission? Water vapor. That makes them perfect for states like California, which is rapidly building out a statewide hydrogen fueling network.
-
-For fleet operators, hydrogen offers the range and refueling speed of diesel—with none of the emissions or noise.`
     }
   ];
 
@@ -76,11 +64,7 @@ For fleet operators, hydrogen offers the range and refueling speed of diesel—w
                         variant={article.category === 'HVAC' ? 'default' : 'secondary'}
                         className="flex items-center gap-1"
                       >
-                        {article.category === 'HVAC' ? (
-                          <Wrench className="h-3 w-3" />
-                        ) : (
-                          <Truck className="h-3 w-3" />
-                        )}
+                        <Wrench className="h-3 w-3" />
                         {article.category}
                       </Badge>
                     </div>
