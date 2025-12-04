@@ -77,7 +77,7 @@ const ProgramsSection = () => {
         
         <div className="mt-8 sm:mt-12 text-center">
           <div className="flex flex-col items-center justify-center gap-4 mb-6">
-            <Link to="/contact">
+            <Link to="/financial-aid">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
