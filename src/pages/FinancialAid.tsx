@@ -54,8 +54,8 @@ const FinancialAid = () => {
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
               <p className="text-navy-700 text-lg leading-relaxed">
                 {language === 'en'
-                  ? "At AIT, we're not a Title IV school yet, so we don't offer FAFSA. However, we know not everyone has tuition funds upfront. Many students use personal loans from trusted lenders—funds often deposit the same day you're approved. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
-                  : "En AIT, aún no somos una escuela Título IV, por lo que no ofrecemos FAFSA. Sin embargo, sabemos que no todos tienen los fondos de matrícula por adelantado. Muchos estudiantes usan préstamos personales de prestamistas de confianza—los fondos a menudo se depositan el mismo día que eres aprobado. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
+                  ? "At AIT, we're not a Title IV school yet, so we don't offer FAFSA. However, we know not everyone has tuition funds upfront. Many students use personal loans from trusted lenders—funds often deposit the same day you're approved. Many students also co-sign loans with a parent or loved one. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
+                  : "En AIT, aún no somos una escuela Título IV, por lo que no ofrecemos FAFSA. Sin embargo, sabemos que no todos tienen los fondos de matrícula por adelantado. Muchos estudiantes usan préstamos personales de prestamistas de confianza—los fondos a menudo se depositan el mismo día que eres aprobado. Muchos estudiantes también co-firman préstamos con un padre o ser querido. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
               </p>
             </div>
 
