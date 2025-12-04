@@ -17,7 +17,7 @@ const FinancialAid = () => {
     },
     {
       name: 'U.S. Bank',
-      url: 'https://www.usbank.com/loans-credit-cards/personal-loans.html',
+      url: 'https://www.usbank.com/loans-credit-lines/personal-loans-and-lines-of-credit/personal-loan.html',
     },
     {
       name: 'Discover',
