@@ -87,30 +87,6 @@ If you've ever wished your A/C was cheaper to run, more sustainable, and less pr
             </div>
           </div>
         </section>
-
-        {/* Newsletter Signup */}
-        <section className="py-16 bg-navy-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              {language === 'en' ? 'Stay Updated' : 'Mantente Actualizado'}
-            </h2>
-            <p className="text-xl opacity-90 mb-8">
-              {language === 'en' 
-                ? 'Get the latest industry insights delivered to your inbox'
-                : 'Recibe las últimas perspectivas de la industria en tu bandeja de entrada'}
-            </p>
-            <div className="max-w-md mx-auto flex gap-4">
-              <input 
-                type="email" 
-                placeholder={language === 'en' ? 'Enter your email' : 'Ingresa tu email'}
-                className="flex-1 px-4 py-2 rounded-md text-navy-900"
-              />
-              <button className="px-6 py-2 bg-gold-400 text-navy-900 rounded-md hover:bg-gold-300 transition-colors font-medium">
-                {language === 'en' ? 'Subscribe' : 'Suscribirse'}
-              </button>
-            </div>
-          </div>
-        </section>
       </div>
     </Layout>
   );
