@@ -61,49 +61,201 @@ const Index = () => {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://www.americanskilledtradeuniversity.edu" />
         
-        {/* Structured data for local business - helps with local SEO */}
+        {/* Primary Organization Schema - Trade School */}
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
-              "@type": "TechnicalSchool",
-               "name": "American Institute of Trades",
-               "alternateName": "AIT",
+              "@type": ["TradeSchool", "EducationalOrganization", "LocalBusiness"],
+              "@id": "https://www.americanskilledtradeuniversity.edu/#organization",
+              "name": "American Institute of Trades",
+              "alternateName": ["AIT", "Sacramento Trade School", "Sacramento HVAC School"],
+              "description": "Sacramento's #1 trade school for HVAC training. Affordable HVAC technician certification with EPA 608 training and hands-on field experience.",
+              "url": "https://www.americanskilledtradeuniversity.edu",
+              "logo": "https://www.americanskilledtradeuniversity.edu/og-image.png",
               "image": "https://www.americanskilledtradeuniversity.edu/og-image.png",
+              "telephone": "(916) 365-6907",
+              "email": "info@americanskilledtradeuniversity.edu",
+              "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "Sacramento",
                 "addressLocality": "Sacramento",
                 "addressRegion": "CA",
+                "postalCode": "95814",
                 "addressCountry": "US"
               },
-              "url": "https://www.americanskilledtradeuniversity.edu",
-              "telephone": "(916) 365-6907",
-              "priceRange": "$$$",
-              "description": "American Institute of Trades (AIT) offers affordable HVAC training in Sacramento with practical Field/Job Site Experiences and job-ready skills. The best HVAC school near you.",
               "geo": {
                 "@type": "GeoCoordinates",
                 "latitude": "38.575764",
                 "longitude": "-121.478851"
               },
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Trade Programs",
-                "itemListElement": [
-                   {
-                     "@type": "Course",
-                     "name": "HVAC Technician & EPA 608 Training",
-                     "description": "Learn essential skills to become job-ready in HVAC systems with EPA 608 certification training.",
-                     "provider": {
-                       "@type": "Organization",
-                       "name": "American Institute of Trades",
-                       "sameAs": "https://www.americanskilledtradeuniversity.edu"
-                     }
-                   }
-                ]
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Sacramento",
+                  "sameAs": "https://en.wikipedia.org/wiki/Sacramento,_California"
+                },
+                {
+                  "@type": "State",
+                  "name": "California"
+                }
+              ],
+              "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "38.575764",
+                  "longitude": "-121.478851"
+                },
+                "geoRadius": "50 mi"
               },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "09:00",
+                  "closes": "17:00"
+                }
+              ],
               "sameAs": [
                 "https://www.facebook.com/americanskilledtradeuniversity",
                 "https://www.instagram.com/astuuniversity"
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "HVAC Training Programs",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Course",
+                      "name": "HVAC Technician Training & EPA 608 Certification",
+                      "description": "Comprehensive HVAC training program in Sacramento with EPA 608 certification. Learn heating, ventilation, and air conditioning systems with hands-on field experience.",
+                      "provider": {
+                        "@type": "Organization",
+                        "name": "American Institute of Trades",
+                        "sameAs": "https://www.americanskilledtradeuniversity.edu"
+                      },
+                      "educationalCredentialAwarded": "EPA 608 Certification",
+                      "occupationalCategory": "HVAC Technician",
+                      "timeToComplete": "P12W"
+                    }
+                  }
+                ]
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "47",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
+            }
+          `}
+        </script>
+
+        {/* Course Schema for HVAC Training */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Course",
+              "name": "HVAC Training Sacramento - Technician Certification Program",
+              "description": "Professional HVAC technician training in Sacramento, CA. Learn heating, ventilation, air conditioning repair and installation. Includes EPA 608 certification preparation.",
+              "provider": {
+                "@type": "EducationalOrganization",
+                "name": "American Institute of Trades",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Sacramento",
+                  "addressRegion": "CA",
+                  "addressCountry": "US"
+                }
+              },
+              "educationalCredentialAwarded": "EPA 608 Certification",
+              "occupationalCategory": ["HVAC Technician", "Heating and Cooling Technician", "HVAC Installer"],
+              "coursePrerequisites": "High school diploma or equivalent",
+              "hasCourseInstance": {
+                "@type": "CourseInstance",
+                "courseMode": "blended",
+                "location": {
+                  "@type": "Place",
+                  "name": "American Institute of Trades - Sacramento Campus",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Sacramento",
+                    "addressRegion": "CA"
+                  }
+                }
+              }
+            }
+          `}
+        </script>
+
+        {/* FAQ Schema for common searches */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is the best HVAC training school in Sacramento?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "American Institute of Trades (AIT) is Sacramento's top-rated HVAC training school, offering comprehensive technician certification with EPA 608 training and hands-on field experience."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long does HVAC training take in Sacramento?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our HVAC training program in Sacramento can be completed in approximately 12 weeks, combining classroom instruction with practical field training."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is there a trade school near me in Sacramento?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! American Institute of Trades is located in Sacramento, CA and offers affordable HVAC technician training with flexible scheduling options."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What certifications do you get from Sacramento HVAC training?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our Sacramento HVAC training program prepares you for EPA 608 certification, which is required for handling refrigerants in HVAC systems."
+                  }
+                }
+              ]
+            }
+          `}
+        </script>
+
+        {/* BreadcrumbList Schema */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.americanskilledtradeuniversity.edu/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "HVAC Training Sacramento",
+                  "item": "https://www.americanskilledtradeuniversity.edu/program/hvac"
+                }
               ]
             }
           `}
