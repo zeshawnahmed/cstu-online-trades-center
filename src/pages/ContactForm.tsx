@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -101,6 +102,43 @@ const ContactForm = () => {
   
   return (
     <Layout>
+      <Helmet>
+        <title>{language === 'en' 
+          ? 'Contact Sacramento Trade School | American Institute of Trades | Enroll Today'
+          : 'Contacto Escuela de Oficios Sacramento | Instituto Americano de Oficios'
+        }</title>
+        <meta name="description" content={language === 'en'
+          ? 'Contact American Institute of Trades - Sacramento\'s #1 trade school. Get information about HVAC training programs, financial aid, and enrollment. Start your trade career today!'
+          : 'Contacta al Instituto Americano de Oficios - La escuela de oficios #1 de Sacramento. Obtén información sobre programas de capacitación HVAC.'
+        } />
+        <meta name="keywords" content={language === 'en'
+          ? 'contact Sacramento trade school, enroll HVAC training Sacramento, trade school admissions Sacramento, AIT contact, American Institute of Trades phone, HVAC school enrollment Sacramento'
+          : 'contacto escuela de oficios Sacramento, inscripción HVAC Sacramento'
+        } />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.americanskilledtradeuniversity.edu/contact" />
+        
+        <meta property="og:title" content={language === 'en' ? 'Contact Sacramento Trade School | American Institute of Trades' : 'Contacto Escuela de Oficios Sacramento'} />
+        <meta property="og:description" content={language === 'en' ? 'Contact AIT for HVAC training information and enrollment in Sacramento' : 'Contacta a AIT para información de capacitación HVAC'} />
+        <meta property="og:url" content="https://www.americanskilledtradeuniversity.edu/contact" />
+        <meta property="og:type" content="website" />
+        
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "ContactPage",
+              "name": "Contact American Institute of Trades",
+              "description": "Contact Sacramento's premier trade school for HVAC training information and enrollment",
+              "url": "https://www.americanskilledtradeuniversity.edu/contact",
+              "mainEntity": {
+                "@type": "EducationalOrganization",
+                "@id": "https://www.americanskilledtradeuniversity.edu/#organization"
+              }
+            }
+          `}
+        </script>
+      </Helmet>
       <section className="py-20 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">

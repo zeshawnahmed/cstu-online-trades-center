@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -38,6 +39,47 @@ const FinancialAid = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{language === 'en' 
+          ? 'Financial Aid for Trade School Sacramento | HVAC Training Financing | AIT'
+          : 'Ayuda Financiera Escuela de Oficios Sacramento | Financiamiento HVAC | AIT'
+        }</title>
+        <meta name="description" content={language === 'en'
+          ? 'Explore financial aid options for trade school in Sacramento. Affordable HVAC training financing, personal loans, and scholarship resources. American Institute of Trades helps you fund your education.'
+          : 'Explora opciones de ayuda financiera para escuela de oficios en Sacramento. Financiamiento asequible para capacitación HVAC.'
+        } />
+        <meta name="keywords" content={language === 'en'
+          ? 'financial aid trade school Sacramento, HVAC training financing, trade school loans Sacramento, affordable trade school Sacramento, vocational training financing Sacramento, scholarship trade school'
+          : 'ayuda financiera escuela de oficios Sacramento, financiamiento HVAC Sacramento'
+        } />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.americanskilledtradeuniversity.edu/financial-aid" />
+        
+        <meta property="og:title" content={language === 'en' ? 'Financial Aid for Trade School Sacramento | AIT' : 'Ayuda Financiera Escuela de Oficios Sacramento'} />
+        <meta property="og:description" content={language === 'en' ? 'Explore financial aid options for HVAC training in Sacramento' : 'Explora opciones de ayuda financiera para capacitación HVAC'} />
+        <meta property="og:url" content="https://www.americanskilledtradeuniversity.edu/financial-aid" />
+        <meta property="og:type" content="website" />
+        
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Financial Aid for Sacramento Trade School",
+              "description": "Financial aid options and resources for trade school education in Sacramento",
+              "url": "https://www.americanskilledtradeuniversity.edu/financial-aid",
+              "isPartOf": {
+                "@type": "WebSite",
+                "@id": "https://www.americanskilledtradeuniversity.edu/#website"
+              },
+              "about": {
+                "@type": "Thing",
+                "name": "Trade School Financial Aid"
+              }
+            }
+          `}
+        </script>
+      </Helmet>
       <section className="py-20 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
