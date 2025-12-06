@@ -38,12 +38,12 @@ const Index = () => {
 
   // SEO Helmet data with translations and enhanced for local search
   const seoTitle = language === 'en' 
-    ? 'Skilled Trade Mastery and Prosperity Begins Here.'
-    : 'Skilled Trade Mastery and Prosperity Begins Here.';
+    ? 'HVAC Training Sacramento | Sacramento Trade School | American Institute of Trades'
+    : 'Capacitación HVAC Sacramento | Escuela de Oficios Sacramento | AIT';
   
   const seoDescription = language === 'en'
-    ? 'American Skilled Trade University (ASTU) offers affordable HVAC training in Sacramento. Find the best HVAC school near me with Job Site/Field training. Sacramento\'s #1 trade school for HVAC career training.'
-    : 'Universidad de Oficios Especializados Americana ofrece capacitación asequible de HVAC en Sacramento. La mejor escuela de HVAC cerca de ti con capacitación práctica.';
+    ? 'American Institute of Trades (AIT) - Sacramento\'s #1 trade school for HVAC training. Affordable HVAC technician certification with EPA 608 training and hands-on field experience. Best HVAC school near me in Sacramento, California.'
+    : 'American Institute of Trades (AIT) - La escuela de oficios #1 de Sacramento para capacitación HVAC. Certificación de técnico HVAC asequible con capacitación EPA 608 y experiencia práctica.';
 
   return (
     <Layout>
@@ -51,9 +51,11 @@ const Index = () => {
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
         <meta name="keywords" content={language === 'en' 
-          ? "HVAC school near me, HVAC training Sacramento, EPA 608 certification, Sacramento trade school, AIT, American Institute of Trades, best HVAC school, trade school near me, affordable trade school Sacramento"
-          : "Escuela de HVAC cerca de mí, Capacitación de HVAC Sacramento, Certificación EPA 608, Escuela de oficios Sacramento"
+          ? "HVAC training Sacramento, Sacramento trade school, HVAC school near me, HVAC technician training Sacramento, EPA 608 certification Sacramento, trade school Sacramento CA, HVAC certification program, Sacramento HVAC school, affordable HVAC training, vocational training Sacramento, skilled trades Sacramento, AIT, American Institute of Trades, best trade school Sacramento, HVAC career training, HVAC classes Sacramento"
+          : "Capacitación HVAC Sacramento, Escuela de oficios Sacramento, Escuela HVAC cerca de mí, Certificación EPA 608 Sacramento, Escuela de oficios Sacramento CA, AIT, American Institute of Trades"
         } />
+        <meta name="author" content="American Institute of Trades" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="website" />
