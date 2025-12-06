@@ -1,0 +1,9 @@
+# robots.txt for American Institute of Trades
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.americanskilledtradeuniversity.edu/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
