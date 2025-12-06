@@ -10,21 +10,47 @@ import { CheckCircle, DollarSign, Clock, BarChart3, MapPin, Target } from 'lucid
 
 const AboutUs = () => {
   const { t, language } = useLanguage();
+
+  const seoTitle = language === 'en' 
+    ? 'About Sacramento Trade School | American Institute of Trades | AIT'
+    : 'Sobre Escuela de Oficios Sacramento | Instituto Americano de Oficios';
+  
+  const seoDescription = language === 'en'
+    ? 'Learn about American Institute of Trades - Sacramento\'s premier affordable trade school for HVAC training. Our cost-effective vocational programs prepare you for high-demand careers in skilled trades.'
+    : 'Conozca sobre el Instituto Americano de Oficios - La principal escuela de oficios asequible de Sacramento para capacitación de HVAC.';
   
   return (
     <Layout>
       <Helmet>
-        <title>
-          {language === 'en' 
-            ? 'About Us | Sacramento Trade School | American Institute of Trades (AIT)' 
-            : 'Sobre Nosotros | Escuela de Oficios Sacramento | Instituto Americano de Oficios'}
-        </title>
-        <meta 
-          name="description" 
-          content={language === 'en'
-            ? "Learn about American Institute of Trades - Sacramento's premier affordable trade school for HVAC training. Our cost-effective programs prepare you for lucrative careers without the debt of traditional colleges."
-            : "Conozca sobre el Instituto Americano de Oficios - La principal escuela de oficios asequible de Sacramento para capacitación de HVAC."}
-        />
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
+        <meta name="keywords" content={language === 'en'
+          ? 'about Sacramento trade school, AIT Sacramento, American Institute of Trades about, trade school Sacramento history, vocational school Sacramento CA, HVAC training school Sacramento, affordable trade education Sacramento'
+          : 'sobre escuela de oficios Sacramento, AIT Sacramento, Instituto Americano de Oficios'
+        } />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.americanskilledtradeuniversity.edu/about" />
+        
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
+        <meta property="og:url" content="https://www.americanskilledtradeuniversity.edu/about" />
+        <meta property="og:type" content="website" />
+        
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              "name": "About American Institute of Trades - Sacramento Trade School",
+              "description": "${seoDescription}",
+              "url": "https://www.americanskilledtradeuniversity.edu/about",
+              "mainEntity": {
+                "@type": "EducationalOrganization",
+                "@id": "https://www.americanskilledtradeuniversity.edu/#organization"
+              }
+            }
+          `}
+        </script>
       </Helmet>
       
       <section className="pt-32 pb-20 bg-gray-50">
