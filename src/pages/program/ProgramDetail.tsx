@@ -415,7 +415,7 @@ const ProgramDetail = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="hidden lg:block"
+              className="mt-8 lg:mt-0"
             >
               <img 
                 src={cohortHvacImage} 
