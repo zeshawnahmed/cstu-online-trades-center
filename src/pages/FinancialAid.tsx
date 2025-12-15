@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { ExternalLink, GraduationCap, AlertCircle } from 'lucide-react';
+import { ExternalLink, GraduationCap, AlertCircle, CreditCard, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -141,6 +141,46 @@ const FinancialAid = () => {
                     <ExternalLink className="h-5 w-5 text-gold-500 group-hover:text-gold-600" />
                   </a>
                 ))}
+              </div>
+            </div>
+
+            {/* Tuition Payment Plan */}
+            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
+              <h2 className="text-2xl font-bold text-navy-700 mb-6 flex items-center">
+                <Calendar className="h-6 w-6 text-gold-500 mr-2" />
+                {language === 'en' ? 'Flexible Tuition Payment Plan' : 'Plan de Pago de Matrícula Flexible'}
+              </h2>
+              <div className="space-y-4">
+                <p className="text-navy-700 text-lg leading-relaxed">
+                  {language === 'en'
+                    ? "We understand that investing in your future is a big decision. That's why we offer a convenient tuition payment plan that allows you to pay for your training in manageable installments—making it easier than ever to get started on your new career path!"
+                    : "Entendemos que invertir en tu futuro es una gran decisión. Por eso ofrecemos un conveniente plan de pago de matrícula que te permite pagar tu capacitación en cuotas manejables—¡haciendo más fácil que nunca comenzar en tu nuevo camino profesional!"}
+                </p>
+                <div className="bg-navy-50 rounded-lg p-5 mt-4">
+                  <div className="flex items-start">
+                    <CreditCard className="h-6 w-6 text-gold-500 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-navy-700 mb-2">
+                        {language === 'en' ? 'How It Works' : 'Cómo Funciona'}
+                      </h3>
+                      <p className="text-navy-600">
+                        {language === 'en'
+                          ? "Simply keep a debit or credit card on file, and we'll automatically process your scheduled payments. It's secure, hassle-free, and lets you focus on what matters most—your education and future career success."
+                          : "Simplemente mantén una tarjeta de débito o crédito en archivo, y procesaremos automáticamente tus pagos programados. Es seguro, sin complicaciones, y te permite enfocarte en lo que más importa—tu educación y éxito profesional futuro."}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-navy-600 mt-4">
+                  {language === 'en'
+                    ? "Interested in learning more about our payment plan options? Reach out to us and we'll work together to find a plan that fits your budget."
+                    : "¿Interesado en aprender más sobre nuestras opciones de plan de pago? Contáctanos y trabajaremos juntos para encontrar un plan que se ajuste a tu presupuesto."}
+                </p>
+                <Link to="/contact" className="inline-block mt-2">
+                  <Button variant="outline" className="border-gold-400 text-navy-700 hover:bg-gold-50 font-semibold">
+                    {language === 'en' ? 'Ask About Payment Plans' : 'Preguntar Sobre Planes de Pago'}
+                  </Button>
+                </Link>
               </div>
             </div>
 
