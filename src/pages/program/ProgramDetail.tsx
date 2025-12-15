@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Clock, Award, Users, DollarSign, TrendingUp } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import SectionHeading from '@/components/ui/section-heading';
 import { useLanguage } from '@/contexts/LanguageContext';
 import cohortHvacImage from '@/assets/cohort_hvac.jpeg';
+import workshopImage from '@/assets/workshop.jpeg';
+import handsOnImage from '@/assets/hands_on.jpeg';
+
+const hvacImages = [
+  { src: cohortHvacImage, alt: 'HVAC Technician Cohort Students' },
+  { src: workshopImage, alt: 'HVAC Workshop Training Session' },
+  { src: handsOnImage, alt: 'Hands-on HVAC Training' },
+];
 interface CurriculumItem {
   week: string;
   title: string;
@@ -329,6 +337,15 @@ const ProgramDetail = () => {
   const programs = getProgramData(language);
   const program = slug ? programs[slug] : null;
   
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % hvacImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+  
   if (!program) {
     return (
       <Layout>
@@ -415,13 +432,20 @@ const ProgramDetail = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-8 lg:mt-0"
+              className="mt-8 lg:mt-0 relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-2xl"
             >
-              <img 
-                src={cohortHvacImage} 
-                alt="HVAC Technician Cohort Students" 
-                className="rounded-lg shadow-2xl w-full h-auto object-cover"
-              />
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentImageIndex}
+                  src={hvacImages[currentImageIndex].src}
+                  alt={hvacImages[currentImageIndex].alt}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </AnimatePresence>
             </motion.div>
           </div>
         </div>
