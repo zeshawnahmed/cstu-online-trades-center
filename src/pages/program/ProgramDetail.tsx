@@ -6,7 +6,7 @@ import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import SectionHeading from '@/components/ui/section-heading';
 import { useLanguage } from '@/contexts/LanguageContext';
-
+import cohortHvacImage from '@/assets/cohort_hvac.jpeg';
 interface CurriculumItem {
   week: string;
   title: string;
@@ -371,7 +371,7 @@ const ProgramDetail = () => {
             </Link>
           </div>
           
-          <div className="max-w-3xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -409,6 +409,19 @@ const ProgramDetail = () => {
                   </Button>
                 </Link>
               </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="hidden lg:block"
+            >
+              <img 
+                src={cohortHvacImage} 
+                alt="HVAC Technician Cohort Students" 
+                className="rounded-lg shadow-2xl w-full h-auto object-cover"
+              />
             </motion.div>
           </div>
         </div>
