@@ -96,13 +96,13 @@ const FinancialAid = () => {
             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
               <p className="text-navy-700 text-lg leading-relaxed">
                 {language === 'en'
-                  ? "At AIT, we're not a Title IV school yet, so we don't offer FAFSA. Many students have the funds already or ask family or friends for help with their education. Others rely on lenders—funds often deposit the same day you're approved. Many students also co-sign loans with a parent or loved one. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
-                  : "En AIT, aún no somos una escuela Título IV, por lo que no ofrecemos FAFSA. Muchos estudiantes ya tienen los fondos o piden ayuda a familiares o amigos para su educación. Otros dependen de prestamistas—los fondos a menudo se depositan el mismo día que eres aprobado. Muchos estudiantes también co-firman préstamos con un padre o ser querido. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
+                  ? "At AIT, we're not a Title IV school yet, so we don't offer FAFSA. Many students have the funds already or ask family or friends for help with their education. Others rely on lenders, and funds often deposit the same day you're approved. Many students also co-sign loans with a parent or loved one. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
+                  : "En AIT, aún no somos una escuela Título IV, por lo que no ofrecemos FAFSA. Muchos estudiantes ya tienen los fondos o piden ayuda a familiares o amigos para su educación. Otros dependen de prestamistas, y los fondos a menudo se depositan el mismo día que eres aprobado. Muchos estudiantes también co-firman préstamos con un padre o ser querido. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
               </p>
               <p className="text-navy-700 text-lg leading-relaxed mt-4">
                 {language === 'en'
-                  ? "We know money is tight. That's exactly why our programs are for those who've made a DECISION to Level Up—to stop letting hesitation hold them back. If that's you, we're ready to help you move forward."
-                  : "Sabemos que el dinero está ajustado. Por eso nuestros programas son para quienes han tomado la DECISIÓN de Superarse—de dejar de permitir que la duda los detenga. Si eres tú, estamos listos para ayudarte a avanzar."}
+                  ? "We know money is tight. That's exactly why our programs are for those who've made a DECISION to Level Up, to stop letting hesitation hold them back. If that's you, we're ready to help you move forward."
+                  : "Sabemos que el dinero está ajustado. Por eso nuestros programas son para quienes han tomado la DECISIÓN de Superarse, de dejar de permitir que la duda los detenga. Si eres tú, estamos listos para ayudarte a avanzar."}
               </p>
             </div>
 
@@ -127,8 +127,8 @@ const FinancialAid = () => {
               </div>
               <p className="text-navy-600 mt-4 text-sm">
                 {language === 'en'
-                  ? "These loans can offer interest rates similar or comparable to federal FAFSA rates—giving you a great financing option without the wait."
-                  : "Estos préstamos pueden ofrecer tasas de interés similares o comparables a las tasas federales de FAFSA—brindándote una excelente opción de financiamiento sin la espera."}
+                  ? "These loans can offer interest rates similar or comparable to federal FAFSA rates, giving you a great financing option without the wait."
+                  : "Estos préstamos pueden ofrecer tasas de interés similares o comparables a las tasas federales de FAFSA, brindándote una excelente opción de financiamiento sin la espera."}
               </p>
             </div>
 
