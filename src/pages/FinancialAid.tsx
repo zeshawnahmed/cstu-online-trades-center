@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { ExternalLink, GraduationCap, AlertCircle, Calendar } from 'lucide-react';
+import { ExternalLink, GraduationCap, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -101,8 +101,8 @@ const FinancialAid = () => {
               </p>
               <p className="text-navy-700 text-lg leading-relaxed mt-4">
                 {language === 'en'
-                  ? "We know money is tight. That's exactly why our programs are for those who've made a DECISION to Level Up, to stop letting hesitation hold them back. If that's you, we're ready to help you move forward."
-                  : "Sabemos que el dinero está ajustado. Por eso nuestros programas son para quienes han tomado la DECISIÓN de Superarse, de dejar de permitir que la duda los detenga. Si eres tú, estamos listos para ayudarte a avanzar."}
+                  ? "We get it, money is tight. And we know our programs are not for everybody except those who have made a clear DECISION to Level Up. If that's you, we're ready to help you move forward."
+                  : "Lo entendemos, el dinero está ajustado. Y sabemos que nuestros programas no son para todos, excepto para aquellos que han tomado una DECISIÓN clara de Superarse. Si eres tú, estamos listos para ayudarte a avanzar."}
               </p>
             </div>
 
@@ -129,6 +129,11 @@ const FinancialAid = () => {
                 {language === 'en'
                   ? "These loans can offer interest rates similar or comparable to federal FAFSA rates, giving you a great financing option without the wait."
                   : "Estos préstamos pueden ofrecer tasas de interés similares o comparables a las tasas federales de FAFSA, brindándote una excelente opción de financiamiento sin la espera."}
+              </p>
+              <p className="text-navy-500 mt-4 text-xs italic">
+                {language === 'en'
+                  ? "*Lenders terms and conditions apply."
+                  : "*Se aplican los términos y condiciones del prestamista."}
               </p>
             </div>
 
@@ -170,16 +175,6 @@ const FinancialAid = () => {
                   {language === 'en' ? 'Ask About Payment Plans' : 'Preguntar Sobre Planes de Pago'}
                 </Button>
               </Link>
-            </div>
-
-            {/* Disclaimer */}
-            <div className="bg-gold-50 border border-gold-200 rounded-lg p-4 mb-8 flex items-start">
-              <AlertCircle className="h-5 w-5 text-gold-500 mt-0.5 mr-3 flex-shrink-0" />
-              <p className="text-navy-700 text-sm">
-                {language === 'en'
-                  ? '*Lender terms and conditions apply.'
-                  : '*Se aplican los términos y condiciones del prestamista.'}
-              </p>
             </div>
 
             {/* CTA */}
