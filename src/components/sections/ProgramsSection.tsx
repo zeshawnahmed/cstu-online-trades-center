@@ -13,21 +13,20 @@ const ProgramsSection = () => {
     {
       title: language === 'en' ? 'HVAC Technician Program (EPA 608 Certification Training Included)' : 'Programa de Técnico HVAC (Entrenamiento de Certificación EPA 608 Incluido)',
       description: language === 'en' 
-        ? 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training and *hands-on training to get job ready.'
-        : 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608 y *capacitación práctica para estar listo para el trabajo.',
+        ? 'Master HVAC systems through comprehensive training, including EPA 608 certification and complementary hands-on workshops to become job-ready.'
+        : 'Domina los sistemas HVAC a través de capacitación integral, incluyendo certificación EPA 608 y talleres prácticos complementarios para estar listo para trabajar.',
       price: language === 'en' ? 'Affordable Flat Rate Tuition - $2500' : 'Matrícula de Tarifa Plana Asequible - $2500',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',
       imageUrl: '/hvac-technician-program.jpg',
       slug: 'hvac-technician',
       keyFeatures: [
-        language === 'en' ? '*Complementary Hands-On Training Workshops with Qualified Industry Professional' : '*Talleres Complementarios de Capacitación Práctica con Profesional Calificado de la Industria',
         language === 'en' ? 'EPA 608 Certification Training Included' : 'Capacitación de Certificación EPA 608 Incluida',
-        language === 'en' ? 'Learn Residential and Commercial HVAC Systems' : 'Aprende Sistemas HVAC Residenciales y Comerciales',
-        language === 'en' ? 'Self Paced, Online Learning Format for Busy Professionals' : 'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
-        language === 'en' ? 'Access to Accountability/Learning Coach' : 'Acceso a Entrenador de Responsabilidad/Aprendizaje',
-        language === 'en' ? 'Connect with Local Cohort Through Fun Experiences' : 'Conéctate con grupos locales a través de experiencias divertidas',
-        language === 'en' ? '*Although program is designed to be fully online, complementary hands-on workshops for Winter Cohort 2025 will be held bi-monthly near Downtown Sacramento, made possible through the generosity and collaboration with community HVAC Industry, providing an opportunity for students to gain hands-on practice with HVAC skills necessary for a successful career in the field.' : '*Aunque el programa está diseñado para ser completamente en línea, los talleres prácticos complementarios para la Cohorte de Invierno 2025 se llevarán a cabo bimensualmente cerca del centro de Sacramento, posible gracias a la generosidad y colaboración con la industria HVAC de la comunidad, brindando una oportunidad para que los estudiantes obtengan práctica con las habilidades HVAC necesarias para una carrera exitosa en el campo.'
+        language === 'en' ? 'Residential & Commercial HVAC Systems' : 'Sistemas HVAC Residenciales y Comerciales',
+        language === 'en' ? 'Self-Paced, Online Format for Busy Professionals' : 'Formato en Línea a tu Ritmo para Profesionales Ocupados',
+        language === 'en' ? 'Accountability & Learning Coach Support' : 'Apoyo de Entrenador de Responsabilidad y Aprendizaje',
+        language === 'en' ? 'Local Cohort Connection Through Engaging Experiences' : 'Conexión con Cohorte Local a Través de Experiencias Participativas',
+        language === 'en' ? 'Complementary bi-monthly hands-on workshops for the Winter 2025 cohort near Downtown Sacramento, made possible through collaboration with local HVAC industry professionals' : 'Talleres prácticos complementarios bimensuales para la cohorte de Invierno 2025 cerca del centro de Sacramento, posibles gracias a la colaboración con profesionales locales de la industria HVAC'
       ],
       salaryInfo: {
         median: '$63,420',
