@@ -167,8 +167,8 @@ const FinancialAid = () => {
               </h2>
               <p className="text-navy-700 text-lg leading-relaxed">
                 {language === 'en'
-                  ? "Pay tuition in installments with a debit or credit card on file."
-                  : "Paga la matrícula en cuotas con una tarjeta de débito o crédito en archivo."}
+                  ? "Pay tuition in manageable installments with a debit or credit card on file."
+                  : "Paga la matrícula en cuotas manejables con una tarjeta de débito o crédito en archivo."}
               </p>
               <Link to="/contact" className="inline-block mt-4">
                 <Button variant="outline" className="border-gold-400 text-navy-700 hover:bg-gold-50 font-semibold">
