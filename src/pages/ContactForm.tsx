@@ -154,8 +154,8 @@ const ContactForm = () => {
                   </h1>
                   <p className="text-navy-600 mb-8 text-center">
                     {language === 'en' 
-                      ? "Interested in advancing your career? Please fill out the form completely below and an admissions rep will be in touch."
-                      : "¿Interesado en avanzar tu carrera? Por favor completa el formulario a continuación y un representante de admisiones se pondrá en contacto."}
+                      ? "Have you made the Decision to Level Up? Please fill out the form completely below and an admissions rep will be in touch."
+                      : "¿Has tomado la Decisión de Superarte? Por favor completa el formulario a continuación y un representante de admisiones se pondrá en contacto."}
                   </p>
                   
                   {/* Financial Aid Info Alert */}
