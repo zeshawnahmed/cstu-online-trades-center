@@ -99,6 +99,11 @@ const FinancialAid = () => {
                   ? "At AIT, we're not a Title IV school yet, so we don't offer FAFSA. Many students have the funds already or ask family or friends for help with their education. Others rely on lenders—funds often deposit the same day you're approved. Many students also co-sign loans with a parent or loved one. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
                   : "En AIT, aún no somos una escuela Título IV, por lo que no ofrecemos FAFSA. Muchos estudiantes ya tienen los fondos o piden ayuda a familiares o amigos para su educación. Otros dependen de prestamistas—los fondos a menudo se depositan el mismo día que eres aprobado. Muchos estudiantes también co-firman préstamos con un padre o ser querido. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
               </p>
+              <p className="text-navy-700 text-lg leading-relaxed mt-4">
+                {language === 'en'
+                  ? "For others, we get it—money is tight. We also understand that our programs are not for everyone, but only for those who are serious and have made the decision to Level Up. If that's you, we're here to help you find a way to make it happen!"
+                  : "Para otros, lo entendemos—el dinero está ajustado. También entendemos que nuestros programas no son para todos, sino solo para aquellos que están comprometidos y han tomado la decisión de Superarse. Si eres tú, ¡estamos aquí para ayudarte a encontrar la manera de lograrlo!"}
+              </p>
             </div>
 
             {/* Helpful Loan Links */}
@@ -120,6 +125,11 @@ const FinancialAid = () => {
                   </a>
                 ))}
               </div>
+              <p className="text-navy-600 mt-4 text-sm">
+                {language === 'en'
+                  ? "These loans can offer interest rates similar or comparable to federal FAFSA rates—giving you a great financing option without the wait."
+                  : "Estos préstamos pueden ofrecer tasas de interés similares o comparables a las tasas federales de FAFSA—brindándote una excelente opción de financiamiento sin la espera."}
+              </p>
             </div>
 
             {/* Scholarship Resources */}
