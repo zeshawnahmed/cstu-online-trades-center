@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
-import { FileText, MessageSquare, Users, CheckCircle } from 'lucide-react';
+import { FileText, MessageSquare, Users } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const JobSearchPage = () => {
@@ -13,13 +13,13 @@ const JobSearchPage = () => {
       phase: language === 'en' ? '1 Month Before Graduation' : '1 Mes Antes de Graduación',
       icon: FileText,
       title: language === 'en' ? 'Resume Workshop' : 'Taller de Currículum',
-      description: language === 'en' ? 'Craft & tailor your resume' : 'Crea y personaliza tu currículum',
+      description: language === 'en' ? 'Craft & tailor your resume highlighting your unique skills' : 'Crea y personaliza tu currículum destacando tus habilidades únicas',
     },
     {
       phase: language === 'en' ? '1 Month Before Graduation' : '1 Mes Antes de Graduación',
       icon: MessageSquare,
       title: language === 'en' ? 'Interview Prep' : 'Preparación de Entrevistas',
-      description: language === 'en' ? 'Tips & techniques' : 'Consejos y técnicas',
+      description: language === 'en' ? 'Tips & techniques to stand out' : 'Consejos y técnicas para destacar',
     },
     {
       phase: language === 'en' ? 'After Graduation' : 'Después de Graduación',
@@ -60,38 +60,46 @@ const JobSearchPage = () => {
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-5xl">
             {/* Desktop Timeline */}
-            <div className="hidden md:block relative">
+            <div className="hidden md:block relative py-8">
               {/* Timeline Line */}
-              <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-navy-200 via-navy-400 to-navy-600 transform -translate-y-1/2 rounded-full" />
+              <div className="absolute top-1/2 left-[10%] right-[10%] h-1 bg-navy-200 transform -translate-y-1/2">
+                <div className="absolute inset-0 bg-gradient-to-r from-navy-400 to-navy-600 rounded-full" />
+              </div>
               
-              <div className="relative flex justify-between items-start">
+              <div className="relative flex justify-between items-start px-[5%]">
                 {timelineItems.map((item, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
-                    className="flex flex-col items-center text-center w-1/3 px-4"
+                    className="flex flex-col items-center text-center w-1/3 px-6"
                   >
                     {/* Phase Label */}
-                    <span className={`text-xs font-semibold uppercase tracking-wider mb-4 ${
-                      index < 2 ? 'text-navy-500' : 'text-navy-700'
+                    <span className={`text-xs font-semibold uppercase tracking-wider mb-6 px-3 py-1 rounded-full ${
+                      index < 2 ? 'bg-navy-100 text-navy-600' : 'bg-navy-600 text-white'
                     }`}>
                       {item.phase}
                     </span>
                     
-                    {/* Icon Circle */}
-                    <div className={`relative z-10 w-20 h-20 rounded-full flex items-center justify-center shadow-lg mb-4 ${
-                      index < 2 
-                        ? 'bg-white border-4 border-navy-300' 
-                        : 'bg-navy-600 border-4 border-navy-700'
-                    }`}>
-                      <item.icon className={`w-8 h-8 ${index < 2 ? 'text-navy-500' : 'text-white'}`} />
+                    {/* Timeline Node */}
+                    <div className="relative mb-6">
+                      <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg border-4 ${
+                        index < 2 
+                          ? 'bg-white border-navy-300' 
+                          : 'bg-navy-600 border-navy-500'
+                      }`}>
+                        <item.icon className={`w-7 h-7 ${index < 2 ? 'text-navy-600' : 'text-white'}`} />
+                      </div>
+                      {/* Connector dot */}
+                      <div className={`absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full ${
+                        index < 2 ? 'bg-navy-400' : 'bg-navy-600'
+                      }`} />
                     </div>
                     
                     {/* Content */}
-                    <h3 className="text-lg font-bold text-navy-700 mb-1">{item.title}</h3>
-                    <p className="text-sm text-navy-500">{item.description}</p>
+                    <h3 className="text-lg font-bold text-navy-700 mb-2">{item.title}</h3>
+                    <p className="text-sm text-navy-500 leading-relaxed max-w-[200px]">{item.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -135,20 +143,6 @@ const JobSearchPage = () => {
               </div>
             </div>
 
-            {/* Success Indicator */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="mt-16 text-center"
-            >
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-navy-50 rounded-full border border-navy-200">
-                <CheckCircle className="w-5 h-5 text-navy-600" />
-                <span className="text-navy-700 font-medium">
-                  {language === 'en' ? 'Career Ready' : 'Listo para tu Carrera'}
-                </span>
-              </div>
-            </motion.div>
           </div>
         </section>
       </div>
