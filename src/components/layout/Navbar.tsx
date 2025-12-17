@@ -89,7 +89,7 @@ const Navbar = () => {
               </div>
             </div>
             <Link to="/research-hub" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
-              {language === 'en' ? 'Research Hub' : 'Centro de Investigación'}
+              {language === 'en' ? 'Your Job Search' : 'Tu Búsqueda de Empleo'}
             </Link>
             <Link to="/financial-aid" className="text-navy-500 hover:text-navy-400 font-medium transition-colors duration-200">
               {language === 'en' ? 'Financial Aid' : 'Ayuda Financiera'}
@@ -154,7 +154,7 @@ const Navbar = () => {
               className="block py-2 text-navy-500 hover:text-navy-400"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {language === 'en' ? 'Research Hub' : 'Centro de Investigación'}
+              {language === 'en' ? 'Your Job Search' : 'Tu Búsqueda de Empleo'}
             </Link>
             <Link 
               to="/financial-aid" 
