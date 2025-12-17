@@ -24,7 +24,7 @@ const JobSearchPage = () => {
     {
       phase: language === 'en' ? 'After Graduation' : 'Después de Graduación',
       icon: Users,
-      title: language === 'en' ? 'Employer Connections' : 'Conexiones con Empleadores',
+      title: language === 'en' ? 'Industry Exposure' : 'Exposición a la Industria',
       description: language === 'en' ? 'We share your profile with local employers' : 'Compartimos tu perfil con empleadores locales',
     },
   ];
