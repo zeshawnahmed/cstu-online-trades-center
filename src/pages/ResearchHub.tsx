@@ -1,90 +1,154 @@
 
 import React from 'react';
 import Layout from '@/components/layout/Layout';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Wrench } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { FileText, MessageSquare, Users, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const ResearchHub = () => {
+const JobSearchPage = () => {
   const { language } = useLanguage();
 
-  const articles = [
+  const timelineItems = [
     {
-      id: 1,
-      category: 'HVAC',
-      title: "Cooling Without Refrigerants? It's Happening Now",
-      content: `Traditional air conditioners rely on refrigerants like Freon or R-410A—chemicals that, if leaked, contribute to global warming. But what if you could cool a building without refrigerants at all?
-
-That's the promise of solid-state cooling. Instead of using compressors and gases, these systems rely on advanced materials—like magnetocaloric or electrocaloric compounds—that heat up or cool down when exposed to magnetic or electric fields. No moving parts. No leaks. Just clean, compact, and whisper-quiet cooling.
-
-Researchers at MIT and Oak Ridge National Laboratory are leading the charge. Meanwhile, startups like Blue Frontier are piloting early-stage systems that promise to reduce HVAC energy use by 60% or more.
-
-If you've ever wished your A/C was cheaper to run, more sustainable, and less prone to breakdowns—this is the tech to watch.`
-    }
+      phase: language === 'en' ? '1 Month Before Graduation' : '1 Mes Antes de Graduación',
+      icon: FileText,
+      title: language === 'en' ? 'Resume Workshop' : 'Taller de Currículum',
+      description: language === 'en' ? 'Craft & tailor your resume' : 'Crea y personaliza tu currículum',
+    },
+    {
+      phase: language === 'en' ? '1 Month Before Graduation' : '1 Mes Antes de Graduación',
+      icon: MessageSquare,
+      title: language === 'en' ? 'Interview Prep' : 'Preparación de Entrevistas',
+      description: language === 'en' ? 'Tips & techniques' : 'Consejos y técnicas',
+    },
+    {
+      phase: language === 'en' ? 'After Graduation' : 'Después de Graduación',
+      icon: Users,
+      title: language === 'en' ? 'Employer Connections' : 'Conexiones con Empleadores',
+      description: language === 'en' ? 'We share your profile with local employers' : 'Compartimos tu perfil con empleadores locales',
+    },
   ];
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-navy-50 to-white">
+      <div className="min-h-screen bg-gradient-to-b from-navy-50 to-white">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-navy-600 to-navy-800">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-white">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                {language === 'en' ? 'Research Hub' : 'Centro de Investigación'}
-              </h1>
-              <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto mb-8">
-                {language === 'en' 
-                  ? 'Stay updated with the latest breakthroughs and innovations'
-                  : 'Mantente actualizado con los últimos avances e innovaciones'}
-              </p>
-              
-              {/* Innovation Commitment Paragraph */}
-              <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-6 text-left">
-                <p className="text-lg opacity-95 leading-relaxed">
-                  {language === 'en'
-                    ? 'At AIT, we are committed to innovation and preparing our students with the most cutting-edge knowledge in their field. Our Research Hub was launched to keep you informed about the latest technological breakthroughs and industry developments that are shaping the future of skilled trades. Stay ahead of the curve with insights that matter to your career.'
-                    : 'En AIT, estamos comprometidos con la innovación y preparar a nuestros estudiantes con el conocimiento más vanguardista en su campo. Nuestro Centro de Investigación fue lanzado para mantenerlo informado sobre los últimos avances tecnológicos y desarrollos de la industria que están dando forma al futuro de los oficios especializados. Manténgase a la vanguardia con conocimientos que importan para su carrera.'}
-                </p>
-              </div>
-            </div>
+        <section className="pt-32 pb-16 px-4">
+          <div className="container mx-auto text-center max-w-3xl">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-700 mb-6"
+            >
+              {language === 'en' ? 'Job Search Pipeline' : 'Proceso de Búsqueda de Empleo'}
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-lg md:text-xl text-navy-600/80 max-w-xl mx-auto"
+            >
+              {language === 'en' 
+                ? 'Our mission is to empower you to take on your Job Search with CONFIDENCE.'
+                : 'Nuestra misión es empoderarte para enfrentar tu búsqueda de empleo con CONFIANZA.'}
+            </motion.p>
           </div>
         </section>
 
-        {/* Articles Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-12">
-              {articles.map((article) => (
-                <Card key={article.id} className="overflow-hidden">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center gap-4 mb-3">
-                      <Badge 
-                        variant={article.category === 'HVAC' ? 'default' : 'secondary'}
-                        className="flex items-center gap-1"
-                      >
-                        <Wrench className="h-3 w-3" />
-                        {article.category}
-                      </Badge>
+        {/* Visual Timeline */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-5xl">
+            {/* Desktop Timeline */}
+            <div className="hidden md:block relative">
+              {/* Timeline Line */}
+              <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-navy-200 via-navy-400 to-navy-600 transform -translate-y-1/2 rounded-full" />
+              
+              <div className="relative flex justify-between items-start">
+                {timelineItems.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                    className="flex flex-col items-center text-center w-1/3 px-4"
+                  >
+                    {/* Phase Label */}
+                    <span className={`text-xs font-semibold uppercase tracking-wider mb-4 ${
+                      index < 2 ? 'text-navy-500' : 'text-navy-700'
+                    }`}>
+                      {item.phase}
+                    </span>
+                    
+                    {/* Icon Circle */}
+                    <div className={`relative z-10 w-20 h-20 rounded-full flex items-center justify-center shadow-lg mb-4 ${
+                      index < 2 
+                        ? 'bg-white border-4 border-navy-300' 
+                        : 'bg-navy-600 border-4 border-navy-700'
+                    }`}>
+                      <item.icon className={`w-8 h-8 ${index < 2 ? 'text-navy-500' : 'text-white'}`} />
                     </div>
-                    <CardTitle className="text-2xl md:text-3xl text-navy-700 leading-tight">
-                      {article.title}
-                    </CardTitle>
-                  </CardHeader>
-
-                  <CardContent>
-                    <div className="prose prose-lg max-w-none text-navy-600/90 leading-relaxed">
-                      {article.content.split('\n\n').map((paragraph, index) => (
-                        <p key={index} className="mb-4 last:mb-0">
-                          {paragraph}
-                        </p>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                    
+                    {/* Content */}
+                    <h3 className="text-lg font-bold text-navy-700 mb-1">{item.title}</h3>
+                    <p className="text-sm text-navy-500">{item.description}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
+
+            {/* Mobile Timeline */}
+            <div className="md:hidden relative pl-8">
+              {/* Vertical Line */}
+              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-navy-200 via-navy-400 to-navy-600" />
+              
+              <div className="space-y-12">
+                {timelineItems.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                    className="relative"
+                  >
+                    {/* Icon Circle */}
+                    <div className={`absolute -left-8 w-12 h-12 rounded-full flex items-center justify-center shadow-lg ${
+                      index < 2 
+                        ? 'bg-white border-3 border-navy-300' 
+                        : 'bg-navy-600 border-3 border-navy-700'
+                    }`}>
+                      <item.icon className={`w-5 h-5 ${index < 2 ? 'text-navy-500' : 'text-white'}`} />
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="ml-8">
+                      <span className={`text-xs font-semibold uppercase tracking-wider ${
+                        index < 2 ? 'text-navy-400' : 'text-navy-600'
+                      }`}>
+                        {item.phase}
+                      </span>
+                      <h3 className="text-lg font-bold text-navy-700 mt-1">{item.title}</h3>
+                      <p className="text-sm text-navy-500 mt-1">{item.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Success Indicator */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="mt-16 text-center"
+            >
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-navy-50 rounded-full border border-navy-200">
+                <CheckCircle className="w-5 h-5 text-navy-600" />
+                <span className="text-navy-700 font-medium">
+                  {language === 'en' ? 'Career Ready' : 'Listo para tu Carrera'}
+                </span>
+              </div>
+            </motion.div>
           </div>
         </section>
       </div>
@@ -92,4 +156,4 @@ If you've ever wished your A/C was cheaper to run, more sustainable, and less pr
   );
 };
 
-export default ResearchHub;
+export default JobSearchPage;
