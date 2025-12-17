@@ -78,7 +78,7 @@ const AboutUs = () => {
             </h1>
             <p className="text-xl text-navy-600 mb-10 italic">
               {language === 'en' 
-                ? '"We are what we repeatedly do. Excellence, then, is not an act, but a habit," - Aristotle'
+                ? '"We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle'
                 : 'Educación de calidad en oficios que te prepara para carreras en demanda.'
               }
             </p>
@@ -105,8 +105,8 @@ const AboutUs = () => {
             
             <p className="text-lg text-navy-600 mb-6 leading-relaxed">
               {language === 'en'
-                ? "We're a grassroots trade school founded right here in Sacramento by trade industry professionals who believe education should be both excellent and enjoyable. Our mission is simple: deliver specialized training - rooted in excellence - that gets you job-ready while making learning fun again."
-                : "Somos una escuela de oficios de base fundada aquí en Sacramento por profesionales de la industria de oficios que creen que la educación debe ser excelente y agradable. Nuestra misión es simple: brindar capacitación especializada - arraigada en la excelencia - que te prepare para el trabajo mientras hacemos que el aprendizaje sea divertido nuevamente."
+                ? "We're a grassroots trade school founded right here in Sacramento by trade industry professionals who believe education should be both excellent and enjoyable. Our mission is simple: deliver specialized training, rooted in excellence, that gets you job-ready while making learning fun again."
+                : "Somos una escuela de oficios de base fundada aquí en Sacramento por profesionales de la industria de oficios que creen que la educación debe ser excelente y agradable. Nuestra misión es simple: brindar capacitación especializada, arraigada en la excelencia, que te prepare para el trabajo mientras hacemos que el aprendizaje sea divertido nuevamente."
               }
             </p>
             
