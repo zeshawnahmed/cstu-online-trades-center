@@ -86,7 +86,7 @@ const Navbar = () => {
                     {language === 'en' ? 'HVAC Technician & EPA 608' : 'Técnico HVAC y EPA 608'}
                   </Link>
                   <Link to="/programs/pharmacy-technician" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
-                    {language === 'en' ? 'Pharmacy Technician (Coming Soon)' : 'Técnico de Farmacia (Próximamente)'}
+                    {language === 'en' ? 'Pharmacy Technician (Next Start Date January 1, 2026)' : 'Técnico de Farmacia (Próxima Fecha de Inicio 1 de Enero, 2026)'}
                   </Link>
                 </div>
               </div>
@@ -155,7 +155,7 @@ const Navbar = () => {
                   className="block py-1 text-navy-500 hover:text-navy-400"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {language === 'en' ? 'Pharmacy Technician (Coming Soon)' : 'Técnico de Farmacia (Próximamente)'}
+                  {language === 'en' ? 'Pharmacy Technician (Next Start Date January 1, 2026)' : 'Técnico de Farmacia (Próxima Fecha de Inicio 1 de Enero, 2026)'}
                 </Link>
               </div>
             </div>
