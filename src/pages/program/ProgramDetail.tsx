@@ -576,61 +576,61 @@ const ProgramDetail = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-16 pb-20 bg-navy-700 text-white">
+      <section className="relative pt-12 sm:pt-16 pb-16 sm:pb-20 bg-navy-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <Link to="/" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
+          <Link to="/" className="inline-flex items-center text-white/80 hover:text-white mb-4 sm:mb-6 transition-colors text-sm sm:text-base">
             <ArrowLeft className="h-4 w-4 mr-2" />
             {t('backToPrograms')}
           </Link>
           
-          {/* Prominent Admissions Contact */}
-          <div className="text-center mb-8">
-            <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
-              <p className="text-lg font-bold mb-1">
+          {/* Prominent Admissions Contact - Mobile Optimized */}
+          <div className="text-center mb-6 sm:mb-8">
+            <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
+              <p className="text-base sm:text-lg font-bold mb-1">
                 {language === 'en' ? 'To Get Started' : 'Para Comenzar'}
               </p>
-              <p className="text-base font-bold underline">
+              <p className="text-sm sm:text-base font-bold underline">
                 {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
               </p>
             </Link>
           </div>
           
-          <div className={`grid grid-cols-1 ${slug === 'hvac-technician' ? 'lg:grid-cols-2' : ''} gap-8 items-center`}>
+          <div className={`grid grid-cols-1 ${slug === 'hvac-technician' ? 'lg:grid-cols-2' : ''} gap-6 sm:gap-8 items-center`}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="bg-gold-400 text-navy-900 font-bold px-3 py-1 rounded-lg text-sm inline-block mb-4">
+              <div className="bg-gold-400 text-navy-900 font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm inline-block mb-3 sm:mb-4">
                 {program.approvalBadge}
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
                 {program.title}
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8">
                 {program.description}
               </p>
               
-              <div className="flex flex-wrap gap-6 mb-8">
-                <div className="flex items-center">
-                  <DollarSign className="h-5 w-5 mr-2 text-gold-400" />
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-6 mb-6 sm:mb-8">
+                <div className="flex items-center text-sm sm:text-base">
+                  <DollarSign className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-gold-400" />
                   <span>{program.price}</span>
                 </div>
-                <div className="flex items-center">
-                  <Clock className="h-5 w-5 mr-2 text-gold-400" />
+                <div className="flex items-center text-sm sm:text-base">
+                  <Clock className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-gold-400" />
                   <span>{program.duration}</span>
                 </div>
                 {slug === 'hvac-technician' && (
-                  <div className="flex items-center">
-                    <Users className="h-5 w-5 mr-2 text-gold-400" />
+                  <div className="flex items-start text-sm sm:text-base">
+                    <Users className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-gold-400 mt-0.5 flex-shrink-0" />
                     <span>{language === 'en' ? 'Complementary Hands-On Skills Training with Qualified HVAC Professional' : 'Capacitación Complementaria de Habilidades Prácticas con Profesional HVAC Calificado'}</span>
                   </div>
                 )}
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/financial-aid">
-                  <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-8 py-6 text-lg">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Link to="/financial-aid" className="w-full sm:w-auto">
+                  <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto">
                     {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
                   </Button>
                 </Link>
@@ -656,17 +656,17 @@ const ProgramDetail = () => {
       </section>
       
       {/* Curriculum */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             subtitle={`${program.approvalBadge} Curriculum`}
             title={t('programCurriculum')}
             centered={true}
-            className="mb-12"
+            className="mb-8 sm:mb-12"
           />
           
           <div className="max-w-3xl mx-auto">
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {program.curriculum.map((item, index) => (
                 <motion.div
                   key={index}
@@ -676,19 +676,19 @@ const ProgramDetail = () => {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden"
                 >
-                  <div className="bg-navy-700 text-white px-6 py-3 flex items-center justify-between">
-                    <h3 className="font-bold text-lg">{item.week}</h3>
-                    <div className="w-8 h-8 flex items-center justify-center bg-gold-400 text-navy-800 rounded-full font-semibold text-sm">
+                  <div className="bg-navy-700 text-white px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-between">
+                    <h3 className="font-bold text-base sm:text-lg">{item.week}</h3>
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center bg-gold-400 text-navy-800 rounded-full font-semibold text-xs sm:text-sm">
                       {index + 1}
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h4 className="font-bold text-navy-700 text-xl mb-4">{item.title}</h4>
+                  <div className="p-4 sm:p-6">
+                    <h4 className="font-bold text-navy-700 text-base sm:text-xl mb-3 sm:mb-4">{item.title}</h4>
                     <ul className="space-y-2">
                       {item.topics.map((topic, topicIndex) => (
                         <li key={topicIndex} className="flex items-start">
-                          <CheckCircle className="h-5 w-5 text-gold-500 mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-navy-600">{topic}</span>
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-gold-500 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-navy-600 text-sm sm:text-base">{topic}</span>
                         </li>
                       ))}
                     </ul>
@@ -698,7 +698,7 @@ const ProgramDetail = () => {
             </div>
             
             {/* Curriculum disclaimer */}
-            <p className="text-xs text-gray-500 mt-6 text-center italic">
+            <p className="text-xs text-gray-500 mt-4 sm:mt-6 text-center italic">
               *Curriculum subject to change
             </p>
           </div>
@@ -707,31 +707,31 @@ const ProgramDetail = () => {
       
       
       {/* CTA */}
-      <section className="py-16 bg-navy-700 text-white">
+      <section className="py-12 sm:py-16 bg-navy-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            {/* Prominent Admissions Contact */}
-            <div className="mb-8">
-              <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
-                <p className="text-lg font-bold mb-1">
+            {/* Prominent Admissions Contact - Mobile Optimized */}
+            <div className="mb-6 sm:mb-8">
+              <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
+                <p className="text-base sm:text-lg font-bold mb-1">
                   {language === 'en' ? 'To Get Started' : 'Para Comenzar'}
                 </p>
-                <p className="text-base font-bold underline">
+                <p className="text-sm sm:text-base font-bold underline">
                   {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
                 </p>
               </Link>
             </div>
             
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
               {t('readyToStartCareer')}
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8 px-4 sm:px-0">
               {t('applyNowFor')} {program.title} {t('gainEssentialSkills')}
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/financial-aid">
-                <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-8 py-6 text-lg w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
+              <Link to="/financial-aid" className="w-full sm:w-auto">
+                <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto">
                   {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
                 </Button>
               </Link>

@@ -53,15 +53,15 @@ const AboutUs = () => {
         </script>
       </Helmet>
       
-      <section className="pt-32 pb-20 bg-gray-50">
+      <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Prominent Admissions Contact */}
-          <div className="text-center mb-8">
-            <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-navy-600 hover:bg-gold-500 transition-colors">
-              <p className="text-lg font-bold mb-1">
+          {/* Prominent Admissions Contact - Mobile Optimized */}
+          <div className="text-center mb-6 sm:mb-8">
+            <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-navy-600 hover:bg-gold-500 transition-colors">
+              <p className="text-base sm:text-lg font-bold mb-1">
                 {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
               </p>
-              <p className="text-base font-bold underline">
+              <p className="text-sm sm:text-base font-bold underline">
                 {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
               </p>
             </Link>
@@ -73,10 +73,10 @@ const AboutUs = () => {
             transition={{ duration: 0.5 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-navy-700 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-700 mb-4">
               {language === 'en' ? 'About A.I.T.' : 'Sobre el Instituto Americano de Oficios'}
             </h1>
-            <p className="text-xl text-navy-600 mb-10 italic">
+            <p className="text-lg sm:text-xl text-navy-600 mb-8 sm:mb-10 italic px-4 sm:px-0">
               {language === 'en' 
                 ? '"We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle'
                 : 'Educación de calidad en oficios que te prepara para carreras en demanda.'
@@ -86,12 +86,11 @@ const AboutUs = () => {
         </div>
       </section>
       
-      {/* Our Story Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gold-600 mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gold-600 mb-4 px-4 sm:px-0">
                 {language === 'en' 
                   ? 'Proudly Serving the Greater Sacramento Community'
                   : 'Sirviendo con Orgullo a la Gran Comunidad de Sacramento'
@@ -99,18 +98,18 @@ const AboutUs = () => {
               </h2>
             </div>
             
-            <h2 className="text-3xl font-bold text-navy-700 mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy-700 mb-4 sm:mb-6">
               {language === 'en' ? 'Our Story' : 'Nuestra Historia'}
             </h2>
             
-            <p className="text-lg text-navy-600 mb-6 leading-relaxed">
+            <p className="text-base sm:text-lg text-navy-600 mb-4 sm:mb-6 leading-relaxed">
               {language === 'en'
                 ? "We're a grassroots trade school founded right here in Sacramento by trade industry professionals who believe education should be both excellent and enjoyable. Our mission is simple: deliver specialized training, rooted in excellence, that gets you job-ready while making learning fun again."
                 : "Somos una escuela de oficios de base fundada aquí en Sacramento por profesionales de la industria de oficios que creen que la educación debe ser excelente y agradable. Nuestra misión es simple: brindar capacitación especializada, arraigada en la excelencia, que te prepare para el trabajo mientras hacemos que el aprendizaje sea divertido nuevamente."
               }
             </p>
             
-            <p className="text-lg text-navy-600 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-navy-600 mb-6 sm:mb-8 leading-relaxed">
               {language === 'en'
                 ? "Excellence in training is our foundation. We combine rigorous instruction with an engaging learning environment that keeps you motivated. No more boring lectures and hoops to jump through—just practical skills, expert guidance, and a community that supports your success."
                 : "La excelencia en la capacitación es nuestra base. Combinamos instrucción rigurosa con un ambiente de aprendizaje atractivo que te mantiene motivado. No más conferencias aburridas y obstáculos que superar, solo habilidades prácticas, orientación experta y una comunidad que apoya tu éxito."
@@ -130,14 +129,14 @@ const AboutUs = () => {
       </section>
       
       {/* Why Trade School Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-navy-700 mb-10 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy-700 mb-8 sm:mb-10 text-center px-4 sm:px-0">
               {language === 'en' ? 'Why Choose AIT Over Traditional College?' : '¿Por qué elegir AIT sobre la universidad tradicional?'}
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {/* Cost Effective */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -235,38 +234,38 @@ const AboutUs = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 bg-navy-600 text-white">
+      <section className="py-12 sm:py-16 bg-navy-600 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Prominent Admissions Contact */}
-            <div className="mb-8">
-              <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-6 py-4 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
-                <p className="text-lg font-bold mb-1">
+            {/* Prominent Admissions Contact - Mobile Optimized */}
+            <div className="mb-6 sm:mb-8">
+              <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
+                <p className="text-base sm:text-lg font-bold mb-1">
                   {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
                 </p>
-                <p className="text-base font-bold underline">
+                <p className="text-sm sm:text-base font-bold underline">
                   {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
                 </p>
               </Link>
             </div>
             
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
               {language === 'en' ? 'Ready to Start Your Journey?' : '¿Listo para Comenzar tu Viaje?'}
             </h2>
-            <p className="text-xl mb-10 text-navy-100">
+            <p className="text-lg sm:text-xl mb-8 sm:mb-10 text-navy-100 px-4 sm:px-0">
               {language === 'en'
                 ? 'Join AIT and get the specialized training you need to launch your career in the skilled trades.'
                 : 'Únete a AIT y obtén la capacitación especializada que necesitas para lanzar tu carrera en oficios especializados.'
               }
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button className="bg-gold-400 hover:bg-gold-500 text-navy-800 text-lg px-8 py-6 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
+              <Link to="/financial-aid">
+                <Button className="bg-gold-400 hover:bg-gold-500 text-navy-800 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
                   {language === 'en' ? 'Financial Aid Assistance' : 'Asistencia de Ayuda Financiera'}
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button className="bg-white hover:bg-navy-50 text-navy-800 text-lg px-8 py-6 w-full sm:w-auto">
+                <Button className="bg-white hover:bg-navy-50 text-navy-800 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
                   {language === 'en' ? 'Contact Us' : 'Contáctanos'}
                 </Button>
               </Link>

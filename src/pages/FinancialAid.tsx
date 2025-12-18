@@ -80,7 +80,7 @@ const FinancialAid = () => {
           `}
         </script>
       </Helmet>
-      <section className="py-20 bg-gray-50 min-h-screen">
+      <section className="py-16 sm:py-20 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -88,18 +88,18 @@ const FinancialAid = () => {
             transition={{ duration: 0.5 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-3xl sm:text-4xl font-bold text-navy-700 mb-6 text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-700 mb-4 sm:mb-6 text-center px-4 sm:px-0">
               {language === 'en' ? 'Financial Aid Options' : 'Opciones de Ayuda Financiera'}
             </h1>
 
             {/* Introduction */}
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
-              <p className="text-navy-700 text-lg leading-relaxed">
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg mb-6 sm:mb-8">
+              <p className="text-navy-700 text-base sm:text-lg leading-relaxed">
                 {language === 'en'
                   ? "We're not a Title IV school yet, so we don't offer FAFSA loans. Many students have the funds already or ask family or friends for help with their education. Others rely on lenders, and funds often deposit the same day you're approved. Many students also co-sign loans with a parent or loved one. We also offer payment plans. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
                   : "Aún no somos una escuela Título IV, por lo que no ofrecemos préstamos FAFSA. Muchos estudiantes ya tienen los fondos o piden ayuda a familiares o amigos para su educación. Otros dependen de prestamistas, y los fondos a menudo se depositan el mismo día que eres aprobado. Muchos estudiantes también co-firman préstamos con un padre o ser querido. También ofrecemos planes de pago. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
               </p>
-              <p className="text-navy-700 text-lg leading-relaxed mt-4">
+              <p className="text-navy-700 text-base sm:text-lg leading-relaxed mt-4">
                 {language === 'en'
                   ? "We get it, money is tight. And we know our programs are not for everybody except those who have made a clear DECISION to Level Up. If that's you, we're ready to help you move forward."
                   : "Lo entendemos, el dinero está ajustado. Y sabemos que nuestros programas no son para todos, excepto para aquellos que han tomado una DECISIÓN clara de Superarse. Si eres tú, estamos listos para ayudarte a avanzar."}
@@ -107,25 +107,25 @@ const FinancialAid = () => {
             </div>
 
             {/* Helpful Loan Links */}
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
-              <h2 className="text-2xl font-bold text-navy-700 mb-6">
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-navy-700 mb-4 sm:mb-6">
                 {language === 'en' ? 'Helpful Loan Links' : 'Enlaces de Préstamos Útiles'}
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {loanLinks.map((link, index) => (
                   <a
                     key={index}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-4 bg-navy-50 rounded-lg hover:bg-navy-100 transition-colors group"
+                    className="flex items-center justify-between p-3 sm:p-4 bg-navy-50 rounded-lg hover:bg-navy-100 transition-colors group"
                   >
-                    <span className="text-navy-700 font-medium">{link.name}</span>
-                    <ExternalLink className="h-5 w-5 text-gold-500 group-hover:text-gold-600" />
+                    <span className="text-navy-700 font-medium text-sm sm:text-base">{link.name}</span>
+                    <ExternalLink className="h-4 w-4 sm:h-5 sm:w-5 text-gold-500 group-hover:text-gold-600 flex-shrink-0" />
                   </a>
                 ))}
               </div>
-              <p className="text-navy-600 mt-4 text-sm">
+              <p className="text-navy-600 mt-4 text-xs sm:text-sm">
                 {language === 'en'
                   ? "These loans can offer interest rates similar or comparable to federal FAFSA rates, giving you a great financing option without the wait."
                   : "Estos préstamos pueden ofrecer tasas de interés similares o comparables a las tasas federales de FAFSA, brindándote una excelente opción de financiamiento sin la espera."}
@@ -138,54 +138,54 @@ const FinancialAid = () => {
             </div>
 
             {/* Scholarship Resources */}
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
-              <h2 className="text-2xl font-bold text-navy-700 mb-6 flex items-center">
-                <GraduationCap className="h-6 w-6 text-gold-500 mr-2" />
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-navy-700 mb-4 sm:mb-6 flex items-center">
+                <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 text-gold-500 mr-2" />
                 {language === 'en' ? 'Scholarship Resources' : 'Recursos de Becas'}
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {scholarshipLinks.map((link, index) => (
                   <a
                     key={index}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-4 bg-navy-50 rounded-lg hover:bg-navy-100 transition-colors group"
+                    className="flex items-center justify-between p-3 sm:p-4 bg-navy-50 rounded-lg hover:bg-navy-100 transition-colors group"
                   >
-                    <span className="text-navy-700 font-medium">{link.name}</span>
-                    <ExternalLink className="h-5 w-5 text-gold-500 group-hover:text-gold-600" />
+                    <span className="text-navy-700 font-medium text-sm sm:text-base">{link.name}</span>
+                    <ExternalLink className="h-4 w-4 sm:h-5 sm:w-5 text-gold-500 group-hover:text-gold-600 flex-shrink-0" />
                   </a>
                 ))}
               </div>
             </div>
 
             {/* Tuition Payment Plan */}
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-8">
-              <h2 className="text-2xl font-bold text-navy-700 mb-4 flex items-center">
-                <Calendar className="h-6 w-6 text-gold-500 mr-2" />
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-navy-700 mb-3 sm:mb-4 flex items-center">
+                <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-gold-500 mr-2" />
                 {language === 'en' ? 'Tuition Payment Plan' : 'Plan de Pago de Matrícula'}
               </h2>
-              <p className="text-navy-700 text-lg leading-relaxed">
+              <p className="text-navy-700 text-base sm:text-lg leading-relaxed">
                 {language === 'en'
                   ? "Pay tuition in manageable installments with a debit or credit card on file."
                   : "Paga la matrícula en cuotas manejables con una tarjeta de débito o crédito en archivo."}
               </p>
               <Link to="/contact" className="inline-block mt-4">
-                <Button variant="outline" className="border-gold-400 text-navy-700 hover:bg-gold-50 font-semibold">
+                <Button variant="outline" className="border-gold-400 text-navy-700 hover:bg-gold-50 font-semibold text-sm sm:text-base">
                   {language === 'en' ? 'Ask About Payment Plans' : 'Preguntar Sobre Planes de Pago'}
                 </Button>
               </Link>
             </div>
 
             {/* CTA */}
-            <div className="text-center">
-              <p className="text-navy-600 mb-4">
+            <div className="text-center px-4 sm:px-0">
+              <p className="text-navy-600 mb-4 text-sm sm:text-base">
                 {language === 'en'
                   ? 'Have questions about financing your education? Contact us today!'
                   : '¿Tienes preguntas sobre cómo financiar tu educación? ¡Contáctanos hoy!'}
               </p>
               <Link to="/contact">
-                <Button className="bg-gold-400 hover:bg-gold-500 text-navy-800 font-bold px-8 py-4 text-lg">
+                <Button className="bg-gold-400 hover:bg-gold-500 text-navy-800 font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg">
                   {language === 'en' ? 'Contact Us' : 'Contáctanos'}
                 </Button>
               </Link>
