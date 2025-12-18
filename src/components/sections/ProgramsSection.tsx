@@ -52,12 +52,12 @@ const ProgramsSection = () => {
         language === 'en' ? 'Fully Online & Self-Paced' : 'Totalmente en Línea y a Tu Ritmo',
         language === 'en' ? 'Learning Coach & Student Support' : 'Coach de Aprendizaje y Apoyo Estudiantil',
         language === 'en' ? 'Job Search Support Included' : 'Soporte de Búsqueda de Empleo Incluido',
-        language === 'en' ? 'Eligible to work as CA Pharmacy Tech after program & PTCB exam' : 'Elegible para trabajar como Técnico de Farmacia en CA después del programa y examen PTCB'
+        language === 'en' ? 'Eligible to work as CA Pharmacy Tech after program & passing PTCB exam' : 'Elegible para trabajar como Técnico de Farmacia en CA después del programa y aprobar examen PTCB'
       ],
       salaryInfo: {
-        median: '$42,000',
+        median: '$52,900',
         growth: language === 'en' ? '+5%' : '+5%',
-        period: language === 'en' ? 'projected by 2032 - According to BLS' : 'proyectado para 2032 - Según BLS',
+        period: language === 'en' ? 'projected by 2032 - According to Indeed' : 'proyectado para 2032 - Según Indeed',
         clarification: language === 'en' ? 'Median Annual Salary' : 'Salario Anual Mediano'
       }
     }
