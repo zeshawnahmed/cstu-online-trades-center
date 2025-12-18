@@ -148,9 +148,9 @@ const ContactForm = () => {
           `}
         </script>
       </Helmet>
-      <section className="py-20 bg-gray-50 min-h-screen">
+      <section className="py-16 sm:py-20 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+          <div className="max-w-3xl mx-auto bg-white p-5 sm:p-8 rounded-xl shadow-lg">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -158,19 +158,19 @@ const ContactForm = () => {
             >
               {!isSubmitted ? (
                 <>
-                  <h1 className="text-3xl font-bold text-navy-700 mb-6 text-center">
+                  <h1 className="text-2xl sm:text-3xl font-bold text-navy-700 mb-4 sm:mb-6 text-center">
                     {language === 'en' ? "Contact Us" : "Contáctanos"}
                   </h1>
-                  <p className="text-navy-600 mb-8 text-center">
+                  <p className="text-sm sm:text-base text-navy-600 mb-6 sm:mb-8 text-center px-2 sm:px-0">
                     {language === 'en' 
                       ? "Have you made the Decision to Level Up? Please fill out the form completely below and an admissions rep will be in touch."
                       : "¿Has tomado la Decisión de Superarte? Por favor completa el formulario a continuación y un representante de admisiones se pondrá en contacto."}
                   </p>
                   
-                  {/* Financial Aid Info Alert */}
-                  <div className="bg-gold-50 border border-gold-200 rounded-lg p-4 mb-8 flex items-start">
-                    <Info className="h-5 w-5 text-gold-500 mt-0.5 mr-3 flex-shrink-0" />
-                    <p className="text-navy-700">
+                  {/* Financial Aid Info Alert - Mobile Optimized */}
+                  <div className="bg-gold-50 border border-gold-200 rounded-lg p-3 sm:p-4 mb-6 sm:mb-8 flex items-start">
+                    <Info className="h-5 w-5 text-gold-500 mt-0.5 mr-2 sm:mr-3 flex-shrink-0" />
+                    <p className="text-sm sm:text-base text-navy-700">
                       {language === 'en' 
                         ? "Interested in Financial Aid? Let us know and we'll provide you with all available options. "
                         : "¿Interesado en ayuda financiera? Háganoslo saber y le proporcionaremos todas las opciones disponibles. "}
@@ -180,9 +180,9 @@ const ContactForm = () => {
                     </p>
                   </div>
                   
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                     <div>
-                      <label htmlFor="name" className="block text-navy-700 font-medium mb-2">
+                      <label htmlFor="name" className="block text-navy-700 font-medium mb-1 sm:mb-2 text-sm sm:text-base">
                         {language === 'en' ? "Your Name" : "Tu Nombre"} <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -192,12 +192,12 @@ const ContactForm = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-navy-700 font-medium mb-2">
+                      <label htmlFor="email" className="block text-navy-700 font-medium mb-1 sm:mb-2 text-sm sm:text-base">
                         {language === 'en' ? "Email Address" : "Correo Electrónico"} <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -207,12 +207,12 @@ const ContactForm = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-navy-700 font-medium mb-2">
+                      <label htmlFor="phone" className="block text-navy-700 font-medium mb-1 sm:mb-2 text-sm sm:text-base">
                         {language === 'en' ? "Phone Number" : "Número de Teléfono"} <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -222,7 +222,7 @@ const ContactForm = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
                       />
                     </div>
                     
