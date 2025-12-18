@@ -49,7 +49,7 @@ const ProgramsSection = () => {
       keyFeatures: [
         language === 'en' ? '8 Weeks Long' : '8 Semanas de Duración',
         language === 'en' ? 'Prepare for PTCB Certification Exam' : 'Preparación para Examen de Certificación PTCB',
-        language === 'en' ? 'Fully Online & Self-Paced' : 'Totalmente en Línea y a Tu Ritmo',
+        language === 'en' ? 'Fully Online, Self-Paced, & Structured' : 'Totalmente en Línea, a Tu Ritmo y Estructurado',
         language === 'en' ? 'Learning Coach & Student Support' : 'Coach de Aprendizaje y Apoyo Estudiantil',
         language === 'en' ? 'Job Search Support Included' : 'Soporte de Búsqueda de Empleo Incluido',
         language === 'en' ? 'Eligible to work as CA Pharmacy Tech after program & passing PTCB exam' : 'Elegible para trabajar como Técnico de Farmacia en CA después del programa y aprobar examen PTCB'

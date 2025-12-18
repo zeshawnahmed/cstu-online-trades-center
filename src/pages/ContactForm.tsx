@@ -272,13 +272,12 @@ const ContactForm = () => {
                         name="consentToContact"
                         checked={formData.consentToContact}
                         onChange={handleCheckboxChange}
-                        required
                         className="h-5 w-5 text-gold-500 rounded border-gray-300 focus:ring-gold-400 mt-1"
                       />
                       <label htmlFor="consentToContact" className="ml-3 block text-navy-700">
                         {language === 'en' 
                           ? "Can we send you important info about our programs through email or text?"
-                          : "¿Podemos enviarte información importante sobre nuestros programas por correo electrónico o mensaje de texto?"} <span className="text-red-500">*</span>
+                          : "¿Podemos enviarte información importante sobre nuestros programas por correo electrónico o mensaje de texto?"}
                       </label>
                     </div>
                     
