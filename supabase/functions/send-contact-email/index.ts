@@ -15,9 +15,18 @@ interface ContactEmailRequest {
   email: string;
   phone?: string;
   message: string;
+  programInterest?: string;
   interestedInFinancialAid: boolean;
   consentToContact?: boolean;
 }
+
+const getProgramName = (slug: string): string => {
+  const programs: Record<string, string> = {
+    'hvac-technician': 'HVAC Technician Program',
+    'pharmacy-technician': 'California Pharmacy Technician Program (Coming Soon)',
+  };
+  return programs[slug] || slug || 'Not specified';
+};
 
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
@@ -26,7 +35,9 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, phone, message, interestedInFinancialAid, consentToContact }: ContactEmailRequest = await req.json();
+    const { name, email, phone, message, programInterest, interestedInFinancialAid, consentToContact }: ContactEmailRequest = await req.json();
+
+    console.log("Received contact form submission:", { name, email, programInterest, interestedInFinancialAid });
 
     // Initialize Supabase client with service role key to bypass RLS
     const supabaseClient = createClient(
@@ -52,6 +63,8 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Failed to store contact submission");
     }
 
+    const programName = getProgramName(programInterest || '');
+
     // Send email to zeshawn.a@gmail.com
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
@@ -62,6 +75,7 @@ const handler = async (req: Request): Promise<Response> => {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
+        <p><strong>Program of Interest:</strong> ${programName}</p>
         <p><strong>Interested in Financial Aid:</strong> ${interestedInFinancialAid ? 'Yes' : 'No'}</p>
         <p><strong>Consent to Receive Info via Email/Text:</strong> ${consentToContact ? 'Yes' : 'No'}</p>
         <p><strong>Message:</strong></p>
@@ -81,6 +95,7 @@ const handler = async (req: Request): Promise<Response> => {
       html: `
         <h2>Thank you for your message, ${name}!</h2>
         <p>We have received your contact form submission and an admissions representative will be in touch with you soon.</p>
+        <p><strong>Program of Interest:</strong> ${programName}</p>
         <p>Here's a copy of what you sent:</p>
         <blockquote style="border-left: 4px solid #ccc; padding-left: 16px; margin: 16px 0;">
           ${message.replace(/\n/g, '<br>')}
