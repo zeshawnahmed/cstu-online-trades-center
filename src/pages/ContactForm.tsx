@@ -8,6 +8,13 @@ import { CheckCircle, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useToast } from '@/components/ui/use-toast';
 import { useLanguage } from '@/contexts/LanguageContext';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -18,6 +25,7 @@ const ContactForm = () => {
     email: '',
     phone: '',
     message: '',
+    programInterest: '',
     interestedInFinancialAid: false,
     consentToContact: false
   });
@@ -69,6 +77,7 @@ const ContactForm = () => {
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
+          programInterest: formData.programInterest,
           interestedInFinancialAid: formData.interestedInFinancialAid,
           consentToContact: formData.consentToContact,
         }),
@@ -212,6 +221,28 @@ const ContactForm = () => {
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                       />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="programInterest" className="block text-navy-700 font-medium mb-2">
+                        {language === 'en' ? "Program of Interest" : "Programa de Interés"}
+                      </label>
+                      <Select
+                        value={formData.programInterest}
+                        onValueChange={(value) => setFormData(prev => ({ ...prev, programInterest: value }))}
+                      >
+                        <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent bg-white">
+                          <SelectValue placeholder={language === 'en' ? "Select a program" : "Selecciona un programa"} />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white border border-gray-300 shadow-lg z-50">
+                          <SelectItem value="hvac-technician">
+                            {language === 'en' ? 'HVAC Technician Program' : 'Programa de Técnico HVAC'}
+                          </SelectItem>
+                          <SelectItem value="pharmacy-technician">
+                            {language === 'en' ? 'California Pharmacy Technician Program (Coming Soon)' : 'Programa de Técnico de Farmacia de California (Próximamente)'}
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                     
                     <div>

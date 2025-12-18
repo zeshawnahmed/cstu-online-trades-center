@@ -21,6 +21,7 @@ interface ProgramCardProps {
     period: string;
   };
   className?: string;
+  comingSoon?: boolean;
 }
 
 const ProgramCard: React.FC<ProgramCardProps> = ({
@@ -32,10 +33,10 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
   keyFeatures,
   salaryInfo,
   className,
+  comingSoon,
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const { t } = useLanguage();
-
+  const { t, language } = useLanguage();
   return (
     <div className={cn(
       "rounded-xl overflow-hidden bg-white border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl h-full flex flex-col w-full max-w-none",
@@ -43,6 +44,11 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
     )}>
       <div className="p-4 sm:p-6 flex-grow flex flex-col">
         <div className="flex items-center gap-2 mb-2 flex-wrap">
+          {comingSoon && (
+            <div className="bg-navy-700 text-white font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm">
+              {language === 'en' ? 'Coming Soon' : 'Próximamente'}
+            </div>
+          )}
           <div className="bg-gold-400 text-navy-800 font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm">
             {price}
           </div>

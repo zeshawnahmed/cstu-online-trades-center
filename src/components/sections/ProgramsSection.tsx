@@ -34,6 +34,32 @@ const ProgramsSection = () => {
         period: language === 'en' ? 'projected by 2030 - According to TradeCareerPath' : 'proyectado para 2030 - Según TradeCareerPath',
         clarification: language === 'en' ? 'Median Annual Salary' : 'Salario Anual Mediano'
       }
+    },
+    {
+      title: language === 'en' ? 'California Pharmacy Technician Program' : 'Programa de Técnico de Farmacia de California',
+      description: language === 'en' 
+        ? 'Gain the skills to maintain and operate a pharmacy in just 8 weeks and begin an exciting career as a Pharmacy Technician.'
+        : 'Adquiere las habilidades para mantener y operar una farmacia en solo 8 semanas y comienza una emocionante carrera como Técnico de Farmacia.',
+      price: language === 'en' ? 'Affordable Flat Rate Tuition - $2500' : 'Matrícula de Tarifa Plana Asequible - $2500',
+      duration: language === 'en' ? '8 Weeks' : '8 Semanas',
+      certification: language === 'en' ? 'PTCB Certification Prep' : 'Preparación para Certificación PTCB',
+      imageUrl: '/pharmacy-technician-program.jpg',
+      slug: 'pharmacy-technician',
+      comingSoon: true,
+      keyFeatures: [
+        language === 'en' ? '8 Weeks Long' : '8 Semanas de Duración',
+        language === 'en' ? 'Prepare for PTCB Certification Exam' : 'Preparación para Examen de Certificación PTCB',
+        language === 'en' ? 'Fully Online & Self-Paced' : 'Totalmente en Línea y a Tu Ritmo',
+        language === 'en' ? 'Learning Coach & Student Support' : 'Coach de Aprendizaje y Apoyo Estudiantil',
+        language === 'en' ? 'Job Search Support Included' : 'Soporte de Búsqueda de Empleo Incluido',
+        language === 'en' ? 'Eligible to work as CA Pharmacy Tech after program & PTCB exam' : 'Elegible para trabajar como Técnico de Farmacia en CA después del programa y examen PTCB'
+      ],
+      salaryInfo: {
+        median: '$42,000',
+        growth: language === 'en' ? '+5%' : '+5%',
+        period: language === 'en' ? 'projected by 2032 - According to BLS' : 'proyectado para 2032 - Según BLS',
+        clarification: language === 'en' ? 'Median Annual Salary' : 'Salario Anual Mediano'
+      }
     }
   ];
 
@@ -58,20 +84,18 @@ const ProgramsSection = () => {
           </Link>
         </div>
         
-        <div className="flex justify-center">
-          <div className="max-w-lg w-full">
-            {programs.map((program, index) => (
-              <motion.div
-                key={program.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <ProgramCard {...program} />
-              </motion.div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {programs.map((program, index) => (
+            <motion.div
+              key={program.slug}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <ProgramCard {...program} />
+            </motion.div>
+          ))}
         </div>
         
         <div className="mt-8 sm:mt-12 text-center">

@@ -176,6 +176,117 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           '*Although the program is designed to be fully online, complementary hands-on workshops for Winter Cohort 2025 will be held bi-monthly near Downtown Sacramento, made possible through the generosity and collaboration with the Sacramento HVAC Industry, providing an opportunity for students to gain hands-on practice with HVAC skills necessary for a successful career in the field.'
         ],
         approvalBadge: 'HVAC Program'
+      },
+      'pharmacy-technician': {
+        title: 'California Pharmacy Technician Program',
+        description: 'Gain the skills to maintain and operate a pharmacy in just 8 weeks and begin an exciting career as a Pharmacy Technician.',
+        fullDescription: [
+          "Our California Pharmacy Technician Program prepares you for an exciting career in the healthcare industry, providing comprehensive training in pharmacy operations, medication handling, and patient care.",
+          "Through our fully online, self-paced curriculum, you'll learn everything from pharmacy law and drug safety to prescription processing and inventory management.",
+          "Upon successful completion of the program and passing the PTCB exam, you'll be eligible to work as a California Pharmacy Technician."
+        ],
+        price: 'Affordable Flat Rate Tuition - $2500',
+        duration: 'Online Self Paced, 8 Weeks',
+        certification: 'PTCB Certification Prep',
+        curriculum: [
+          {
+            week: 'Week 1',
+            title: 'Pharmacy Foundations & Medication Basics',
+            topics: [
+              'Introduction to pharmacy practice',
+              'Pharmacy terminology and abbreviations',
+              'Drug classification systems',
+              'Dosage forms and routes of administration'
+            ]
+          },
+          {
+            week: 'Week 2',
+            title: 'Pharmacology, Drug Safety & Medication Handling',
+            topics: [
+              'Basic pharmacology principles',
+              'Drug interactions and contraindications',
+              'Safe medication handling procedures',
+              'Storage and stability requirements'
+            ]
+          },
+          {
+            week: 'Week 3',
+            title: 'Federal Pharmacy Law & Controlled Substances',
+            topics: [
+              'Federal pharmacy regulations',
+              'DEA requirements and scheduling',
+              'Controlled substance handling',
+              'Documentation and record-keeping'
+            ]
+          },
+          {
+            week: 'Week 4',
+            title: 'Patient Safety & Quality Assurance',
+            topics: [
+              'Medication error prevention',
+              'Quality assurance protocols',
+              'Patient safety best practices',
+              'Adverse event reporting'
+            ]
+          },
+          {
+            week: 'Week 5',
+            title: 'Pharmacy Calculations & Prescription Interpretation',
+            topics: [
+              'Pharmaceutical calculations',
+              'Dosage conversions',
+              'Reading and interpreting prescriptions',
+              'Sig codes and abbreviations'
+            ]
+          },
+          {
+            week: 'Week 6',
+            title: 'Prescription Processing & Inventory Management',
+            topics: [
+              'Prescription processing workflow',
+              'Insurance billing and claims',
+              'Inventory control systems',
+              'Ordering and receiving procedures'
+            ]
+          },
+          {
+            week: 'Week 7',
+            title: 'Patient Care, Communication & Professional Practice',
+            topics: [
+              'Patient communication skills',
+              'HIPAA and patient privacy',
+              'Professional ethics and conduct',
+              'Customer service excellence'
+            ]
+          },
+          {
+            week: 'Week 8',
+            title: 'Comprehensive PTCE Review & Exam Preparation',
+            topics: [
+              'PTCB exam overview and format',
+              'Comprehensive content review',
+              'Practice exams and test strategies',
+              'Certification application process'
+            ]
+          }
+        ],
+        salaryInfo: {
+          median: '$42,000',
+          growth: '+5%',
+          period: 'projected by 2032',
+          demand: 'Quick Salary Snapshot - Pharmacy Technicians in California (2025)',
+          hourlyRate: '$20.19',
+          source: 'According to BLS'
+        },
+        keyFeatures: [
+          '8 Weeks Long',
+          'Prepare for PTCB Certification Exam',
+          'Fully Online & Self-Paced',
+          'Perfect for Working Professionals',
+          'Learning Coach & Student Support',
+          'Structured Curriculum with Job Search Support'
+        ],
+        approvalBadge: 'Pharmacy Tech Program - Coming Soon'
       }
     };
   } else {
@@ -319,6 +430,117 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           '*Aunque el programa es completamente en línea, los talleres prácticos complementarios para la Cohorte de Invierno 2025 se llevarán a cabo bimensualmente cerca del centro de Sacramento, posible gracias a la generosidad y colaboración con profesionales de la industria HVAC de la comunidad, brindando una oportunidad para que los estudiantes obtengan práctica con las habilidades HVAC necesarias para una carrera exitosa en el campo.'
         ],
         approvalBadge: 'Programa HVAC'
+      },
+      'pharmacy-technician': {
+        title: 'Programa de Técnico de Farmacia de California',
+        description: 'Adquiere las habilidades para mantener y operar una farmacia en solo 8 semanas y comienza una emocionante carrera como Técnico de Farmacia.',
+        fullDescription: [
+          "Nuestro Programa de Técnico de Farmacia de California te prepara para una emocionante carrera en la industria de la salud, brindando capacitación integral en operaciones de farmacia, manejo de medicamentos y atención al paciente.",
+          "A través de nuestro plan de estudios completamente en línea y a tu ritmo, aprenderás todo, desde la ley de farmacia y seguridad de medicamentos hasta el procesamiento de recetas y gestión de inventario.",
+          "Al completar exitosamente el programa y aprobar el examen PTCB, serás elegible para trabajar como Técnico de Farmacia en California."
+        ],
+        price: 'Matrícula de Tarifa Plana Asequible - $2500',
+        duration: 'En línea a tu ritmo, 8 semanas',
+        certification: 'Preparación para Certificación PTCB',
+        curriculum: [
+          {
+            week: 'Semana 1',
+            title: 'Fundamentos de Farmacia y Conceptos Básicos de Medicamentos',
+            topics: [
+              'Introducción a la práctica farmacéutica',
+              'Terminología y abreviaturas farmacéuticas',
+              'Sistemas de clasificación de medicamentos',
+              'Formas de dosificación y vías de administración'
+            ]
+          },
+          {
+            week: 'Semana 2',
+            title: 'Farmacología, Seguridad de Medicamentos y Manejo',
+            topics: [
+              'Principios básicos de farmacología',
+              'Interacciones y contraindicaciones de medicamentos',
+              'Procedimientos seguros de manejo de medicamentos',
+              'Requisitos de almacenamiento y estabilidad'
+            ]
+          },
+          {
+            week: 'Semana 3',
+            title: 'Ley Federal de Farmacia y Sustancias Controladas',
+            topics: [
+              'Regulaciones federales de farmacia',
+              'Requisitos de la DEA y clasificación',
+              'Manejo de sustancias controladas',
+              'Documentación y mantenimiento de registros'
+            ]
+          },
+          {
+            week: 'Semana 4',
+            title: 'Seguridad del Paciente y Garantía de Calidad',
+            topics: [
+              'Prevención de errores de medicación',
+              'Protocolos de garantía de calidad',
+              'Mejores prácticas de seguridad del paciente',
+              'Reporte de eventos adversos'
+            ]
+          },
+          {
+            week: 'Semana 5',
+            title: 'Cálculos Farmacéuticos e Interpretación de Recetas',
+            topics: [
+              'Cálculos farmacéuticos',
+              'Conversiones de dosis',
+              'Lectura e interpretación de recetas',
+              'Códigos de sig y abreviaturas'
+            ]
+          },
+          {
+            week: 'Semana 6',
+            title: 'Procesamiento de Recetas y Gestión de Inventario',
+            topics: [
+              'Flujo de trabajo de procesamiento de recetas',
+              'Facturación de seguros y reclamaciones',
+              'Sistemas de control de inventario',
+              'Procedimientos de pedido y recepción'
+            ]
+          },
+          {
+            week: 'Semana 7',
+            title: 'Atención al Paciente, Comunicación y Práctica Profesional',
+            topics: [
+              'Habilidades de comunicación con pacientes',
+              'HIPAA y privacidad del paciente',
+              'Ética profesional y conducta',
+              'Excelencia en servicio al cliente'
+            ]
+          },
+          {
+            week: 'Semana 8',
+            title: 'Revisión Integral de PTCE y Preparación para el Examen',
+            topics: [
+              'Descripción general y formato del examen PTCB',
+              'Revisión integral del contenido',
+              'Exámenes de práctica y estrategias de prueba',
+              'Proceso de solicitud de certificación'
+            ]
+          }
+        ],
+        salaryInfo: {
+          median: '$42,000',
+          growth: '+5%',
+          period: 'proyectado para 2032',
+          demand: 'Instantánea Rápida de Salario - Técnicos de Farmacia en California (2025)',
+          hourlyRate: '$20.19',
+          source: 'Según BLS'
+        },
+        keyFeatures: [
+          '8 Semanas de Duración',
+          'Preparación para Examen de Certificación PTCB',
+          'Totalmente en Línea y a Tu Ritmo',
+          'Perfecto para Profesionales que Trabajan',
+          'Coach de Aprendizaje y Apoyo Estudiantil',
+          'Currículo Estructurado con Soporte de Búsqueda de Empleo'
+        ],
+        approvalBadge: 'Programa de Técnico de Farmacia - Próximamente'
       }
     };
   }
