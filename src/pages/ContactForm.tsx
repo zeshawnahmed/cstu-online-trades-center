@@ -64,6 +64,19 @@ const ContactForm = () => {
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate required fields
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.programInterest || !formData.message.trim()) {
+      toast({
+        title: language === 'en' ? "Missing Required Fields" : "Campos Requeridos Faltantes",
+        description: language === 'en' 
+          ? "Please fill out all required fields before submitting." 
+          : "Por favor complete todos los campos requeridos antes de enviar.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
