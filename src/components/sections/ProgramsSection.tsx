@@ -15,7 +15,7 @@ const ProgramsSection = () => {
       description: language === 'en' 
         ? 'Master HVAC systems through comprehensive training, including EPA 608 certification and complementary hands-on workshops to become job-ready.'
         : 'Domina los sistemas HVAC a través de capacitación integral, incluyendo certificación EPA 608 y talleres prácticos complementarios para estar listo para trabajar.',
-      price: language === 'en' ? 'Affordable Flat Rate Tuition - $2500' : 'Matrícula de Tarifa Plana Asequible - $2500',
+      price: language === 'en' ? 'Affordable Tuition - $2500' : 'Matrícula Asequible - $2500',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',
       imageUrl: '/hvac-technician-program.jpg',
@@ -40,7 +40,7 @@ const ProgramsSection = () => {
       description: language === 'en' 
         ? 'Gain the skills to maintain and operate a pharmacy in just 8 weeks and begin an exciting career as a Pharmacy Technician.'
         : 'Adquiere las habilidades para mantener y operar una farmacia en solo 8 semanas y comienza una emocionante carrera como Técnico de Farmacia.',
-      price: language === 'en' ? 'Affordable Flat Rate Tuition - $2500' : 'Matrícula de Tarifa Plana Asequible - $2500',
+      price: language === 'en' ? 'Affordable Tuition - $2500' : 'Matrícula Asequible - $2500',
       duration: language === 'en' ? '8 Weeks' : '8 Semanas',
       certification: language === 'en' ? 'PTCB Certification Prep' : 'Preparación para Certificación PTCB',
       imageUrl: '/pharmacy-technician-program.jpg',

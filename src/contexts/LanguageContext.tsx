@@ -22,7 +22,7 @@ export const translations = {
     programsTitle: "Industry-Leading Skilled Trades Training",
     programsSubtitle: "Our Programs",
     programsDescription: "Our comprehensive, affordable programs prepare you for high-demand entry level careers in the skilled trades with a unique blend of online learning and practical Field/Job Site Experiences.",
-    learnMore: "Explore HVAC Curriculum",
+    learnMore: "Explore Curriculum",
     applyNowButton: "APPLY NOW",
     externshipNote: "*Externship placement assistance available upon program completion and subject to industry demand",
     
@@ -68,7 +68,7 @@ export const translations = {
     jobDemand: "Job Demand",
     whatYouWillLearn: "What You'll Learn",
     programCurriculum: "Program Curriculum",
-    curriculumDescription: "Our focused curriculum is designed to help you transition with CONFIDENCE into HVAC.",
+    curriculumDescription: "Our focused curriculum is designed to help you succeed.",
     readyToStartCareer: "Ready to Start Your Career?",
     applyNowFor: "Apply now for our",
     gainEssentialSkills: "program and gain the essential skills needed for entry level positions.",
@@ -134,7 +134,7 @@ export const translations = {
     programsTitle: "Capacitación Líder en Oficios Especializados",
     programsSubtitle: "Nuestros Programas",
     programsDescription: "Nuestros programas completos y asequibles te preparan para carreras de nivel inicial de alta demanda en oficios especializados con una combinación única de aprendizaje en línea y experiencia práctica.",
-    learnMore: "Explorar Currículo de HVAC",
+    learnMore: "Explorar Currículo",
     applyNowButton: "APLICAR AHORA",
     externshipNote: "*Asistencia para colocación en prácticas disponible al completar el programa y sujeta a la demanda de la industria",
     
