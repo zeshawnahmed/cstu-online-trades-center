@@ -45,7 +45,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "Through comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
           "Upon completion, you'll be prepared for entry level positions with EPA 608 certification training and complementary hands-on training to make you job ready."
         ],
-        price: 'Affordable Flat Rate Tuition - $2500',
+        price: 'Affordable Tuition - $2500',
         duration: 'Online Self Paced, 12 Weeks',
         certification: 'EPA 608 Certification',
         curriculum: [
@@ -185,7 +185,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "Through our fully online, self-paced curriculum, you'll learn everything from pharmacy law and drug safety to prescription processing and inventory management.",
           "Upon successful completion of the program and passing the PTCB exam, you'll be eligible to work as a California Pharmacy Technician."
         ],
-        price: 'Affordable Flat Rate Tuition - $2500',
+        price: 'Affordable Tuition - $2500',
         duration: 'Online Self Paced, 8 Weeks',
         certification: 'PTCB Certification Prep',
         curriculum: [
@@ -299,7 +299,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "A través de capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
           "Al completar, estarás preparado para puestos de nivel inicial con capacitación de certificación EPA 608 y capacitación práctica complementaria para hacerte listo para el trabajo."
         ],
-        price: 'Matrícula de Tarifa Plana Asequible - $2500',
+        price: 'Matrícula Asequible - $2500',
         duration: 'En línea a tu ritmo, 12 semanas',
         certification: 'Certificación EPA 608',
         curriculum: [
@@ -439,7 +439,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "A través de nuestro plan de estudios completamente en línea y a tu ritmo, aprenderás todo, desde la ley de farmacia y seguridad de medicamentos hasta el procesamiento de recetas y gestión de inventario.",
           "Al completar exitosamente el programa y aprobar el examen PTCB, serás elegible para trabajar como Técnico de Farmacia en California."
         ],
-        price: 'Matrícula de Tarifa Plana Asequible - $2500',
+        price: 'Matrícula Asequible - $2500',
         duration: 'En línea a tu ritmo, 8 semanas',
         certification: 'Preparación para Certificación PTCB',
         curriculum: [
@@ -595,7 +595,7 @@ const ProgramDetail = () => {
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className={`grid grid-cols-1 ${slug === 'hvac-technician' ? 'lg:grid-cols-2' : ''} gap-8 items-center`}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -620,10 +620,12 @@ const ProgramDetail = () => {
                   <Clock className="h-5 w-5 mr-2 text-gold-400" />
                   <span>{program.duration}</span>
                 </div>
-                <div className="flex items-center">
-                  <Users className="h-5 w-5 mr-2 text-gold-400" />
-                  <span>{language === 'en' ? 'Complementary Hands-On Skills Training with Qualified HVAC Professional' : 'Capacitación Complementaria de Habilidades Prácticas con Profesional HVAC Calificado'}</span>
-                </div>
+                {slug === 'hvac-technician' && (
+                  <div className="flex items-center">
+                    <Users className="h-5 w-5 mr-2 text-gold-400" />
+                    <span>{language === 'en' ? 'Complementary Hands-On Skills Training with Qualified HVAC Professional' : 'Capacitación Complementaria de Habilidades Prácticas con Profesional HVAC Calificado'}</span>
+                  </div>
+                )}
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -635,18 +637,20 @@ const ProgramDetail = () => {
               </div>
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-8 lg:mt-0"
-            >
-              <img 
-                src={cohortHvacImage} 
-                alt="HVAC Technician Cohort Students" 
-                className="rounded-lg shadow-2xl w-full h-auto object-cover"
-              />
-            </motion.div>
+            {slug === 'hvac-technician' && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="mt-8 lg:mt-0"
+              >
+                <img 
+                  src={cohortHvacImage} 
+                  alt="HVAC Technician Cohort Students" 
+                  className="rounded-lg shadow-2xl w-full h-auto object-cover"
+                />
+              </motion.div>
+            )}
           </div>
         </div>
       </section>
