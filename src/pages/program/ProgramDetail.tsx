@@ -271,12 +271,12 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           }
         ],
         salaryInfo: {
-          median: '$42,000',
+          median: '$52,900',
           growth: '+5%',
           period: 'projected by 2032',
           demand: 'Quick Salary Snapshot - Pharmacy Technicians in California (2025)',
-          hourlyRate: '$20.19',
-          source: 'According to BLS'
+          hourlyRate: '$25.43',
+          source: 'According to Indeed'
         },
         keyFeatures: [
           '8 Weeks Long',
@@ -286,7 +286,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Learning Coach & Student Support',
           'Structured Curriculum with Job Search Support'
         ],
-        approvalBadge: 'Pharmacy Tech Program - Coming Soon'
+        approvalBadge: 'Coming Soon'
       }
     };
   } else {
@@ -525,12 +525,12 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           }
         ],
         salaryInfo: {
-          median: '$42,000',
+          median: '$52,900',
           growth: '+5%',
           period: 'proyectado para 2032',
           demand: 'Instantánea Rápida de Salario - Técnicos de Farmacia en California (2025)',
-          hourlyRate: '$20.19',
-          source: 'Según BLS'
+          hourlyRate: '$25.43',
+          source: 'Según Indeed'
         },
         keyFeatures: [
           '8 Semanas de Duración',
@@ -540,7 +540,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Coach de Aprendizaje y Apoyo Estudiantil',
           'Currículo Estructurado con Soporte de Búsqueda de Empleo'
         ],
-        approvalBadge: 'Programa de Técnico de Farmacia - Próximamente'
+        approvalBadge: 'Próximamente'
       }
     };
   }
@@ -629,7 +629,7 @@ const ProgramDetail = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact">
+                <Link to="/financial-aid">
                   <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-8 py-6 text-lg">
                     {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
                   </Button>
@@ -661,7 +661,6 @@ const ProgramDetail = () => {
           <SectionHeading
             subtitle={`${program.approvalBadge} Curriculum`}
             title={t('programCurriculum')}
-            description={t('curriculumDescription')}
             centered={true}
             className="mb-12"
           />
@@ -731,7 +730,7 @@ const ProgramDetail = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/contact">
+              <Link to="/financial-aid">
                 <Button className="bg-white/90 hover:bg-white text-navy-900 font-medium px-8 py-6 text-lg w-full sm:w-auto">
                   {language === 'en' ? 'Financial Aid Assistance Available' : 'Asistencia de Ayuda Financiera Disponible'}
                 </Button>

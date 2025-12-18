@@ -183,7 +183,7 @@ const ContactForm = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                       <label htmlFor="name" className="block text-navy-700 font-medium mb-2">
-                        {language === 'en' ? "Your Name" : "Tu Nombre"}
+                        {language === 'en' ? "Your Name" : "Tu Nombre"} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
@@ -191,13 +191,14 @@ const ContactForm = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
+                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                       />
                     </div>
                     
                     <div>
                       <label htmlFor="email" className="block text-navy-700 font-medium mb-2">
-                        {language === 'en' ? "Email Address" : "Correo Electrónico"}
+                        {language === 'en' ? "Email Address" : "Correo Electrónico"} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="email"
@@ -205,13 +206,14 @@ const ContactForm = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
+                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                       />
                     </div>
                     
                     <div>
                       <label htmlFor="phone" className="block text-navy-700 font-medium mb-2">
-                        {language === 'en' ? "Phone Number" : "Número de Teléfono"}
+                        {language === 'en' ? "Phone Number" : "Número de Teléfono"} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="tel"
@@ -219,17 +221,19 @@ const ContactForm = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
+                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                       />
                     </div>
                     
                     <div>
                       <label htmlFor="programInterest" className="block text-navy-700 font-medium mb-2">
-                        {language === 'en' ? "Program of Interest" : "Programa de Interés"}
+                        {language === 'en' ? "Program of Interest" : "Programa de Interés"} <span className="text-red-500">*</span>
                       </label>
                       <Select
                         value={formData.programInterest}
                         onValueChange={(value) => setFormData(prev => ({ ...prev, programInterest: value }))}
+                        required
                       >
                         <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent bg-white">
                           <SelectValue placeholder={language === 'en' ? "Select a program" : "Selecciona un programa"} />
@@ -247,7 +251,7 @@ const ContactForm = () => {
                     
                     <div>
                       <label htmlFor="message" className="block text-navy-700 font-medium mb-2">
-                        {language === 'en' ? "Message" : "Mensaje"}
+                        {language === 'en' ? "Message" : "Mensaje"} <span className="text-red-500">*</span>
                       </label>
                       <textarea
                         id="message"
@@ -255,25 +259,10 @@ const ContactForm = () => {
                         rows={4}
                         value={formData.message}
                         onChange={handleChange}
+                        required
                         placeholder={language === 'en' ? "Please tell us more about yourself and career goals" : "Por favor cuéntanos más sobre ti y tus metas profesionales"}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                       />
-                    </div>
-                    
-                    <div className="flex items-start">
-                      <input
-                        type="checkbox"
-                        id="interestedInFinancialAid"
-                        name="interestedInFinancialAid"
-                        checked={formData.interestedInFinancialAid}
-                        onChange={handleCheckboxChange}
-                        className="h-5 w-5 text-gold-500 rounded border-gray-300 focus:ring-gold-400 mt-1"
-                      />
-                      <label htmlFor="interestedInFinancialAid" className="ml-3 block text-navy-700">
-                        {language === 'en' 
-                          ? "I'm interested in learning about financial aid options"
-                          : "Estoy interesado en conocer las opciones de ayuda financiera"}
-                      </label>
                     </div>
                     
                     <div className="flex items-start">
@@ -283,12 +272,13 @@ const ContactForm = () => {
                         name="consentToContact"
                         checked={formData.consentToContact}
                         onChange={handleCheckboxChange}
+                        required
                         className="h-5 w-5 text-gold-500 rounded border-gray-300 focus:ring-gold-400 mt-1"
                       />
                       <label htmlFor="consentToContact" className="ml-3 block text-navy-700">
                         {language === 'en' 
                           ? "Can we send you important info about our programs through email or text?"
-                          : "¿Podemos enviarte información importante sobre nuestros programas por correo electrónico o mensaje de texto?"}
+                          : "¿Podemos enviarte información importante sobre nuestros programas por correo electrónico o mensaje de texto?"} <span className="text-red-500">*</span>
                       </label>
                     </div>
                     
