@@ -281,7 +281,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         keyFeatures: [
           '8 Weeks Long',
           'Prepare for PTCB Certification Exam',
-          'Fully Online & Self-Paced',
+          'Fully Online, Self-Paced, & Structured',
           'Perfect for Working Professionals',
           'Learning Coach & Student Support',
           'Structured Curriculum with Job Search Support'
