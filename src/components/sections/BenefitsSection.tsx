@@ -35,7 +35,7 @@ const BenefitsSection = () => {
     {
       icon: ListChecks,
       title: 'Career Support',
-      description: 'Access job search coaching, resume building, and interview preparation resources.',
+      description: 'Access job search support, resume building, and interview preparation resources.',
     },
   ];
 
