@@ -49,7 +49,7 @@ const ProgramsSection = () => {
       keyFeatures: [
         language === 'en' ? '8 Weeks Long' : '8 Semanas de Duración',
         language === 'en' ? 'Prepare for PTCB Certification Exam' : 'Preparación para Examen de Certificación PTCB',
-        language === 'en' ? 'Fully Online, Self-Paced, & Structured' : 'Totalmente en Línea, a Tu Ritmo y Estructurado',
+        language === 'en' ? 'Fully Online and Weekly Structure' : 'Totalmente en Línea con Estructura Semanal',
         language === 'en' ? 'Learning Coach & Student Support' : 'Coach de Aprendizaje y Apoyo Estudiantil',
         language === 'en' ? 'Job Search Support Included' : 'Soporte de Búsqueda de Empleo Incluido',
         language === 'en' ? 'Eligible to work as CA Pharmacy Tech after program & passing PTCB exam' : 'Elegible para trabajar como Técnico de Farmacia en CA después del programa y aprobar examen PTCB'
@@ -107,6 +107,15 @@ const ProgramsSection = () => {
                 className="bg-gold-400 hover:bg-gold-500 text-navy-800 font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-lg sm:text-xl w-full sm:w-auto min-w-[280px]"
               >
                 {language === 'en' ? 'Financial Aid Assistance' : 'Asistencia de Ayuda Financiera'}
+              </motion.button>
+            </Link>
+            <Link to="/alumni">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-navy-700 hover:bg-navy-600 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-lg text-base sm:text-lg w-full sm:w-auto min-w-[280px]"
+              >
+                {language === 'en' ? 'Alumni Portal Login' : 'Inicio de Sesión Portal de Exalumnos'}
               </motion.button>
             </Link>
           </div>
