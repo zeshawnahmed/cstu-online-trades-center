@@ -17,7 +17,10 @@ const NewsTicker = () => {
         : "Cohorte de Otoño 2025 Iniciando, Contacta Admisiones Hoy",
       language === 'en'
         ? "Proudly Serving Greater Sacramento Region"
-        : "Orgullosamente Sirviendo a la Gran Región de Sacramento"
+        : "Orgullosamente Sirviendo a la Gran Región de Sacramento",
+      language === 'en'
+        ? "New Years Alumni Luncheon coming soon, details in Alumni Portal"
+        : "Almuerzo de Año Nuevo para Exalumnos próximamente, detalles en el Portal de Exalumnos"
   ];
 
   return (
