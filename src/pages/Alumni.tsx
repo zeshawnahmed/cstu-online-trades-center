@@ -108,10 +108,6 @@ const Alumni = () => {
             </CardContent>
           </Card>
 
-          {/* Footer */}
-          <p className="text-center text-white/50 text-xs mt-6">
-            © {new Date().getFullYear()} American Institute of Technology. All rights reserved.
-          </p>
         </motion.div>
       </main>
     </div>
