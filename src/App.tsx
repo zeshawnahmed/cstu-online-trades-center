@@ -18,6 +18,7 @@ import AirConditioningTraining from "./pages/seo/AirConditioningTraining";
 import VocationalTraining from "./pages/seo/VocationalTraining";
 import HVACCareersSacramento from "./pages/seo/HVACCareersSacramento";
 import FAQPage from "./pages/seo/FAQPage";
+import Alumni from "./pages/Alumni";
 import { motion, AnimatePresence } from "framer-motion";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
@@ -46,6 +47,7 @@ const App = () => (
               <Route path="/vocational-training-sacramento" element={<VocationalTraining />} />
               <Route path="/hvac-careers-sacramento" element={<HVACCareersSacramento />} />
               <Route path="/faq" element={<FAQPage />} />
+              <Route path="/alumni" element={<Alumni />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
