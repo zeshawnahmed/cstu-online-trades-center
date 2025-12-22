@@ -26,8 +26,9 @@ const ContactForm = () => {
     phone: '',
     message: '',
     programInterest: '',
-    interestedInFinancialAid: false,
-    consentToContact: false
+    howDidYouHear: '',
+    referrerName: '',
+    referralCode: '',
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -57,16 +58,19 @@ const ContactForm = () => {
     }
   };
   
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-    setFormData(prev => ({ ...prev, [name]: checked }));
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Reset referral fields if not "referred"
+    if (name === 'howDidYouHear' && value !== 'referred') {
+      setFormData(prev => ({ ...prev, referrerName: '', referralCode: '' }));
+    }
   };
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validate required fields
-    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.programInterest || !formData.message.trim()) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.programInterest || !formData.message.trim() || !formData.howDidYouHear) {
       toast({
         title: language === 'en' ? "Missing Required Fields" : "Campos Requeridos Faltantes",
         description: language === 'en' 
@@ -91,8 +95,9 @@ const ContactForm = () => {
           phone: formData.phone,
           message: formData.message,
           programInterest: formData.programInterest,
-          interestedInFinancialAid: formData.interestedInFinancialAid,
-          consentToContact: formData.consentToContact,
+          howDidYouHear: formData.howDidYouHear,
+          referrerName: formData.referrerName,
+          referralCode: formData.referralCode,
         }),
       });
 
@@ -278,21 +283,62 @@ const ContactForm = () => {
                       />
                     </div>
                     
-                    <div className="flex items-start">
-                      <input
-                        type="checkbox"
-                        id="consentToContact"
-                        name="consentToContact"
-                        checked={formData.consentToContact}
-                        onChange={handleCheckboxChange}
-                        className="h-5 w-5 text-gold-500 rounded border-gray-300 focus:ring-gold-400 mt-1"
-                      />
-                      <label htmlFor="consentToContact" className="ml-3 block text-navy-700">
-                        {language === 'en' 
-                          ? "Can we send you important info about our programs through email or text?"
-                          : "¿Podemos enviarte información importante sobre nuestros programas por correo electrónico o mensaje de texto?"}
+                    <div>
+                      <label htmlFor="howDidYouHear" className="block text-navy-700 font-medium mb-2 text-sm sm:text-base">
+                        {language === 'en' ? "How did you learn about us?" : "¿Cómo te enteraste de nosotros?"} <span className="text-red-500">*</span>
                       </label>
+                      <Select
+                        value={formData.howDidYouHear}
+                        onValueChange={(value) => handleSelectChange('howDidYouHear', value)}
+                        required
+                      >
+                        <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent bg-white">
+                          <SelectValue placeholder={language === 'en' ? "Select an option" : "Selecciona una opción"} />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white border border-gray-300 shadow-lg z-50">
+                          <SelectItem value="craigslist">Craigslist</SelectItem>
+                          <SelectItem value="indeed">Indeed</SelectItem>
+                          <SelectItem value="school-counselor">{language === 'en' ? 'School Counselor' : 'Consejero Escolar'}</SelectItem>
+                          <SelectItem value="facebook">Facebook</SelectItem>
+                          <SelectItem value="instagram">Instagram</SelectItem>
+                          <SelectItem value="referred">{language === 'en' ? 'I was Referred' : 'Fui Referido'}</SelectItem>
+                          <SelectItem value="other">{language === 'en' ? 'Other' : 'Otro'}</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
+                    
+                    {formData.howDidYouHear === 'referred' && (
+                      <div className="space-y-4 p-4 bg-gold-50 border border-gold-200 rounded-lg">
+                        <div>
+                          <label htmlFor="referrerName" className="block text-navy-700 font-medium mb-2 text-sm sm:text-base">
+                            {language === 'en' ? "Who referred you?" : "¿Quién te refirió?"}
+                          </label>
+                          <input
+                            type="text"
+                            id="referrerName"
+                            name="referrerName"
+                            value={formData.referrerName}
+                            onChange={handleChange}
+                            placeholder={language === 'en' ? "Enter referrer's name" : "Ingresa el nombre de quien te refirió"}
+                            className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="referralCode" className="block text-navy-700 font-medium mb-2 text-sm sm:text-base">
+                            {language === 'en' ? "Referral Code (if applicable)" : "Código de Referido (si aplica)"}
+                          </label>
+                          <input
+                            type="text"
+                            id="referralCode"
+                            name="referralCode"
+                            value={formData.referralCode}
+                            onChange={handleChange}
+                            placeholder={language === 'en' ? "Enter referral code" : "Ingresa el código de referido"}
+                            className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
+                          />
+                        </div>
+                      </div>
+                    )}
                     
                     <div className="pt-4">
                       <Button 

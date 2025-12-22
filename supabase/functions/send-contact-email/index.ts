@@ -16,8 +16,9 @@ interface ContactEmailRequest {
   phone?: string;
   message: string;
   programInterest?: string;
-  interestedInFinancialAid: boolean;
-  consentToContact?: boolean;
+  howDidYouHear?: string;
+  referrerName?: string;
+  referralCode?: string;
 }
 
 const getProgramName = (slug: string): string => {
@@ -28,6 +29,19 @@ const getProgramName = (slug: string): string => {
   return programs[slug] || slug || 'Not specified';
 };
 
+const getHowDidYouHearLabel = (value: string): string => {
+  const options: Record<string, string> = {
+    'craigslist': 'Craigslist',
+    'indeed': 'Indeed',
+    'school-counselor': 'School Counselor',
+    'facebook': 'Facebook',
+    'instagram': 'Instagram',
+    'referred': 'I was Referred',
+    'other': 'Other',
+  };
+  return options[value] || value || 'Not specified';
+};
+
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -35,9 +49,9 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, phone, message, programInterest, interestedInFinancialAid, consentToContact }: ContactEmailRequest = await req.json();
+    const { name, email, phone, message, programInterest, howDidYouHear, referrerName, referralCode }: ContactEmailRequest = await req.json();
 
-    console.log("Received contact form submission:", { name, email, programInterest, interestedInFinancialAid });
+    console.log("Received contact form submission:", { name, email, programInterest, howDidYouHear, referrerName, referralCode });
 
     // Initialize Supabase client with service role key to bypass RLS
     const supabaseClient = createClient(
@@ -65,19 +79,33 @@ const handler = async (req: Request): Promise<Response> => {
 
     const programName = getProgramName(programInterest || '');
 
+    const howDidYouHearLabel = getHowDidYouHearLabel(howDidYouHear || '');
+    
+    // Build referral info section if applicable
+    let referralInfoHtml = '';
+    if (howDidYouHear === 'referred') {
+      referralInfoHtml = `
+        <div style="background-color: #FEF3C7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="margin: 0 0 10px 0; color: #92400E;">📋 Referral Information</h3>
+          <p style="margin: 5px 0;"><strong>Referrer Name:</strong> ${referrerName || 'Not provided'}</p>
+          <p style="margin: 5px 0;"><strong>Referral Code:</strong> ${referralCode || 'Not provided'}</p>
+        </div>
+      `;
+    }
+
     // Send email to zeshawn.a@gmail.com
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: ["zeshawn.a@gmail.com"],
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `New Contact Form Submission from ${name}${howDidYouHear === 'referred' ? ' (REFERRAL)' : ''}`,
       html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
         <p><strong>Program of Interest:</strong> ${programName}</p>
-        <p><strong>Interested in Financial Aid:</strong> ${interestedInFinancialAid ? 'Yes' : 'No'}</p>
-        <p><strong>Consent to Receive Info via Email/Text:</strong> ${consentToContact ? 'Yes' : 'No'}</p>
+        <p><strong>How They Found Us:</strong> ${howDidYouHearLabel}</p>
+        ${referralInfoHtml}
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
         <hr>
