@@ -29,6 +29,7 @@ const ContactForm = () => {
     howDidYouHear: '',
     referrerName: '',
     referralCode: '',
+    otherSource: '',
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -60,9 +61,14 @@ const ContactForm = () => {
   
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }));
-    // Reset referral fields if not "referred"
-    if (name === 'howDidYouHear' && value !== 'referred') {
-      setFormData(prev => ({ ...prev, referrerName: '', referralCode: '' }));
+    // Reset conditional fields based on selection
+    if (name === 'howDidYouHear') {
+      if (value !== 'referred') {
+        setFormData(prev => ({ ...prev, [name]: value, referrerName: '', referralCode: '' }));
+      }
+      if (value !== 'other') {
+        setFormData(prev => ({ ...prev, [name]: value, otherSource: '' }));
+      }
     }
   };
   
@@ -98,6 +104,7 @@ const ContactForm = () => {
           howDidYouHear: formData.howDidYouHear,
           referrerName: formData.referrerName,
           referralCode: formData.referralCode,
+          otherSource: formData.otherSource,
         }),
       });
 
@@ -340,9 +347,26 @@ const ContactForm = () => {
                       </div>
                     )}
                     
+                    {formData.howDidYouHear === 'other' && (
+                      <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                        <label htmlFor="otherSource" className="block text-navy-700 font-medium mb-2 text-sm sm:text-base">
+                          {language === 'en' ? "Please specify where you learned about us" : "Por favor especifica dónde te enteraste de nosotros"}
+                        </label>
+                        <input
+                          type="text"
+                          id="otherSource"
+                          name="otherSource"
+                          value={formData.otherSource}
+                          onChange={handleChange}
+                          placeholder={language === 'en' ? "e.g., Friend, YouTube, Google, etc." : "ej., Amigo, YouTube, Google, etc."}
+                          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
+                        />
+                      </div>
+                    )}
+                    
                     <div className="pt-4">
                       <Button 
-                        type="submit" 
+                        type="submit"
                         className="w-full bg-gold-400 hover:bg-gold-500 text-navy-900 font-bold text-lg py-6"
                         disabled={isSubmitting}
                       >

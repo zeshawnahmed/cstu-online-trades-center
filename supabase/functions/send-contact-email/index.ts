@@ -19,6 +19,7 @@ interface ContactEmailRequest {
   howDidYouHear?: string;
   referrerName?: string;
   referralCode?: string;
+  otherSource?: string;
 }
 
 const getProgramName = (slug: string): string => {
@@ -49,9 +50,9 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, phone, message, programInterest, howDidYouHear, referrerName, referralCode }: ContactEmailRequest = await req.json();
+    const { name, email, phone, message, programInterest, howDidYouHear, referrerName, referralCode, otherSource }: ContactEmailRequest = await req.json();
 
-    console.log("Received contact form submission:", { name, email, programInterest, howDidYouHear, referrerName, referralCode });
+    console.log("Received contact form submission:", { name, email, programInterest, howDidYouHear, referrerName, referralCode, otherSource });
 
     // Initialize Supabase client with service role key to bypass RLS
     const supabaseClient = createClient(
@@ -67,7 +68,7 @@ const handler = async (req: Request): Promise<Response> => {
         email,
         phone,
         message,
-        interested_in_financial_aid: interestedInFinancialAid,
+        interested_in_financial_aid: false,
       })
       .select()
       .single();
@@ -79,7 +80,11 @@ const handler = async (req: Request): Promise<Response> => {
 
     const programName = getProgramName(programInterest || '');
 
-    const howDidYouHearLabel = getHowDidYouHearLabel(howDidYouHear || '');
+    // Build the "How they found us" display text
+    let howDidYouHearDisplay = getHowDidYouHearLabel(howDidYouHear || '');
+    if (howDidYouHear === 'other' && otherSource) {
+      howDidYouHearDisplay = `Other: ${otherSource}`;
+    }
     
     // Build referral info section if applicable
     let referralInfoHtml = '';
@@ -104,7 +109,7 @@ const handler = async (req: Request): Promise<Response> => {
         <p><strong>Email:</strong> ${email}</p>
         ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
         <p><strong>Program of Interest:</strong> ${programName}</p>
-        <p><strong>How They Found Us:</strong> ${howDidYouHearLabel}</p>
+        <p><strong>How They Found Us:</strong> ${howDidYouHearDisplay}</p>
         ${referralInfoHtml}
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
