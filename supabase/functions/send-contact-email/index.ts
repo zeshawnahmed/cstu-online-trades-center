@@ -188,7 +188,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         <ul>
           <li>100 percent online and self paced built for working adults</li>
-          <li>Job search support near graduation including résumé guidance and sharing your résumé with local employers</li>
+          <li>Job search support near graduation including résumé guidance and sharing your profile with local employers</li>
           <li>Complimentary twice monthly hands on skills workshops near UC Davis Medical Center</li>
         </ul>
         
