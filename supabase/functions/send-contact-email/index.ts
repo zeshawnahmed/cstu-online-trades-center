@@ -112,34 +112,32 @@ const handler = async (req: Request): Promise<Response> => {
     `;
     
     if (programInterest === 'pharmacy-technician') {
-      userSubject = "California Pharmacy Technician Program AIT - Next Steps";
+      userSubject = "Pharmacy Technician Program – Next Steps";
       userEmailContent = `
-        <p>Thank you for your interest in the Pharmacy Technician Program at American Institute of Trades (AIT) in Sacramento, CA</p>
+        <p>Thank you for your interest in the Pharmacy Technician Program at American Institute of Trades (AIT) in Sacramento CA. I'm glad you reached out.</p>
         
-        <p>Our next start date is 1/1/26.</p>
-        
-        <p><a href="https://www.levelupait.com">https://www.levelupait.com</a></p>
+        <p>Our next program start date is January 1, 2026.</p>
         
         <h3>What You'll Learn</h3>
         
-        <p>This program is recognized by the Pharmacy Technician Certification Board (PTCB) and prepares you to sit for the Pharmacy Technician Certification Board Exam (PTCE) and covers:</p>
+        <p>This program is recognized by the Pharmacy Technician Certification Board (PTCB) and prepares you to sit for the Pharmacy Technician Certification Exam (PTCE). You'll receive training in:</p>
         
         <ul>
-          <li>Federal pharmacy law & regulations</li>
+          <li>Federal pharmacy law and regulations</li>
           <li>Medication safety and error prevention</li>
           <li>Pharmacology and drug classifications</li>
           <li>Pharmacy calculations</li>
           <li>Prescription processing and pharmacy workflow</li>
         </ul>
         
-        <p>Full curriculum available at <a href="https://www.levelupait.com">https://www.levelupait.com</a>.</p>
+        <p>You can view the full curriculum on our website: <a href="https://www.levelupait.com">www.levelupait.com</a>. Everything is designed to help you feel confident and exam ready.</p>
         
         <h3>Program Format</h3>
         
         <ul>
-          <li>100% online, self-paced, asynchronous</li>
-          <li>Designed for working adults</li>
-          <li>Job-search support near program completion</li>
+          <li>100 percent online and self paced asynchronous</li>
+          <li>Built for working adults</li>
+          <li>Job search support near program completion</li>
         </ul>
         
         <h3>Tuition</h3>
@@ -148,25 +146,21 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>Next Steps</h3>
         
-        <p><strong>1.</strong> Reply to this email confirming your interest and which payment option you would like to move forward with:</p>
+        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward with enrollment. If that's you, please reply confirming your tuition payment option below and I'll send the Enrollment Agreement and tuition payment instructions.</p>
+        
         <ul>
-          <li>Option 1: Pay $2,500 upfront</li>
-          <li>Option 2: Payment plan — 3 payments of $833.33</li>
+          <li>Option 1: Full tuition payment of $2,500</li>
+          <li>Option 2: Tuition payment plan with 3 payments of $833.33</li>
         </ul>
         
-        <p><strong>2.</strong> Once confirmed, I'll send your Enrollment Agreement and deposit instructions to secure your seat and we will also find time to chat.</p>
+        <p>Access to online program materials is provided once the Enrollment Agreement and initial tuition payment are complete. Remaining tuition payments are due per the selected tuition payment option and outlined in the Enrollment Agreement. We will also schedule time to connect after enrollment is confirmed.</p>
         
-        <p>Access to online program materials is granted only after the Enrollment Agreement and deposit are received. Remaining tuition is due per the selected payment option and outlined in the Enrollment Agreement.</p>
+        <p>If you have any questions feel free to reply to this email or call or text me at 916-365-6907. I'm happy to help.</p>
         
-        <p>If you have any questions, feel free to email me back or call at 916-365-6907.</p>
+        <p>Additional financial aid and tuition payment assistance options are available on our website.</p>
         
-        <p>Additional financial aid and payment assistance options are available on our website:</p>
-        
-        <p><a href="https://www.levelupait.com">https://www.levelupait.com</a></p>
-        
-        <p>Best regards,</p>
-        
-        <p><strong>Shawn</strong><br>
+        <p>Best regards<br>
+        <strong>Shawn</strong><br>
         Pharmacy Technician Program Director<br>
         American Institute of Trades (AIT)</p>
       `;
