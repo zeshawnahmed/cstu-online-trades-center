@@ -121,8 +121,11 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Admin email sent successfully:", emailResponse);
 
     // Send program-specific email to the user based on their program interest
+    let userEmailResponse = null;
+    
     if (programInterest === 'pharmacy-technician') {
-      await resend.emails.send({
+      console.log("Sending Pharmacy Technician email to:", email);
+      userEmailResponse = await resend.emails.send({
         from: "American Institute of Trades <onboarding@resend.dev>",
         to: [email],
         subject: "California Pharmacy Technician Program AIT - Next Steps",
@@ -184,9 +187,10 @@ const handler = async (req: Request): Promise<Response> => {
           American Institute of Trades (AIT)</p>
         `,
       });
-      console.log("Pharmacy Technician program email sent to user");
+      console.log("Pharmacy Technician email response:", userEmailResponse);
     } else if (programInterest === 'hvac-technician') {
-      await resend.emails.send({
+      console.log("Sending HVAC email to:", email);
+      userEmailResponse = await resend.emails.send({
         from: "American Institute of Trades <onboarding@resend.dev>",
         to: [email],
         subject: "HVAC Technician Program – Next Steps",
@@ -258,7 +262,13 @@ const handler = async (req: Request): Promise<Response> => {
           <a href="https://www.levelupait.com">www.levelupait.com</a></p>
         `,
       });
-      console.log("HVAC program email sent to user");
+      console.log("HVAC email response:", userEmailResponse);
+    } else {
+      console.log("No program-specific email sent - programInterest:", programInterest);
+    }
+    
+    if (userEmailResponse?.error) {
+      console.error("Error sending user email:", userEmailResponse.error);
     }
 
     return new Response(JSON.stringify({
