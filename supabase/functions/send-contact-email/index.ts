@@ -118,26 +118,150 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Admin email sent successfully:", emailResponse);
 
-    // Send confirmation email to the user
-    await resend.emails.send({
-      from: "American Institute of Trades <onboarding@resend.dev>",
-      to: [email],
-      subject: "Thank you for contacting AIT!",
-      html: `
-        <h2>Thank you for your message, ${name}!</h2>
-        <p>We have received your contact form submission and an admissions representative will be in touch with you soon.</p>
-        <p><strong>Program of Interest:</strong> ${programName}</p>
-        <p>Here's a copy of what you sent:</p>
-        <blockquote style="border-left: 4px solid #ccc; padding-left: 16px; margin: 16px 0;">
-          ${message.replace(/\n/g, '<br>')}
-        </blockquote>
-        <p>Best regards,<br>The American Institute of Trades Team</p>
-      `,
-    });
+    // Send program-specific email to the user based on their program interest
+    if (programInterest === 'pharmacy-technician') {
+      await resend.emails.send({
+        from: "American Institute of Trades <onboarding@resend.dev>",
+        to: [email],
+        subject: "California Pharmacy Technician Program AIT - Next Steps",
+        html: `
+          <p>Thank you for your interest in the Pharmacy Technician Program at American Institute of Trades (AIT) in Sacramento, CA</p>
+          
+          <p>Our next start date is 1/1/26.</p>
+          
+          <p><a href="https://www.levelupait.com">https://www.levelupait.com</a></p>
+          
+          <h3>What You'll Learn</h3>
+          
+          <p>This program is recognized by the Pharmacy Technician Certification Board (PTCB) and prepares you to sit for the Pharmacy Technician Certification Board Exam (PTCE) and covers:</p>
+          
+          <ul>
+            <li>Federal pharmacy law & regulations</li>
+            <li>Medication safety and error prevention</li>
+            <li>Pharmacology and drug classifications</li>
+            <li>Pharmacy calculations</li>
+            <li>Prescription processing and pharmacy workflow</li>
+          </ul>
+          
+          <p>Full curriculum available at <a href="https://www.levelupait.com">https://www.levelupait.com</a>.</p>
+          
+          <h3>Program Format</h3>
+          
+          <ul>
+            <li>100% online, self-paced, asynchronous</li>
+            <li>Designed for working adults</li>
+            <li>Job-search support near program completion</li>
+          </ul>
+          
+          <h3>Tuition</h3>
+          
+          <p>Total program cost: $2,500</p>
+          
+          <h3>Next Steps</h3>
+          
+          <p><strong>1.</strong> Reply to this email confirming your interest and which payment option you would like to move forward with:</p>
+          <ul>
+            <li>Option 1: Pay $2,500 upfront</li>
+            <li>Option 2: Payment plan — 3 payments of $833.33</li>
+          </ul>
+          
+          <p><strong>2.</strong> Once confirmed, I'll send your Enrollment Agreement and deposit instructions to secure your seat and we will also find time to chat.</p>
+          
+          <p>Access to online program materials is granted only after the Enrollment Agreement and deposit are received. Remaining tuition is due per the selected payment option and outlined in the Enrollment Agreement.</p>
+          
+          <p>If you have any questions, feel free to email me back or call at 916-365-6907.</p>
+          
+          <p>Additional financial aid and payment assistance options are available on our website:</p>
+          
+          <p><a href="https://www.levelupait.com">https://www.levelupait.com</a></p>
+          
+          <p>Best regards,</p>
+          
+          <p><strong>Shawn</strong><br>
+          Pharmacy Technician Program Director<br>
+          American Institute of Trades (AIT)</p>
+        `,
+      });
+      console.log("Pharmacy Technician program email sent to user");
+    } else if (programInterest === 'hvac-technician') {
+      await resend.emails.send({
+        from: "American Institute of Trades <onboarding@resend.dev>",
+        to: [email],
+        subject: "HVAC Technician Program – Next Steps",
+        html: `
+          <p>Thank you for your interest in the HVAC Technician Program at American Institute of Trades (AIT) in Sacramento, CA. I'm glad you reached out.</p>
+          
+          <p>Website: <a href="https://www.levelupait.com">www.levelupait.com</a></p>
+          
+          <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
+          
+          <h3>What You'll Learn</h3>
+          
+          <p>In this 12-week program, you'll build a strong HVAC foundation, including:</p>
+          <ul>
+            <li>Basics of electricity</li>
+            <li>Safety, tools, and core HVAC systems</li>
+            <li>Diagnostics and troubleshooting</li>
+            <li>Refrigeration fundamentals</li>
+            <li>EPA 608 exam preparation</li>
+          </ul>
+          
+          <p>Full curriculum available on our website.</p>
+          
+          <p>This program is designed to help you feel confident and job-ready.</p>
+          
+          <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
+          
+          <h3>Why AIT</h3>
+          
+          <p>We're a community-focused school working with experienced Sacramento-area HVAC professionals who care about helping new technicians enter the trade.</p>
+          <ul>
+            <li>100% online, self-paced, built for working adults</li>
+            <li>Job-search support near graduation, including resume guidance and sharing your résumé with local employers</li>
+            <li>Complimentary, twice-monthly hands-on skills workshops near UC Davis Medical Center</li>
+          </ul>
+          
+          <p><em>Because these depend on instructor availability (many who work full time or own their own HVAC businesses) these are offered as a bonus opportunity and not a guaranteed or refundable portion of tuition. However, we strive to hold these regularly.</em></p>
+          
+          <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
+          
+          <h3>Tuition</h3>
+          
+          <p>Total cost: $2,500</p>
+          
+          <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
+          
+          <h3>Next Steps</h3>
+          
+          <p><strong>1.</strong> Reply to confirm your interest and choose a payment option:</p>
+          <ul>
+            <li>Option 1: $2,500 paid in full</li>
+            <li>Option 2: Payment plan — 3 payments of $833.33</li>
+          </ul>
+          
+          <p><strong>2.</strong> I'll send your Enrollment Agreement and payment instructions.</p>
+          
+          <p><strong>3.</strong> Access to online materials is provided once enrollment and payment are complete.</p>
+          
+          <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
+          
+          <p>If you have any questions, feel free to call me at 916-365-6907. I'm happy to help.</p>
+          
+          <p>Financial aid options are available on our website.</p>
+          
+          <p>Best regards,<br>
+          <strong>Shawn</strong><br>
+          Program Director<br>
+          American Institute of Trades (AIT)<br>
+          <a href="https://www.levelupait.com">www.levelupait.com</a></p>
+        `,
+      });
+      console.log("HVAC program email sent to user");
+    }
 
-    return new Response(JSON.stringify({ 
+    return new Response(JSON.stringify({
       success: true, 
       submissionId: submission.id,
       emailId: emailResponse.data?.id 
