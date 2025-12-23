@@ -243,7 +243,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send admin notification email
     const adminEmailResponse = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
+      from: "Contact Form <admin@levelupait.com>",
       to: ["zeshawn.a@gmail.com"],
       subject: `New Contact Form Submission from ${name}${howDidYouHear === 'referred' ? ' (REFERRAL)' : ''}`,
       html: `
@@ -266,7 +266,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send the program-specific email to the user
     console.log("Sending user email to:", email, "with subject:", userSubject);
     const userEmailResponse = await resend.emails.send({
-      from: "American Institute of Trades <onboarding@resend.dev>",
+      from: "American Institute of Trades <admin@levelupait.com>",
       to: [email],
       subject: userSubject,
       html: userEmailContent,
