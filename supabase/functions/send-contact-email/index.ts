@@ -173,71 +173,56 @@ const handler = async (req: Request): Promise<Response> => {
     } else if (programInterest === 'hvac-technician') {
       userSubject = "HVAC Technician Program – Next Steps";
       userEmailContent = `
-        <p>Thank you for your interest in the HVAC Technician Program at American Institute of Trades (AIT) in Sacramento, CA. I'm glad you reached out.</p>
-        
-        <p>Website: <a href="https://www.levelupait.com">www.levelupait.com</a></p>
-        
-        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
+        <p>Thank you for your interest in the HVAC Technician Program at American Institute of Trades (AIT) in Sacramento CA. I'm glad you reached out.</p>
         
         <h3>What You'll Learn</h3>
         
-        <p>In this 12-week program, you'll build a strong HVAC foundation, including:</p>
+        <p>In this 12 week program you'll build a strong foundation in HVAC including:</p>
         <ul>
           <li>Basics of electricity</li>
-          <li>Safety, tools, and core HVAC systems</li>
+          <li>Safety tools and core HVAC systems</li>
           <li>Diagnostics and troubleshooting</li>
           <li>Refrigeration fundamentals</li>
           <li>EPA 608 exam preparation</li>
         </ul>
         
-        <p>Full curriculum available on our website.</p>
-        
-        <p>This program is designed to help you feel confident and job-ready.</p>
-        
-        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
+        <p>You can view the full curriculum on our website: <a href="https://www.levelupait.com">www.levelupait.com</a>. Everything is designed to help you feel confident and job ready.</p>
         
         <h3>Why AIT</h3>
         
-        <p>We're a community-focused school working with experienced Sacramento-area HVAC professionals who care about helping new technicians enter the trade.</p>
+        <p>We're a community focused trade school working with experienced Sacramento area HVAC professionals who genuinely care about helping new technicians enter the trade.</p>
+        
         <ul>
-          <li>100% online, self-paced, built for working adults</li>
-          <li>Job-search support near graduation, including resume guidance and sharing your résumé with local employers</li>
-          <li>Complimentary, twice-monthly hands-on skills workshops near UC Davis Medical Center</li>
+          <li>100 percent online and self paced built for working adults</li>
+          <li>Job search support near graduation including résumé guidance and sharing your résumé with local employers</li>
+          <li>Complimentary twice monthly hands on skills workshops near UC Davis Medical Center</li>
         </ul>
         
-        <p><em>Because these depend on instructor availability (many who work full time or own their own HVAC businesses) these are offered as a bonus opportunity and not a guaranteed or refundable portion of tuition. However, we strive to hold these regularly.</em></p>
-        
-        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
+        <p><em>Currently, hands on workshops are offered as a bonus opportunity and are not a guaranteed or refundable portion of tuition as they depend on instructor collaborator availability. Many of our instructor collaborators work full time in the field or own their own HVAC businesses. That said, we strive and anticipate to hold these workshops regularly.</em></p>
         
         <h3>Tuition</h3>
         
         <p>Total cost: $2,500</p>
         
-        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
-        
         <h3>Next Steps</h3>
         
-        <p><strong>1.</strong> Reply to confirm your interest and choose a payment option:</p>
+        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward with enrollment. If that's you, please reply confirming your tuition payment option below and I'll send the Enrollment Agreement and tuition payment instructions.</p>
+        
         <ul>
-          <li>Option 1: $2,500 paid in full</li>
-          <li>Option 2: Payment plan — 3 payments of $833.33</li>
+          <li>Option 1: Full tuition payment of $2,500</li>
+          <li>Option 2: Tuition payment plan with 3 payments of $833.33</li>
         </ul>
         
-        <p><strong>2.</strong> I'll send your Enrollment Agreement and payment instructions.</p>
+        <p>Access to the online materials is provided once enrollment and tuition payment are complete.</p>
         
-        <p><strong>3.</strong> Access to online materials is provided once enrollment and payment are complete.</p>
+        <p>If you have any questions feel free to call or text me at 916-365-6907. I'm happy to help.</p>
         
-        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;">
+        <p>Additional financial aid options are available on our website.</p>
         
-        <p>If you have any questions, feel free to call me at 916-365-6907. I'm happy to help.</p>
-        
-        <p>Financial aid options are available on our website.</p>
-        
-        <p>Best regards,<br>
+        <p>Best regards<br>
         <strong>Shawn</strong><br>
         Program Director<br>
-        American Institute of Trades (AIT)<br>
-        <a href="https://www.levelupait.com">www.levelupait.com</a></p>
+        American Institute of Trades (AIT)</p>
       `;
     }
 
