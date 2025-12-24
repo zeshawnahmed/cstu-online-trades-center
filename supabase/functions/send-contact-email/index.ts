@@ -114,13 +114,13 @@ const handler = async (req: Request): Promise<Response> => {
     if (programInterest === 'pharmacy-technician') {
       userSubject = "Pharmacy Technician Program – Next Steps";
       userEmailContent = `
-        <p>Thank you for your interest in the Pharmacy Technician Program at American Institute of Trades (AIT) in Sacramento CA. I'm glad you reached out.</p>
+        <p>Thank you for your interest in the Pharmacy Technician Program at American Institute of Trades (AIT) in Sacramento, CA. We're glad you reached out.</p>
         
         <p>Our next program start date is January 1, 2026.</p>
         
         <h3>What You'll Learn</h3>
         
-        <p>This program is recognized by the Pharmacy Technician Certification Board (PTCB) and prepares you to sit for the Pharmacy Technician Certification Exam (PTCE). You'll receive training in:</p>
+        <p>This program is recognized by the Pharmacy Technician Certification Board (PTCB) and prepares students to sit for the Pharmacy Technician Certification Exam (PTCE). The curriculum includes:</p>
         
         <ul>
           <li>Federal pharmacy law and regulations</li>
@@ -130,93 +130,104 @@ const handler = async (req: Request): Promise<Response> => {
           <li>Prescription processing and pharmacy workflow</li>
         </ul>
         
-        <p>You can view the full curriculum on our website: <a href="https://www.levelupait.com">www.levelupait.com</a>. Everything is designed to help you feel confident and exam ready.</p>
+        <p>The full curriculum is available on our website: <a href="https://www.levelupait.com">www.levelupait.com</a>.<br>
+        All coursework is designed to help students feel confident and exam-ready.</p>
         
         <h3>Program Format</h3>
         
         <ul>
-          <li>100 percent online and self paced asynchronous</li>
-          <li>Built for working adults</li>
-          <li>Job search support near program completion</li>
+          <li>100% online, self-paced, asynchronous</li>
+          <li>Designed for working adults</li>
+          <li>Job search support provided near program completion</li>
         </ul>
         
         <h3>Tuition</h3>
         
-        <p>Total program cost: $2,500</p>
+        <ul>
+          <li>Total program cost: $2,500</li>
+        </ul>
         
         <h3>Next Steps</h3>
         
-        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward with enrollment. If that's you, please reply confirming your tuition payment option below and I'll send the Enrollment Agreement and tuition payment instructions.</p>
+        <p>To keep the enrollment process efficient, we work with students who are ready to move forward. If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</p>
         
-        <ul>
-          <li>Option 1: Full tuition payment of $2,500</li>
-          <li>Option 2: Tuition payment plan with 3 payments of $833.33</li>
-        </ul>
+        <p>Option 1: Full tuition payment of $2,500<br>
+        Option 2: Tuition payment plan — 3 payments of $833.33</p>
         
-        <p>Access to online program materials is provided once the Enrollment Agreement and initial tuition payment are complete. Remaining tuition payments are due per the selected tuition payment option and outlined in the Enrollment Agreement. We will also schedule time to connect after enrollment is confirmed.</p>
+        <p>Once the Enrollment Agreement and initial tuition payment are complete, access to the online program materials will be provided. Remaining tuition payments are due according to the selected option and outlined in the Enrollment Agreement. An admissions representative will also schedule time to connect after enrollment is confirmed.</p>
         
-        <p>If you have any questions feel free to reply to this email or call or text me at 916-365-6907. I'm happy to help.</p>
+        <h3>Questions or Assistance</h3>
+        
+        <p>If you have any questions or would like to speak with an admissions representative, please call 916-365-6907.</p>
         
         <p>Additional financial aid and tuition payment assistance options are available on our website.</p>
         
-        <p>Best regards<br>
-        <strong>Shawn</strong><br>
-        Pharmacy Technician Program Director<br>
-        American Institute of Trades (AIT)</p>
+        <p>Best regards,<br>
+        <strong>Admissions Team</strong><br>
+        American Institute of Trades (AIT)<br>
+        Pharmacy Technician Program<br>
+        <a href="https://www.levelupait.com">www.levelupait.com</a><br>
+        916-365-6907</p>
       `;
     } else if (programInterest === 'hvac-technician') {
       userSubject = "HVAC Technician Program – Next Steps";
       userEmailContent = `
-        <p>Thank you for your interest in the HVAC Technician Program at American Institute of Trades (AIT) in Sacramento CA. I'm glad you reached out.</p>
+        <p>Thank you for your interest in the HVAC Technician Program at American Institute of Trades (AIT) in Sacramento, CA. We're glad you reached out.</p>
         
         <h3>What You'll Learn</h3>
         
-        <p>In this 12 week program you'll build a strong foundation in HVAC including:</p>
+        <p>In this 12-week program, students build a strong foundation in HVAC, including:</p>
+        
         <ul>
           <li>Basics of electricity</li>
-          <li>Safety tools and core HVAC systems</li>
+          <li>Safety, tools, and core HVAC systems</li>
           <li>Diagnostics and troubleshooting</li>
           <li>Refrigeration fundamentals</li>
-          <li>EPA 608 exam preparation</li>
+          <li>Preparation for the EPA 608 certification exam</li>
         </ul>
         
-        <p>You can view the full curriculum on our website: <a href="https://www.levelupait.com">www.levelupait.com</a>. Everything is designed to help you feel confident and job ready.</p>
+        <p>The full curriculum is available on our website: <a href="https://www.levelupait.com">www.levelupait.com</a>.<br>
+        All coursework is designed to help students feel confident and job-ready.</p>
         
         <h3>Why AIT</h3>
         
-        <p>We're a community focused trade school working with experienced Sacramento area HVAC professionals who genuinely care about helping new technicians enter the trade.</p>
+        <p>American Institute of Trades is a community-focused trade school working with experienced Sacramento-area HVAC professionals who are committed to helping new technicians enter the trade.</p>
         
         <ul>
-          <li>100 percent online and self paced built for working adults</li>
-          <li>Job search support near graduation including résumé guidance and sharing your profile with local employers</li>
-          <li>Complimentary twice monthly hands on skills workshops near UC Davis Medical Center</li>
+          <li>100% online, self-paced, designed for working adults</li>
+          <li>Job search support near graduation, including résumé guidance and sharing student profiles with local employers</li>
+          <li>Complimentary twice-monthly hands-on skills workshops near UC Davis Medical Center</li>
         </ul>
         
-        <p><em>Currently, hands on workshops are offered as a bonus opportunity and are not a guaranteed or refundable portion of tuition as they depend on instructor collaborator availability. Many of our instructor collaborators work full time in the field or own their own HVAC businesses. That said, we strive and anticipate to hold these workshops regularly.</em></p>
+        <p><em>Hands-on workshops are offered as a bonus opportunity and are not a guaranteed or refundable portion of tuition. Workshop availability heavily depends on instructor collaborator schedules, as many collaborators work full-time in the field or operate their own HVAC businesses. AIT anticipates and strives to hold these workshops regularly.</em></p>
         
         <h3>Tuition</h3>
         
-        <p>Total cost: $2,500</p>
+        <ul>
+          <li>Total program cost: $2,500</li>
+        </ul>
         
         <h3>Next Steps</h3>
         
-        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward with enrollment. If that's you, please reply confirming your tuition payment option below and I'll send the Enrollment Agreement and tuition payment instructions.</p>
+        <p>To keep the enrollment process efficient, we work with students who are ready to move forward. If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</p>
         
-        <ul>
-          <li>Option 1: Full tuition payment of $2,500</li>
-          <li>Option 2: Tuition payment plan with 3 payments of $833.33</li>
-        </ul>
+        <p>Option 1: Full tuition payment of $2,500<br>
+        Option 2: Tuition payment plan — 3 payments of $833.33</p>
         
-        <p>Access to the online materials is provided once enrollment and tuition payment are complete.</p>
+        <p>Access to online program materials is provided once enrollment and tuition payment are complete.</p>
         
-        <p>If you have any questions feel free to call or text me at 916-365-6907. I'm happy to help.</p>
+        <h3>Questions or Assistance</h3>
         
-        <p>Additional financial aid options are available on our website.</p>
+        <p>If you have any questions or would like to speak with an admissions representative, please call 916-365-6907.</p>
         
-        <p>Best regards<br>
-        <strong>Shawn</strong><br>
-        Program Director<br>
-        American Institute of Trades (AIT)</p>
+        <p>Additional financial aid and tuition assistance options are available on our website.</p>
+        
+        <p>Best regards,<br>
+        <strong>Admissions Team</strong><br>
+        American Institute of Trades (AIT)<br>
+        HVAC Technician Program<br>
+        <a href="https://www.levelupait.com">www.levelupait.com</a><br>
+        916-365-6907</p>
       `;
     }
 
