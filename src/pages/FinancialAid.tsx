@@ -131,8 +131,8 @@ const FinancialAid = () => {
               </h2>
               <p className="text-navy-700 text-base sm:text-lg leading-relaxed mb-4">
                 {language === 'en'
-                  ? "Get approved and receive funds as fast as the same day. Rates comparable to federal FAFSA loans."
-                  : "Obtén aprobación y recibe fondos tan rápido como el mismo día. Tasas comparables a los préstamos federales FAFSA."}
+                  ? "Get approved and receive funds quicker — sometimes same day. Rates may be comparable to federal FAFSA loans."
+                  : "Obtén aprobación y recibe fondos más rápido — a veces el mismo día. Las tasas pueden ser comparables a los préstamos federales FAFSA."}
               </p>
               <div className="space-y-3 sm:space-y-4">
                 {loanLinks.map((link, index) => (
