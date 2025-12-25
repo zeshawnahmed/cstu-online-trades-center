@@ -106,11 +106,34 @@ const FinancialAid = () => {
               </p>
             </div>
 
-            {/* Helpful Loan Links */}
+            {/* Tuition Payment Plan */}
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-navy-700 mb-3 sm:mb-4 flex items-center">
+                <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-gold-500 mr-2" />
+                {language === 'en' ? 'Tuition Payment Plan' : 'Plan de Pago de Matrícula'}
+              </h2>
+              <p className="text-navy-700 text-base sm:text-lg leading-relaxed">
+                {language === 'en'
+                  ? "Pay tuition in 3 monthly payments of $833.33 with a debit or credit card on file."
+                  : "Paga la matrícula en 3 pagos mensuales de $833.33 con una tarjeta de débito o crédito en archivo."}
+              </p>
+              <Link to="/contact" className="inline-block mt-4">
+                <Button variant="outline" className="border-gold-400 text-navy-700 hover:bg-gold-50 font-semibold text-sm sm:text-base">
+                  {language === 'en' ? 'Ask About Payment Plans' : 'Preguntar Sobre Planes de Pago'}
+                </Button>
+              </Link>
+            </div>
+
+            {/* Student Loans - Fast Funding */}
             <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg mb-6 sm:mb-8">
               <h2 className="text-xl sm:text-2xl font-bold text-navy-700 mb-4 sm:mb-6">
-                {language === 'en' ? 'Helpful Loan Links' : 'Enlaces de Préstamos Útiles'}
+                {language === 'en' ? 'Student Loans – Fast Funding' : 'Préstamos Estudiantiles – Fondos Rápidos'}
               </h2>
+              <p className="text-navy-700 text-base sm:text-lg leading-relaxed mb-4">
+                {language === 'en'
+                  ? "Get approved and receive funds as fast as the same day. Rates comparable to federal FAFSA loans."
+                  : "Obtén aprobación y recibe fondos tan rápido como el mismo día. Tasas comparables a los préstamos federales FAFSA."}
+              </p>
               <div className="space-y-3 sm:space-y-4">
                 {loanLinks.map((link, index) => (
                   <a
@@ -125,14 +148,9 @@ const FinancialAid = () => {
                   </a>
                 ))}
               </div>
-              <p className="text-navy-600 mt-4 text-xs sm:text-sm">
-                {language === 'en'
-                  ? "These loans can offer interest rates similar or comparable to federal FAFSA rates, giving you a great financing option without the wait."
-                  : "Estos préstamos pueden ofrecer tasas de interés similares o comparables a las tasas federales de FAFSA, brindándote una excelente opción de financiamiento sin la espera."}
-              </p>
               <p className="text-navy-500 mt-4 text-xs italic">
                 {language === 'en'
-                  ? "*Lenders terms and conditions apply."
+                  ? "*Lender terms and conditions apply."
                   : "*Se aplican los términos y condiciones del prestamista."}
               </p>
             </div>
@@ -157,24 +175,6 @@ const FinancialAid = () => {
                   </a>
                 ))}
               </div>
-            </div>
-
-            {/* Tuition Payment Plan */}
-            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg mb-6 sm:mb-8">
-              <h2 className="text-xl sm:text-2xl font-bold text-navy-700 mb-3 sm:mb-4 flex items-center">
-                <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-gold-500 mr-2" />
-                {language === 'en' ? 'Tuition Payment Plan' : 'Plan de Pago de Matrícula'}
-              </h2>
-              <p className="text-navy-700 text-base sm:text-lg leading-relaxed">
-                {language === 'en'
-                  ? "Pay tuition in manageable installments with a debit or credit card on file."
-                  : "Paga la matrícula en cuotas manejables con una tarjeta de débito o crédito en archivo."}
-              </p>
-              <Link to="/contact" className="inline-block mt-4">
-                <Button variant="outline" className="border-gold-400 text-navy-700 hover:bg-gold-50 font-semibold text-sm sm:text-base">
-                  {language === 'en' ? 'Ask About Payment Plans' : 'Preguntar Sobre Planes de Pago'}
-                </Button>
-              </Link>
             </div>
 
             {/* CTA */}
