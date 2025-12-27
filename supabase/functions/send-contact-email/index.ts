@@ -60,7 +60,7 @@ const handler = async (req: Request): Promise<Response> => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
     );
 
-    // Store the contact submission in the database
+    // Store the contact submission in the database with program interest
     const { data: submission, error: dbError } = await supabaseClient
       .from("contact_submissions")
       .insert({
@@ -69,6 +69,7 @@ const handler = async (req: Request): Promise<Response> => {
         phone,
         message,
         interested_in_financial_aid: false,
+        program_interest: programInterest || null,
       })
       .select()
       .single();

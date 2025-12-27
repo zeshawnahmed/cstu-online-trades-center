@@ -9,82 +9,134 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Get program-specific follow-up content
-function getFollowupContent(programInterest: string, followupNumber: number): { subject: string; body: string } {
-  const isHVAC = programInterest === 'hvac';
-  const programName = isHVAC ? 'HVAC Technician Program' : 'Pharmacy Technician Program';
+// Get program-specific follow-up content - uses the same content as initial email
+function getFollowupContent(programInterest: string, followupNumber: number, name: string): { subject: string; body: string } {
+  const isHVAC = programInterest === 'hvac-technician';
   
-  if (followupNumber === 1) {
+  if (isHVAC) {
     return {
-      subject: `Following Up – ${programName} at AIT`,
+      subject: "HVAC Technician Program – Next Steps",
       body: `
-<p>Hi there,</p>
+<p>Hi ${name},</p>
 
-<p>We wanted to follow up on your interest in the ${programName} at American Institute of Trades.</p>
+<p>Thank you for your interest in the HVAC Technician Program at American Institute of Trades (AIT) in Sacramento, CA. We're glad you reached out.</p>
 
-<p>If you have any questions about the program, tuition options, or next steps, we're here to help.</p>
+<h3>What You'll Learn</h3>
 
-<p><strong>Quick Recap:</strong></p>
+<p>In this 12-week program, students build a strong foundation in HVAC, including:</p>
+
 <ul>
-  <li>100% online, self-paced program</li>
-  <li>Total cost: $2,500 (payment plan available: 3 monthly payments of $833.33)</li>
-  ${isHVAC ? '<li>Complimentary hands-on workshops near UC Davis Medical Center</li>' : '<li>PTCB-recognized program</li>'}
-  <li>Job search support near graduation</li>
+  <li>Basics of electricity</li>
+  <li>Safety, tools, and core HVAC systems</li>
+  <li>Diagnostics and troubleshooting</li>
+  <li>Refrigeration fundamentals</li>
+  <li>Preparation for the EPA 608 certification exam</li>
 </ul>
 
-<p>Ready to enroll? Simply reply to this email with your preferred tuition option.</p>
+<p>The full curriculum is available on our website: <a href="https://www.levelupait.com">www.levelupait.com</a>.<br>
+All coursework is designed to help students feel confident and job-ready.</p>
+
+<h3>Why AIT</h3>
+
+<p>American Institute of Trades is a community-focused trade school working with experienced Sacramento-area HVAC professionals who are committed to helping new technicians enter the trade.</p>
+
+<ul>
+  <li>100% online, self-paced, designed for working adults</li>
+  <li>Job search support near graduation, including résumé guidance and sharing student profiles with local employers</li>
+  <li>Complimentary twice-monthly hands-on skills workshops near UC Davis Medical Center</li>
+</ul>
+
+<p><em>Hands-on workshops are offered as a bonus opportunity and are not a guaranteed or refundable portion of tuition. Workshop availability heavily depends on instructor collaborator schedules, as many collaborators work full-time in the field or operate their own HVAC businesses. AIT anticipates and strives to hold these workshops regularly.</em></p>
+
+<h3>Tuition</h3>
+
+<ul>
+  <li>Total program cost: $2,500</li>
+</ul>
+
+<h3>Next Steps</h3>
+
+<p>To keep the enrollment process efficient, we work with students who are ready to move forward. If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</p>
+
+<p>Option 1: Full tuition payment of $2,500<br>
+Option 2: Tuition payment plan — 3 payments of $833.33</p>
+
+<p>Access to online program materials is provided once enrollment and tuition payment are complete.</p>
+
+<h3>Questions or Assistance</h3>
+
+<p>If you have any questions or would like to speak with an admissions representative, please call 916-365-6907.</p>
+
+<p>Additional financial aid and tuition assistance options are available on our website.</p>
 
 <p>Best regards,<br>
-Admissions Team<br>
-American Institute of Trades<br>
-www.levelupait.com<br>
+<strong>Admissions Team</strong><br>
+American Institute of Trades (AIT)<br>
+HVAC Technician Program<br>
+<a href="https://www.levelupait.com">www.levelupait.com</a><br>
 916-365-6907</p>
       `
     };
-  } else if (followupNumber === 2) {
+  } else {
+    // Pharmacy Technician
     return {
-      subject: `Still Interested? – ${programName}`,
+      subject: "Pharmacy Technician Program – Next Steps",
       body: `
-<p>Hi there,</p>
+<p>Hi ${name},</p>
 
-<p>We noticed you recently expressed interest in our ${programName}. We'd love to help you take the next step.</p>
+<p>Thank you for your interest in the Pharmacy Technician Program at American Institute of Trades (AIT) in Sacramento, CA. We're glad you reached out.</p>
 
-<p>Many of our students are working adults looking to start a new career. Our flexible, self-paced online format makes it possible to learn on your schedule.</p>
+<p>Our next program start date is January 1, 2026.</p>
 
-<p><strong>Enrollment Options:</strong></p>
+<h3>What You'll Learn</h3>
+
+<p>This program is recognized by the Pharmacy Technician Certification Board (PTCB) and prepares students to sit for the Pharmacy Technician Certification Exam (PTCE). The curriculum includes:</p>
+
 <ul>
-  <li>Option 1: Full tuition payment of $2,500</li>
-  <li>Option 2: Payment plan – 3 monthly payments of $833.33</li>
+  <li>Federal pharmacy law and regulations</li>
+  <li>Medication safety and error prevention</li>
+  <li>Pharmacology and drug classifications</li>
+  <li>Pharmacy calculations</li>
+  <li>Prescription processing and pharmacy workflow</li>
 </ul>
 
-<p>Additional financial aid options are available on our website.</p>
+<p>The full curriculum is available on our website: <a href="https://www.levelupait.com">www.levelupait.com</a>.<br>
+All coursework is designed to help students feel confident and exam-ready.</p>
 
-<p>Have questions? Call us at 916-365-6907 or reply to this email.</p>
+<h3>Program Format</h3>
+
+<ul>
+  <li>100% online, self-paced, asynchronous</li>
+  <li>Designed for working adults</li>
+  <li>Job search support provided near program completion</li>
+</ul>
+
+<h3>Tuition</h3>
+
+<ul>
+  <li>Total program cost: $2,500</li>
+</ul>
+
+<h3>Next Steps</h3>
+
+<p>To keep the enrollment process efficient, we work with students who are ready to move forward. If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</p>
+
+<p>Option 1: Full tuition payment of $2,500<br>
+Option 2: Tuition payment plan — 3 payments of $833.33</p>
+
+<p>Once the Enrollment Agreement and initial tuition payment are complete, access to the online program materials will be provided. Remaining tuition payments are due according to the selected option and outlined in the Enrollment Agreement. An admissions representative will also schedule time to connect after enrollment is confirmed.</p>
+
+<h3>Questions or Assistance</h3>
+
+<p>If you have any questions or would like to speak with an admissions representative, please call 916-365-6907.</p>
+
+<p>Additional financial aid and tuition payment assistance options are available on our website.</p>
 
 <p>Best regards,<br>
-Admissions Team<br>
-American Institute of Trades<br>
-www.levelupait.com</p>
-      `
-    };
-  } else {
-    return {
-      subject: `Last Reminder – ${programName} Enrollment`,
-      body: `
-<p>Hi there,</p>
-
-<p>This is our final follow-up regarding your interest in the ${programName} at American Institute of Trades.</p>
-
-<p>If now isn't the right time, we completely understand. But if you're ready to start your journey toward a rewarding career, we're here to help you get started.</p>
-
-<p><strong>To enroll:</strong> Reply to this email with your preferred payment option, or call us at 916-365-6907.</p>
-
-<p>We hope to hear from you soon!</p>
-
-<p>Best regards,<br>
-Admissions Team<br>
-American Institute of Trades<br>
-www.levelupait.com<br>
+<strong>Admissions Team</strong><br>
+American Institute of Trades (AIT)<br>
+Pharmacy Technician Program<br>
+<a href="https://www.levelupait.com">www.levelupait.com</a><br>
 916-365-6907</p>
       `
     };
@@ -125,11 +177,12 @@ const handler = async (req: Request): Promise<Response> => {
 
     for (const submission of submissions || []) {
       const followupNumber = (submission.followup_count || 0) + 1;
-      const programInterest = submission.message?.toLowerCase().includes('hvac') ? 'hvac' : 'pharmacy-tech';
+      // Use stored program_interest from the database
+      const programInterest = submission.program_interest || 'hvac-technician';
       
-      console.log(`Sending follow-up #${followupNumber} to ${submission.email}`);
+      console.log(`Sending follow-up #${followupNumber} to ${submission.email} for program: ${programInterest}`);
 
-      const { subject, body } = getFollowupContent(programInterest, followupNumber);
+      const { subject, body } = getFollowupContent(programInterest, followupNumber, submission.name);
 
       try {
         // Send follow-up email
