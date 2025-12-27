@@ -26,6 +26,7 @@ export type Database = {
           name: string
           next_followup_at: string | null
           phone: string | null
+          program_interest: string | null
           updated_at: string
         }
         Insert: {
@@ -39,6 +40,7 @@ export type Database = {
           name: string
           next_followup_at?: string | null
           phone?: string | null
+          program_interest?: string | null
           updated_at?: string
         }
         Update: {
@@ -52,6 +54,7 @@ export type Database = {
           name?: string
           next_followup_at?: string | null
           phone?: string | null
+          program_interest?: string | null
           updated_at?: string
         }
         Relationships: []
