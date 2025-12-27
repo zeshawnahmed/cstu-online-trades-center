@@ -18,30 +18,39 @@ export type Database = {
         Row: {
           created_at: string
           email: string
+          followup_count: number | null
           id: string
           interested_in_financial_aid: boolean | null
+          last_followup_at: string | null
           message: string
           name: string
+          next_followup_at: string | null
           phone: string | null
           updated_at: string
         }
         Insert: {
           created_at?: string
           email: string
+          followup_count?: number | null
           id?: string
           interested_in_financial_aid?: boolean | null
+          last_followup_at?: string | null
           message: string
           name: string
+          next_followup_at?: string | null
           phone?: string | null
           updated_at?: string
         }
         Update: {
           created_at?: string
           email?: string
+          followup_count?: number | null
           id?: string
           interested_in_financial_aid?: boolean | null
+          last_followup_at?: string | null
           message?: string
           name?: string
+          next_followup_at?: string | null
           phone?: string | null
           updated_at?: string
         }
