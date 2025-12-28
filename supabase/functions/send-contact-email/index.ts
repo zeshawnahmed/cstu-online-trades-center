@@ -213,12 +213,14 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>Next Steps</h3>
         
-        <p>To keep the enrollment process efficient, we work with students who are ready to move forward. If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</p>
+        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward. If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</p>
         
         <p>Option 1: Full tuition payment of $2,500<br>
         Option 2: Tuition payment plan — 3 payments of $833.33</p>
         
-        <p>Once the Enrollment Agreement and initial tuition payment are complete, access to the online program materials will be provided. Remaining tuition payments are due according to the selected option and outlined in the Enrollment Agreement. An admissions representative will also schedule time to connect after enrollment is confirmed.</p>
+        <p>We will then email you a Student Enrollment Agreement to review and sign along with a link to make your first tuition payment.</p>
+        
+        <p>Once the Enrollment Agreement and initial tuition payment are complete, access to the program materials will be provided. Remaining tuition payments are due according to the selected option. An admissions representative will also schedule time to connect after enrollment is confirmed.</p>
         
         <h3>Questions or Assistance</h3>
         
@@ -273,12 +275,14 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>Next Steps</h3>
         
-        <p>To keep the enrollment process efficient, we work with students who are ready to move forward. If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</p>
+        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward. If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</p>
         
         <p>Option 1: Full tuition payment of $2,500<br>
         Option 2: Tuition payment plan — 3 payments of $833.33</p>
         
-        <p>Access to online program materials is provided once enrollment and tuition payment are complete.</p>
+        <p>We will then email you a Student Enrollment Agreement to review and sign along with a link to make your first tuition payment.</p>
+        
+        <p>Once the Enrollment Agreement and initial tuition payment are complete, access to the program materials will be provided. Remaining tuition payments are due according to the selected option. An admissions representative will also schedule time to connect after enrollment is confirmed.</p>
         
         <h3>Questions or Assistance</h3>
         
