@@ -5,6 +5,3 @@ verify_jwt = false
 
 [functions.send-followup-emails]
 verify_jwt = false
-
-[functions.reset-followups]
-verify_jwt = false
