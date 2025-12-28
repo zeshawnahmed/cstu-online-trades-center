@@ -43,6 +43,69 @@ const getHowDidYouHearLabel = (value: string): string => {
   return options[value] || value || 'Not specified';
 };
 
+// Send SMS via Twilio
+async function sendSMS(to: string, body: string): Promise<{ success: boolean; error?: string; sid?: string }> {
+  const accountSid = Deno.env.get("TWILIO_ACCOUNT_SID");
+  const authToken = Deno.env.get("TWILIO_AUTH_TOKEN");
+  const fromPhone = Deno.env.get("TWILIO_PHONE_NUMBER");
+
+  if (!accountSid || !authToken || !fromPhone) {
+    console.log("Twilio credentials not configured, skipping SMS");
+    return { success: false, error: "Twilio not configured" };
+  }
+
+  // Format phone number - ensure it has country code
+  let formattedPhone = to.replace(/\D/g, '');
+  if (formattedPhone.length === 10) {
+    formattedPhone = '1' + formattedPhone; // Add US country code
+  }
+  if (!formattedPhone.startsWith('+')) {
+    formattedPhone = '+' + formattedPhone;
+  }
+
+  try {
+    const response = await fetch(
+      `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
+      {
+        method: "POST",
+        headers: {
+          "Authorization": "Basic " + btoa(`${accountSid}:${authToken}`),
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+          To: formattedPhone,
+          From: fromPhone,
+          Body: body,
+        }),
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error("Twilio API error:", data);
+      return { success: false, error: data.message || "Failed to send SMS" };
+    }
+
+    console.log("SMS sent successfully:", data.sid);
+    return { success: true, sid: data.sid };
+  } catch (error: any) {
+    console.error("Error sending SMS:", error);
+    return { success: false, error: error.message };
+  }
+}
+
+// Generate SMS content based on program
+function getSMSContent(programInterest: string, name: string): string {
+  const programName = programInterest === 'hvac-technician' 
+    ? 'HVAC Technician' 
+    : programInterest === 'pharmacy-technician'
+    ? 'Pharmacy Technician'
+    : 'our programs';
+
+  return `Hi ${name}! Thank you for your interest in the ${programName} Program at American Institute of Trades. Check your email for next steps, or call us at 916-365-6907. Visit levelupait.com for more info.`;
+}
+
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -52,7 +115,7 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, phone, message, programInterest, howDidYouHear, referrerName, referralCode, otherSource }: ContactEmailRequest = await req.json();
 
-    console.log("Received contact form submission:", { name, email, programInterest, howDidYouHear, referrerName, referralCode, otherSource });
+    console.log("Received contact form submission:", { name, email, phone, programInterest, howDidYouHear, referrerName, referralCode, otherSource });
 
     // Initialize Supabase client with service role key to bypass RLS
     const supabaseClient = createClient(
@@ -269,11 +332,21 @@ const handler = async (req: Request): Promise<Response> => {
       console.error("Error sending user email:", userEmailResponse.error);
     }
 
+    // Send SMS if phone number is provided
+    let smsResult = null;
+    if (phone) {
+      console.log("Sending SMS to:", phone);
+      const smsContent = getSMSContent(programInterest || '', name);
+      smsResult = await sendSMS(phone, smsContent);
+      console.log("SMS result:", smsResult);
+    }
+
     return new Response(JSON.stringify({
       success: true, 
       submissionId: submission.id,
       adminEmailId: adminEmailResponse.data?.id,
-      userEmailId: userEmailResponse.data?.id
+      userEmailId: userEmailResponse.data?.id,
+      smsResult
     }), {
       status: 200,
       headers: {
