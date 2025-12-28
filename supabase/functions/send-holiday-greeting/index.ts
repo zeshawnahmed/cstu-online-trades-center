@@ -9,9 +9,9 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const getHolidayEmailContent = (name: string): { subject: string; body: string } => {
+const getHolidayEmailContent = (): { subject: string; body: string } => {
   return {
-    subject: "🎄 Happy Holidays from American Institute of Technology!",
+    subject: "Happy Holidays from AIT",
     body: `
       <!DOCTYPE html>
       <html>
@@ -21,51 +21,46 @@ const getHolidayEmailContent = (name: string): { subject: string; body: string }
       </head>
       <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa;">
         <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
-          <!-- Header with festive design -->
+          <!-- Header -->
           <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); padding: 40px 30px; text-align: center;">
             <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 600;">
-              ✨ Happy Holidays! ✨
+              Happy Holidays
             </h1>
           </div>
           
           <!-- Main content -->
           <div style="padding: 40px 30px;">
-            <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
-              Dear ${name},
+            <p style="color: #333333; font-size: 16px; line-height: 1.8; margin: 0 0 20px 0;">
+              Happy Holidays,
             </p>
             
-            <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
-              As the year comes to a close, we at <strong>American Institute of Technology</strong> want to take a moment to thank you for your interest in our programs and for being part of our community.
+            <p style="color: #333333; font-size: 16px; line-height: 1.8; margin: 0 0 20px 0;">
+              As the year comes to a close, we wanted to reach out and say thank you for taking a moment to explore new possibilities for yourself.
             </p>
             
-            <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
-              We hope this holiday season brings you joy, warmth, and time spent with loved ones. May the new year be filled with exciting opportunities and success in all your endeavors.
+            <p style="color: #333333; font-size: 16px; line-height: 1.8; margin: 0 0 20px 0;">
+              Believing in yourself takes courage. Choosing growth, learning something new, and stepping toward a better future is never easy but it is always worth it. At American Institute of Trades, we truly admire anyone willing to bet on themselves and take that step forward.
             </p>
             
-            <div style="background-color: #f0f7ff; border-left: 4px solid #f59e0b; padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0;">
-              <p style="color: #1e3a5f; font-size: 16px; line-height: 1.6; margin: 0; font-style: italic;">
-                "Education is the passport to the future, for tomorrow belongs to those who prepare for it today."
-              </p>
-            </div>
-            
-            <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
-              If you have any questions about our programs or are ready to take the next step in your career, we're here to help. Don't hesitate to reach out!
+            <p style="color: #333333; font-size: 16px; line-height: 1.8; margin: 0 0 20px 0;">
+              We are cheering you on and wishing you confidence in your decisions, strength in your journey, and success in whatever path you choose next.
             </p>
             
-            <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0;">
-              Warm wishes,<br>
-              <strong>The AIT Family</strong>
+            <p style="color: #333333; font-size: 16px; line-height: 1.8; margin: 0 0 30px 0;">
+              Wishing you and your loved ones a joyful holiday season and a powerful start to the new year.
+            </p>
+            
+            <p style="color: #333333; font-size: 16px; line-height: 1.8; margin: 0;">
+              Warm regards,<br>
+              <strong>American Institute of Trades</strong><br>
+              <a href="https://www.levelupait.com" style="color: #2d5a87; text-decoration: none;">www.levelupait.com</a>
             </p>
           </div>
           
           <!-- Footer -->
-          <div style="background-color: #1e3a5f; padding: 30px; text-align: center;">
-            <p style="color: #ffffff; font-size: 14px; margin: 0 0 10px 0;">
-              🎄 Wishing you a wonderful holiday season! 🎄
-            </p>
+          <div style="background-color: #1e3a5f; padding: 20px; text-align: center;">
             <p style="color: #94a3b8; font-size: 12px; margin: 0;">
-              American Institute of Technology<br>
-              Sacramento, CA
+              American Institute of Trades
             </p>
           </div>
         </div>
@@ -125,7 +120,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send holiday greeting to each unique contact
     for (const [email, name] of uniqueEmails) {
       try {
-        const { subject, body } = getHolidayEmailContent(name);
+        const { subject, body } = getHolidayEmailContent();
 
         const emailResponse = await resend.emails.send({
           from: "American Institute of Technology <onboarding@resend.dev>",
