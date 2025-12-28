@@ -387,8 +387,8 @@ const ContactForm = () => {
                   </h2>
                   <p className="text-xl text-navy-600 mb-8">
                     {language === 'en'
-                      ? "Your message has been sent. We'll get back to you soon!"
-                      : "Tu mensaje ha sido enviado. ¡Nos pondremos en contacto contigo pronto!"}
+                      ? "Your message has been sent. Please check your email for next steps!"
+                      : "Tu mensaje ha sido enviado. ¡Por favor revisa tu correo electrónico para los próximos pasos!"}
                   </p>
                   <Button 
                     onClick={() => window.location.href = '/'}
