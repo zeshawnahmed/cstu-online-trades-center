@@ -5,3 +5,6 @@ verify_jwt = false
 
 [functions.send-followup-emails]
 verify_jwt = false
+
+[functions.send-holiday-greeting]
+verify_jwt = false
