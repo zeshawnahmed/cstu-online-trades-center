@@ -61,7 +61,7 @@ async function sendSMS(to: string, body: string): Promise<{ success: boolean; er
   }
 }
 
-// Generate SMS content for follow-ups
+// Generate SMS content for follow-ups (7 days of daily reminders)
 function getFollowupSMSContent(programInterest: string, name: string, followupNumber: number): string {
   const programName = programInterest === 'hvac-technician' 
     ? 'HVAC Technician' 
@@ -69,9 +69,9 @@ function getFollowupSMSContent(programInterest: string, name: string, followupNu
     ? 'Pharmacy Technician'
     : 'our programs';
 
-  if (followupNumber === 1) {
+  if (followupNumber <= 2) {
     return `Hi ${name}, just following up on your interest in the ${programName} Program at AIT. We'd love to answer any questions! Call 916-365-6907 or reply to our email. - AIT Team`;
-  } else if (followupNumber === 2) {
+  } else if (followupNumber <= 5) {
     return `Hi ${name}, reminder: Spots are filling for the ${programName} Program at AIT! Ready to enroll? Call 916-365-6907 or visit levelupait.com - AIT Team`;
   } else {
     return `Hi ${name}, final reminder about the ${programName} Program at AIT. Don't miss out on your new career! Call 916-365-6907 today. - AIT Team`;
@@ -232,7 +232,7 @@ const handler = async (req: Request): Promise<Response> => {
       .from("contact_submissions")
       .select("*")
       .lt("next_followup_at", now)
-      .lt("followup_count", 3)
+      .lt("followup_count", 7)
       .order("next_followup_at", { ascending: true });
 
     if (fetchError) {
@@ -273,9 +273,9 @@ const handler = async (req: Request): Promise<Response> => {
           console.log("SMS result:", smsResult);
         }
 
-        // Calculate next follow-up date (3 days from now) or null if this was the last one
-        const nextFollowupAt = followupNumber < 3 
-          ? new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString()
+        // Calculate next follow-up date (1 day from now) or null if this was the last one (7 days total)
+        const nextFollowupAt = followupNumber < 7 
+          ? new Date(Date.now() + 1 * 24 * 60 * 60 * 1000).toISOString()
           : null;
 
         // Update the submission record
