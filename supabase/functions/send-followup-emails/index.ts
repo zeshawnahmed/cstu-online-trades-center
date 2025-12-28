@@ -9,76 +9,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Send SMS via Twilio
-async function sendSMS(to: string, body: string): Promise<{ success: boolean; error?: string; sid?: string }> {
-  const accountSid = Deno.env.get("TWILIO_ACCOUNT_SID");
-  const authToken = Deno.env.get("TWILIO_AUTH_TOKEN");
-  const fromPhone = Deno.env.get("TWILIO_PHONE_NUMBER");
-
-  if (!accountSid || !authToken || !fromPhone) {
-    console.log("Twilio credentials not configured, skipping SMS");
-    return { success: false, error: "Twilio not configured" };
-  }
-
-  // Format phone number - ensure it has country code
-  let formattedPhone = to.replace(/\D/g, '');
-  if (formattedPhone.length === 10) {
-    formattedPhone = '1' + formattedPhone; // Add US country code
-  }
-  if (!formattedPhone.startsWith('+')) {
-    formattedPhone = '+' + formattedPhone;
-  }
-
-  try {
-    const response = await fetch(
-      `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
-      {
-        method: "POST",
-        headers: {
-          "Authorization": "Basic " + btoa(`${accountSid}:${authToken}`),
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({
-          To: formattedPhone,
-          From: fromPhone,
-          Body: body,
-        }),
-      }
-    );
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      console.error("Twilio API error:", data);
-      return { success: false, error: data.message || "Failed to send SMS" };
-    }
-
-    console.log("SMS sent successfully:", data.sid);
-    return { success: true, sid: data.sid };
-  } catch (error: any) {
-    console.error("Error sending SMS:", error);
-    return { success: false, error: error.message };
-  }
-}
-
-// Generate SMS content for follow-ups (7 days of daily reminders)
-function getFollowupSMSContent(programInterest: string, name: string, followupNumber: number): string {
-  const programName = programInterest === 'hvac-technician' 
-    ? 'HVAC Technician' 
-    : programInterest === 'pharmacy-technician'
-    ? 'Pharmacy Technician'
-    : 'our programs';
-
-  if (followupNumber <= 2) {
-    return `Hi ${name}, just following up on your interest in the ${programName} Program at AIT. We'd love to answer any questions! Call 916-365-6907 or reply to our email. - AIT Team`;
-  } else if (followupNumber <= 5) {
-    return `Hi ${name}, reminder: Spots are filling for the ${programName} Program at AIT! Ready to enroll? Call 916-365-6907 or visit levelupait.com - AIT Team`;
-  } else {
-    return `Hi ${name}, final reminder about the ${programName} Program at AIT. Don't miss out on your new career! Call 916-365-6907 today. - AIT Team`;
-  }
-}
-
-// Get program-specific follow-up content - uses the same content as initial email
+// Get program-specific follow-up content
 function getFollowupContent(programInterest: string, followupNumber: number, name: string): { subject: string; body: string } {
   const isHVAC = programInterest === 'hvac-technician';
   
@@ -219,14 +150,14 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    console.log("Starting follow-up email and SMS processing...");
+    console.log("Starting follow-up email processing...");
 
     // Create Supabase client with service role key
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    // Get submissions that need follow-up
+    // Get submissions that need follow-up (7 daily emails max)
     const now = new Date().toISOString();
     const { data: submissions, error: fetchError } = await supabase
       .from("contact_submissions")
@@ -246,7 +177,6 @@ const handler = async (req: Request): Promise<Response> => {
 
     for (const submission of submissions || []) {
       const followupNumber = (submission.followup_count || 0) + 1;
-      // Use stored program_interest from the database
       const programInterest = submission.program_interest || 'hvac-technician';
       
       console.log(`Sending follow-up #${followupNumber} to ${submission.email} for program: ${programInterest}`);
@@ -263,15 +193,6 @@ const handler = async (req: Request): Promise<Response> => {
         });
 
         console.log(`Email sent to ${submission.email}:`, emailResponse);
-
-        // Send follow-up SMS if phone number exists
-        let smsResult = null;
-        if (submission.phone) {
-          console.log(`Sending follow-up SMS #${followupNumber} to ${submission.phone}`);
-          const smsContent = getFollowupSMSContent(programInterest, submission.name, followupNumber);
-          smsResult = await sendSMS(submission.phone, smsContent);
-          console.log("SMS result:", smsResult);
-        }
 
         // Calculate next follow-up date (1 day from now) or null if this was the last one (7 days total)
         const nextFollowupAt = followupNumber < 7 
@@ -294,10 +215,8 @@ const handler = async (req: Request): Promise<Response> => {
           results.push({ 
             id: submission.id, 
             email: submission.email, 
-            phone: submission.phone,
             followupNumber, 
             emailSuccess: true,
-            smsResult 
           });
         }
       } catch (emailError) {
