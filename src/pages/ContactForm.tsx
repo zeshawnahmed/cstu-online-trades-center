@@ -117,8 +117,8 @@ const ContactForm = () => {
       
       setIsSubmitted(true);
       toast({
-        title: language === 'en' ? "Message Sent" : "Mensaje Enviado",
-        description: language === 'en' ? "Your message has been received. We'll get back to you soon." : "Tu mensaje ha sido recibido. Nos pondremos en contacto contigo pronto.",
+        title: language === 'en' ? "Thank You" : "Gracias",
+        description: language === 'en' ? "Please Check Email Provided For Next Steps." : "Por favor revisa el correo electrónico proporcionado para los próximos pasos.",
       });
     } catch (error) {
       console.error('Contact form submission error:', error);
