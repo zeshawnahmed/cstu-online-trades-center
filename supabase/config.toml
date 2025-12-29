@@ -8,3 +8,6 @@ verify_jwt = false
 
 [functions.send-holiday-greeting]
 verify_jwt = false
+
+[functions.reset-followups]
+verify_jwt = false
