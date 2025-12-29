@@ -180,8 +180,6 @@ const handler = async (req: Request): Promise<Response> => {
       userEmailContent = `
         <p>Thank you for your interest in the Pharmacy Technician Program at American Institute of Trades (AIT) in Sacramento, CA. We're glad you reached out.</p>
         
-        <p>Our next program start date is January 1, 2026.</p>
-        
         <h3>What You'll Learn</h3>
         
         <p>This program is recognized by the Pharmacy Technician Certification Board (PTCB) and prepares students to sit for the Pharmacy Technician Certification Exam (PTCE). The curriculum includes:</p>
