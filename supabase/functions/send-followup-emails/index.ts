@@ -256,7 +256,7 @@ const handler = async (req: Request): Promise<Response> => {
       try {
         // Send follow-up email
         const emailResponse = await resend.emails.send({
-          from: "American Institute of Trades <admissions@levelupait.com>",
+          from: "American Institute of Trades <admin@levelupait.com>",
           to: [submission.email],
           subject: subject,
           html: body,

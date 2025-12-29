@@ -123,7 +123,7 @@ const handler = async (req: Request): Promise<Response> => {
         const { subject, body } = getHolidayEmailContent();
 
         const emailResponse = await resend.emails.send({
-          from: "American Institute of Technology <onboarding@resend.dev>",
+          from: "American Institute of Trades <admin@levelupait.com>",
           to: [email],
           subject: subject,
           html: body,
