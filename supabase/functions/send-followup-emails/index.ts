@@ -254,11 +254,33 @@ const handler = async (req: Request): Promise<Response> => {
       const { subject, body } = getFollowupContent(programInterest, followupNumber, submission.name);
 
       try {
+        // Generate plain-text version by stripping HTML
+        const bodyText = body
+          .replace(/<h3>/g, '\n\n')
+          .replace(/<\/h3>/g, '\n')
+          .replace(/<li>/g, '• ')
+          .replace(/<\/li>/g, '\n')
+          .replace(/<br\s*\/?>/g, '\n')
+          .replace(/<p>/g, '')
+          .replace(/<\/p>/g, '\n')
+          .replace(/<ul>/g, '')
+          .replace(/<\/ul>/g, '')
+          .replace(/<em>/g, '')
+          .replace(/<\/em>/g, '')
+          .replace(/<strong>/g, '')
+          .replace(/<\/strong>/g, '')
+          .replace(/<a[^>]*href="([^"]*)"[^>]*>([^<]*)<\/a>/g, '$2 ($1)')
+          .replace(/<[^>]+>/g, '')
+          .replace(/\n{3,}/g, '\n\n')
+          .trim();
+
         // Send follow-up email
         const emailResponse = await resend.emails.send({
           from: "American Institute of Trades <admin@levelupait.com>",
           to: [submission.email],
+          reply_to: "admin@levelupait.com",
           subject: subject,
+          text: bodyText,
           html: body,
         });
 
