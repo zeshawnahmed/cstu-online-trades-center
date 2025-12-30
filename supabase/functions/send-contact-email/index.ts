@@ -297,11 +297,34 @@ const handler = async (req: Request): Promise<Response> => {
       `;
     }
 
+    // Build plain-text referral info
+    let referralInfoText = '';
+    if (howDidYouHear === 'referred') {
+      referralInfoText = `
+REFERRAL INFORMATION
+Referrer Name: ${referrerName || 'Not provided'}
+Referral Code: ${referralCode || 'Not provided'}
+`;
+    }
+
     // Send admin notification email
     const adminEmailResponse = await resend.emails.send({
       from: "Contact Form <admin@levelupait.com>",
       to: ["zeshawn.a@gmail.com"],
+      reply_to: "admin@levelupait.com",
       subject: `New Contact Form Submission from ${name}${howDidYouHear === 'referred' ? ' (REFERRAL)' : ''}`,
+      text: `New Contact Form Submission
+
+Name: ${name}
+Email: ${email}
+${phone ? `Phone: ${phone}` : ''}
+Program of Interest: ${programName}
+How They Found Us: ${howDidYouHearDisplay}
+${referralInfoText}
+Message:
+${message}
+
+Submitted at: ${new Date().toLocaleString()}`,
       html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
@@ -319,12 +342,34 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Admin email sent successfully:", adminEmailResponse);
 
+    // Generate plain-text version by stripping HTML
+    const userEmailText = userEmailContent
+      .replace(/<h3>/g, '\n\n')
+      .replace(/<\/h3>/g, '\n')
+      .replace(/<li>/g, '• ')
+      .replace(/<\/li>/g, '\n')
+      .replace(/<br\s*\/?>/g, '\n')
+      .replace(/<p>/g, '')
+      .replace(/<\/p>/g, '\n')
+      .replace(/<ul>/g, '')
+      .replace(/<\/ul>/g, '')
+      .replace(/<em>/g, '')
+      .replace(/<\/em>/g, '')
+      .replace(/<strong>/g, '')
+      .replace(/<\/strong>/g, '')
+      .replace(/<a[^>]*href="([^"]*)"[^>]*>([^<]*)<\/a>/g, '$2 ($1)')
+      .replace(/<[^>]+>/g, '')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+
     // Send the program-specific email to the user
     console.log("Sending user email to:", email, "with subject:", userSubject);
     const userEmailResponse = await resend.emails.send({
       from: "American Institute of Trades <admin@levelupait.com>",
       to: [email],
+      reply_to: "admin@levelupait.com",
       subject: userSubject,
+      text: userEmailText,
       html: userEmailContent,
     });
     

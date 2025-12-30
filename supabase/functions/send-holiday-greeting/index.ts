@@ -9,9 +9,24 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const getHolidayEmailContent = (): { subject: string; body: string } => {
+const getHolidayEmailContent = (): { subject: string; body: string; text: string } => {
+  const text = `Happy Holidays,
+
+As the year comes to a close, we wanted to reach out and say thank you for taking a moment to explore new possibilities for yourself.
+
+Believing in yourself takes courage. Choosing growth, learning something new, and stepping toward a better future is never easy but it is always worth it. At American Institute of Trades, we truly admire anyone willing to bet on themselves and take that step forward.
+
+We are cheering you on and wishing you confidence in your decisions, strength in your journey, and success in whatever path you choose next.
+
+Wishing you and your loved ones a joyful holiday season and a powerful start to the new year.
+
+Warm regards,
+American Institute of Trades
+www.levelupait.com`;
+
   return {
     subject: "Happy Holidays from AIT",
+    text,
     body: `
       <!DOCTYPE html>
       <html>
@@ -120,12 +135,14 @@ const handler = async (req: Request): Promise<Response> => {
     // Send holiday greeting to each unique contact
     for (const [email, name] of uniqueEmails) {
       try {
-        const { subject, body } = getHolidayEmailContent();
+        const { subject, body, text } = getHolidayEmailContent();
 
         const emailResponse = await resend.emails.send({
           from: "American Institute of Trades <admin@levelupait.com>",
           to: [email],
+          reply_to: "admin@levelupait.com",
           subject: subject,
+          text: text,
           html: body,
         });
 
