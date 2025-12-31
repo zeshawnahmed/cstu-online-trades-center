@@ -189,8 +189,8 @@ const ContactForm = () => {
                   </h1>
                   <p className="text-sm sm:text-base text-navy-600 mb-6 sm:mb-8 text-center px-2 sm:px-0">
                     {language === 'en' 
-                      ? "Please fill out the below form completely and Admissions Rep will email next steps."
-                      : "Por favor complete el siguiente formulario y un representante de admisiones le enviará los próximos pasos por correo electrónico."}
+                      ? "Fill out the form below to get started."
+                      : "Complete el formulario para comenzar."}
                   </p>
                   
                   {/* Financial Aid Info Alert - Mobile Optimized */}
