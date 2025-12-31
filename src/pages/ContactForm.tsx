@@ -189,8 +189,8 @@ const ContactForm = () => {
                   </h1>
                   <p className="text-sm sm:text-base text-navy-600 mb-6 sm:mb-8 text-center px-2 sm:px-0">
                     {language === 'en' 
-                      ? "Fill out the form below to get started."
-                      : "Complete el formulario para comenzar."}
+                      ? "Please fill out the below form completely and Admissions Rep will email next steps."
+                      : "Por favor complete el siguiente formulario y un representante de admisiones le enviará los próximos pasos por correo electrónico."}
                   </p>
                   
                   {/* Financial Aid Info Alert - Mobile Optimized */}
@@ -378,10 +378,10 @@ const ContactForm = () => {
                         <span className="text-sm text-navy-700">
                           {language === 'en' 
                             ? <>
-                                <strong>I agree to receive SMS/text messages</strong> from American Institute of Trades at the phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time. <span className="text-red-500">*</span>
+                                I agree to receive SMS updates. Msg & data rates may apply. Reply STOP to opt out. <span className="text-red-500">*</span>
                               </>
                             : <>
-                                <strong>Acepto recibir mensajes SMS/de texto</strong> del Instituto Americano de Oficios al número de teléfono proporcionado. La frecuencia de los mensajes varía. Se pueden aplicar tarifas de mensajes y datos. Responda STOP para cancelar en cualquier momento. <span className="text-red-500">*</span>
+                                Acepto recibir SMS. Pueden aplicarse tarifas. Responda STOP para cancelar. <span className="text-red-500">*</span>
                               </>
                           }
                         </span>
