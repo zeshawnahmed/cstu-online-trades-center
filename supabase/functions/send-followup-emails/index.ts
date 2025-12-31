@@ -177,6 +177,7 @@ All coursework is designed to help students feel confident and exam-ready.</p>
 <ul>
   <li>100% online, self-paced, asynchronous</li>
   <li>Designed for working adults</li>
+  <li>Program start dates are the 1st and 15th of every month</li>
   <li>Job search support provided near program completion</li>
 </ul>
 
