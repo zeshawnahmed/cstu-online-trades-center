@@ -30,6 +30,7 @@ const ContactForm = () => {
     referrerName: '',
     referralCode: '',
     otherSource: '',
+    smsConsent: false,
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -76,12 +77,12 @@ const ContactForm = () => {
     e.preventDefault();
     
     // Validate required fields
-    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.programInterest || !formData.message.trim() || !formData.howDidYouHear) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.programInterest || !formData.message.trim() || !formData.howDidYouHear || !formData.smsConsent) {
       toast({
         title: language === 'en' ? "Missing Required Fields" : "Campos Requeridos Faltantes",
         description: language === 'en' 
-          ? "Please fill out all required fields before submitting." 
-          : "Por favor complete todos los campos requeridos antes de enviar.",
+          ? "Please fill out all required fields and agree to receive SMS messages before submitting." 
+          : "Por favor complete todos los campos requeridos y acepte recibir mensajes SMS antes de enviar.",
         variant: "destructive",
       });
       return;
@@ -363,6 +364,29 @@ const ContactForm = () => {
                         />
                       </div>
                     )}
+                    
+                    {/* SMS Consent Checkbox - Required for Twilio Compliance */}
+                    <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                      <label className="flex items-start cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={formData.smsConsent}
+                          onChange={(e) => setFormData(prev => ({ ...prev, smsConsent: e.target.checked }))}
+                          className="mt-1 mr-3 h-5 w-5 rounded border-gray-300 text-gold-500 focus:ring-gold-400"
+                          required
+                        />
+                        <span className="text-sm text-navy-700">
+                          {language === 'en' 
+                            ? <>
+                                <strong>I agree to receive SMS/text messages</strong> from American Institute of Trades at the phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time. <span className="text-red-500">*</span>
+                              </>
+                            : <>
+                                <strong>Acepto recibir mensajes SMS/de texto</strong> del Instituto Americano de Oficios al número de teléfono proporcionado. La frecuencia de los mensajes varía. Se pueden aplicar tarifas de mensajes y datos. Responda STOP para cancelar en cualquier momento. <span className="text-red-500">*</span>
+                              </>
+                          }
+                        </span>
+                      </label>
+                    </div>
                     
                     <div className="pt-4">
                       <Button 
