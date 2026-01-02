@@ -6,8 +6,8 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Use the working Resend API key
-const RESEND_API_KEY = "re_9J2sJBFD_KUP9sJWbc4RCjxvRCWVLq3VD";
+// Get Resend API key from environment
+const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY") || "";
 const resend = new Resend(RESEND_API_KEY);
 
 interface ResendEmail {
