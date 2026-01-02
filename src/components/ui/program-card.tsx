@@ -22,6 +22,7 @@ interface ProgramCardProps {
   };
   className?: string;
   comingSoon?: boolean;
+  ptcbApproved?: boolean;
 }
 
 const ProgramCard: React.FC<ProgramCardProps> = ({
@@ -34,6 +35,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
   salaryInfo,
   className,
   comingSoon,
+  ptcbApproved,
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const { t, language } = useLanguage();
@@ -44,6 +46,11 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
     )}>
       <div className="p-4 sm:p-6 flex-grow flex flex-col">
         <div className="flex items-center gap-2 mb-2 flex-wrap">
+          {ptcbApproved && (
+            <div className="bg-green-600 text-white font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm">
+              {language === 'en' ? 'PTCB Approved Program' : 'Programa Aprobado por PTCB'}
+            </div>
+          )}
           {comingSoon && (
             <div className="bg-navy-700 text-white font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm">
               {language === 'en' ? 'Start Dates: 1st & 15th of Every Month' : 'Fechas de Inicio: 1 y 15 de Cada Mes'}

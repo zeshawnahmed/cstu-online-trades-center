@@ -46,7 +46,9 @@ const ProgramsSection = () => {
       imageUrl: '/pharmacy-technician-program.jpg',
       slug: 'pharmacy-technician',
       comingSoon: true,
+      ptcbApproved: true,
       keyFeatures: [
+        language === 'en' ? 'PTCB Approved Program' : 'Programa Aprobado por PTCB',
         language === 'en' ? '8 Weeks Long' : '8 Semanas de Duración',
         language === 'en' ? 'Prepare for PTCB Certification Exam' : 'Preparación para Examen de Certificación PTCB',
         language === 'en' ? 'Fully Online and Weekly Structure' : 'Totalmente en Línea con Estructura Semanal',

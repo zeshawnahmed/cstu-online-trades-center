@@ -286,7 +286,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Learning Coach & Student Support',
           'Structured Curriculum with Job Search Support'
         ],
-        approvalBadge: 'Start Dates: 1st & 15th of Every Month'
+        approvalBadge: 'PTCB Approved Program'
       }
     };
   } else {
@@ -540,7 +540,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Coach de Aprendizaje y Apoyo Estudiantil',
           'Currículo Estructurado con Soporte de Búsqueda de Empleo'
         ],
-        approvalBadge: 'Fechas de Inicio: 1 y 15 de Cada Mes'
+        approvalBadge: 'Programa Aprobado por PTCB'
       }
     };
   }
