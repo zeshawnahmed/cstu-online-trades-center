@@ -153,6 +153,11 @@ const FinancialAid = () => {
                   ? "*Lender terms and conditions apply."
                   : "*Se aplican los términos y condiciones del prestamista."}
               </p>
+              <p className="text-navy-500 mt-2 text-xs italic">
+                {language === 'en'
+                  ? "We're not a Title IV school yet, so we can't offer FAFSA loans at the moment."
+                  : "Aún no somos una escuela Título IV, por lo que no podemos ofrecer préstamos FAFSA por el momento."}
+              </p>
             </div>
 
             {/* Scholarship Resources */}
