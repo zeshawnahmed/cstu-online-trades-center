@@ -96,8 +96,8 @@ const FinancialAid = () => {
             <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg mb-6 sm:mb-8">
               <p className="text-navy-700 text-base sm:text-lg leading-relaxed">
                 {language === 'en'
-                  ? "How do I pay for it? Many students have the funds already or ask family or friends for help with their education. Others rely on lenders, and funds often deposit the same day you're approved. Many students also co-sign loans with a parent or loved one. We also offer payment plans. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
-                  : "¿Cómo lo pago? Muchos estudiantes ya tienen los fondos o piden ayuda a familiares o amigos para su educación. Otros dependen de prestamistas, y los fondos a menudo se depositan el mismo día que eres aprobado. Muchos estudiantes también co-firman préstamos con un padre o ser querido. También ofrecemos planes de pago. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
+                  ? "Many students have the funds already or ask family or friends for help with their education. Others rely on lenders, and funds often deposit the same day you're approved. Many students also co-sign loans with a parent or loved one. We also offer payment plans. We believe financial hurdles shouldn't stop you from starting a career in skilled trades."
+                  : "Muchos estudiantes ya tienen los fondos o piden ayuda a familiares o amigos para su educación. Otros dependen de prestamistas, y los fondos a menudo se depositan el mismo día que eres aprobado. Muchos estudiantes también co-firman préstamos con un padre o ser querido. También ofrecemos planes de pago. Creemos que los obstáculos financieros no deberían impedirte comenzar una carrera en oficios especializados."}
               </p>
               <p className="text-navy-700 text-base sm:text-lg leading-relaxed mt-4">
                 {language === 'en'
