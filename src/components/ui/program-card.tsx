@@ -46,7 +46,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
         <div className="flex items-center gap-2 mb-2 flex-wrap">
           {comingSoon && (
             <div className="bg-navy-700 text-white font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm">
-              {language === 'en' ? 'Next Start Date January 1, 2026' : 'Próxima Fecha de Inicio 1 de Enero, 2026'}
+              {language === 'en' ? 'Start Dates: 1st & 15th of Every Month' : 'Fechas de Inicio: 1 y 15 de Cada Mes'}
             </div>
           )}
           <div className="bg-gold-400 text-navy-800 font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm">
