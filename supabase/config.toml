@@ -11,3 +11,6 @@ verify_jwt = false
 
 [functions.reset-followups]
 verify_jwt = false
+
+[functions.send-email-report]
+verify_jwt = false
