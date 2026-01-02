@@ -70,13 +70,13 @@ function getFollowupSMSContent(programInterest: string, name: string, followupNu
     : 'our programs';
 
   if (followupNumber === 1) {
-    return `Hi ${name}, just following up on your interest in the ${programName} Program at AIT. We'd love to answer any questions! Call 916-365-6907 or reply to our email. - AIT Team`;
+    return `Hi ${name}, just following up on your interest in the ${programName} Program at AIT. We'd love to answer any questions! Call 916-343-8014 or reply to our email. - AIT Team`;
   } else if (followupNumber === 2) {
-    return `Hi ${name}, reminder: Spots are filling for the ${programName} Program at AIT! Ready to enroll? Call 916-365-6907 or visit levelupait.com - AIT Team`;
+    return `Hi ${name}, reminder: Spots are filling for the ${programName} Program at AIT! Ready to enroll? Call 916-343-8014 or visit levelupait.com - AIT Team`;
   } else if (followupNumber === 3) {
-    return `Hi ${name}, don't miss out on the ${programName} Program at AIT! Call 916-365-6907 or reply to get started. - AIT Team`;
+    return `Hi ${name}, don't miss out on the ${programName} Program at AIT! Call 916-343-8014 or reply to get started. - AIT Team`;
   } else {
-    return `Hi ${name}, final reminder about the ${programName} Program at AIT. Don't miss out on your new career! Call 916-365-6907 today. - AIT Team`;
+    return `Hi ${name}, final reminder about the ${programName} Program at AIT. Don't miss out on your new career! Call 916-343-8014 today. - AIT Team`;
   }
 }
 
@@ -136,7 +136,7 @@ Option 2: Tuition payment plan — 3 payments of $833.33</p>
 
 <h3>Questions or Assistance</h3>
 
-<p>If you have any questions or would like to speak with an admissions representative, please call 916-365-6907.</p>
+<p>If you have any questions or would like to speak with an admissions representative, please call 916-343-8014.</p>
 
 <p>Additional financial aid and tuition assistance options are available on our website.</p>
 
@@ -145,7 +145,7 @@ Option 2: Tuition payment plan — 3 payments of $833.33</p>
 American Institute of Trades (AIT)<br>
 HVAC Technician Program<br>
 <a href="https://www.levelupait.com">www.levelupait.com</a><br>
-916-365-6907</p>
+916-343-8014</p>
       `
     };
   } else {
@@ -198,7 +198,7 @@ Option 2: Tuition payment plan — 3 payments of $833.33</p>
 
 <h3>Questions or Assistance</h3>
 
-<p>If you have any questions or would like to speak with an admissions representative, please call 916-365-6907.</p>
+<p>If you have any questions or would like to speak with an admissions representative, please call 916-343-8014.</p>
 
 <p>Additional financial aid and tuition payment assistance options are available on our website.</p>
 
@@ -207,7 +207,7 @@ Option 2: Tuition payment plan — 3 payments of $833.33</p>
 American Institute of Trades (AIT)<br>
 Pharmacy Technician Program<br>
 <a href="https://www.levelupait.com">www.levelupait.com</a><br>
-916-365-6907</p>
+916-343-8014</p>
       `
     };
   }

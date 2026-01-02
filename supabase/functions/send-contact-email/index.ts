@@ -103,7 +103,7 @@ function getSMSContent(programInterest: string, name: string): string {
     ? 'Pharmacy Technician'
     : 'our programs';
 
-  return `Hi ${name}! Thank you for your interest in the ${programName} Program at American Institute of Trades. Check your email for next steps, or call us at 916-365-6907. Visit levelupait.com for more info.`;
+  return `Hi ${name}! Thank you for your interest in the ${programName} Program at American Institute of Trades. Check your email for next steps, or call us at 916-343-8014. Visit levelupait.com for more info.`;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -167,7 +167,7 @@ const handler = async (req: Request): Promise<Response> => {
     let userEmailContent = `
       <p>Thank you for your interest in American Institute of Trades (AIT) in Sacramento, CA.</p>
       <p>We have received your message and will get back to you soon.</p>
-      <p>If you have any questions, feel free to call at 916-365-6907.</p>
+      <p>If you have any questions, feel free to call at 916-343-8014.</p>
       <p>Best regards,<br>
       <strong>Shawn</strong><br>
       Program Director<br>
@@ -223,7 +223,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>Questions or Assistance</h3>
         
-        <p>If you have any questions or would like to speak with an admissions representative, please call 916-365-6907.</p>
+        <p>If you have any questions or would like to speak with an admissions representative, please call 916-343-8014.</p>
         
         <p>Additional financial aid and tuition payment assistance options are available on our website.</p>
         
@@ -232,7 +232,7 @@ const handler = async (req: Request): Promise<Response> => {
         American Institute of Trades (AIT)<br>
         Pharmacy Technician Program<br>
         <a href="https://www.levelupait.com">www.levelupait.com</a><br>
-        916-365-6907</p>
+        916-343-8014</p>
       `;
     } else if (programInterest === 'hvac-technician') {
       userSubject = "HVAC Technician Program – Next Steps";
@@ -285,7 +285,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>Questions or Assistance</h3>
         
-        <p>If you have any questions or would like to speak with an admissions representative, please call 916-365-6907.</p>
+        <p>If you have any questions or would like to speak with an admissions representative, please call 916-343-8014.</p>
         
         <p>Additional financial aid and tuition assistance options are available on our website.</p>
         
@@ -294,7 +294,7 @@ const handler = async (req: Request): Promise<Response> => {
         American Institute of Trades (AIT)<br>
         HVAC Technician Program<br>
         <a href="https://www.levelupait.com">www.levelupait.com</a><br>
-        916-365-6907</p>
+        916-343-8014</p>
       `;
     }
 
