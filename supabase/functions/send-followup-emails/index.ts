@@ -207,15 +207,28 @@ const handler = async (req: Request): Promise<Response> => {
           .replace(/\n{3,}/g, '\n\n')
           .trim();
 
-        // Send follow-up email
-        const emailResponse = await resend.emails.send({
+        // Build email options with threading headers if we have the original Message-ID
+        const emailOptions: any = {
           from: "American Institute of Trades <admin@levelupait.com>",
           to: [submission.email],
           reply_to: "admin@levelupait.com",
           subject: subject,
           text: bodyText,
           html: body,
-        });
+        };
+
+        // Add threading headers to make follow-ups appear in same conversation
+        if (submission.email_message_id) {
+          const originalMessageId = `<${submission.email_message_id}@resend.dev>`;
+          emailOptions.headers = {
+            "In-Reply-To": originalMessageId,
+            "References": originalMessageId,
+          };
+          console.log(`Adding threading headers for message: ${originalMessageId}`);
+        }
+
+        // Send follow-up email
+        const emailResponse = await resend.emails.send(emailOptions);
 
         console.log(`Email sent to ${submission.email}:`, emailResponse);
 
