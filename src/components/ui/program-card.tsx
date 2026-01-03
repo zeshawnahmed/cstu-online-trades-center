@@ -48,7 +48,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
         <div className="flex items-center gap-2 mb-2 flex-wrap">
           {ptcbApproved && (
             <div className="bg-green-600 text-white font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm">
-              {language === 'en' ? 'PTCB Approved Program' : 'Programa Aprobado por PTCB'}
+              {language === 'en' ? 'Pharmacy Tech Certification Board (PTCB) approved' : 'Aprobado por PTCB'}
             </div>
           )}
           {comingSoon && (

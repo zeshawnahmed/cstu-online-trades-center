@@ -48,13 +48,13 @@ const ProgramsSection = () => {
       comingSoon: true,
       ptcbApproved: true,
       keyFeatures: [
-        language === 'en' ? 'PTCB Approved Program' : 'Programa Aprobado por PTCB',
+        language === 'en' ? 'Pharmacy Tech Certification Board (PTCB) approved' : 'Aprobado por la Junta de Certificación de Técnicos de Farmacia (PTCB)',
         language === 'en' ? '8 Weeks Long' : '8 Semanas de Duración',
         language === 'en' ? 'Prepare for PTCB Certification Exam' : 'Preparación para Examen de Certificación PTCB',
         language === 'en' ? 'Fully Online and Weekly Structure' : 'Totalmente en Línea con Estructura Semanal',
         language === 'en' ? 'Learning Coach & Student Support' : 'Coach de Aprendizaje y Apoyo Estudiantil',
         language === 'en' ? 'Job Search Support Included' : 'Soporte de Búsqueda de Empleo Incluido',
-        language === 'en' ? 'Eligible to work as CA Pharmacy Tech after program & passing PTCB exam' : 'Elegible para trabajar como Técnico de Farmacia en CA después del programa y aprobar examen PTCB'
+        language === 'en' ? 'Eligible for licensure upon program completion and passing the PTCB exam' : 'Elegible para licenciatura al completar el programa y aprobar el examen PTCB'
       ],
       salaryInfo: {
         median: '$52,900',
