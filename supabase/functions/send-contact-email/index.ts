@@ -176,7 +176,7 @@ const handler = async (req: Request): Promise<Response> => {
     `;
     
     if (programInterest === 'pharmacy-technician') {
-      userSubject = "Pharmacy Technician Program – Next Steps";
+      userSubject = "Next Steps - Pharmacy Technician Program";
       userEmailContent = `
         <p>Thank you for your interest in the Pharmacy Technician Program at American Institute of Trades (AIT). We're glad you reached out.</p>
         
@@ -237,7 +237,7 @@ const handler = async (req: Request): Promise<Response> => {
         916-343-8014</p>
       `;
     } else if (programInterest === 'hvac-technician') {
-      userSubject = "HVAC Technician Program – Next Steps";
+      userSubject = "Next Steps - HVAC Program";
       userEmailContent = `
         <p>Thank you for your interest in the HVAC Technician Program at American Institute of Trades (AIT) in Sacramento, CA. We're glad you reached out.</p>
         

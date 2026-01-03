@@ -15,7 +15,7 @@ function getFollowupContent(programInterest: string, followupNumber: number, nam
   
   if (isHVAC) {
     return {
-      subject: "HVAC Technician Program – Next Steps",
+      subject: "Next Steps - HVAC Program",
       body: `
 <p>Hi ${name},</p>
 
@@ -80,7 +80,7 @@ HVAC Technician Program<br>
   } else {
     // Pharmacy Technician
     return {
-      subject: "Pharmacy Technician Program – Next Steps",
+      subject: "Next Steps - Pharmacy Technician Program",
       body: `
 <p>Hi ${name},</p>
 
