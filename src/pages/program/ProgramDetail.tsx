@@ -286,7 +286,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Learning Coach & Student Support',
           'Structured Curriculum with Job Search Support'
         ],
-        approvalBadge: 'PTCB Approved Program'
+        approvalBadge: 'Pharmacy Tech Certification Board (PTCB) approved'
       }
     };
   } else {
@@ -540,7 +540,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Coach de Aprendizaje y Apoyo Estudiantil',
           'Currículo Estructurado con Soporte de Búsqueda de Empleo'
         ],
-        approvalBadge: 'Programa Aprobado por PTCB'
+        approvalBadge: 'Aprobado por la Junta de Certificación de Técnicos de Farmacia (PTCB)'
       }
     };
   }
