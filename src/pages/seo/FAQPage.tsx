@@ -29,7 +29,7 @@ const FAQPage = () => {
     },
     {
       question: "I didn't get my email with next steps after submitting contact form?",
-      answer: "Please check your spam or junk folder as important program emails may end up there."
+      answer: "Please check your spam, junk, or promotions folder as important program emails may end up there."
     }
   ];
 
@@ -60,7 +60,7 @@ const FAQPage = () => {
             "name": "I didn't get my email with next steps after submitting contact form?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Please check your spam or junk folder as important program emails may end up there."
+              "text": "Please check your spam, junk, or promotions folder as important program emails may end up there."
             }
           }
         ]
