@@ -404,10 +404,15 @@ const ContactForm = () => {
                   <h2 className="text-3xl font-bold text-navy-700 mb-4">
                     {language === 'en' ? "Thank You!" : "¡Gracias!"}
                   </h2>
-                  <p className="text-xl text-navy-600 mb-8">
+                  <p className="text-xl text-navy-600 mb-2">
                     {language === 'en'
                       ? "Please check your email for next steps!"
                       : "¡Por favor revisa tu correo electrónico para los próximos pasos!"}
+                  </p>
+                  <p className="text-base text-navy-500 mb-8">
+                    {language === 'en'
+                      ? "Please check spam or junk folder if you don't see it."
+                      : "Por favor revisa la carpeta de spam o correo no deseado si no lo ves."}
                   </p>
                   <Button 
                     onClick={() => window.location.href = '/'}

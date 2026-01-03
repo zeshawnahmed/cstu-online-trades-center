@@ -56,6 +56,11 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 mr-2 text-gold-400" />
                 <span className="text-gray-300 text-sm sm:text-base">Sacramento, CA</span>
               </li>
+              <li className="text-gray-300 text-sm sm:text-base">
+                <a href="tel:916-343-8014" className="hover:text-gold-400 transition-colors">
+                  916-343-8014
+                </a>
+              </li>
               <li>
                 <Link to="/contact" className="text-gray-300 hover:text-gold-400 transition-colors underline text-sm sm:text-base">
                   {language === 'en' ? 'Fill Out Contact Form' : 'Llenar Formulario de Contacto'}
