@@ -18,6 +18,7 @@ export type Database = {
         Row: {
           created_at: string
           email: string
+          email_message_id: string | null
           followup_count: number | null
           id: string
           interested_in_financial_aid: boolean | null
@@ -32,6 +33,7 @@ export type Database = {
         Insert: {
           created_at?: string
           email: string
+          email_message_id?: string | null
           followup_count?: number | null
           id?: string
           interested_in_financial_aid?: boolean | null
@@ -46,6 +48,7 @@ export type Database = {
         Update: {
           created_at?: string
           email?: string
+          email_message_id?: string | null
           followup_count?: number | null
           id?: string
           interested_in_financial_aid?: boolean | null

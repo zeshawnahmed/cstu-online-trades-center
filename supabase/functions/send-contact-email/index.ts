@@ -378,6 +378,21 @@ Submitted at: ${new Date().toLocaleString()}`,
     
     console.log("User email response:", userEmailResponse);
     
+    // Store the Message-ID for threading follow-up emails
+    const messageId = userEmailResponse.data?.id;
+    if (messageId) {
+      const { error: updateError } = await supabaseClient
+        .from("contact_submissions")
+        .update({ email_message_id: messageId })
+        .eq("id", submission.id);
+      
+      if (updateError) {
+        console.error("Error storing message ID:", updateError);
+      } else {
+        console.log("Stored Message-ID for threading:", messageId);
+      }
+    }
+    
     if (userEmailResponse?.error) {
       console.error("Error sending user email:", userEmailResponse.error);
     }
