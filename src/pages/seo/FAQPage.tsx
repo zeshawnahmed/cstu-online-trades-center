@@ -30,18 +30,6 @@ const FAQPage = () => {
     {
       question: "I didn't get my email with next steps after submitting contact form?",
       answer: "Please check your spam or junk folder as important program emails may end up there."
-    },
-    {
-      question: "Will I get a job if I do this?",
-      answer: (
-        <>
-          Since we can't control people's minds, including employers, and make them hire people (we wouldn't be working here if we could :)), we don't guarantee job or salary outcomes. However, we do offer job search support, more information can be found{" "}
-          <Link to="/research-hub" className="text-primary hover:text-primary/80 underline font-medium">
-            here
-          </Link>
-          .
-        </>
-      )
     }
   ];
 
@@ -73,14 +61,6 @@ const FAQPage = () => {
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Please check your spam or junk folder as important program emails may end up there."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Will I get a job if I do this?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Since we can't control people's minds, including employers, and make them hire people, we don't guarantee job or salary outcomes. However, we do offer job search support."
             }
           }
         ]
@@ -130,30 +110,30 @@ const FAQPage = () => {
       </Helmet>
 
       <main className="min-h-screen bg-background">
-        <section className="py-20 px-4 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <section className="py-12 md:py-20 px-4 bg-gradient-to-b from-primary/10 to-background">
+          <div className="container mx-auto max-w-4xl text-center px-2">
+            <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               Get answers to common questions about our programs
             </p>
           </div>
         </section>
 
-        <section className="py-16 px-4">
+        <section className="py-10 md:py-16 px-3 md:px-4">
           <div className="container mx-auto max-w-4xl">
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="border border-border rounded-lg px-6 bg-card shadow-sm"
+                  className="border border-border rounded-lg px-4 md:px-6 bg-card shadow-sm"
                 >
-                  <AccordionTrigger className="text-left text-lg font-medium py-6 hover:no-underline">
+                  <AccordionTrigger className="text-left text-base md:text-lg font-medium py-4 md:py-6 hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-6 text-base leading-relaxed">
+                  <AccordionContent className="text-muted-foreground pb-4 md:pb-6 text-sm md:text-base leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -162,21 +142,16 @@ const FAQPage = () => {
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-muted/30">
+        <section className="py-10 md:py-16 px-4 bg-muted/30">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Still Have Questions?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 md:mb-6">Still Have Questions?</h2>
+            <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 px-2">
               Our admissions team is here to help. Contact us for personalized answers about 
               our programs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="text-lg px-8">Contact Us</Button>
-              </Link>
-              <Link to="/apply">
-                <Button size="lg" variant="outline" className="text-lg px-8">Apply Now</Button>
-              </Link>
-            </div>
+            <Link to="/contact">
+              <Button size="lg" className="text-base md:text-lg px-6 md:px-8 w-full sm:w-auto">Contact Us</Button>
+            </Link>
           </div>
         </section>
       </main>
