@@ -84,7 +84,7 @@ HVAC Technician Program<br>
       body: `
 <p>Hi ${name},</p>
 
-<p>Thank you for your interest in the Pharmacy Technician Program at American Institute of Trades (AIT) in Sacramento, CA. We're glad you reached out.</p>
+<p>Thank you for your interest in the Pharmacy Technician Program at American Institute of Trades (AIT). We're glad you reached out.</p>
 
 <h3>What You'll Learn</h3>
 
