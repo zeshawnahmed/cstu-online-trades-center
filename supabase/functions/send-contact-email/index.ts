@@ -182,7 +182,9 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>What You'll Learn</h3>
         
-        <p>This program is recognized by the Pharmacy Technician Certification Board (PTCB) and prepares students to sit for the Pharmacy Technician Certification Exam (PTCE). The curriculum includes:</p>
+        <p>This program is approved and recognized by the Pharmacy Technician Certification Board (PTCB). We are listed on PTCB's official list of approved training providers found here (search for "American Institute of Trades"): <a href="https://ptcb.org/ptcb-recognized-education-training-program-directory/">https://ptcb.org/ptcb-recognized-education-training-program-directory/</a></p>
+        
+        <p>This program prepares students to sit for the Pharmacy Technician Certification Exam (PTCE). The curriculum includes:</p>
         
         <ul>
           <li>Federal pharmacy law and regulations</li>
