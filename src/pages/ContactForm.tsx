@@ -77,12 +77,12 @@ const ContactForm = () => {
     e.preventDefault();
     
     // Validate required fields
-    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.programInterest || !formData.message.trim() || !formData.howDidYouHear || !formData.smsConsent) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.programInterest || !formData.message.trim() || !formData.howDidYouHear) {
       toast({
         title: language === 'en' ? "Missing Required Fields" : "Campos Requeridos Faltantes",
         description: language === 'en' 
-          ? "Please fill out all required fields and agree to receive SMS messages before submitting." 
-          : "Por favor complete todos los campos requeridos y acepte recibir mensajes SMS antes de enviar.",
+          ? "Please fill out all required fields before submitting." 
+          : "Por favor complete todos los campos requeridos antes de enviar.",
         variant: "destructive",
       });
       return;
@@ -365,7 +365,7 @@ const ContactForm = () => {
                       </div>
                     )}
                     
-                    {/* SMS Consent Checkbox - Required for Twilio Compliance */}
+                    {/* SMS Consent Checkbox - Optional */}
                     <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                       <label className="flex items-start cursor-pointer">
                         <input
@@ -373,16 +373,11 @@ const ContactForm = () => {
                           checked={formData.smsConsent}
                           onChange={(e) => setFormData(prev => ({ ...prev, smsConsent: e.target.checked }))}
                           className="mt-1 mr-3 h-5 w-5 rounded border-gray-300 text-gold-500 focus:ring-gold-400"
-                          required
                         />
                         <span className="text-sm text-navy-700">
                           {language === 'en' 
-                            ? <>
-                                I agree to receive SMS updates. Msg & data rates may apply. Reply STOP to opt out. <span className="text-red-500">*</span>
-                              </>
-                            : <>
-                                Acepto recibir SMS. Pueden aplicarse tarifas. Responda STOP para cancelar. <span className="text-red-500">*</span>
-                              </>
+                            ? "I agree to receive SMS updates. Msg & data rates may apply. Reply STOP to opt out."
+                            : "Acepto recibir SMS. Pueden aplicarse tarifas. Responda STOP para cancelar."
                           }
                         </span>
                       </label>
