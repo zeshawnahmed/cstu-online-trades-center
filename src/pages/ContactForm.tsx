@@ -269,7 +269,7 @@ const ContactForm = () => {
                             {language === 'en' ? 'HVAC Technician Program' : 'Programa de Técnico HVAC'}
                           </SelectItem>
                           <SelectItem value="pharmacy-technician">
-                            {language === 'en' ? 'California Pharmacy Technician Program (Next Start Date January 1, 2026)' : 'Programa de Técnico de Farmacia de California (Próxima Fecha de Inicio 1 de Enero, 2026)'}
+                            {language === 'en' ? 'California Pharmacy Technician Program' : 'Programa de Técnico de Farmacia de California'}
                           </SelectItem>
                         </SelectContent>
                       </Select>
