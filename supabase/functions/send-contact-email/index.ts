@@ -172,7 +172,7 @@ const handler = async (req: Request): Promise<Response> => {
       <strong>Shawn</strong><br>
       Program Director<br>
       American Institute of Trades (AIT)<br>
-      <a href="https://www.levelupait.com">www.levelupait.com</a></p>
+      <a href="https://www.levelupait.com">levelupait.com</a></p>
     `;
     
     if (programInterest === 'pharmacy-technician') {
@@ -182,7 +182,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>What You'll Learn</h3>
         
-        <p>This program is approved and recognized by the Pharmacy Technician Certification Board (PTCB). We are listed on PTCB's official list of approved training providers found here (search for "American Institute of Trades"): <a href="https://ptcb.org/ptcb-recognized-education-training-program-directory/">https://ptcb.org/ptcb-recognized-education-training-program-directory/</a></p>
+        <p>This program is approved and recognized by the Pharmacy Technician Certification Board (PTCB). We are listed on PTCB's official list of approved training providers found <a href="https://ptcb.org/ptcb-recognized-education-training-program-directory/">here</a> (search for "American Institute of Trades").</p>
         
         <p>This program prepares students to sit for the Pharmacy Technician Certification Exam (PTCE). The curriculum includes:</p>
         
@@ -194,7 +194,7 @@ const handler = async (req: Request): Promise<Response> => {
           <li>Prescription processing and pharmacy workflow</li>
         </ul>
         
-        <p>The full curriculum is available on our website: <a href="https://www.levelupait.com">www.levelupait.com</a>.<br>
+        <p>The full curriculum is available on <a href="https://www.levelupait.com">our website</a>.<br>
         All coursework is designed to help students feel confident and exam-ready.</p>
         
 <h3>Program Format</h3>
@@ -233,7 +233,7 @@ const handler = async (req: Request): Promise<Response> => {
         <strong>Admissions Team</strong><br>
         American Institute of Trades (AIT)<br>
         Pharmacy Technician Program<br>
-        <a href="https://www.levelupait.com">www.levelupait.com</a><br>
+        <a href="https://www.levelupait.com">levelupait.com</a><br>
         916-343-8014</p>
       `;
     } else if (programInterest === 'hvac-technician') {
@@ -253,7 +253,7 @@ const handler = async (req: Request): Promise<Response> => {
           <li>Preparation for the EPA 608 certification exam</li>
         </ul>
         
-        <p>The full curriculum is available on our website: <a href="https://www.levelupait.com">www.levelupait.com</a>.<br>
+        <p>The full curriculum is available on <a href="https://www.levelupait.com">our website</a>.<br>
         All coursework is designed to help students feel confident and job-ready.</p>
         
         <h3>Why AIT</h3>
@@ -295,7 +295,7 @@ const handler = async (req: Request): Promise<Response> => {
         <strong>Admissions Team</strong><br>
         American Institute of Trades (AIT)<br>
         HVAC Technician Program<br>
-        <a href="https://www.levelupait.com">www.levelupait.com</a><br>
+        <a href="https://www.levelupait.com">levelupait.com</a><br>
         916-343-8014</p>
       `;
     }
