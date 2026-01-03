@@ -159,12 +159,13 @@ const handler = async (req: Request): Promise<Response> => {
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     // Get submissions that need follow-up
+    // No upper limit on followup_count - continues weekly indefinitely after day 7
     const now = new Date().toISOString();
     const { data: submissions, error: fetchError } = await supabase
       .from("contact_submissions")
       .select("*")
       .lt("next_followup_at", now)
-      .lt("followup_count", 4)
+      .not("next_followup_at", "is", null)
       .order("next_followup_at", { ascending: true });
 
     if (fetchError) {
@@ -219,10 +220,17 @@ const handler = async (req: Request): Promise<Response> => {
         console.log(`Email sent to ${submission.email}:`, emailResponse);
 
 
-        // Calculate next follow-up date (1 day from now) or null if this was the last one
-        const nextFollowupAt = followupNumber < 4 
-          ? new Date(Date.now() + 1 * 24 * 60 * 60 * 1000).toISOString()
-          : null;
+        // Calculate next follow-up date:
+        // - Days 1-7: daily emails (1 day interval)
+        // - Day 8+: weekly emails (7 day interval)
+        let nextFollowupAt: string;
+        if (followupNumber < 7) {
+          // Daily for first 7 days
+          nextFollowupAt = new Date(Date.now() + 1 * 24 * 60 * 60 * 1000).toISOString();
+        } else {
+          // Weekly after day 7
+          nextFollowupAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+        }
 
         // Update the submission record
         const { error: updateError } = await supabase
