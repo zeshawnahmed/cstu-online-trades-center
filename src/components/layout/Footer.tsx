@@ -66,11 +66,6 @@ const Footer = () => {
                   {language === 'en' ? 'Fill Out Contact Form' : 'Llenar Formulario de Contacto'}
                 </Link>
               </li>
-              <li className="mt-3">
-                <Link to="/contact" className="bg-gold-400 hover:bg-gold-500 text-navy-800 px-4 py-2 rounded-lg font-medium inline-block text-sm sm:text-base">
-                  {language === 'en' ? "Contact Us" : "Contáctanos"}
-                </Link>
-              </li>
             </ul>
           </div>
           
