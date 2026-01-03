@@ -38,8 +38,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 sm:mb-6 leading-tight">
               {language === 'en' 
-                ? 'Skilled Trade Mastery and Prosperity Begins Here.'
-                : 'El Dominio de Oficios Especializados y Tu Futuro Próspero Comienza Aquí.'
+                ? 'Skilled Trade Mastery Begins Here.'
+                : 'El Dominio de Oficios Especializados Comienza Aquí.'
               }
             </h1>
             
@@ -84,7 +84,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 transition={{ duration: 0.4, delay: 0.9 }}
                 className="bg-gold-400/90 text-navy-900 font-semibold px-2 sm:px-3 py-2 rounded-lg backdrop-blur-sm text-xs sm:text-sm text-center"
               >
-                {language === 'en' ? 'Financial Aid Assistance' : 'Asistencia de Ayuda Financiera'}
+                {language === 'en' ? 'Financial Aid Available' : 'Ayuda Financiera Disponible'}
               </motion.div>
 
               <motion.div

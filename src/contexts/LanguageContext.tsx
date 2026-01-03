@@ -10,11 +10,11 @@ export const translations = {
     applyNow: "Apply Now",
     
     // Hero Section
-    heroTitle: "Skilled Trade Mastery and Prosperity Begins Here.",
+    heroTitle: "Skilled Trade Mastery Begins Here.",
     heroSubtitle: "Learn High-Demand Skills Through Affordable, Self-Paced Online Programs and Job Site/Field Training. Start Your Career in the Skilled Trades Today.",
     becomeJobReady: "BECOME JOB READY",
-    onlineSelfPaced: "ONLINE SELF-PACED & STRUCTURED",
-    handsOnTraining: "*Hands-On Skills Training",
+    onlineSelfPaced: "Online & Structured",
+    handsOnTraining: "*Hands On Training",
     explorePrograms: "EXPLORE PROGRAMS",
     financialAid: "FINANCIAL AID AVAILABLE",
     
@@ -122,11 +122,11 @@ export const translations = {
     applyNow: "Aplicar Ahora",
     
     // Hero Section
-    heroTitle: "El Dominio de Oficios Especializados Comienza Aquí. Construye Tu Futuro.",
+    heroTitle: "El Dominio de Oficios Especializados Comienza Aquí.",
     heroSubtitle: "Aprende Habilidades de Alta Demanda a Través de Programas en Línea Asequibles y Autoguiados con Capacitación Práctica. Comienza Tu Carrera en Oficios Especializados Hoy.",
     becomeJobReady: "PREPÁRATE PARA TRABAJAR",
-    onlineSelfPaced: "APRENDIZAJE A TU RITMO Y ESTRUCTURADO",
-    handsOnTraining: "CAPACITACIÓN PRÁCTICA",
+    onlineSelfPaced: "En Línea y Estructurado",
+    handsOnTraining: "*Capacitación Práctica",
     explorePrograms: "EXPLORAR PROGRAMAS",
     financialAid: "AYUDA FINANCIERA DISPONIBLE",
     
