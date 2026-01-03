@@ -1,27 +1,31 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { language } = useLanguage();
+  const location = useLocation();
+  const isContactPage = location.pathname === '/contact';
   
   return (
     <footer className="bg-navy-500 text-white">
       <div className="container mx-auto px-4 py-12 md:py-16">
-        {/* Prominent Admissions Contact at top - Mobile Optimized */}
-        <div className="text-center mb-8 sm:mb-12">
-          <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-8 py-4 sm:py-6 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
-            <p className="text-base sm:text-xl font-bold mb-1 sm:mb-2">
-              {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
-            </p>
-            <p className="text-sm sm:text-lg font-bold underline">
-              {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
-            </p>
-          </Link>
-        </div>
+        {/* Prominent Admissions Contact at top - Hidden on contact page */}
+        {!isContactPage && (
+          <div className="text-center mb-8 sm:mb-12">
+            <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-8 py-4 sm:py-6 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
+              <p className="text-base sm:text-xl font-bold mb-1 sm:mb-2">
+                {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
+              </p>
+              <p className="text-sm sm:text-lg font-bold underline">
+                {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
+              </p>
+            </Link>
+          </div>
+        )}
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Column 1 - About */}
