@@ -214,7 +214,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>Next Steps</h3>
         
-        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward. If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</p>
+        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward. <u>If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</u></p>
         
         <p>Option 1: Full tuition payment of $2,500<br>
         Option 2: Tuition payment plan — 3 payments of $833.33</p>
@@ -276,7 +276,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>Next Steps</h3>
         
-        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward. If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</p>
+        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward. <u>If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</u></p>
         
         <p>Option 1: Full tuition payment of $2,500<br>
         Option 2: Tuition payment plan — 3 payments of $833.33</p>
