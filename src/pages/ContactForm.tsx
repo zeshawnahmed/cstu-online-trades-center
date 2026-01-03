@@ -193,15 +193,15 @@ const ContactForm = () => {
                       : "Por favor complete el siguiente formulario y un representante de admisiones le enviará los próximos pasos por correo electrónico."}
                   </p>
                   
-                  {/* Financial Aid Info Alert - Mobile Optimized */}
+                  {/* FAQ Info Alert - Mobile Optimized */}
                   <div className="bg-gold-50 border border-gold-200 rounded-lg p-3 sm:p-4 mb-6 sm:mb-8 flex items-start">
                     <Info className="h-5 w-5 text-gold-500 mt-0.5 mr-2 sm:mr-3 flex-shrink-0" />
                     <p className="text-sm sm:text-base text-navy-700">
                       {language === 'en' 
-                        ? "Interested in Financial Aid? Let us know and we'll provide you with all available options. "
-                        : "¿Interesado en ayuda financiera? Háganoslo saber y le proporcionaremos todas las opciones disponibles. "}
-                      <Link to="/financial-aid" className="text-gold-600 hover:text-gold-700 underline font-medium">
-                        {language === 'en' ? 'View Financial Aid Options' : 'Ver Opciones de Ayuda Financiera'}
+                        ? "View answers to Frequently Asked Questions "
+                        : "Ver respuestas a Preguntas Frecuentes "}
+                      <Link to="/faq" className="text-gold-600 hover:text-gold-700 underline font-medium">
+                        {language === 'en' ? 'here' : 'aquí'}
                       </Link>
                     </p>
                   </div>
