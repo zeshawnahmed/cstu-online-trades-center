@@ -411,8 +411,8 @@ const ContactForm = () => {
                   </p>
                   <p className="text-base text-navy-500 mb-8">
                     {language === 'en'
-                      ? "Please check spam or junk folder if you don't see it."
-                      : "Por favor revisa la carpeta de spam o correo no deseado si no lo ves."}
+                      ? "Please check spam, junk, or promotions folder if you don't see it."
+                      : "Por favor revisa la carpeta de spam, correo no deseado o promociones si no lo ves."}
                   </p>
                   <Button 
                     onClick={() => window.location.href = '/'}
