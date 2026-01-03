@@ -36,7 +36,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
               </Link>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 sm:mb-6 leading-tight">
               {language === 'en' 
                 ? 'Skilled Trade Mastery Begins Here.'
                 : 'El Dominio de Oficios Especializados Comienza Aquí.'
