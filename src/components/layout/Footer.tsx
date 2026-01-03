@@ -48,39 +48,7 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Column 2 - Quick Links */}
-          <div className="text-center sm:text-left">
-            <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Quick Links" : "Enlaces Rápidos"}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-gold-400 transition-colors text-sm sm:text-base">
-                  {language === 'en' ? "About Us" : "Sobre Nosotros"}
-                </Link>
-              </li>
-              <li>
-                <Link to="/financial-aid" className="text-gray-300 hover:text-gold-400 transition-colors text-sm sm:text-base">
-                  {language === 'en' ? "Financial Aid" : "Ayuda Financiera"}
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-300 hover:text-gold-400 transition-colors text-sm sm:text-base">
-                  {language === 'en' ? "Contact Us" : "Contacto"}
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy" className="text-gray-300 hover:text-gold-400 transition-colors text-sm sm:text-base">
-                  {language === 'en' ? "Privacy Policy" : "Política de Privacidad"}
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms" className="text-gray-300 hover:text-gold-400 transition-colors text-sm sm:text-base">
-                  {language === 'en' ? "Terms of Service" : "Términos de Servicio"}
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Column 3 - Contact */}
+          {/* Column 2 - Contact */}
           <div className="text-center sm:text-left">
             <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Contact Us" : "Contáctanos"}</h3>
             <ul className="space-y-3">
@@ -96,6 +64,23 @@ const Footer = () => {
               <li className="mt-3">
                 <Link to="/contact" className="bg-gold-400 hover:bg-gold-500 text-navy-800 px-4 py-2 rounded-lg font-medium inline-block text-sm sm:text-base">
                   {language === 'en' ? "Contact Us" : "Contáctanos"}
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Column 3 - Legal Links */}
+          <div className="text-center sm:text-left">
+            <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Legal" : "Legal"}</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/privacy" className="text-gray-300 hover:text-gold-400 transition-colors text-sm sm:text-base">
+                  {language === 'en' ? "Privacy Policy" : "Política de Privacidad"}
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms" className="text-gray-300 hover:text-gold-400 transition-colors text-sm sm:text-base">
+                  {language === 'en' ? "Terms of Service" : "Términos de Servicio"}
                 </Link>
               </li>
             </ul>
