@@ -235,6 +235,11 @@ const ContactForm = () => {
                         required
                         className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
                       />
+                      <p className="text-xs sm:text-sm text-gray-500 mt-1">
+                        {language === 'en' 
+                          ? "After submitting form, check this email for next steps" 
+                          : "Después de enviar el formulario, revisa este correo para los próximos pasos"}
+                      </p>
                     </div>
                     
                     <div>
@@ -395,6 +400,19 @@ const ContactForm = () => {
                       </Button>
                     </div>
                   </form>
+                  
+                  {/* Admissions Phone Number */}
+                  <div className="mt-6 text-center">
+                    <p className="text-sm sm:text-base text-navy-600">
+                      {language === 'en' ? "Questions? Call Admissions:" : "¿Preguntas? Llama a Admisiones:"}
+                    </p>
+                    <a 
+                      href="tel:916-343-8014" 
+                      className="text-lg sm:text-xl font-bold text-gold-600 hover:text-gold-700 transition-colors"
+                    >
+                      916-343-8014
+                    </a>
+                  </div>
                 </>
               ) : (
                 <div className="text-center py-10">
