@@ -236,16 +236,24 @@ const handler = async (req: Request): Promise<Response> => {
 
         console.log(`Email sent to ${submission.email}:`, emailResponse);
 
-        // Calculate next follow-up date:
-        // - Days 1-7: daily emails (1 day interval)
-        // - Day 8+: weekly emails (7 day interval)
+        // Calculate next follow-up date at 9 AM PST (17:00 UTC):
+        // - Days 1-7: daily emails
+        // - Day 8+: weekly emails
+        const getNext9amPST = (daysFromNow: number): string => {
+          const now = new Date();
+          const target = new Date(now);
+          target.setUTCDate(target.getUTCDate() + daysFromNow);
+          target.setUTCHours(17, 0, 0, 0); // 17:00 UTC = 9 AM PST
+          return target.toISOString();
+        };
+        
         let nextFollowupAt: string;
         if (followupNumber < 7) {
-          // Daily for first 7 days
-          nextFollowupAt = new Date(Date.now() + 1 * 24 * 60 * 60 * 1000).toISOString();
+          // Daily for first 7 days - schedule for tomorrow at 9 AM PST
+          nextFollowupAt = getNext9amPST(1);
         } else {
-          // Weekly after day 7
-          nextFollowupAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+          // Weekly after day 7 - schedule for 7 days from now at 9 AM PST
+          nextFollowupAt = getNext9amPST(7);
         }
 
         // Update the submission record
