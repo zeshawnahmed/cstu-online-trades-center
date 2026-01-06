@@ -176,6 +176,10 @@ const handler = async (req: Request): Promise<Response> => {
     console.log(`Found ${submissions?.length || 0} submissions needing follow-up`);
 
     const results = [];
+    const errors = [];
+
+    // Helper function to add delay between emails (500ms = 2 emails/second max)
+    const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
     for (const submission of submissions || []) {
       const followupNumber = (submission.followup_count || 0) + 1;
@@ -232,7 +236,6 @@ const handler = async (req: Request): Promise<Response> => {
 
         console.log(`Email sent to ${submission.email}:`, emailResponse);
 
-
         // Calculate next follow-up date:
         // - Days 1-7: daily emails (1 day interval)
         // - Day 8+: weekly emails (7 day interval)
@@ -265,9 +268,16 @@ const handler = async (req: Request): Promise<Response> => {
             emailSuccess: true
           });
         }
+
+        // Add 500ms delay between emails to respect Resend's 2 emails/second rate limit
+        await delay(500);
+
       } catch (emailError) {
         console.error(`Error sending email to ${submission.email}:`, emailError);
-        results.push({ id: submission.id, email: submission.email, followupNumber, success: false, error: emailError.message });
+        errors.push({ id: submission.id, email: submission.email, followupNumber, success: false, error: emailError.message });
+        
+        // Still add delay even after errors to avoid rate limiting
+        await delay(500);
       }
     }
 
@@ -277,7 +287,9 @@ const handler = async (req: Request): Promise<Response> => {
       JSON.stringify({ 
         success: true, 
         processed: results.length,
-        results 
+        failed: errors.length,
+        results,
+        errors
       }),
       {
         status: 200,
