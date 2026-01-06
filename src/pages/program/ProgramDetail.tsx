@@ -616,12 +616,6 @@ const ProgramDetail = () => {
                   <Clock className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-gold-400" />
                   <span>{program.duration}</span>
                 </div>
-                {slug === 'hvac-technician' && (
-                  <div className="flex items-start text-sm sm:text-base">
-                    <Users className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-gold-400 mt-0.5 flex-shrink-0" />
-                    <span>{language === 'en' ? 'Complementary Hands-On Skills Training with Qualified HVAC Professional' : 'Capacitación Complementaria de Habilidades Prácticas con Profesional HVAC Calificado'}</span>
-                  </div>
-                )}
               </div>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
