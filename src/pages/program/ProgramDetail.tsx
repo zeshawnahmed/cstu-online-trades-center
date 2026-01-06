@@ -43,7 +43,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         fullDescription: [
           "Our HVAC Technician program focuses on the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
           "Through comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
-          "Upon completion, you'll be prepared for entry level positions with EPA 608 certification training and complementary hands-on training to make you job ready."
+          "Upon completion, you'll be prepared for entry level positions with EPA 608 certification training to make you job ready."
         ],
         price: 'Affordable Tuition - $2500',
         duration: 'Online Self Paced, 12 Weeks',
@@ -168,12 +168,10 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'According to TradeCareerPath'
         },
         keyFeatures: [
-          '*Complementary Hands-On Skills Training with HVAC Industry Professional',
           'EPA 608 Certification Training Included',
           'Residential and Commercial HVAC Systems',
           'Self Paced, Online Learning Format for Busy Professionals',
-          'Connect with Local Cohort Through Fun Experiences',
-          '*Although the program is designed to be fully online, complementary hands-on workshops for Winter Cohort 2025 will be held bi-monthly near Downtown Sacramento, made possible through the generosity and collaboration with the Sacramento HVAC Industry, providing an opportunity for students to gain hands-on practice with HVAC skills necessary for a successful career in the field.'
+          'Connect with Local Cohort Through Fun Experiences'
         ],
         approvalBadge: 'HVAC Program'
       },
@@ -297,7 +295,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         fullDescription: [
           "Nuestro programa de Técnico HVAC se enfoca en las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
           "A través de capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
-          "Al completar, estarás preparado para puestos de nivel inicial con capacitación de certificación EPA 608 y capacitación práctica complementaria para hacerte listo para el trabajo."
+          "Al completar, estarás preparado para puestos de nivel inicial con capacitación de certificación EPA 608 para hacerte listo para el trabajo."
         ],
         price: 'Matrícula Asequible - $2500',
         duration: 'En línea a tu ritmo, 12 semanas',
@@ -422,12 +420,10 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'Según TradeCareerPath'
         },
         keyFeatures: [
-          '*Capacitación Complementaria de Habilidades Prácticas con Profesional HVAC Calificado',
           'Capacitación de Certificación EPA 608 Incluida',
           'Sistemas HVAC Residenciales y Comerciales',
           'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
-          'Conéctate con grupos locales a través de experiencias divertidas',
-          '*Aunque el programa es completamente en línea, los talleres prácticos complementarios para la Cohorte de Invierno 2025 se llevarán a cabo bimensualmente cerca del centro de Sacramento, posible gracias a la generosidad y colaboración con profesionales de la industria HVAC de la comunidad, brindando una oportunidad para que los estudiantes obtengan práctica con las habilidades HVAC necesarias para una carrera exitosa en el campo.'
+          'Conéctate con grupos locales a través de experiencias divertidas'
         ],
         approvalBadge: 'Programa HVAC'
       },
