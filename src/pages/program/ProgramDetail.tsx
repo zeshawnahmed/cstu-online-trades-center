@@ -170,7 +170,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         keyFeatures: [
           'EPA 608 Certification Training Included',
           'Residential and Commercial HVAC Systems',
-          'Self Paced, Online Learning Format for Busy Professionals',
+          '100% Online, Self-Paced Learning Format for Busy Professionals',
           'Connect with Local Cohort Through Fun Experiences'
         ],
         approvalBadge: 'HVAC Program'
@@ -422,7 +422,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         keyFeatures: [
           'Capacitación de Certificación EPA 608 Incluida',
           'Sistemas HVAC Residenciales y Comerciales',
-          'Formato de aprendizaje en línea a tu propio ritmo para profesionales ocupados',
+          'Formato de aprendizaje 100% en línea a tu propio ritmo para profesionales ocupados',
           'Conéctate con grupos locales a través de experiencias divertidas'
         ],
         approvalBadge: 'Programa HVAC'

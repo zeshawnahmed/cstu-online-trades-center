@@ -23,7 +23,7 @@ const ProgramsSection = () => {
       keyFeatures: [
         language === 'en' ? 'EPA 608 Certification Training Included' : 'Capacitación de Certificación EPA 608 Incluida',
         language === 'en' ? 'Residential & Commercial HVAC Systems' : 'Sistemas HVAC Residenciales y Comerciales',
-        language === 'en' ? 'Self-Paced, Online Format for Busy Professionals' : 'Formato en Línea a tu Ritmo para Profesionales Ocupados',
+        language === 'en' ? '100% Online, Self-Paced Format for Busy Professionals' : 'Formato 100% en Línea a tu Ritmo para Profesionales Ocupados',
         language === 'en' ? 'Accountability & Learning Coach Support' : 'Apoyo de Entrenador de Responsabilidad y Aprendizaje',
         language === 'en' ? 'Local Cohort Connection Through Engaging Experiences' : 'Conexión con Cohorte Local a Través de Experiencias Participativas'
       ],
