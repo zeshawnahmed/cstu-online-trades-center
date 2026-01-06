@@ -43,10 +43,7 @@ All coursework is designed to help students feel confident and job-ready.</p>
 <ul>
   <li>100% online, self-paced, designed for working adults</li>
   <li>Job search support near graduation, including résumé guidance and sharing student profiles with local employers</li>
-  <li>Complimentary twice-monthly hands-on skills workshops near UC Davis Medical Center</li>
 </ul>
-
-<p><em>Hands-on workshops are offered as a bonus opportunity and are not a guaranteed or refundable portion of tuition. Workshop availability heavily depends on instructor collaborator schedules, as many collaborators work full-time in the field or operate their own HVAC businesses. AIT anticipates and strives to hold these workshops regularly.</em></p>
 
 <h3>Tuition</h3>
 
