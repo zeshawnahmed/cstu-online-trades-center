@@ -13,8 +13,8 @@ const ProgramsSection = () => {
     {
       title: language === 'en' ? 'HVAC Technician Program (EPA 608 Certification Training Included)' : 'Programa de Técnico HVAC (Entrenamiento de Certificación EPA 608 Incluido)',
       description: language === 'en' 
-        ? 'Master HVAC systems through comprehensive training, including EPA 608 certification and complementary hands-on workshops to become job-ready.'
-        : 'Domina los sistemas HVAC a través de capacitación integral, incluyendo certificación EPA 608 y talleres prácticos complementarios para estar listo para trabajar.',
+        ? 'Master HVAC systems through comprehensive training, including EPA 608 certification to become job-ready.'
+        : 'Domina los sistemas HVAC a través de capacitación integral, incluyendo certificación EPA 608 para estar listo para trabajar.',
       price: language === 'en' ? 'Affordable Tuition - $2500' : 'Matrícula Asequible - $2500',
       duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
       certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',
@@ -25,8 +25,7 @@ const ProgramsSection = () => {
         language === 'en' ? 'Residential & Commercial HVAC Systems' : 'Sistemas HVAC Residenciales y Comerciales',
         language === 'en' ? 'Self-Paced, Online Format for Busy Professionals' : 'Formato en Línea a tu Ritmo para Profesionales Ocupados',
         language === 'en' ? 'Accountability & Learning Coach Support' : 'Apoyo de Entrenador de Responsabilidad y Aprendizaje',
-        language === 'en' ? 'Local Cohort Connection Through Engaging Experiences' : 'Conexión con Cohorte Local a Través de Experiencias Participativas',
-        language === 'en' ? 'Complementary bi-monthly hands-on workshops for the Winter 2025 cohort near Downtown Sacramento, made possible through collaboration with local HVAC industry professionals' : 'Talleres prácticos complementarios bimensuales para la cohorte de Invierno 2025 cerca del centro de Sacramento, posibles gracias a la colaboración con profesionales locales de la industria HVAC'
+        language === 'en' ? 'Local Cohort Connection Through Engaging Experiences' : 'Conexión con Cohorte Local a Través de Experiencias Participativas'
       ],
       salaryInfo: {
         median: '$63,420',
