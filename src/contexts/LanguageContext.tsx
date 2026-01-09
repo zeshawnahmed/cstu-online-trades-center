@@ -14,7 +14,7 @@ export const translations = {
     heroSubtitle: "Learn High-Demand Skills Through Affordable, Self-Paced Online Programs and Job Site/Field Training. Start Your Career in the Skilled Trades Today.",
     becomeJobReady: "BECOME JOB READY",
     onlineSelfPaced: "Online & Structured",
-    handsOnTraining: "*Hands On Training",
+    handsOnTraining: "Become Certified",
     explorePrograms: "EXPLORE PROGRAMS",
     financialAid: "FINANCIAL AID AVAILABLE",
     
@@ -126,7 +126,7 @@ export const translations = {
     heroSubtitle: "Aprende Habilidades de Alta Demanda a Través de Programas en Línea Asequibles y Autoguiados con Capacitación Práctica. Comienza Tu Carrera en Oficios Especializados Hoy.",
     becomeJobReady: "PREPÁRATE PARA TRABAJAR",
     onlineSelfPaced: "En Línea y Estructurado",
-    handsOnTraining: "*Capacitación Práctica",
+    handsOnTraining: "Obtén Certificación",
     explorePrograms: "EXPLORAR PROGRAMAS",
     financialAid: "AYUDA FINANCIERA DISPONIBLE",
     

@@ -39,7 +39,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
     return {
       'hvac-technician': {
         title: 'Certified HVAC Technician (EPA 608)',
-        description: 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training and hands-on training to get job ready.',
+        description: 'Master heating, ventilation, and air conditioning systems with comprehensive 100% online training including EPA 608 certification preparation to become job ready.',
         fullDescription: [
           "Our HVAC Technician program focuses on the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
           "Through comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
@@ -410,7 +410,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
     return {
       'hvac-technician': {
         title: 'Técnico HVAC Certificado (EPA 608)',
-        description: 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608 y capacitación práctica para estar listo para el trabajo.',
+        description: 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral 100% en línea incluyendo preparación de certificación EPA 608 para estar listo para el trabajo.',
         fullDescription: [
           "Nuestro programa de Técnico HVAC se enfoca en las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
           "A través de capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
