@@ -26,7 +26,7 @@ const getProgramName = (slug: string): string => {
   const programs: Record<string, string> = {
     'hvac-technician': 'HVAC Technician Program',
     'pharmacy-technician': 'California Pharmacy Technician Program',
-    'medical-assistant': 'Certified Medical Assistant Program',
+    'medical-assistant': 'Certified Medical Administrative Assistant Program',
   };
   return programs[slug] || slug || 'Not specified';
 };
@@ -103,7 +103,7 @@ function getSMSContent(programInterest: string, name: string): string {
     : programInterest === 'pharmacy-technician'
     ? 'Pharmacy Technician'
     : programInterest === 'medical-assistant'
-    ? 'Certified Medical Assistant'
+    ? 'Certified Medical Administrative Assistant'
     : 'our programs';
 
   return `Hi ${name}! Thank you for your interest in the ${programName} Program at American Institute of Trades. Check your email for next steps, or call us at 916-343-8014. Visit levelupait.com for more info.`;
@@ -302,23 +302,24 @@ const handler = async (req: Request): Promise<Response> => {
         916-343-8014</p>
       `;
     } else if (programInterest === 'medical-assistant') {
-      userSubject = "Next Steps - Certified Medical Assistant Program";
+      userSubject = "Next Steps - Certified Medical Administrative Assistant Program";
       userEmailContent = `
-        <p>Thank you for your interest in the Certified Medical Assistant Program at American Institute of Trades (AIT). We're glad you reached out.</p>
+        <p>Thank you for your interest in the Certified Medical Administrative Assistant Program at American Institute of Trades (AIT). We're glad you reached out.</p>
         
         <h3>What You'll Learn</h3>
         
-        <p>This program is approved and recognized by the National Healthcareer Association (NHA). Upon completion, you'll be prepared to sit for the Certified Clinical Medical Assistant (CCMA) exam.</p>
+        <p>This program is approved and recognized by the National Healthcareer Association (NHA). Upon completion, you'll be prepared to sit for the Certified Medical Administrative Assistant (CMAA) exam.</p>
         
         <p>The curriculum includes:</p>
         
         <ul>
-          <li>Medical terminology and anatomy</li>
-          <li>Clinical procedures and patient care</li>
-          <li>Vital signs and medical measurements</li>
-          <li>Infection control and safety</li>
-          <li>Medical office administration</li>
-          <li>EKG and phlebotomy basics</li>
+          <li>Medical terminology and foundational knowledge</li>
+          <li>Communication and professionalism</li>
+          <li>Medical law, ethics, and HIPAA compliance</li>
+          <li>Scheduling and appointment management</li>
+          <li>Patient encounter and documentation</li>
+          <li>Billing and revenue cycle fundamentals</li>
+          <li>Administrative procedures and office operations</li>
         </ul>
         
         <p>The full curriculum is available on <a href="https://www.levelupait.com">our website</a>.<br>
@@ -359,7 +360,7 @@ const handler = async (req: Request): Promise<Response> => {
         <p>Best regards,<br>
         <strong>Admissions Team</strong><br>
         American Institute of Trades (AIT)<br>
-        Certified Medical Assistant Program<br>
+        Certified Medical Administrative Assistant Program<br>
         <a href="https://www.levelupait.com">levelupait.com</a><br>
         916-343-8014</p>
       `;
