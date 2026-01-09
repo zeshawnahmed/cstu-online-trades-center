@@ -24,6 +24,18 @@ const FAQPage = () => {
       )
     },
     {
+      question: "Do you guys accept FAFSA loans or any state tuition waivers?",
+      answer: (
+        <>
+          We currently do not accept any FAFSA loans or any state or federal tuition waivers. Please see our{" "}
+          <Link to="/financial-aid" className="text-primary hover:text-primary/80 underline font-medium">
+            Financial Aid page
+          </Link>{" "}
+          for more information.
+        </>
+      )
+    },
+    {
       question: "Are you guys legit?",
       answer: "Our institution is in compliance with the California Bureau of Post Secondary Education and as applicable programs are board-approved."
     },
@@ -45,6 +57,14 @@ const FAQPage = () => {
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "We get it, money is tight. That's why we offer a tuition payment plan to break the full program cost $2500 into 3 monthly payments of $833.33. Please visit our Financial Aid page for all available options."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you guys accept FAFSA loans or any state tuition waivers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We currently do not accept any FAFSA loans or any state or federal tuition waivers. Please see our Financial Aid page for more information."
             }
           },
           {
