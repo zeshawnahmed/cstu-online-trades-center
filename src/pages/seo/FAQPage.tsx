@@ -165,10 +165,6 @@ const FAQPage = () => {
         <section className="py-10 md:py-16 px-4 bg-muted/30">
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 md:mb-6">Still Have Questions?</h2>
-            <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 px-2">
-              Our admissions team is here to help. Contact us for personalized answers about 
-              our programs.
-            </p>
             <Link to="/contact">
               <Button size="lg" className="text-base md:text-lg px-6 md:px-8 w-full sm:w-auto">Contact Us</Button>
             </Link>
