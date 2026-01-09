@@ -287,95 +287,102 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         approvalBadge: 'Pharmacy Tech Certification Board (PTCB) approved'
       },
       'medical-assistant': {
-        title: 'Certified Medical Administrative Assistant Program',
-        description: 'Earn the nationally recognized CMAA credential to work as a Medical Administrative Assistant in just 8 weeks with our NHA-approved program.',
+        title: 'Certified Clinical Medical Assistant Program',
+        description: 'Earn the nationally recognized CCMA credential to work as a Clinical Medical Assistant in just 8 weeks with our NHA-approved program.',
         fullDescription: [
-          "Our Certified Medical Administrative Assistant Program prepares you for a rewarding career in healthcare administration, providing comprehensive training in medical office operations, patient communication, and billing fundamentals.",
-          "Through our fully online, self-paced curriculum, you'll learn everything from medical terminology and scheduling to documentation and revenue cycle management.",
-          "Upon successful completion of the program and passing the NHA exam, you'll earn the Certified Medical Administrative Assistant (CMAA) credential."
+          "Our Certified Clinical Medical Assistant Program prepares you for a rewarding career in healthcare, providing comprehensive training in clinical procedures, patient care, and medical office operations.",
+          "Through our fully online, self-paced curriculum, you'll learn everything from anatomy and physiology to phlebotomy, EKG, and clinical documentation.",
+          "Upon successful completion of the program and passing the NHA exam, you'll earn the Certified Clinical Medical Assistant (CCMA) credential."
         ],
         price: 'Affordable Tuition - $2500',
         duration: 'Online Self Paced, 8 Weeks',
-        certification: 'NHA CMAA Certification Prep',
+        certification: 'NHA CCMA Certification Prep',
         curriculum: [
           {
             week: 'Week 1',
-            title: 'Foundational Knowledge & Medical Terminology',
+            title: 'Foundational Clinical Knowledge',
             topics: [
-              'Medical terminology and word building',
-              'Body systems overview',
-              'Common medical abbreviations',
-              'Healthcare industry fundamentals'
+              'Role and responsibilities of the Clinical Medical Assistant',
+              'Healthcare delivery systems',
+              'Professional standards and scope of practice',
+              'Medical terminology fundamentals',
+              'Basic anatomy and physiology concepts'
             ]
           },
           {
             week: 'Week 2',
-            title: 'Communication & Professionalism',
+            title: 'Anatomy, Physiology & Medical Terminology',
             topics: [
-              'Professional communication skills',
-              'Patient interaction best practices',
-              'Telephone etiquette and protocols',
-              'Written communication standards'
+              'Body systems and functions',
+              'Common diseases and conditions',
+              'Signs and symptoms',
+              'Clinical abbreviations and terminology',
+              'Documentation awareness'
             ]
           },
           {
             week: 'Week 3',
-            title: 'Medical Law, Ethics & Compliance',
+            title: 'Infection Control & Patient Safety',
             topics: [
-              'HIPAA regulations and patient privacy',
-              'Medical ethics and professional conduct',
-              'Legal considerations in healthcare',
-              'Compliance and regulatory requirements'
+              'OSHA standards',
+              'Infection prevention principles',
+              'Hand hygiene and PPE',
+              'Aseptic technique',
+              'Environmental safety and emergency preparedness'
             ]
           },
           {
             week: 'Week 4',
-            title: 'Scheduling & Appointment Management',
+            title: 'Patient Care & Clinical Procedures',
             topics: [
-              'Appointment scheduling systems',
-              'Patient flow management',
-              'Cancellations and rescheduling',
-              'Provider schedule coordination'
+              'Patient intake and identification',
+              'Measuring and recording vital signs',
+              'Assisting with examinations',
+              'Positioning and draping patients',
+              'Clinical documentation basics'
             ]
           },
           {
             week: 'Week 5',
-            title: 'Patient Encounter & Documentation',
+            title: 'Phlebotomy & Specimen Collection',
             topics: [
-              'Patient registration and intake',
-              'Medical records management',
-              'Electronic health records (EHR)',
-              'Documentation best practices'
+              'Venipuncture concepts and safety',
+              'Blood collection equipment',
+              'Order of draw principles',
+              'Specimen handling and transport',
+              'Non-blood specimen collection fundamentals'
             ]
           },
           {
             week: 'Week 6',
-            title: 'Billing & Revenue Cycle Fundamentals',
+            title: 'EKG & Diagnostic Testing',
             topics: [
-              'Medical billing basics',
-              'Insurance verification and claims',
-              'CPT and ICD coding overview',
-              'Patient payment processing'
+              'Purpose of electrocardiography',
+              'Patient preparation',
+              'Lead placement concepts',
+              'Artifact awareness',
+              'Diagnostic testing support fundamentals'
             ]
           },
           {
             week: 'Week 7',
-            title: 'Administrative Procedures & Office Operations',
+            title: 'Administrative & Professional Responsibilities',
             topics: [
-              'Office management and supplies',
-              'Mail and correspondence handling',
-              'Filing systems and organization',
-              'Quality assurance procedures'
+              'Scheduling and patient flow',
+              'Electronic health records (EHR)',
+              'HIPAA and confidentiality',
+              'Insurance and billing awareness',
+              'Professional communication'
             ]
           },
           {
             week: 'Week 8',
-            title: 'CMAA Exam Review & Career Readiness',
+            title: 'NHA CCMA Exam Preparation',
             topics: [
-              'NHA CMAA exam overview and format',
-              'Comprehensive content review',
-              'Practice exams and test strategies',
-              'Job search and interview preparation'
+              'Review of all NHA CCMA domains',
+              'Practice exams and item review',
+              'Test-taking strategies',
+              'Professional readiness and employability skills'
             ]
           }
         ],
@@ -383,13 +390,13 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           median: '$46,880',
           growth: '+14%',
           period: 'projected by 2032',
-          demand: 'Quick Salary Snapshot - Medical Administrative Assistants in California (2025)',
+          demand: 'Quick Salary Snapshot - Clinical Medical Assistants in California (2025)',
           hourlyRate: '$22.54',
           source: 'According to BLS'
         },
         keyFeatures: [
           '8 Weeks Long',
-          'Prepare for NHA CMAA Certification Exam',
+          'Prepare for NHA CCMA Certification Exam',
           'Fully Online and Weekly Structure',
           'Perfect for Working Professionals',
           'Learning Coach & Student Support',
@@ -650,95 +657,102 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
         approvalBadge: 'Aprobado por la Junta de Certificación de Técnicos de Farmacia (PTCB)'
       },
       'medical-assistant': {
-        title: 'Programa de Asistente Administrativo Médico Certificado',
-        description: 'Obtén la credencial CMAA reconocida a nivel nacional para trabajar como Asistente Administrativo Médico en solo 8 semanas con nuestro programa aprobado por NHA.',
+        title: 'Programa de Asistente Médico Clínico Certificado',
+        description: 'Obtén la credencial CCMA reconocida a nivel nacional para trabajar como Asistente Médico Clínico en solo 8 semanas con nuestro programa aprobado por NHA.',
         fullDescription: [
-          "Nuestro Programa de Asistente Administrativo Médico Certificado te prepara para una carrera gratificante en administración de salud, brindando capacitación integral en operaciones de oficina médica, comunicación con pacientes y fundamentos de facturación.",
-          "A través de nuestro plan de estudios completamente en línea y a tu ritmo, aprenderás todo, desde terminología médica y programación hasta documentación y gestión del ciclo de ingresos.",
-          "Al completar exitosamente el programa y aprobar el examen NHA, obtendrás la credencial de Asistente Administrativo Médico Certificado (CMAA)."
+          "Nuestro Programa de Asistente Médico Clínico Certificado te prepara para una carrera gratificante en el cuidado de la salud, brindando capacitación integral en procedimientos clínicos, atención al paciente y operaciones de oficina médica.",
+          "A través de nuestro plan de estudios completamente en línea y a tu ritmo, aprenderás todo, desde anatomía y fisiología hasta flebotomía, EKG y documentación clínica.",
+          "Al completar exitosamente el programa y aprobar el examen NHA, obtendrás la credencial de Asistente Médico Clínico Certificado (CCMA)."
         ],
         price: 'Matrícula Asequible - $2500',
         duration: 'En línea a tu ritmo, 8 semanas',
-        certification: 'Preparación para Certificación NHA CMAA',
+        certification: 'Preparación para Certificación NHA CCMA',
         curriculum: [
           {
             week: 'Semana 1',
-            title: 'Conocimientos Fundamentales y Terminología Médica',
+            title: 'Conocimientos Clínicos Fundamentales',
             topics: [
-              'Terminología médica y construcción de palabras',
-              'Descripción general de los sistemas del cuerpo',
-              'Abreviaturas médicas comunes',
-              'Fundamentos de la industria de la salud'
+              'Rol y responsabilidades del Asistente Médico Clínico',
+              'Sistemas de prestación de atención médica',
+              'Estándares profesionales y alcance de la práctica',
+              'Fundamentos de terminología médica',
+              'Conceptos básicos de anatomía y fisiología'
             ]
           },
           {
             week: 'Semana 2',
-            title: 'Comunicación y Profesionalismo',
+            title: 'Anatomía, Fisiología y Terminología Médica',
             topics: [
-              'Habilidades de comunicación profesional',
-              'Mejores prácticas de interacción con pacientes',
-              'Etiqueta y protocolos telefónicos',
-              'Estándares de comunicación escrita'
+              'Sistemas del cuerpo y funciones',
+              'Enfermedades y condiciones comunes',
+              'Signos y síntomas',
+              'Abreviaturas y terminología clínica',
+              'Conciencia de documentación'
             ]
           },
           {
             week: 'Semana 3',
-            title: 'Ley Médica, Ética y Cumplimiento',
+            title: 'Control de Infecciones y Seguridad del Paciente',
             topics: [
-              'Regulaciones HIPAA y privacidad del paciente',
-              'Ética médica y conducta profesional',
-              'Consideraciones legales en el cuidado de la salud',
-              'Requisitos de cumplimiento y regulatorios'
+              'Estándares de OSHA',
+              'Principios de prevención de infecciones',
+              'Higiene de manos y EPP',
+              'Técnica aséptica',
+              'Seguridad ambiental y preparación para emergencias'
             ]
           },
           {
             week: 'Semana 4',
-            title: 'Programación y Gestión de Citas',
+            title: 'Atención al Paciente y Procedimientos Clínicos',
             topics: [
-              'Sistemas de programación de citas',
-              'Gestión del flujo de pacientes',
-              'Cancelaciones y reprogramaciones',
-              'Coordinación del horario del proveedor'
+              'Ingreso e identificación del paciente',
+              'Medición y registro de signos vitales',
+              'Asistencia en exámenes',
+              'Posicionamiento y drapeado de pacientes',
+              'Conceptos básicos de documentación clínica'
             ]
           },
           {
             week: 'Semana 5',
-            title: 'Encuentro con el Paciente y Documentación',
+            title: 'Flebotomía y Recolección de Muestras',
             topics: [
-              'Registro e ingreso de pacientes',
-              'Gestión de registros médicos',
-              'Registros electrónicos de salud (EHR)',
-              'Mejores prácticas de documentación'
+              'Conceptos y seguridad de venopunción',
+              'Equipo de recolección de sangre',
+              'Principios de orden de extracción',
+              'Manejo y transporte de muestras',
+              'Fundamentos de recolección de muestras no sanguíneas'
             ]
           },
           {
             week: 'Semana 6',
-            title: 'Fundamentos de Facturación y Ciclo de Ingresos',
+            title: 'EKG y Pruebas Diagnósticas',
             topics: [
-              'Conceptos básicos de facturación médica',
-              'Verificación de seguros y reclamaciones',
-              'Introducción a códigos CPT e ICD',
-              'Procesamiento de pagos de pacientes'
+              'Propósito de la electrocardiografía',
+              'Preparación del paciente',
+              'Conceptos de colocación de electrodos',
+              'Conciencia de artefactos',
+              'Fundamentos de apoyo a pruebas diagnósticas'
             ]
           },
           {
             week: 'Semana 7',
-            title: 'Procedimientos Administrativos y Operaciones de Oficina',
+            title: 'Responsabilidades Administrativas y Profesionales',
             topics: [
-              'Gestión de oficina y suministros',
-              'Manejo de correo y correspondencia',
-              'Sistemas de archivo y organización',
-              'Procedimientos de garantía de calidad'
+              'Programación y flujo de pacientes',
+              'Registros electrónicos de salud (EHR)',
+              'HIPAA y confidencialidad',
+              'Conciencia de seguros y facturación',
+              'Comunicación profesional'
             ]
           },
           {
             week: 'Semana 8',
-            title: 'Revisión del Examen CMAA y Preparación Profesional',
+            title: 'Preparación para el Examen NHA CCMA',
             topics: [
-              'Descripción general y formato del examen NHA CMAA',
-              'Revisión integral del contenido',
-              'Exámenes de práctica y estrategias de prueba',
-              'Búsqueda de empleo y preparación para entrevistas'
+              'Revisión de todos los dominios del NHA CCMA',
+              'Exámenes de práctica y revisión de ítems',
+              'Estrategias para tomar exámenes',
+              'Preparación profesional y habilidades de empleabilidad'
             ]
           }
         ],
@@ -746,13 +760,13 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           median: '$46,880',
           growth: '+14%',
           period: 'proyectado para 2032',
-          demand: 'Instantánea Rápida de Salario - Asistentes Administrativos Médicos en California (2025)',
+          demand: 'Instantánea Rápida de Salario - Asistentes Médicos Clínicos en California (2025)',
           hourlyRate: '$22.54',
           source: 'Según BLS'
         },
         keyFeatures: [
           '8 Semanas de Duración',
-          'Preparación para Examen de Certificación NHA CMAA',
+          'Preparación para Examen de Certificación NHA CCMA',
           'Totalmente en Línea y a Tu Ritmo',
           'Perfecto para Profesionales que Trabajan',
           'Coach de Aprendizaje y Apoyo Estudiantil',
