@@ -24,6 +24,7 @@ interface ProgramCardProps {
   comingSoon?: boolean;
   ptcbApproved?: boolean;
   nhaApproved?: boolean;
+  showStartDates?: boolean;
 }
 
 const ProgramCard: React.FC<ProgramCardProps> = ({
@@ -38,6 +39,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
   comingSoon,
   ptcbApproved,
   nhaApproved,
+  showStartDates,
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const { t, language } = useLanguage();
@@ -58,7 +60,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
               {language === 'en' ? 'National Healthcareer Association (NHA) approved' : 'Aprobado por NHA'}
             </div>
           )}
-          {comingSoon && (
+          {(comingSoon || showStartDates) && (
             <div className="bg-navy-700 text-white font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm">
               {language === 'en' ? 'Start Dates: 1st & 15th of Every Month' : 'Fechas de Inicio: 1 y 15 de Cada Mes'}
             </div>
