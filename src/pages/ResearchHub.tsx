@@ -25,7 +25,7 @@ const JobSearchPage = () => {
       phase: language === 'en' ? 'After Graduation' : 'Después de Graduación',
       icon: Users,
       title: language === 'en' ? 'Industry Readiness' : 'Preparación para la Industria',
-      description: language === 'en' ? 'We share your profile with select employers' : 'Compartimos tu perfil con empleadores selectos',
+      description: language === 'en' ? 'Get job-ready with professional guidance' : 'Prepárate para el trabajo con orientación profesional',
     },
   ];
 

@@ -38,7 +38,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
   if (language === 'en') {
     return {
       'hvac-technician': {
-        title: 'HVAC Technician Program (EPA 608 Certification Training Included)',
+        title: 'Certified HVAC Technician (EPA 608)',
         description: 'Master heating, ventilation, and air conditioning systems with comprehensive training including EPA 608 certification training and hands-on training to get job ready.',
         fullDescription: [
           "Our HVAC Technician program focuses on the essential skills needed to succeed in entry level positions in the heating, ventilation, and air conditioning industry.",
@@ -168,10 +168,11 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'According to TradeCareerPath'
         },
         keyFeatures: [
+          '100% Online Program',
           'EPA 608 Certification Training Included',
           'Residential and Commercial HVAC Systems',
-          '100% Online, Self-Paced Learning Format for Busy Professionals',
-          'Connect with Local Cohort Through Fun Experiences'
+          'Self-Paced Learning Format for Busy Professionals',
+          'Accountability & Learning Coach Support'
         ],
         approvalBadge: 'HVAC Program'
       },
@@ -277,9 +278,9 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'According to Indeed'
         },
         keyFeatures: [
+          '100% Online Program',
           '8 Weeks Long',
           'Prepare for PTCB Certification Exam',
-          'Fully Online and Weekly Structure',
           'Perfect for Working Professionals',
           'Learning Coach & Student Support',
           'Structured Curriculum with Job Search Support'
@@ -395,9 +396,9 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'According to BLS'
         },
         keyFeatures: [
+          '100% Online Program',
           '8 Weeks Long',
           'Prepare for NHA CCMA Certification Exam',
-          'Fully Online and Weekly Structure',
           'Perfect for Working Professionals',
           'Learning Coach & Student Support',
           'Structured Curriculum with Job Search Support'
@@ -408,7 +409,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
   } else {
     return {
       'hvac-technician': {
-        title: 'Programa de Técnico HVAC (Capacitación de Certificación EPA 608 Incluida)',
+        title: 'Técnico HVAC Certificado (EPA 608)',
         description: 'Domina los sistemas de calefacción, ventilación y aire acondicionado con capacitación integral incluyendo capacitación de certificación EPA 608 y capacitación práctica para estar listo para el trabajo.',
         fullDescription: [
           "Nuestro programa de Técnico HVAC se enfoca en las habilidades esenciales necesarias para tener éxito en puestos de nivel inicial en la industria de calefacción, ventilación y aire acondicionado.",
@@ -538,10 +539,11 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'Según TradeCareerPath'
         },
         keyFeatures: [
+          'Programa 100% en Línea',
           'Capacitación de Certificación EPA 608 Incluida',
           'Sistemas HVAC Residenciales y Comerciales',
-          'Formato de aprendizaje 100% en línea a tu propio ritmo para profesionales ocupados',
-          'Conéctate con grupos locales a través de experiencias divertidas'
+          'Formato de aprendizaje a tu propio ritmo para profesionales ocupados',
+          'Apoyo de Entrenador de Responsabilidad y Aprendizaje'
         ],
         approvalBadge: 'Programa HVAC'
       },
@@ -647,9 +649,9 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'Según Indeed'
         },
         keyFeatures: [
+          'Programa 100% en Línea',
           '8 Semanas de Duración',
           'Preparación para Examen de Certificación PTCB',
-          'Totalmente en Línea y a Tu Ritmo',
           'Perfecto para Profesionales que Trabajan',
           'Coach de Aprendizaje y Apoyo Estudiantil',
           'Currículo Estructurado con Soporte de Búsqueda de Empleo'
@@ -765,9 +767,9 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           source: 'Según BLS'
         },
         keyFeatures: [
+          'Programa 100% en Línea',
           '8 Semanas de Duración',
           'Preparación para Examen de Certificación NHA CCMA',
-          'Totalmente en Línea y a Tu Ritmo',
           'Perfecto para Profesionales que Trabajan',
           'Coach de Aprendizaje y Apoyo Estudiantil',
           'Currículo Estructurado con Soporte de Búsqueda de Empleo'

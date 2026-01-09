@@ -11,7 +11,7 @@ const ProgramsSection = () => {
 
   const programs = [
     {
-      title: language === 'en' ? 'HVAC Technician Program (EPA 608 Certification Training Included)' : 'Programa de Técnico HVAC (Entrenamiento de Certificación EPA 608 Incluido)',
+      title: language === 'en' ? 'Certified HVAC Technician (EPA 608)' : 'Técnico HVAC Certificado (EPA 608)',
       description: language === 'en' 
         ? 'Master HVAC systems through comprehensive training, including EPA 608 certification to become job-ready.'
         : 'Domina los sistemas HVAC a través de capacitación integral, incluyendo certificación EPA 608 para estar listo para trabajar.',
@@ -21,11 +21,11 @@ const ProgramsSection = () => {
       imageUrl: '/hvac-technician-program.jpg',
       slug: 'hvac-technician',
       keyFeatures: [
+        language === 'en' ? '100% Online Program' : 'Programa 100% en Línea',
         language === 'en' ? 'EPA 608 Certification Training Included' : 'Capacitación de Certificación EPA 608 Incluida',
         language === 'en' ? 'Residential & Commercial HVAC Systems' : 'Sistemas HVAC Residenciales y Comerciales',
-        language === 'en' ? '100% Online, Self-Paced Format for Busy Professionals' : 'Formato 100% en Línea a tu Ritmo para Profesionales Ocupados',
-        language === 'en' ? 'Accountability & Learning Coach Support' : 'Apoyo de Entrenador de Responsabilidad y Aprendizaje',
-        language === 'en' ? 'Local Cohort Connection Through Engaging Experiences' : 'Conexión con Cohorte Local a Través de Experiencias Participativas'
+        language === 'en' ? 'Self-Paced Format for Busy Professionals' : 'Formato a tu Ritmo para Profesionales Ocupados',
+        language === 'en' ? 'Accountability & Learning Coach Support' : 'Apoyo de Entrenador de Responsabilidad y Aprendizaje'
       ],
       salaryInfo: {
         median: '$63,420',
@@ -47,10 +47,10 @@ const ProgramsSection = () => {
       comingSoon: true,
       ptcbApproved: true,
       keyFeatures: [
+        language === 'en' ? '100% Online Program' : 'Programa 100% en Línea',
         language === 'en' ? 'Pharmacy Tech Certification Board (PTCB) approved' : 'Aprobado por la Junta de Certificación de Técnicos de Farmacia (PTCB)',
         language === 'en' ? '8 Weeks Long' : '8 Semanas de Duración',
         language === 'en' ? 'Prepare for PTCB Certification Exam' : 'Preparación para Examen de Certificación PTCB',
-        language === 'en' ? 'Fully Online and Weekly Structure' : 'Totalmente en Línea con Estructura Semanal',
         language === 'en' ? 'Learning Coach & Student Support' : 'Coach de Aprendizaje y Apoyo Estudiantil',
         language === 'en' ? 'Job Search Support Included' : 'Soporte de Búsqueda de Empleo Incluido',
         language === 'en' ? 'Eligible for licensure upon program completion and passing the PTCB exam' : 'Elegible para licenciatura al completar el programa y aprobar el examen PTCB'
@@ -75,10 +75,10 @@ const ProgramsSection = () => {
       comingSoon: true,
       nhaApproved: true,
       keyFeatures: [
+        language === 'en' ? '100% Online Program' : 'Programa 100% en Línea',
         language === 'en' ? 'National Healthcareer Association (NHA) approved' : 'Aprobado por la Asociación Nacional de Carreras de Salud (NHA)',
         language === 'en' ? '8 Weeks Long' : '8 Semanas de Duración',
         language === 'en' ? 'Prepare for CCMA Certification Exam' : 'Preparación para Examen de Certificación CCMA',
-        language === 'en' ? 'Fully Online and Weekly Structure' : 'Totalmente en Línea con Estructura Semanal',
         language === 'en' ? 'Learning Coach & Student Support' : 'Coach de Aprendizaje y Apoyo Estudiantil',
         language === 'en' ? 'Job Search Support Included' : 'Soporte de Búsqueda de Empleo Incluido'
       ],
