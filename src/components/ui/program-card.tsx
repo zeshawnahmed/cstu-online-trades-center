@@ -23,6 +23,7 @@ interface ProgramCardProps {
   className?: string;
   comingSoon?: boolean;
   ptcbApproved?: boolean;
+  nhaApproved?: boolean;
 }
 
 const ProgramCard: React.FC<ProgramCardProps> = ({
@@ -36,6 +37,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
   className,
   comingSoon,
   ptcbApproved,
+  nhaApproved,
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const { t, language } = useLanguage();
@@ -49,6 +51,11 @@ const ProgramCard: React.FC<ProgramCardProps> = ({
           {ptcbApproved && (
             <div className="bg-green-600 text-white font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm">
               {language === 'en' ? 'Pharmacy Tech Certification Board (PTCB) approved' : 'Aprobado por PTCB'}
+            </div>
+          )}
+          {nhaApproved && (
+            <div className="bg-green-600 text-white font-bold px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm">
+              {language === 'en' ? 'National Healthcareer Association (NHA) approved' : 'Aprobado por NHA'}
             </div>
           )}
           {comingSoon && (
