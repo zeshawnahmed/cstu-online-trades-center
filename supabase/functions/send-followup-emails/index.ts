@@ -74,26 +74,26 @@ HVAC Technician Program<br>
     };
   } else if (programInterest === 'medical-assistant') {
     return {
-      subject: "Next Steps - Certified Medical Administrative Assistant Program",
+      subject: "Next Steps - Certified Clinical Medical Assistant Program",
       body: `
 <p>Hi ${name},</p>
 
-<p>Thank you for your interest in the Certified Medical Administrative Assistant Program at American Institute of Trades (AIT). We're glad you reached out.</p>
+<p>Thank you for your interest in the Certified Clinical Medical Assistant Program at American Institute of Trades (AIT). We're glad you reached out.</p>
 
 <h3>What You'll Learn</h3>
 
-<p>This program is approved and recognized by the National Healthcareer Association (NHA). Upon completion, you'll be prepared to sit for the Certified Medical Administrative Assistant (CMAA) exam.</p>
+<p>This program is approved and recognized by the National Healthcareer Association (NHA). Upon completion, you'll be prepared to sit for the Certified Clinical Medical Assistant (CCMA) exam.</p>
 
 <p>The curriculum includes:</p>
 
 <ul>
-  <li>Medical terminology and foundational knowledge</li>
-  <li>Communication and professionalism</li>
-  <li>Medical law, ethics, and HIPAA compliance</li>
-  <li>Scheduling and appointment management</li>
-  <li>Patient encounter and documentation</li>
-  <li>Billing and revenue cycle fundamentals</li>
-  <li>Administrative procedures and office operations</li>
+  <li>Foundational clinical knowledge and medical terminology</li>
+  <li>Anatomy, physiology, and body systems</li>
+  <li>Infection control and patient safety (OSHA standards)</li>
+  <li>Patient care and clinical procedures</li>
+  <li>Phlebotomy and specimen collection</li>
+  <li>EKG and diagnostic testing</li>
+  <li>Administrative and professional responsibilities</li>
 </ul>
 
 <p>The full curriculum is available on <a href="https://www.levelupait.com">our website</a>.<br>
@@ -132,7 +132,7 @@ Option 2: Tuition payment plan — 3 payments of $833.33</p>
 <p>Best regards,<br>
 <strong>Admissions Team</strong><br>
 American Institute of Trades (AIT)<br>
-Certified Medical Administrative Assistant Program<br>
+Certified Clinical Medical Assistant Program<br>
 <a href="https://www.levelupait.com">levelupait.com</a><br>
 916-343-8014</p>
       `
