@@ -72,15 +72,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.7 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-2 sm:px-3 py-2 rounded-lg backdrop-blur-sm text-xs sm:text-sm text-center"
-              >
-                {t('handsOnTraining')}
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.9 }}
                 className="bg-gold-400/90 text-navy-900 font-semibold px-2 sm:px-3 py-2 rounded-lg backdrop-blur-sm text-xs sm:text-sm text-center"
               >
