@@ -276,6 +276,9 @@ const ContactForm = () => {
                           <SelectItem value="pharmacy-technician">
                             {language === 'en' ? 'California Pharmacy Technician Program' : 'Programa de Técnico de Farmacia de California'}
                           </SelectItem>
+                          <SelectItem value="medical-assistant">
+                            {language === 'en' ? 'Certified Medical Assistant Program' : 'Programa de Asistente Médico Certificado'}
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>

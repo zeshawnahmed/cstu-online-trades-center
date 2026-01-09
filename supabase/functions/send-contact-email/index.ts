@@ -25,7 +25,8 @@ interface ContactEmailRequest {
 const getProgramName = (slug: string): string => {
   const programs: Record<string, string> = {
     'hvac-technician': 'HVAC Technician Program',
-    'pharmacy-technician': 'California Pharmacy Technician Program (Coming Soon)',
+    'pharmacy-technician': 'California Pharmacy Technician Program',
+    'medical-assistant': 'Certified Medical Assistant Program',
   };
   return programs[slug] || slug || 'Not specified';
 };
@@ -101,6 +102,8 @@ function getSMSContent(programInterest: string, name: string): string {
     ? 'HVAC Technician' 
     : programInterest === 'pharmacy-technician'
     ? 'Pharmacy Technician'
+    : programInterest === 'medical-assistant'
+    ? 'Certified Medical Assistant'
     : 'our programs';
 
   return `Hi ${name}! Thank you for your interest in the ${programName} Program at American Institute of Trades. Check your email for next steps, or call us at 916-343-8014. Visit levelupait.com for more info.`;
@@ -295,6 +298,68 @@ const handler = async (req: Request): Promise<Response> => {
         <strong>Admissions Team</strong><br>
         American Institute of Trades (AIT)<br>
         HVAC Technician Program<br>
+        <a href="https://www.levelupait.com">levelupait.com</a><br>
+        916-343-8014</p>
+      `;
+    } else if (programInterest === 'medical-assistant') {
+      userSubject = "Next Steps - Certified Medical Assistant Program";
+      userEmailContent = `
+        <p>Thank you for your interest in the Certified Medical Assistant Program at American Institute of Trades (AIT). We're glad you reached out.</p>
+        
+        <h3>What You'll Learn</h3>
+        
+        <p>This program is approved and recognized by the National Healthcareer Association (NHA). Upon completion, you'll be prepared to sit for the Certified Clinical Medical Assistant (CCMA) exam.</p>
+        
+        <p>The curriculum includes:</p>
+        
+        <ul>
+          <li>Medical terminology and anatomy</li>
+          <li>Clinical procedures and patient care</li>
+          <li>Vital signs and medical measurements</li>
+          <li>Infection control and safety</li>
+          <li>Medical office administration</li>
+          <li>EKG and phlebotomy basics</li>
+        </ul>
+        
+        <p>The full curriculum is available on <a href="https://www.levelupait.com">our website</a>.<br>
+        All coursework is designed to help students feel confident and exam-ready.</p>
+        
+        <h3>Program Format</h3>
+        
+        <ul>
+          <li>100% online, self-paced, asynchronous</li>
+          <li>Designed for working adults</li>
+          <li>Program start dates are the 1st and 15th of every month</li>
+          <li>Job search support provided near program completion</li>
+        </ul>
+        
+        <h3>Tuition</h3>
+        
+        <ul>
+          <li>Total program cost: $2,500</li>
+        </ul>
+        
+        <h3>Next Steps</h3>
+        
+        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward. <u>If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</u></p>
+        
+        <p>Option 1: Full tuition payment of $2,500<br>
+        Option 2: Tuition payment plan — 3 payments of $833.33</p>
+        
+        <p>We will then email you a Student Enrollment Agreement to review and sign along with a link to make your first tuition payment.</p>
+        
+        <p>Once the Enrollment Agreement and initial tuition payment are complete, access to the program materials will be provided. Remaining tuition payments are due according to the selected option. An admissions representative will also schedule time to connect after enrollment is confirmed.</p>
+        
+        <h3>Questions or Assistance</h3>
+        
+        <p>If you have any questions or would like to speak with an admissions representative, please call 916-343-8014.</p>
+        
+        <p>Additional financial aid and tuition payment assistance options are available on our website.</p>
+        
+        <p>Best regards,<br>
+        <strong>Admissions Team</strong><br>
+        American Institute of Trades (AIT)<br>
+        Certified Medical Assistant Program<br>
         <a href="https://www.levelupait.com">levelupait.com</a><br>
         916-343-8014</p>
       `;

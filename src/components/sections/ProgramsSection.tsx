@@ -61,6 +61,32 @@ const ProgramsSection = () => {
         period: language === 'en' ? 'projected by 2032 - According to Indeed' : 'proyectado para 2032 - Según Indeed',
         clarification: language === 'en' ? 'Median Annual Salary' : 'Salario Anual Mediano'
       }
+    },
+    {
+      title: language === 'en' ? 'Certified Medical Assistant Program' : 'Programa de Asistente Médico Certificado',
+      description: language === 'en' 
+        ? 'Earn the nationally recognized credential to work as a Medical Assistant in just 8 weeks with our NHA-approved program.'
+        : 'Obtén la credencial reconocida a nivel nacional para trabajar como Asistente Médico en solo 8 semanas con nuestro programa aprobado por NHA.',
+      price: language === 'en' ? 'Affordable Tuition - $2500' : 'Matrícula Asequible - $2500',
+      duration: language === 'en' ? '8 Weeks' : '8 Semanas',
+      certification: language === 'en' ? 'NHA Certification Prep' : 'Preparación para Certificación NHA',
+      imageUrl: '/medical-assistant-program.jpg',
+      slug: 'medical-assistant',
+      comingSoon: true,
+      keyFeatures: [
+        language === 'en' ? 'National Healthcareer Association (NHA) approved' : 'Aprobado por la Asociación Nacional de Carreras de Salud (NHA)',
+        language === 'en' ? '8 Weeks Long' : '8 Semanas de Duración',
+        language === 'en' ? 'Prepare for CCMA Certification Exam' : 'Preparación para Examen de Certificación CCMA',
+        language === 'en' ? 'Fully Online and Weekly Structure' : 'Totalmente en Línea con Estructura Semanal',
+        language === 'en' ? 'Learning Coach & Student Support' : 'Coach de Aprendizaje y Apoyo Estudiantil',
+        language === 'en' ? 'Job Search Support Included' : 'Soporte de Búsqueda de Empleo Incluido'
+      ],
+      salaryInfo: {
+        median: '$46,880',
+        growth: language === 'en' ? '+14%' : '+14%',
+        period: language === 'en' ? 'projected by 2032 - According to BLS' : 'proyectado para 2032 - Según BLS',
+        clarification: language === 'en' ? 'Median Annual Salary' : 'Salario Anual Mediano'
+      }
     }
   ];
 

@@ -285,6 +285,117 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Structured Curriculum with Job Search Support'
         ],
         approvalBadge: 'Pharmacy Tech Certification Board (PTCB) approved'
+      },
+      'medical-assistant': {
+        title: 'Certified Medical Assistant Program',
+        description: 'Earn the nationally recognized credential to work as a Medical Assistant in just 8 weeks with our NHA-approved program.',
+        fullDescription: [
+          "Our Certified Medical Assistant Program prepares you for a rewarding career in healthcare, providing comprehensive training in clinical procedures, patient care, and medical office administration.",
+          "Through our fully online, self-paced curriculum, you'll learn everything from vital signs and EKG basics to medical terminology and administrative skills.",
+          "Upon successful completion of the program and passing the NHA exam, you'll earn the Certified Clinical Medical Assistant (CCMA) credential."
+        ],
+        price: 'Affordable Tuition - $2500',
+        duration: 'Online Self Paced, 8 Weeks',
+        certification: 'NHA CCMA Certification Prep',
+        curriculum: [
+          {
+            week: 'Week 1',
+            title: 'Medical Terminology & Anatomy Foundations',
+            topics: [
+              'Medical terminology and word building',
+              'Body systems overview',
+              'Anatomical positions and planes',
+              'Common medical abbreviations'
+            ]
+          },
+          {
+            week: 'Week 2',
+            title: 'Clinical Procedures & Patient Care',
+            topics: [
+              'Patient intake and assessment',
+              'Vital signs measurement',
+              'Height, weight, and BMI',
+              'Patient positioning and draping'
+            ]
+          },
+          {
+            week: 'Week 3',
+            title: 'Infection Control & Safety',
+            topics: [
+              'Standard precautions and PPE',
+              'Sterilization and disinfection',
+              'OSHA regulations and compliance',
+              'Bloodborne pathogen safety'
+            ]
+          },
+          {
+            week: 'Week 4',
+            title: 'Phlebotomy & Specimen Collection',
+            topics: [
+              'Venipuncture techniques',
+              'Capillary puncture procedures',
+              'Specimen handling and processing',
+              'Quality control in the lab'
+            ]
+          },
+          {
+            week: 'Week 5',
+            title: 'EKG & Cardiac Monitoring',
+            topics: [
+              'Basic cardiac anatomy and physiology',
+              'EKG lead placement and recording',
+              'Rhythm recognition basics',
+              'Troubleshooting EKG artifacts'
+            ]
+          },
+          {
+            week: 'Week 6',
+            title: 'Pharmacology & Medication Administration',
+            topics: [
+              'Drug classifications and actions',
+              'Routes of administration',
+              'Dosage calculations',
+              'Prescription handling and refills'
+            ]
+          },
+          {
+            week: 'Week 7',
+            title: 'Medical Office Administration',
+            topics: [
+              'Scheduling and appointment management',
+              'Medical records and documentation',
+              'Insurance and billing basics',
+              'HIPAA compliance and patient privacy'
+            ]
+          },
+          {
+            week: 'Week 8',
+            title: 'Comprehensive CCMA Review & Exam Preparation',
+            topics: [
+              'NHA CCMA exam overview and format',
+              'Comprehensive content review',
+              'Practice exams and test strategies',
+              'Certification application process'
+            ]
+          }
+        ],
+        salaryInfo: {
+          median: '$46,880',
+          growth: '+14%',
+          period: 'projected by 2032',
+          demand: 'Quick Salary Snapshot - Medical Assistants in California (2025)',
+          hourlyRate: '$22.54',
+          source: 'According to BLS'
+        },
+        keyFeatures: [
+          '8 Weeks Long',
+          'Prepare for NHA CCMA Certification Exam',
+          'Fully Online and Weekly Structure',
+          'Perfect for Working Professionals',
+          'Learning Coach & Student Support',
+          'Structured Curriculum with Job Search Support'
+        ],
+        approvalBadge: 'National Healthcareer Association (NHA) approved'
       }
     };
   } else {
@@ -537,6 +648,117 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           'Currículo Estructurado con Soporte de Búsqueda de Empleo'
         ],
         approvalBadge: 'Aprobado por la Junta de Certificación de Técnicos de Farmacia (PTCB)'
+      },
+      'medical-assistant': {
+        title: 'Programa de Asistente Médico Certificado',
+        description: 'Obtén la credencial reconocida a nivel nacional para trabajar como Asistente Médico en solo 8 semanas con nuestro programa aprobado por NHA.',
+        fullDescription: [
+          "Nuestro Programa de Asistente Médico Certificado te prepara para una carrera gratificante en el cuidado de la salud, brindando capacitación integral en procedimientos clínicos, atención al paciente y administración de oficinas médicas.",
+          "A través de nuestro plan de estudios completamente en línea y a tu ritmo, aprenderás todo, desde signos vitales y conceptos básicos de EKG hasta terminología médica y habilidades administrativas.",
+          "Al completar exitosamente el programa y aprobar el examen NHA, obtendrás la credencial de Asistente Médico Clínico Certificado (CCMA)."
+        ],
+        price: 'Matrícula Asequible - $2500',
+        duration: 'En línea a tu ritmo, 8 semanas',
+        certification: 'Preparación para Certificación NHA CCMA',
+        curriculum: [
+          {
+            week: 'Semana 1',
+            title: 'Terminología Médica y Fundamentos de Anatomía',
+            topics: [
+              'Terminología médica y construcción de palabras',
+              'Descripción general de los sistemas del cuerpo',
+              'Posiciones y planos anatómicos',
+              'Abreviaturas médicas comunes'
+            ]
+          },
+          {
+            week: 'Semana 2',
+            title: 'Procedimientos Clínicos y Atención al Paciente',
+            topics: [
+              'Recepción y evaluación del paciente',
+              'Medición de signos vitales',
+              'Altura, peso e IMC',
+              'Posicionamiento y cobertura del paciente'
+            ]
+          },
+          {
+            week: 'Semana 3',
+            title: 'Control de Infecciones y Seguridad',
+            topics: [
+              'Precauciones estándar y EPP',
+              'Esterilización y desinfección',
+              'Regulaciones y cumplimiento de OSHA',
+              'Seguridad de patógenos transmitidos por sangre'
+            ]
+          },
+          {
+            week: 'Semana 4',
+            title: 'Flebotomía y Recolección de Muestras',
+            topics: [
+              'Técnicas de venopunción',
+              'Procedimientos de punción capilar',
+              'Manejo y procesamiento de muestras',
+              'Control de calidad en el laboratorio'
+            ]
+          },
+          {
+            week: 'Semana 5',
+            title: 'EKG y Monitoreo Cardíaco',
+            topics: [
+              'Anatomía y fisiología cardíaca básica',
+              'Colocación de electrodos y registro de EKG',
+              'Conceptos básicos de reconocimiento de ritmos',
+              'Solución de problemas de artefactos de EKG'
+            ]
+          },
+          {
+            week: 'Semana 6',
+            title: 'Farmacología y Administración de Medicamentos',
+            topics: [
+              'Clasificaciones y acciones de medicamentos',
+              'Vías de administración',
+              'Cálculos de dosis',
+              'Manejo de recetas y resurtidos'
+            ]
+          },
+          {
+            week: 'Semana 7',
+            title: 'Administración de Oficina Médica',
+            topics: [
+              'Programación y gestión de citas',
+              'Registros médicos y documentación',
+              'Conceptos básicos de seguros y facturación',
+              'Cumplimiento de HIPAA y privacidad del paciente'
+            ]
+          },
+          {
+            week: 'Semana 8',
+            title: 'Revisión Integral de CCMA y Preparación para el Examen',
+            topics: [
+              'Descripción general y formato del examen NHA CCMA',
+              'Revisión integral del contenido',
+              'Exámenes de práctica y estrategias de prueba',
+              'Proceso de solicitud de certificación'
+            ]
+          }
+        ],
+        salaryInfo: {
+          median: '$46,880',
+          growth: '+14%',
+          period: 'proyectado para 2032',
+          demand: 'Instantánea Rápida de Salario - Asistentes Médicos en California (2025)',
+          hourlyRate: '$22.54',
+          source: 'Según BLS'
+        },
+        keyFeatures: [
+          '8 Semanas de Duración',
+          'Preparación para Examen de Certificación NHA CCMA',
+          'Totalmente en Línea y a Tu Ritmo',
+          'Perfecto para Profesionales que Trabajan',
+          'Coach de Aprendizaje y Apoyo Estudiantil',
+          'Currículo Estructurado con Soporte de Búsqueda de Empleo'
+        ],
+        approvalBadge: 'Aprobado por la Asociación Nacional de Carreras de Salud (NHA)'
       }
     };
   }
