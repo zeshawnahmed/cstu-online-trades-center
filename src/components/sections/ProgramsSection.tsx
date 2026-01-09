@@ -20,6 +20,7 @@ const ProgramsSection = () => {
       certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',
       imageUrl: '/hvac-technician-program.jpg',
       slug: 'hvac-technician',
+      showStartDates: true,
       keyFeatures: [
         language === 'en' ? '100% Online Program' : 'Programa 100% en Línea',
         language === 'en' ? 'EPA 608 Certification Training Included' : 'Capacitación de Certificación EPA 608 Incluida',
