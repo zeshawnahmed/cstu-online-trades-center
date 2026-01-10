@@ -49,7 +49,7 @@ function getSubjectLine(programInterest: string, followupNumber: number): string
     case 2: // Follow-ups 2, 5, 8...
       return "Yes, Change Is Possible";
     case 0: // Follow-ups 3, 6, 9...
-      return "2026 Is About Believing We Are Capable";
+      return "Reality Only Rewards Action";
     default:
       return `Next Steps: ${programName}`;
   }
@@ -73,7 +73,7 @@ function getOpeningParagraph(programInterest: string, followupNumber: number, na
     case 0: // Follow-ups 3, 6, 9...
       return `<p>Hi ${name},</p>
 
-<p>2026 is about believing we are capable: capable of growth, new skills, and building the future we want. Thank you for considering the ${programName} at American Institute of Trades as part of that journey.</p>`;
+<p>Reality only rewards action. You've already taken the first step by reaching out about the ${programName} at American Institute of Trades. Now it's time to take the next one and turn that interest into real progress.</p>`;
     default:
       return `<p>Hi ${name},</p>
 
