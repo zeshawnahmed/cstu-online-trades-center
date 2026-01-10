@@ -2,26 +2,100 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.50.0";
 
-const resend = new Resend("re_9J25fCVN_i6kZzjiAP9KhkQjVbWXKkC1x");
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Get program-specific follow-up content - uses the same content as initial email
+// Get program display name for emails
+function getProgramDisplayName(programInterest: string): string {
+  switch (programInterest) {
+    case 'hvac-technician':
+      return 'HVAC Technician Program';
+    case 'medical-assistant':
+      return 'Certified Clinical Medical Assistant Program';
+    default:
+      return 'Pharmacy Technician Program';
+  }
+}
+
+// Get program short name for signatures
+function getProgramShortName(programInterest: string): string {
+  switch (programInterest) {
+    case 'hvac-technician':
+      return 'HVAC Technician Program';
+    case 'medical-assistant':
+      return 'Certified Clinical Medical Assistant Program';
+    default:
+      return 'Pharmacy Technician Program';
+  }
+}
+
+// Get location text (only for HVAC)
+function getLocationText(programInterest: string): string {
+  return programInterest === 'hvac-technician' ? ' in Sacramento, CA' : '';
+}
+
+// Get rotating subject line based on follow-up number
+function getSubjectLine(programInterest: string, followupNumber: number): string {
+  const programName = getProgramDisplayName(programInterest);
+  const variation = followupNumber % 3;
+  
+  switch (variation) {
+    case 1: // Follow-ups 1, 4, 7...
+      return `Next Steps: ${programName}`;
+    case 2: // Follow-ups 2, 5, 8...
+      return "Yes, Change Is Possible";
+    case 0: // Follow-ups 3, 6, 9...
+      return "2026 Is About Believing We Are Capable";
+    default:
+      return `Next Steps: ${programName}`;
+  }
+}
+
+// Get rotating opening paragraph based on follow-up number
+function getOpeningParagraph(programInterest: string, followupNumber: number, name: string): string {
+  const programName = getProgramDisplayName(programInterest);
+  const locationText = getLocationText(programInterest);
+  const variation = followupNumber % 3;
+  
+  switch (variation) {
+    case 1: // Follow-ups 1, 4, 7...
+      return `<p>Hi ${name},</p>
+
+<p>Thank you for your interest in the ${programName} at American Institute of Trades (AIT)${locationText}. We're glad you reached out.</p>`;
+    case 2: // Follow-ups 2, 5, 8...
+      return `<p>Hi ${name},</p>
+
+<p>Change is possible, and it starts with a single step. You've already taken that step by reaching out about the ${programName} at American Institute of Trades. Let's keep the momentum going.</p>`;
+    case 0: // Follow-ups 3, 6, 9...
+      return `<p>Hi ${name},</p>
+
+<p>2026 is about believing we are capable: capable of growth, new skills, and building the future we want. Thank you for considering the ${programName} at American Institute of Trades as part of that journey.</p>`;
+    default:
+      return `<p>Hi ${name},</p>
+
+<p>Thank you for your interest in the ${programName} at American Institute of Trades (AIT)${locationText}. We're glad you reached out.</p>`;
+  }
+}
+
+// Get program-specific follow-up content with rotating subject lines and openings
 function getFollowupContent(programInterest: string, followupNumber: number, name: string): { subject: string; body: string } {
+  const subject = getSubjectLine(programInterest, followupNumber);
+  const openingParagraph = getOpeningParagraph(programInterest, followupNumber, name);
+  const programShortName = getProgramShortName(programInterest);
+  
   if (programInterest === 'hvac-technician') {
     return {
-      subject: "Next Steps - HVAC Program",
+      subject,
       body: `
-<p>Hi ${name},</p>
-
-<p>Thank you for your interest in the HVAC Technician Program at American Institute of Trades (AIT) in Sacramento, CA. We're glad you reached out.</p>
+${openingParagraph}
 
 <h3>What You'll Learn</h3>
 
-<p>In this 12-week program, students build a strong foundation in HVAC, including:</p>
+<p>In this 12 week program, students build a strong foundation in HVAC, including:</p>
 
 <ul>
   <li>Basics of electricity</li>
@@ -32,14 +106,14 @@ function getFollowupContent(programInterest: string, followupNumber: number, nam
 </ul>
 
 <p>The full curriculum is available on <a href="https://www.levelupait.com">our website</a>.<br>
-All coursework is designed to help students feel confident and job-ready.</p>
+All coursework is designed to help students feel confident and job ready.</p>
 
 <h3>Why AIT</h3>
 
-<p>American Institute of Trades is a community-focused trade school working with experienced Sacramento-area HVAC professionals who are committed to helping new technicians enter the trade.</p>
+<p>American Institute of Trades is a community focused trade school working with experienced Sacramento area HVAC professionals who are committed to helping new technicians enter the trade.</p>
 
 <ul>
-  <li>100% online, self-paced, designed for working adults</li>
+  <li>100% online, self paced, designed for working adults</li>
   <li>Job search support near graduation, including résumé guidance and sharing student profiles with local employers</li>
 </ul>
 
@@ -54,7 +128,7 @@ All coursework is designed to help students feel confident and job-ready.</p>
 <p>To keep the enrollment process efficient, we work with students who are ready to move forward. <u>If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</u></p>
 
 <p>Option 1: Full tuition payment of $2,500<br>
-Option 2: Tuition payment plan — 3 payments of $833.33</p>
+Option 2: Tuition payment plan: 3 payments of $833.33</p>
 
 <p>Access to online program materials is provided once enrollment and tuition payment are complete.</p>
 
@@ -67,18 +141,16 @@ Option 2: Tuition payment plan — 3 payments of $833.33</p>
 <p>Best regards,<br>
 <strong>Admissions Team</strong><br>
 American Institute of Trades (AIT)<br>
-HVAC Technician Program<br>
+${programShortName}<br>
 <a href="https://www.levelupait.com">levelupait.com</a><br>
 916-343-8014</p>
       `
     };
   } else if (programInterest === 'medical-assistant') {
     return {
-      subject: "Next Steps - Certified Clinical Medical Assistant Program",
+      subject,
       body: `
-<p>Hi ${name},</p>
-
-<p>Thank you for your interest in the Certified Clinical Medical Assistant Program at American Institute of Trades (AIT). We're glad you reached out.</p>
+${openingParagraph}
 
 <h3>What You'll Learn</h3>
 
@@ -97,12 +169,12 @@ HVAC Technician Program<br>
 </ul>
 
 <p>The full curriculum is available on <a href="https://www.levelupait.com">our website</a>.<br>
-All coursework is designed to help students feel confident and exam-ready.</p>
+All coursework is designed to help students feel confident and exam ready.</p>
 
 <h3>Program Format</h3>
 
 <ul>
-  <li>100% online, self-paced, asynchronous</li>
+  <li>100% online, self paced, asynchronous</li>
   <li>Designed for working adults</li>
   <li>Program start dates are the 1st and 15th of every month</li>
   <li>Job search support provided near program completion</li>
@@ -119,7 +191,7 @@ All coursework is designed to help students feel confident and exam-ready.</p>
 <p>To keep the enrollment process efficient, we work with students who are ready to move forward. <u>If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</u></p>
 
 <p>Option 1: Full tuition payment of $2,500<br>
-Option 2: Tuition payment plan — 3 payments of $833.33</p>
+Option 2: Tuition payment plan: 3 payments of $833.33</p>
 
 <p>Once the Enrollment Agreement and initial tuition payment are complete, access to the online program materials will be provided. Remaining tuition payments are due according to the selected option and outlined in the Enrollment Agreement. An admissions representative will also schedule time to connect after enrollment is confirmed.</p>
 
@@ -132,7 +204,7 @@ Option 2: Tuition payment plan — 3 payments of $833.33</p>
 <p>Best regards,<br>
 <strong>Admissions Team</strong><br>
 American Institute of Trades (AIT)<br>
-Certified Clinical Medical Assistant Program<br>
+${programShortName}<br>
 <a href="https://www.levelupait.com">levelupait.com</a><br>
 916-343-8014</p>
       `
@@ -140,11 +212,9 @@ Certified Clinical Medical Assistant Program<br>
   } else {
     // Pharmacy Technician (default)
     return {
-      subject: "Next Steps - Pharmacy Technician Program",
+      subject,
       body: `
-<p>Hi ${name},</p>
-
-<p>Thank you for your interest in the Pharmacy Technician Program at American Institute of Trades (AIT). We're glad you reached out.</p>
+${openingParagraph}
 
 <h3>What You'll Learn</h3>
 
@@ -161,12 +231,12 @@ Certified Clinical Medical Assistant Program<br>
 </ul>
 
 <p>The full curriculum is available on <a href="https://www.levelupait.com">our website</a>.<br>
-All coursework is designed to help students feel confident and exam-ready.</p>
+All coursework is designed to help students feel confident and exam ready.</p>
 
 <h3>Program Format</h3>
 
 <ul>
-  <li>100% online, self-paced, asynchronous</li>
+  <li>100% online, self paced, asynchronous</li>
   <li>Designed for working adults</li>
   <li>Program start dates are the 1st and 15th of every month</li>
   <li>Job search support provided near program completion</li>
@@ -183,7 +253,7 @@ All coursework is designed to help students feel confident and exam-ready.</p>
 <p>To keep the enrollment process efficient, we work with students who are ready to move forward. <u>If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</u></p>
 
 <p>Option 1: Full tuition payment of $2,500<br>
-Option 2: Tuition payment plan — 3 payments of $833.33</p>
+Option 2: Tuition payment plan: 3 payments of $833.33</p>
 
 <p>Once the Enrollment Agreement and initial tuition payment are complete, access to the online program materials will be provided. Remaining tuition payments are due according to the selected option and outlined in the Enrollment Agreement. An admissions representative will also schedule time to connect after enrollment is confirmed.</p>
 
@@ -196,7 +266,7 @@ Option 2: Tuition payment plan — 3 payments of $833.33</p>
 <p>Best regards,<br>
 <strong>Admissions Team</strong><br>
 American Institute of Trades (AIT)<br>
-Pharmacy Technician Program<br>
+${programShortName}<br>
 <a href="https://www.levelupait.com">levelupait.com</a><br>
 916-343-8014</p>
       `
