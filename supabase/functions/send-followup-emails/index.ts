@@ -280,6 +280,14 @@ const handler = async (req: Request): Promise<Response> => {
     return new Response(null, { headers: corsHeaders });
   }
 
+  // Automatic follow-up emails are temporarily disabled.
+  // To re-enable, remove this early return.
+  console.log("Automatic follow-up emails are DISABLED. Exiting without sending.");
+  return new Response(
+    JSON.stringify({ success: true, disabled: true, message: "Follow-up emails are disabled" }),
+    { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
+  );
+
   try {
     console.log("Starting follow-up email and SMS processing...");
 
