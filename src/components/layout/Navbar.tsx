@@ -131,18 +131,20 @@ const Navbar = () => {
             >
               {t('home')}
             </Link>
-            <div>
-              <div className="py-2 text-navy-500">{t('programs')}</div>
-              <div className="pl-4 space-y-2">
-                <Link 
-                  to="/programs/medical-assistant" 
-                  className="block py-1 text-navy-500 hover:text-navy-400"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {language === 'en' ? 'Clinical Medical Assistant (CCMA)' : 'Asistente Médico Clínico (CCMA)'}
-                </Link>
-              </div>
-            </div>
+            <Link
+              to="/programs/medical-assistant"
+              className="block py-2 text-navy-500 hover:text-navy-400"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {language === 'en' ? 'CCMA Program' : 'Programa CCMA'}
+            </Link>
+            <Link
+              to="/instructor"
+              className="block py-2 text-navy-500 hover:text-navy-400"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {language === 'en' ? 'Meet Your Instructor' : 'Conoce a tu Instructor'}
+            </Link>
             <Link 
               to="/research-hub" 
               className="block py-2 text-navy-500 hover:text-navy-400"
