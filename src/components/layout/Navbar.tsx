@@ -141,20 +141,6 @@ const Navbar = () => {
               <div className="py-2 text-navy-500">{t('programs')}</div>
               <div className="pl-4 space-y-2">
                 <Link 
-                  to="/programs/hvac-technician" 
-                  className="block py-1 text-navy-500 hover:text-navy-400"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {language === 'en' ? 'Certified HVAC Technician (EPA 608)' : 'Técnico HVAC Certificado (EPA 608)'}
-                </Link>
-                <Link 
-                  to="/programs/pharmacy-technician" 
-                  className="block py-1 text-navy-500 hover:text-navy-400"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {language === 'en' ? 'Pharmacy Technician' : 'Técnico de Farmacia'}
-                </Link>
-                <Link 
                   to="/programs/medical-assistant" 
                   className="block py-1 text-navy-500 hover:text-navy-400"
                   onClick={() => setMobileMenuOpen(false)}
