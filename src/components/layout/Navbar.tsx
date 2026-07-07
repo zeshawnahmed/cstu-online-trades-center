@@ -82,12 +82,6 @@ const Navbar = () => {
               </button>
               <div className="absolute left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
                 <div className="py-2 bg-white rounded-md shadow-xl border border-gray-100">
-                  <Link to="/programs/hvac-technician" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
-                    {language === 'en' ? 'Certified HVAC Technician (EPA 608)' : 'Técnico HVAC Certificado (EPA 608)'}
-                  </Link>
-                  <Link to="/programs/pharmacy-technician" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
-                    {language === 'en' ? 'Pharmacy Technician' : 'Técnico de Farmacia'}
-                  </Link>
                   <Link to="/programs/medical-assistant" className="block px-4 py-2 text-sm text-navy-500 hover:bg-navy-50 transition-colors duration-200">
                     {language === 'en' ? 'Clinical Medical Assistant (CCMA)' : 'Asistente Médico Clínico (CCMA)'}
                   </Link>
@@ -146,20 +140,6 @@ const Navbar = () => {
             <div>
               <div className="py-2 text-navy-500">{t('programs')}</div>
               <div className="pl-4 space-y-2">
-                <Link 
-                  to="/programs/hvac-technician" 
-                  className="block py-1 text-navy-500 hover:text-navy-400"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {language === 'en' ? 'Certified HVAC Technician (EPA 608)' : 'Técnico HVAC Certificado (EPA 608)'}
-                </Link>
-                <Link 
-                  to="/programs/pharmacy-technician" 
-                  className="block py-1 text-navy-500 hover:text-navy-400"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {language === 'en' ? 'Pharmacy Technician' : 'Técnico de Farmacia'}
-                </Link>
                 <Link 
                   to="/programs/medical-assistant" 
                   className="block py-1 text-navy-500 hover:text-navy-400"

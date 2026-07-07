@@ -11,59 +11,6 @@ const ProgramsSection = () => {
 
   const programs = [
     {
-      title: language === 'en' ? 'Certified HVAC Technician (EPA 608)' : 'Técnico HVAC Certificado (EPA 608)',
-      description: language === 'en' 
-        ? 'Master HVAC systems through comprehensive training, including EPA 608 certification to become job-ready.'
-        : 'Domina los sistemas HVAC a través de capacitación integral, incluyendo certificación EPA 608 para estar listo para trabajar.',
-      price: language === 'en' ? 'Affordable Tuition - $2500' : 'Matrícula Asequible - $2500',
-      duration: language === 'en' ? 'Self-paced' : 'A tu ritmo',
-      certification: language === 'en' ? 'EPA 608 Certification' : 'Certificación EPA 608',
-      imageUrl: '/hvac-technician-program.jpg',
-      slug: 'hvac-technician',
-      showStartDates: true,
-      keyFeatures: [
-        language === 'en' ? '100% Online Program' : 'Programa 100% en Línea',
-        language === 'en' ? 'EPA 608 Certification Training Included' : 'Capacitación de Certificación EPA 608 Incluida',
-        language === 'en' ? 'Residential & Commercial HVAC Systems' : 'Sistemas HVAC Residenciales y Comerciales',
-        language === 'en' ? 'Self-Paced Format for Busy Professionals' : 'Formato a tu Ritmo para Profesionales Ocupados',
-        language === 'en' ? 'Accountability & Learning Coach Support' : 'Apoyo de Entrenador de Responsabilidad y Aprendizaje'
-      ],
-      salaryInfo: {
-        median: '$63,420',
-        growth: language === 'en' ? '+13%' : '+13%',
-        period: language === 'en' ? 'projected by 2030 - According to TradeCareerPath' : 'proyectado para 2030 - Según TradeCareerPath',
-        clarification: language === 'en' ? 'Median Annual Salary' : 'Salario Anual Mediano'
-      }
-    },
-    {
-      title: language === 'en' ? 'California Pharmacy Technician Program' : 'Programa de Técnico de Farmacia de California',
-      description: language === 'en' 
-        ? 'Gain the skills to maintain and operate a pharmacy in just 8 weeks and begin an exciting career as a Pharmacy Technician.'
-        : 'Adquiere las habilidades para mantener y operar una farmacia en solo 8 semanas y comienza una emocionante carrera como Técnico de Farmacia.',
-      price: language === 'en' ? 'Affordable Tuition - $2500' : 'Matrícula Asequible - $2500',
-      duration: language === 'en' ? '8 Weeks' : '8 Semanas',
-      certification: language === 'en' ? 'PTCB Certification Prep' : 'Preparación para Certificación PTCB',
-      imageUrl: '/pharmacy-technician-program.jpg',
-      slug: 'pharmacy-technician',
-      comingSoon: true,
-      ptcbApproved: true,
-      keyFeatures: [
-        language === 'en' ? '100% Online Program' : 'Programa 100% en Línea',
-        language === 'en' ? 'Pharmacy Tech Certification Board (PTCB) approved' : 'Aprobado por la Junta de Certificación de Técnicos de Farmacia (PTCB)',
-        language === 'en' ? '8 Weeks Long' : '8 Semanas de Duración',
-        language === 'en' ? 'Prepare for PTCB Certification Exam' : 'Preparación para Examen de Certificación PTCB',
-        language === 'en' ? 'Learning Coach & Student Support' : 'Coach de Aprendizaje y Apoyo Estudiantil',
-        language === 'en' ? 'Job Search Support Included' : 'Soporte de Búsqueda de Empleo Incluido',
-        language === 'en' ? 'Eligible for licensure upon program completion and passing the PTCB exam' : 'Elegible para licenciatura al completar el programa y aprobar el examen PTCB'
-      ],
-      salaryInfo: {
-        median: '$52,900',
-        growth: language === 'en' ? '+5%' : '+5%',
-        period: language === 'en' ? 'projected by 2032 - According to Indeed' : 'proyectado para 2032 - Según Indeed',
-        clarification: language === 'en' ? 'Median Annual Salary' : 'Salario Anual Mediano'
-      }
-    },
-    {
       title: language === 'en' ? 'Certified Clinical Medical Assistant Program' : 'Programa de Asistente Médico Clínico Certificado',
       description: language === 'en' 
         ? 'Earn the nationally recognized CCMA credential to work as a Clinical Medical Assistant in just 8 weeks with our NHA-approved program.'
@@ -113,7 +60,7 @@ const ProgramsSection = () => {
           </Link>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 gap-6 max-w-2xl mx-auto">
           {programs.map((program, index) => (
             <motion.div
               key={program.slug}
