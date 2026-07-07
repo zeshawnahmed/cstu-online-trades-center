@@ -270,12 +270,6 @@ const ContactForm = () => {
                           <SelectValue placeholder={language === 'en' ? "Select a program" : "Selecciona un programa"} />
                         </SelectTrigger>
                         <SelectContent className="bg-white border border-gray-300 shadow-lg z-50">
-                          <SelectItem value="hvac-technician">
-                            {language === 'en' ? 'HVAC Technician Program' : 'Programa de Técnico HVAC'}
-                          </SelectItem>
-                          <SelectItem value="pharmacy-technician">
-                            {language === 'en' ? 'California Pharmacy Technician Program' : 'Programa de Técnico de Farmacia de California'}
-                          </SelectItem>
                           <SelectItem value="medical-assistant">
                             {language === 'en' ? 'Certified Clinical Medical Assistant Program' : 'Programa de Asistente Médico Clínico Certificado'}
                           </SelectItem>
