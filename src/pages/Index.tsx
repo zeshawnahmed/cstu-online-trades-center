@@ -5,6 +5,12 @@ import { Helmet } from 'react-helmet';
 import { ArrowRight } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import ccmaHero from '@/assets/ccma-hero.jpg';
 import instructorImg from '@/assets/instructor-placeholder.jpg';
 
@@ -197,6 +203,39 @@ const Index = () => {
                 Directions
               </a>
             </div>
+          </motion.div>
+
+          <motion.div
+            {...fade}
+            transition={{ ...fade.transition, delay: 0.4 }}
+            className="mx-auto max-w-xl mt-14 text-left"
+          >
+            <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6 text-center">Common Questions</p>
+            <Accordion type="single" collapsible className="border-t border-emerald-900/10">
+              {[
+                {
+                  q: 'Do you offer an externship?',
+                  a: 'We do not operate our own externship site. The program prepares you for the NHA CCMA exam, and we guide you toward local clinical volunteer and shadowing opportunities in the Sacramento area.',
+                },
+                {
+                  q: 'How self-paced is the program?',
+                  a: 'Coursework is online and asynchronous, so you study on your schedule. Optional in-person sessions at Capsity Coworking are scheduled weekly for review and skills practice.',
+                },
+                {
+                  q: 'What does BPPE approval pending mean?',
+                  a: 'We have submitted our application to the California Bureau for Private Postsecondary Education and are awaiting approval. Enrollment is limited while the review is in process.',
+                },
+              ].map((item, i) => (
+                <AccordionItem key={i} value={`item-${i}`} className="border-b border-emerald-900/10">
+                  <AccordionTrigger className="text-sm text-emerald-900 font-medium tracking-wide hover:no-underline py-5">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm text-emerald-900/60 font-light leading-relaxed">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </motion.div>
         </div>
       </section>
