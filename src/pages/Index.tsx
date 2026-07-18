@@ -12,8 +12,8 @@ import instructorImg from '@/assets/instructor-placeholder.jpg';
 const Index = () => {
   const { language } = useLanguage();
 
-  const seoTitle = 'Certified Clinical Medical Assistant Program | American Institute of Trades';
-  const seoDescription = 'NHA-approved 100% online Certified Clinical Medical Assistant (CCMA) program. Taught by UC Berkeley & Sac State alumni. Granted Exemption Status by California BPPE.';
+  const seoTitle = 'Sacramento CCMA Program | Taught by Zeshawn Ahmed RN | AIT';
+  const seoDescription = 'NHA-approved Certified Clinical Medical Assistant program in Sacramento. Online coursework plus optional in-person sessions at Capcity Coworking near downtown. Taught by Zeshawn Ahmed RN.';
 
   return (
     <Layout>
@@ -38,13 +38,13 @@ const Index = () => {
             >
               <div className="inline-flex items-center gap-2 bg-gold-100 text-navy-800 px-3 py-1.5 rounded-full text-sm font-semibold mb-5 border border-gold-300">
                 <ShieldCheck className="h-4 w-4" />
-                NHA-Approved Program
+                NHA-Approved · Proudly Sacramento-Based
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-800 leading-[1.05] mb-5">
-                Become a Certified Clinical Medical Assistant
+                Sacramento's Friendliest Path to Becoming a Certified Clinical Medical Assistant
               </h1>
               <p className="text-xl sm:text-2xl text-navy-600 font-medium mb-3">
-                100% Online. Nationally Recognized. Career-Ready in 8 Weeks.
+                Learn online, meet up near downtown at Capcity Coworking, and get career-ready in 8 weeks — taught by Zeshawn Ahmed, RN.
               </p>
               <div className="flex items-center gap-1 mb-8 text-sm text-navy-500">
                 <span className="flex text-gold-500">
@@ -52,7 +52,7 @@ const Index = () => {
                     <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.163c.969 0 1.371 1.24.588 1.81l-3.367 2.447a1 1 0 00-.363 1.118l1.286 3.957c.3.921-.755 1.688-1.54 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.363-1.118L2.098 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69l1.286-3.957z"/></svg>
                   ))}
                 </span>
-                <span className="ml-2">Trusted by students preparing for the CCMA exam</span>
+                <span className="ml-2">Small cohorts. Real support. Zero fluff.</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link to="/contact">
@@ -91,28 +91,28 @@ const Index = () => {
       <section className="bg-navy-50 border-y border-navy-100 py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs font-bold tracking-widest text-navy-500 uppercase mb-6">
-            Recognized • Accredited • Trusted
+            Built in Sacramento · Rooted in the Community
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-start gap-3 bg-white p-5 rounded-xl border border-navy-100">
               <Award className="h-8 w-8 text-gold-500 flex-shrink-0 mt-1" />
               <div>
-                <p className="font-bold text-navy-800">NHA-Approved</p>
-                <p className="text-sm text-navy-600">Approved by the National Healthcareer Association to prepare students for the CCMA exam.</p>
+                <p className="font-bold text-navy-800">NHA-Approved Curriculum</p>
+                <p className="text-sm text-navy-600">Built to the National Healthcareer Association standards for the CCMA exam.</p>
               </div>
             </div>
             <div className="flex items-start gap-3 bg-white p-5 rounded-xl border border-navy-100">
               <ShieldCheck className="h-8 w-8 text-gold-500 flex-shrink-0 mt-1" />
               <div>
-                <p className="font-bold text-navy-800">California BPPE Exemption</p>
-                <p className="text-sm text-navy-600">Granted Exemption Status by the California Bureau of Post-Secondary Education.</p>
+                <p className="font-bold text-navy-800">BPPE Approval Pending</p>
+                <p className="text-sm text-navy-600">Currently pending approval from the California Bureau of Post-Secondary Education (BPPE).</p>
               </div>
             </div>
             <div className="flex items-start gap-3 bg-white p-5 rounded-xl border border-navy-100">
               <GraduationCap className="h-8 w-8 text-gold-500 flex-shrink-0 mt-1" />
               <div>
-                <p className="font-bold text-navy-800">Educator-Led</p>
-                <p className="text-sm text-navy-600">Taught by UC Berkeley and Sacramento State alumni with real clinical experience.</p>
+                <p className="font-bold text-navy-800">Sacramento Roots</p>
+                <p className="text-sm text-navy-600">Classes held near downtown Sacramento at Capcity Coworking. Led by Zeshawn Ahmed, RN — UC Berkeley & Sac State alumni.</p>
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@ const Index = () => {
             {[
               { icon: TrendingUp, stat: '+14%', label: 'Projected job growth by 2032', src: 'U.S. Bureau of Labor Statistics' },
               { icon: DollarSign, stat: '$46,880', label: 'Median annual salary', src: 'BLS, 2023' },
-              { icon: Clock, stat: '8 Weeks', label: 'Self-paced, 100% online', src: '' },
+              { icon: Clock, stat: '8 Weeks', label: 'Online + optional Sacramento meetups', src: '' },
               { icon: BookOpen, stat: '$2,500', label: 'Affordable total tuition', src: 'Payment plans available' },
             ].map((item, i) => (
               <motion.div
@@ -194,14 +194,14 @@ const Index = () => {
             <div>
               <p className="text-sm font-bold tracking-widest text-gold-600 uppercase mb-3">Meet Your Instructor</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-800 mb-4">
-                Learn from an experienced healthcare educator.
+                Zeshawn Ahmed, RN — your Sacramento-based guide.
               </h2>
               <p className="text-lg text-navy-600 mb-6">
-                Our instructors bring years of clinical and classroom experience, and hold degrees from UC Berkeley and Sacramento State. You'll be supported every step of the way — from enrollment through your CCMA exam.
+                A Registered Nurse born and raised in the Sacramento region, Zeshawn brings real bedside experience into every class. Expect a fun, engaging, no-jargon learning environment — with in-person study sessions held right near downtown at Capcity Coworking.
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="inline-flex items-center gap-2 bg-navy-50 text-navy-700 px-3 py-1.5 rounded-full text-sm font-semibold border border-navy-100">
-                  <Stethoscope className="h-4 w-4" /> Clinical experience
+                  <Stethoscope className="h-4 w-4" /> Registered Nurse (RN)
                 </span>
                 <span className="inline-flex items-center gap-2 bg-navy-50 text-navy-700 px-3 py-1.5 rounded-full text-sm font-semibold border border-navy-100">
                   <GraduationCap className="h-4 w-4" /> UC Berkeley & Sac State alumni
@@ -209,10 +209,28 @@ const Index = () => {
               </div>
               <Link to="/instructor">
                 <Button size="lg" className="bg-navy-700 hover:bg-navy-800 text-white rounded-full px-8">
-                  Meet Your Instructor
+                  Meet Zeshawn
                 </Button>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SACRAMENTO / CAPCITY */}
+      <section className="py-16 bg-navy-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+          <p className="text-sm font-bold tracking-widest text-gold-600 uppercase mb-3">Proudly Sacramento</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy-800 mb-5">
+            Study online. Hang out in person. Right here in the 916.
+          </h2>
+          <p className="text-lg text-navy-600 mb-6">
+            Coursework is fully online so you can learn on your schedule — and our in-person study sessions, meetups, and exam prep are held near downtown at <span className="font-semibold text-navy-800">Capcity Coworking</span>. Think good coffee, natural light, and a room full of people rooting for you.
+          </p>
+          <div className="inline-flex flex-wrap justify-center gap-2 text-sm">
+            <span className="bg-white border border-navy-100 text-navy-700 px-3 py-1.5 rounded-full font-medium">Near Downtown Sacramento</span>
+            <span className="bg-white border border-navy-100 text-navy-700 px-3 py-1.5 rounded-full font-medium">Small, supportive cohorts</span>
+            <span className="bg-white border border-navy-100 text-navy-700 px-3 py-1.5 rounded-full font-medium">Fun · Engaging · Human</span>
           </div>
         </div>
       </section>
