@@ -21,7 +21,8 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", ...fontFamily.sans],
+        sans: ["Epilogue", "Inter", ...fontFamily.sans],
+        display: ["Urbanist", "Inter", ...fontFamily.sans],
         serif: ["Georgia", "Times New Roman", "serif"],
       },
       colors: {
@@ -48,6 +49,26 @@ const config = {
           700: "#93831a",
           800: "#625712",
           900: "#312c09",
+        },
+        emerald: {
+          50: "#f2f8f5",
+          100: "#dcece3",
+          200: "#b6d6c4",
+          300: "#7fb89a",
+          400: "#4a9670",
+          500: "#0d7a5f",
+          600: "#0a624c",
+          700: "#064e3b",
+          800: "#053d2f",
+          900: "#032a20",
+        },
+        sand: {
+          50: "#fbf8ef",
+          100: "#f5f0e0",
+          200: "#ebe2c4",
+          300: "#dccf9c",
+          400: "#c9a84c",
+          500: "#b3922f",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
