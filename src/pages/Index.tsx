@@ -194,14 +194,14 @@ const Index = () => {
             <div>
               <p className="text-sm font-bold tracking-widest text-gold-600 uppercase mb-3">Meet Your Instructor</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-800 mb-4">
-                Learn from an experienced healthcare educator.
+                Zeshawn Ahmed, RN — your Sacramento-based guide.
               </h2>
               <p className="text-lg text-navy-600 mb-6">
-                Our instructors bring years of clinical and classroom experience, and hold degrees from UC Berkeley and Sacramento State. You'll be supported every step of the way — from enrollment through your CCMA exam.
+                A Registered Nurse born and raised in the Sacramento region, Zeshawn brings real bedside experience into every class. Expect a fun, engaging, no-jargon learning environment — with in-person study sessions held right near downtown at Capcity Coworking.
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="inline-flex items-center gap-2 bg-navy-50 text-navy-700 px-3 py-1.5 rounded-full text-sm font-semibold border border-navy-100">
-                  <Stethoscope className="h-4 w-4" /> Clinical experience
+                  <Stethoscope className="h-4 w-4" /> Registered Nurse (RN)
                 </span>
                 <span className="inline-flex items-center gap-2 bg-navy-50 text-navy-700 px-3 py-1.5 rounded-full text-sm font-semibold border border-navy-100">
                   <GraduationCap className="h-4 w-4" /> UC Berkeley & Sac State alumni
@@ -209,7 +209,7 @@ const Index = () => {
               </div>
               <Link to="/instructor">
                 <Button size="lg" className="bg-navy-700 hover:bg-navy-800 text-white rounded-full px-8">
-                  Meet Your Instructor
+                  Meet Zeshawn
                 </Button>
               </Link>
             </div>
