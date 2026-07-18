@@ -5,6 +5,12 @@ import { Helmet } from 'react-helmet';
 import { ArrowRight } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import ccmaHero from '@/assets/ccma-hero.jpg';
 import instructorImg from '@/assets/instructor-placeholder.jpg';
 
