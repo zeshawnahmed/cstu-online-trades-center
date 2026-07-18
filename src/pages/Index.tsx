@@ -217,6 +217,24 @@ const Index = () => {
         </div>
       </section>
 
+      {/* SACRAMENTO / CAPCITY */}
+      <section className="py-16 bg-navy-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+          <p className="text-sm font-bold tracking-widest text-gold-600 uppercase mb-3">Proudly Sacramento</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy-800 mb-5">
+            Study online. Hang out in person. Right here in the 916.
+          </h2>
+          <p className="text-lg text-navy-600 mb-6">
+            Coursework is fully online so you can learn on your schedule — and our in-person study sessions, meetups, and exam prep are held near downtown at <span className="font-semibold text-navy-800">Capcity Coworking</span>. Think good coffee, natural light, and a room full of people rooting for you.
+          </p>
+          <div className="inline-flex flex-wrap justify-center gap-2 text-sm">
+            <span className="bg-white border border-navy-100 text-navy-700 px-3 py-1.5 rounded-full font-medium">Near Downtown Sacramento</span>
+            <span className="bg-white border border-navy-100 text-navy-700 px-3 py-1.5 rounded-full font-medium">Small, supportive cohorts</span>
+            <span className="bg-white border border-navy-100 text-navy-700 px-3 py-1.5 rounded-full font-medium">Fun · Engaging · Human</span>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-br from-navy-800 to-navy-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
