@@ -91,28 +91,28 @@ const Index = () => {
       <section className="bg-navy-50 border-y border-navy-100 py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs font-bold tracking-widest text-navy-500 uppercase mb-6">
-            Recognized • Accredited • Trusted
+            Built in Sacramento · Rooted in the Community
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-start gap-3 bg-white p-5 rounded-xl border border-navy-100">
               <Award className="h-8 w-8 text-gold-500 flex-shrink-0 mt-1" />
               <div>
-                <p className="font-bold text-navy-800">NHA-Approved</p>
-                <p className="text-sm text-navy-600">Approved by the National Healthcareer Association to prepare students for the CCMA exam.</p>
+                <p className="font-bold text-navy-800">NHA-Approved Curriculum</p>
+                <p className="text-sm text-navy-600">Built to the National Healthcareer Association standards for the CCMA exam.</p>
               </div>
             </div>
             <div className="flex items-start gap-3 bg-white p-5 rounded-xl border border-navy-100">
               <ShieldCheck className="h-8 w-8 text-gold-500 flex-shrink-0 mt-1" />
               <div>
-                <p className="font-bold text-navy-800">California BPPE Exemption</p>
-                <p className="text-sm text-navy-600">Granted Exemption Status by the California Bureau of Post-Secondary Education.</p>
+                <p className="font-bold text-navy-800">BPPE Approval Pending</p>
+                <p className="text-sm text-navy-600">Currently pending approval from the California Bureau of Post-Secondary Education (BPPE).</p>
               </div>
             </div>
             <div className="flex items-start gap-3 bg-white p-5 rounded-xl border border-navy-100">
               <GraduationCap className="h-8 w-8 text-gold-500 flex-shrink-0 mt-1" />
               <div>
-                <p className="font-bold text-navy-800">Educator-Led</p>
-                <p className="text-sm text-navy-600">Taught by UC Berkeley and Sacramento State alumni with real clinical experience.</p>
+                <p className="font-bold text-navy-800">Sacramento Roots</p>
+                <p className="text-sm text-navy-600">Classes held near downtown Sacramento at Capcity Coworking. Led by Zeshawn Ahmed, RN — UC Berkeley & Sac State alumni.</p>
               </div>
             </div>
           </div>
