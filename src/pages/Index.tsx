@@ -161,14 +161,43 @@ const Index = () => {
 
       {/* LOCATION */}
       <section className="bg-white py-32 border-t border-emerald-900/10">
-        <div className="container mx-auto px-6 max-w-2xl text-center">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
           <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6">Where</motion.p>
           <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-6">
-            Capcity Coworking.<br /><span className="italic">Downtown Sacramento.</span>
+            Capsity Coworking.<br /><span className="italic">Downtown Sacramento.</span>
           </motion.h2>
-          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.2 }} className="text-emerald-900/60 font-light">
+          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.2 }} className="text-emerald-900/60 font-light mb-10">
             Online first. In-person when it matters.
           </motion.p>
+          <motion.div
+            {...fade}
+            transition={{ ...fade.transition, delay: 0.3 }}
+            className="mx-auto max-w-xl border border-emerald-900/10 shadow-sm overflow-hidden"
+          >
+            <iframe
+              title="Capsity Coworking — 1715 R Street, Sacramento"
+              src="https://www.google.com/maps?q=Capsity+Coworking+1715+R+Street+Sacramento+CA&output=embed"
+              width="100%"
+              height="260"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{ border: 0, display: 'block' }}
+            />
+            <div className="bg-sand-50 px-5 py-4 text-left flex items-center justify-between">
+              <div>
+                <p className="text-sm text-emerald-900 tracking-wide">Capsity Coworking</p>
+                <p className="text-xs text-emerald-900/60">1715 R Street, Sacramento, CA 95811</p>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Capsity+Coworking+1715+R+Street+Sacramento+CA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs tracking-wider uppercase text-emerald-700 hover:text-emerald-500 border-b border-emerald-700 pb-0.5"
+              >
+                Directions
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
