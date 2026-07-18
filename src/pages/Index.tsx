@@ -38,13 +38,13 @@ const Index = () => {
             >
               <div className="inline-flex items-center gap-2 bg-gold-100 text-navy-800 px-3 py-1.5 rounded-full text-sm font-semibold mb-5 border border-gold-300">
                 <ShieldCheck className="h-4 w-4" />
-                NHA-Approved Program
+                NHA-Approved · Proudly Sacramento-Based
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-800 leading-[1.05] mb-5">
-                Become a Certified Clinical Medical Assistant
+                Sacramento's Friendliest Path to Becoming a Certified Clinical Medical Assistant
               </h1>
               <p className="text-xl sm:text-2xl text-navy-600 font-medium mb-3">
-                100% Online. Nationally Recognized. Career-Ready in 8 Weeks.
+                Learn online, meet up near downtown at Capcity Coworking, and get career-ready in 8 weeks — taught by Zeshawn Ahmed, RN.
               </p>
               <div className="flex items-center gap-1 mb-8 text-sm text-navy-500">
                 <span className="flex text-gold-500">
@@ -52,7 +52,7 @@ const Index = () => {
                     <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.163c.969 0 1.371 1.24.588 1.81l-3.367 2.447a1 1 0 00-.363 1.118l1.286 3.957c.3.921-.755 1.688-1.54 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.363-1.118L2.098 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69l1.286-3.957z"/></svg>
                   ))}
                 </span>
-                <span className="ml-2">Trusted by students preparing for the CCMA exam</span>
+                <span className="ml-2">Small cohorts. Real support. Zero fluff.</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link to="/contact">
