@@ -12,8 +12,8 @@ import instructorImg from '@/assets/instructor-placeholder.jpg';
 const Index = () => {
   const { language } = useLanguage();
 
-  const seoTitle = 'Certified Clinical Medical Assistant Program | American Institute of Trades';
-  const seoDescription = 'NHA-approved 100% online Certified Clinical Medical Assistant (CCMA) program. Taught by UC Berkeley & Sac State alumni. Granted Exemption Status by California BPPE.';
+  const seoTitle = 'Sacramento CCMA Program | Taught by Zeshawn Ahmed RN | AIT';
+  const seoDescription = 'NHA-approved Certified Clinical Medical Assistant program in Sacramento. Online coursework plus optional in-person sessions at Capcity Coworking near downtown. Taught by Zeshawn Ahmed RN.';
 
   return (
     <Layout>
