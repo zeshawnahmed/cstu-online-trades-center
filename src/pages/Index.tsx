@@ -126,7 +126,7 @@ const Index = () => {
             {[
               { icon: TrendingUp, stat: '+14%', label: 'Projected job growth by 2032', src: 'U.S. Bureau of Labor Statistics' },
               { icon: DollarSign, stat: '$46,880', label: 'Median annual salary', src: 'BLS, 2023' },
-              { icon: Clock, stat: '8 Weeks', label: 'Self-paced, 100% online', src: '' },
+              { icon: Clock, stat: '8 Weeks', label: 'Online + optional Sacramento meetups', src: '' },
               { icon: BookOpen, stat: '$2,500', label: 'Affordable total tuition', src: 'Payment plans available' },
             ].map((item, i) => (
               <motion.div
