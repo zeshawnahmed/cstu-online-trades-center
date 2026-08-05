@@ -127,7 +127,9 @@ const Index = () => {
             Clinical foundations. Phlebotomy. EKG. Patient care. Exam preparation. Built by clinicians, taught in small cohorts, structured around your life.
           </motion.p>
           <motion.div {...fade} transition={{ ...fade.transition, delay: 0.3 }} className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-sand-100/70 tracking-wide">
-            <span>8 weeks</span>
+            <span>6 weeks</span>
+            <span className="text-sand-400">·</span>
+            <span>Hybrid</span>
             <span className="text-sand-400">·</span>
             <span>Online</span>
             <span className="text-sand-400">·</span>
@@ -140,29 +142,21 @@ const Index = () => {
 
       {/* INSTRUCTOR */}
       <section className="bg-sand-50 py-32">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <motion.div {...fade}>
-              <img
-                src={instructorImg}
-                alt="Zeshawn Ahmed, RN"
-                className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
-              />
-            </motion.div>
-            <motion.div {...fade} transition={{ ...fade.transition, delay: 0.1 }}>
-              <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6">Your Instructor</p>
-              <h2 className="font-display text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-6">
-                Zeshawn Ahmed, <span className="italic">RN</span>
-              </h2>
-              <p className="text-emerald-900/70 leading-relaxed mb-8 font-light">
-                Sacramento-born. UC Berkeley and Sac State educated. Bedside-tested. Teaching the class he wished he'd had.
-              </p>
-              <Link to="/instructor" className="inline-flex items-center gap-2 text-sm tracking-wider uppercase text-emerald-700 hover:text-emerald-500 border-b border-emerald-700 pb-1">
-                Read more <ArrowRight className="h-3 w-3" />
-              </Link>
-            </motion.div>
-          </div>
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <motion.div {...fade}>
+            <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6">Your Instructor</p>
+            <h2 className="font-display text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-6">
+              Zeshawn Ahmed, <span className="italic">RN</span>
+            </h2>
+            <p className="text-emerald-900/70 leading-relaxed mb-8 font-light max-w-xl mx-auto">
+              Sacramento-born. UC Berkeley and Sac State educated. Bedside-tested. Teaching the class he wished he'd had.
+            </p>
+            <Link to="/instructor" className="inline-flex items-center gap-2 text-sm tracking-wider uppercase text-emerald-700 hover:text-emerald-500 border-b border-emerald-700 pb-1">
+              Read more <ArrowRight className="h-3 w-3" />
+            </Link>
+          </motion.div>
         </div>
+
       </section>
 
       {/* LOCATION */}
