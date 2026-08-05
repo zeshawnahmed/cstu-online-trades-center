@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import { ArrowRight } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import instructorImg from '@/assets/instructor-placeholder.jpg';
+
 
 const fade = {
   initial: { opacity: 0, y: 24 },
@@ -52,17 +52,6 @@ const MeetInstructor = () => {
         </div>
       </section>
 
-      {/* PORTRAIT */}
-      <section className="bg-sand-50 pb-24">
-        <div className="container mx-auto px-6 max-w-2xl">
-          <motion.img
-            {...fade}
-            src={instructorImg}
-            alt="Zeshawn Ahmed, RN"
-            className="w-full aspect-[4/5] object-cover"
-          />
-        </div>
-      </section>
 
       {/* BIO */}
       <section className="bg-white py-32 border-t border-emerald-900/10">
