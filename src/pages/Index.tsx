@@ -11,8 +11,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import ccmaHero from '@/assets/ccma-hero.jpg';
-import instructorImg from '@/assets/instructor-placeholder.jpg';
 
 const fade = {
   initial: { opacity: 0, y: 24 },
@@ -46,16 +44,16 @@ const Index = () => {
             transition={{ duration: 0.5 }}
             className="text-xs tracking-[0.25em] uppercase text-emerald-700 font-medium mb-8 font-sans"
           >
-            Sacramento · Est. 2025
+            Launch Your Career in Healthcare
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-5xl sm:text-6xl md:text-7xl font-light text-emerald-700 leading-[1.02] tracking-tight mb-8"
+            className="font-display text-4xl sm:text-5xl md:text-6xl font-light text-emerald-700 leading-[1.05] tracking-tight mb-8"
           >
-            Become a Certified<br />
-            <span className="italic font-normal">Medical Assistant.</span>
+            Become a California<br />
+            <span className="italic font-normal">Certified Medical Assistant.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -63,7 +61,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-emerald-800/70 max-w-xl mx-auto mb-12 font-light leading-relaxed"
           >
-            Eight weeks. Online. Guided by a Registered Nurse in downtown Sacramento.
+            Hybrid schedule for working adults. Six weeks. Guided by a Registered Nurse in downtown Sacramento.
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -85,18 +83,20 @@ const Index = () => {
         </div>
       </section>
 
-      {/* HERO IMAGE */}
+      {/* VIDEO */}
       <section className="bg-sand-50 pb-24">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <motion.div {...fade} className="overflow-hidden">
-            <img
-              src={ccmaHero}
-              alt="Certified Clinical Medical Assistant"
-              className="w-full aspect-[16/9] object-cover"
-            />
+        <div className="container mx-auto px-6 max-w-4xl">
+          <motion.div
+            {...fade}
+            className="aspect-video w-full border border-emerald-900/10 bg-emerald-700/5 flex items-center justify-center"
+          >
+            <p className="text-xs tracking-[0.25em] uppercase text-emerald-800/40">
+              Program video coming soon
+            </p>
           </motion.div>
         </div>
       </section>
+
 
       {/* CREDIBILITY LINE */}
       <section className="bg-white py-24 border-t border-emerald-900/10">
