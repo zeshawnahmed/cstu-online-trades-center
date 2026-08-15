@@ -20,6 +20,7 @@ import HVACCareersSacramento from "./pages/seo/HVACCareersSacramento";
 import FAQPage from "./pages/seo/FAQPage";
 import Alumni from "./pages/Alumni";
 import MeetInstructor from "./pages/MeetInstructor";
+import Curriculum from "./pages/Curriculum";
 import { motion, AnimatePresence } from "framer-motion";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
