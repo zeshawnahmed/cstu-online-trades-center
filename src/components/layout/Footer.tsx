@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MapPin, Phone } from 'lucide-react';
+import BrandName from './BrandName';
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
