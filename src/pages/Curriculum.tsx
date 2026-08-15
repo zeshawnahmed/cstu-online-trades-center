@@ -41,7 +41,7 @@ const weeks = [
   {
     n: 'Week 5',
     title: 'Final Exam Prep',
-    topics: ['Medical office', 'Emergencies', 'California MA regulations', 'CACMA review'],
+    topics: ['Medical office', 'Emergencies', 'California MA regulations', 'CACMA review — Medical Board of California'],
     checks: ['Final Skills Check-Off', 'Comprehensive Practice Test', 'Resume & Interviewing Workshop'],
   },
 ];
@@ -49,7 +49,7 @@ const weeks = [
 const Curriculum = () => {
   const seoTitle = '5-Week Medical Assistant Curriculum · CACMA Exam Prep';
   const seoDescription =
-    'Week-by-week curriculum for our 5-week Medical Assistant program in Sacramento: patient care, clinical testing, injections, blood draws, and CACMA exam preparation.';
+    'Week-by-week curriculum for our 5-week Medical Assistant program in Sacramento: patient care, clinical testing, injections, blood draws, and CACMA exam preparation for the credential recognized by the Medical Board of California.';
 
   return (
     <Layout>
@@ -71,7 +71,8 @@ const Curriculum = () => {
             <span className="italic font-normal">Curriculum.</span>
           </h1>
           <p className="text-base sm:text-lg text-emerald-800/70 font-light leading-relaxed">
-            Online coursework, a weekly in-person skills lab, and CCBMA CACMA exam prep.
+            Online coursework, a weekly in-person skills lab, and CCBMA CACMA exam prep
+            for the credential recognized by the Medical Board of California.
             Ends with a resume &amp; interviewing workshop.
           </p>
         </div>
@@ -115,7 +116,7 @@ const Curriculum = () => {
             {...fade}
             className="font-display text-2xl md:text-3xl font-light text-emerald-700 text-center mt-16 leading-snug"
           >
-            Learn it. Practice it. <span className="italic">Get prepared for the CACMA exam.</span>
+            Learn it. Practice it. <span className="italic">Get prepared for the CACMA exam — recognized by the Medical Board of California.</span>
           </motion.p>
         </div>
       </section>

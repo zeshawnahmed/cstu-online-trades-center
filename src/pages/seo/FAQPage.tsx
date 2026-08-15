@@ -81,7 +81,7 @@ const FAQPage = () => {
         "@type": "WebPage",
         "@id": "https://www.americanskilledtradeuniversity.edu/faq",
         "name": "FAQ | Medical Assistant Program | American Institute of Trades Sacramento",
-        "description": "Frequently asked questions about the 5-week Medical Assistant program, tuition payment options, and CCBMA CACMA exam prep at AIT Sacramento.",
+        "description": "Frequently asked questions about the 5-week Medical Assistant program, tuition payment options, and CCBMA CACMA exam prep for the credential recognized by the Medical Board of California at AIT Sacramento.",
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
@@ -107,13 +107,13 @@ const FAQPage = () => {
     <Layout>
       <Helmet>
         <title>FAQ | Medical Assistant Program | AIT Sacramento</title>
-        <meta name="description" content="Answers to common questions about the 5-week Medical Assistant program, tuition payment options, and CCBMA CACMA exam prep at AIT Sacramento." />
-        <meta name="keywords" content="Medical Assistant FAQ Sacramento, CCBMA CACMA exam prep, tuition payment plan, AIT Sacramento FAQ" />
+        <meta name="description" content="Answers to common questions about the 5-week Medical Assistant program, tuition payment options, and CCBMA CACMA exam prep for the credential recognized by the Medical Board of California at AIT Sacramento." />
+        <meta name="keywords" content="Medical Assistant FAQ Sacramento, CCBMA CACMA exam prep, Medical Board of California, tuition payment plan, AIT Sacramento FAQ" />
         <meta name="geo.region" content="US-CA" />
         <meta name="geo.placename" content="Sacramento" />
         <link rel="canonical" href="https://www.americanskilledtradeuniversity.edu/faq" />
         <meta property="og:title" content="FAQ | Medical Assistant Program | AIT Sacramento" />
-        <meta property="og:description" content="Answers to common questions about the 5-week Medical Assistant program, tuition, and CCBMA CACMA exam prep at AIT Sacramento." />
+        <meta property="og:description" content="Answers to common questions about the 5-week Medical Assistant program, tuition, and CCBMA CACMA exam prep for the credential recognized by the Medical Board of California at AIT Sacramento." />
         <meta property="og:url" content="https://www.americanskilledtradeuniversity.edu/faq" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">

@@ -30,7 +30,7 @@ const Footer = () => {
               <BrandName /> <span className="text-sand-400">(AIT)</span>
             </p>
             <p className="text-sand-100/70 font-light leading-relaxed">
-              5-week Medical Assistant program · CCBMA CACMA exam prep. BPPE approval pending.
+              5-week Medical Assistant program · CCBMA CACMA exam prep for the credential recognized by the Medical Board of California. BPPE approval pending.
             </p>
           </div>
 

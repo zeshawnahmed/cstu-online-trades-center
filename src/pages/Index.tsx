@@ -34,7 +34,7 @@ const highlights = [
   },
   {
     t: 'CACMA exam ready',
-    d: 'Weekly skills labs and practice tests.',
+    d: 'Prepare for the CACMA — recognized by the Medical Board of California.',
   },
   {
     t: 'Resume + interviewing workshop',
@@ -46,7 +46,7 @@ const highlights = [
 const Index = () => {
   const seoTitle = 'Medical Assistant Program Sacramento · CACMA Exam Prep';
   const seoDescription =
-    'A 5-week Medical Assistant program in Sacramento preparing you for the CCBMA CACMA certification. Online coursework with a weekly in-person skills lab. Tuition $2,499.';
+    'A 5-week Medical Assistant program in Sacramento preparing you for the CCBMA CACMA certification — the credential recognized by the Medical Board of California. Online coursework with a weekly in-person skills lab. Tuition $2,499.';
 
   return (
     <Layout>
@@ -86,8 +86,8 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-emerald-800/70 max-w-xl mx-auto mb-10 font-light leading-relaxed"
           >
-            Five weeks. Hybrid schedule for working adults. CCBMA CACMA exam prep,
-            taught by a Registered Nurse in Sacramento.
+            Five weeks. Hybrid schedule for working adults. CCBMA CACMA exam prep
+            for the credential recognized by the Medical Board of California.
           </motion.p>
 
           <motion.div
@@ -129,7 +129,7 @@ const Index = () => {
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="grid md:grid-cols-3 gap-12 md:gap-8">
             {[
-              { k: 'CCBMA', v: 'Prepares you for the CACMA exam' },
+              { k: 'CCBMA', v: 'Prepares you for the CACMA exam — recognized by the Medical Board of California' },
               { k: 'BPPE', v: 'Approval pending' },
               { k: 'RN', v: 'Led by a Registered Nurse' },
             ].map((item, i) => (
@@ -178,7 +178,7 @@ const Index = () => {
             clinical skills, injections, blood draws, California MA regulations, and practice testing.
           </motion.p>
           <motion.p {...fade} transition={{ ...fade.transition, delay: 0.25 }} className="text-sand-100/70 font-light mb-12">
-            Learn it. Practice it. Walk into the CACMA exam prepared.
+            Learn it. Practice it. Walk into the CACMA exam prepared — for the credential recognized by the Medical Board of California.
           </motion.p>
           <motion.div {...fade} transition={{ ...fade.transition, delay: 0.3 }} className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-sand-100/70 tracking-wide mb-12">
             <span>5 weeks</span>
@@ -221,7 +221,7 @@ const Index = () => {
           </div>
 
           <motion.p {...fade} transition={{ ...fade.transition, delay: 0.3 }} className="text-sm text-emerald-900/55 mt-8">
-            Covers instruction, weekly skills labs, practice testing, CACMA prep, and the resume &amp; interviewing workshop.
+            Covers instruction, weekly skills labs, practice testing, CACMA prep for the credential recognized by the Medical Board of California, and the resume &amp; interviewing workshop.
           </motion.p>
         </div>
       </section>
