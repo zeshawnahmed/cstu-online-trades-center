@@ -84,11 +84,12 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-emerald-800/70 max-w-xl mx-auto mb-12 font-light leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-emerald-800/70 max-w-xl mx-auto mb-10 font-light leading-relaxed"
           >
-            Five weeks. Hybrid schedule for working adults. Built to prepare you for the
-            CCBMA CACMA certification exam — guided by a Registered Nurse in downtown Sacramento.
+            Five weeks. Hybrid schedule for working adults. CCBMA CACMA exam prep,
+            taught by a Registered Nurse in Sacramento.
           </motion.p>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
