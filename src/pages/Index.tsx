@@ -174,8 +174,8 @@ const Index = () => {
           </motion.h2>
           <motion.p {...fade} transition={{ ...fade.transition, delay: 0.2 }} className="text-lg text-sand-100/80 font-light leading-relaxed mb-6">
             The California Certifying Board for Medical Assistants awards the CACMA — the
-            credential Sacramento employers know. Every week maps to it: clinical skills,
-            injections, blood draws, California MA regulations, and practice testing.
+            credential recognized by the Medical Board of California. Every week maps to it:
+            clinical skills, injections, blood draws, California MA regulations, and practice testing.
           </motion.p>
           <motion.p {...fade} transition={{ ...fade.transition, delay: 0.25 }} className="text-sand-100/70 font-light mb-12">
             Learn it. Practice it. Walk into the CACMA exam prepared.
