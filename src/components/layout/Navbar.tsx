@@ -9,7 +9,6 @@ import BrandName from './BrandName';
 const links = [
   { to: '/', label: 'Home' },
   { to: '/curriculum', label: 'Curriculum' },
-  { to: '/instructor', label: 'Instructor' },
   { to: '/financial-aid', label: 'Tuition' },
   { to: '/contact', label: 'Contact' },
 ];

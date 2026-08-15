@@ -51,7 +51,6 @@ const Footer = () => {
             <p className="text-xs tracking-[0.25em] uppercase text-sand-400 mb-4">Explore</p>
             <ul className="space-y-3 text-sand-100/80">
               <li><Link to="/curriculum" className="hover:text-sand-50">Curriculum</Link></li>
-              <li><Link to="/instructor" className="hover:text-sand-50">Instructor</Link></li>
               <li><Link to="/financial-aid" className="hover:text-sand-50">Tuition</Link></li>
               <li><Link to="/contact" className="hover:text-sand-50">Contact</Link></li>
             </ul>
