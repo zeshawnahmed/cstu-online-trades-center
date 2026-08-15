@@ -234,9 +234,8 @@ const Index = () => {
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-8">
               Zeshawn Ahmed, <span className="italic">RN</span>
             </h2>
-            <Link to="/instructor" className="inline-flex items-center gap-2 text-sm tracking-wider uppercase text-emerald-700 hover:text-emerald-500 border-b border-emerald-700 pb-1">
-              Read more <ArrowRight className="h-3 w-3" />
-            </Link>
+            <p className="text-emerald-900/60 tracking-wide">Registered Nurse · Master's in Education · Sacramento</p>
+
           </motion.div>
         </div>
       </section>
