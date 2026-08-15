@@ -106,14 +106,14 @@ const FAQPage = () => {
   return (
     <Layout>
       <Helmet>
-        <title>FAQ | Frequently Asked Questions | American Institute of Trades Sacramento</title>
-        <meta name="description" content="Get answers to frequently asked questions about HVAC training, tuition payment options, and job search support at American Institute of Trades in Sacramento, California." />
-        <meta name="keywords" content="HVAC training FAQ, trade school questions Sacramento, tuition payment plan, job search support, AIT Sacramento FAQ" />
+        <title>FAQ | Medical Assistant Program | AIT Sacramento</title>
+        <meta name="description" content="Answers to common questions about the 5-week Medical Assistant program, tuition payment options, and CCBMA CACMA exam prep at AIT Sacramento." />
+        <meta name="keywords" content="Medical Assistant FAQ Sacramento, CCBMA CACMA exam prep, tuition payment plan, AIT Sacramento FAQ" />
         <meta name="geo.region" content="US-CA" />
         <meta name="geo.placename" content="Sacramento" />
         <link rel="canonical" href="https://www.americanskilledtradeuniversity.edu/faq" />
-        <meta property="og:title" content="FAQ | Frequently Asked Questions | American Institute of Trades" />
-        <meta property="og:description" content="Answers to common questions about HVAC training, tuition, and careers at AIT Sacramento." />
+        <meta property="og:title" content="FAQ | Medical Assistant Program | AIT Sacramento" />
+        <meta property="og:description" content="Answers to common questions about the 5-week Medical Assistant program, tuition, and CCBMA CACMA exam prep at AIT Sacramento." />
         <meta property="og:url" content="https://www.americanskilledtradeuniversity.edu/faq" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
