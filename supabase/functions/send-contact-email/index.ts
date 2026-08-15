@@ -106,7 +106,7 @@ function getSMSContent(programInterest: string, name: string): string {
     ? 'Certified Clinical Medical Assistant'
     : 'our programs';
 
-  return `Hi ${name}! Thank you for your interest in the ${programName} Program at American Institute of Trades. Check your email for next steps, or call us at 916-343-8014. Visit levelupait.com for more info.`;
+  return `Hi ${name}! Thank you for your interest in the ${programName} Program at American Institute of Trades. Check your email for next steps, or call us at 916-572-6514. Visit levelupait.com for more info.`;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -170,7 +170,7 @@ const handler = async (req: Request): Promise<Response> => {
     let userEmailContent = `
       <p>Thank you for your interest in American Institute of Trades (AIT) in Sacramento, CA.</p>
       <p>We have received your message and will get back to you soon.</p>
-      <p>If you have any questions, feel free to call at 916-343-8014.</p>
+      <p>If you have any questions, feel free to call at 916-572-6514.</p>
       <p>Best regards,<br>
       <strong>Shawn</strong><br>
       Program Director<br>
@@ -228,7 +228,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>Questions or Assistance</h3>
         
-        <p>If you have any questions or would like to speak with an admissions representative, please call 916-343-8014.</p>
+        <p>If you have any questions or would like to speak with an admissions representative, please call 916-572-6514.</p>
         
         <p>Additional financial aid and tuition payment assistance options are available on our website.</p>
         
@@ -237,7 +237,7 @@ const handler = async (req: Request): Promise<Response> => {
         American Institute of Trades (AIT)<br>
         Pharmacy Technician Program<br>
         <a href="https://www.levelupait.com">levelupait.com</a><br>
-        916-343-8014</p>
+        916-572-6514</p>
       `;
     } else if (programInterest === 'hvac-technician') {
       userSubject = "Next Steps - HVAC Program";
@@ -290,7 +290,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>Questions or Assistance</h3>
         
-        <p>If you have any questions or would like to speak with an admissions representative, please call 916-343-8014.</p>
+        <p>If you have any questions or would like to speak with an admissions representative, please call 916-572-6514.</p>
         
         <p>Additional financial aid and tuition assistance options are available on our website.</p>
         
@@ -299,7 +299,7 @@ const handler = async (req: Request): Promise<Response> => {
         American Institute of Trades (AIT)<br>
         HVAC Technician Program<br>
         <a href="https://www.levelupait.com">levelupait.com</a><br>
-        916-343-8014</p>
+        916-572-6514</p>
       `;
     } else if (programInterest === 'medical-assistant') {
       userSubject = "Next Steps - Certified Clinical Medical Assistant Program";
@@ -353,7 +353,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h3>Questions or Assistance</h3>
         
-        <p>If you have any questions or would like to speak with an admissions representative, please call 916-343-8014.</p>
+        <p>If you have any questions or would like to speak with an admissions representative, please call 916-572-6514.</p>
         
         <p>Additional financial aid and tuition payment assistance options are available on our website.</p>
         
@@ -362,7 +362,7 @@ const handler = async (req: Request): Promise<Response> => {
         American Institute of Trades (AIT)<br>
         Certified Clinical Medical Assistant Program<br>
         <a href="https://www.levelupait.com">levelupait.com</a><br>
-        916-343-8014</p>
+        916-572-6514</p>
       `;
     }
 

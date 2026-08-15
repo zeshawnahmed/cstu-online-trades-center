@@ -42,7 +42,7 @@ const weeks = [
     n: 'Week 5',
     title: 'Final Exam Prep',
     topics: ['Medical office', 'Emergencies', 'California MA regulations', 'CACMA review'],
-    checks: ['Final Skills Check-Off', 'Comprehensive Practice Test'],
+    checks: ['Final Skills Check-Off', 'Comprehensive Practice Test', 'Resume & Interviewing Workshop'],
   },
 ];
 
@@ -66,20 +66,19 @@ const Curriculum = () => {
       <section className="bg-sand-50 pt-28 pb-20 md:pt-36">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 font-medium mb-8">Curriculum</p>
-          <h1 className="font-display text-4xl md:text-5xl font-light text-emerald-700 leading-[1.1] tracking-tight mb-8">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-emerald-700 leading-[1.1] tracking-tight mb-8">
             5-Week Medical Assistant<br />
             <span className="italic font-normal">Curriculum.</span>
           </h1>
-          <p className="text-lg text-emerald-800/70 font-light leading-relaxed">
-            Train online with a weekly in-person skills lab while preparing for the
-            California Certified Medical Assistant (CACMA) certification from the
-            California Certifying Board for Medical Assistants (CCBMA).
+          <p className="text-base sm:text-lg text-emerald-800/70 font-light leading-relaxed">
+            Online coursework, a weekly in-person skills lab, and CCBMA CACMA exam prep.
+            Ends with a resume &amp; interviewing workshop.
           </p>
         </div>
       </section>
 
       {/* WEEKS */}
-      <section className="bg-white py-24 border-t border-emerald-900/10">
+      <section className="bg-white py-16 md:py-24 border-t border-emerald-900/10">
         <div className="container mx-auto px-6 max-w-3xl">
           <div className="border-t border-emerald-900/10">
             {weeks.map((w, i) => (
@@ -122,10 +121,10 @@ const Curriculum = () => {
       </section>
 
       {/* TUITION */}
-      <section className="bg-emerald-700 text-sand-50 py-24">
+      <section className="bg-emerald-700 text-sand-50 py-16 md:py-24">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <p className="text-xs tracking-[0.25em] uppercase text-sand-400 mb-6">Tuition</p>
-          <p className="font-display text-5xl md:text-6xl font-light mb-4">$2,499</p>
+          <p className="font-display text-4xl sm:text-5xl md:text-6xl font-light mb-4">$2,499</p>
           <p className="text-sand-100/80 font-light mb-10">
             Total program cost — or three payments of $833
           </p>
