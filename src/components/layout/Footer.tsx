@@ -1,108 +1,65 @@
-
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { language } = useLanguage();
   const location = useLocation();
   const isContactPage = location.pathname === '/contact';
-  
+
   return (
-    <footer className="bg-navy-500 text-white">
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        {/* Prominent Admissions Contact at top - Hidden on contact page */}
+    <footer className="bg-emerald-700 text-sand-50">
+      <div className="container mx-auto px-6 py-16 max-w-5xl">
         {!isContactPage && (
-          <div className="text-center mb-8 sm:mb-12">
-            <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-8 py-4 sm:py-6 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
-              <p className="text-base sm:text-xl font-bold mb-1 sm:mb-2">
-                {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
-              </p>
-              <p className="text-sm sm:text-lg font-bold underline">
-                {language === 'en' ? 'Click Here to Fill Out Contact Form and Admissions Rep Will Be in Touch' : 'Haz Clic Aquí para Llenar el Formulario de Contacto y un Representante de Admisiones se Pondrá en Contacto'}
-              </p>
+          <div className="text-center mb-16">
+            <p className="text-xs tracking-[0.25em] uppercase text-sand-400 mb-4">To Get Started</p>
+            <Link
+              to="/contact"
+              className="font-display text-2xl md:text-3xl font-light text-sand-50 border-b border-sand-400 pb-2 hover:text-sand-200 transition-colors"
+            >
+              Request program information
             </Link>
           </div>
         )}
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Column 1 - About */}
-          <div className="text-center sm:text-left">
-            <h3 className="text-xl font-bold mb-4">AIT</h3>
-            <p className="text-gray-300 mb-4 text-sm sm:text-base">
-              {language === 'en' 
-                ? "American Institute of Trades offers specialized training in high demand skilled trades."
-                : "Instituto Americano de Oficios ofrece capacitación especializada en oficios de alta demanda."}
+
+        <div className="grid sm:grid-cols-3 gap-10 text-sm">
+          <div>
+            <p className="font-display text-lg font-light mb-3">American Institute of Trades</p>
+            <p className="text-sand-100/70 font-light leading-relaxed">
+              5-week Medical Assistant program preparing students for the CCBMA CACMA exam.
+              BPPE approval pending.
             </p>
-            <div className="flex justify-center sm:justify-start space-x-4">
-              <a href="#" className="text-white hover:text-gold-400 transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-gold-400 transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-gold-400 transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-gold-400 transition-colors">
-                <Linkedin size={20} />
-              </a>
-            </div>
           </div>
-          
-          {/* Column 2 - Contact */}
-          <div className="text-center sm:text-left">
-            <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Contact Us" : "Contáctanos"}</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center justify-center sm:justify-start">
-                <MapPin className="h-5 w-5 mr-2 text-gold-400" />
-                <span className="text-gray-300 text-sm sm:text-base">Sacramento, CA</span>
+
+          <div>
+            <p className="text-xs tracking-[0.25em] uppercase text-sand-400 mb-4">Contact</p>
+            <ul className="space-y-3 text-sand-100/80">
+              <li className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-sand-400" />
+                Capsity Coworking · Sacramento, CA
               </li>
-              <li className="text-gray-300 text-sm sm:text-base">
-                <a href="tel:916-343-8014" className="hover:text-gold-400 transition-colors">
-                  916-343-8014
-                </a>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-300 hover:text-gold-400 transition-colors underline text-sm sm:text-base">
-                  {language === 'en' ? 'Fill Out Contact Form' : 'Llenar Formulario de Contacto'}
-                </Link>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-sand-400" />
+                <a href="tel:916-343-8014" className="hover:text-sand-50">916-343-8014</a>
               </li>
             </ul>
           </div>
-          
-          {/* Column 3 - Legal Links */}
-          <div className="text-center sm:text-left">
-            <h3 className="text-xl font-bold mb-4">{language === 'en' ? "Legal" : "Legal"}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/privacy" className="text-gray-300 hover:text-gold-400 transition-colors text-sm sm:text-base">
-                  {language === 'en' ? "Privacy Policy" : "Política de Privacidad"}
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms" className="text-gray-300 hover:text-gold-400 transition-colors text-sm sm:text-base">
-                  {language === 'en' ? "Terms of Service" : "Términos de Servicio"}
-                </Link>
-              </li>
+
+          <div>
+            <p className="text-xs tracking-[0.25em] uppercase text-sand-400 mb-4">Explore</p>
+            <ul className="space-y-3 text-sand-100/80">
+              <li><Link to="/curriculum" className="hover:text-sand-50">Curriculum</Link></li>
+              <li><Link to="/instructor" className="hover:text-sand-50">Meet Your Instructor</Link></li>
+              <li><Link to="/financial-aid" className="hover:text-sand-50">Tuition &amp; Payment Plan</Link></li>
+              <li><Link to="/contact" className="hover:text-sand-50">Contact</Link></li>
             </ul>
           </div>
         </div>
-        
-        <div className="border-t border-navy-400 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
+
+        <div className="border-t border-sand-400/20 mt-12 pt-6">
+          <p className="text-xs text-sand-100/50">
             &copy; {currentYear} American Institute of Trades. All rights reserved.
           </p>
-          <div className="flex space-x-6">
-            <Link to="/privacy" className="text-gray-400 hover:text-gold-400 text-sm transition-colors">
-              {language === 'en' ? "Privacy Policy" : "Política de Privacidad"}
-            </Link>
-            <Link to="/terms" className="text-gray-400 hover:text-gold-400 text-sm transition-colors">
-              {language === 'en' ? "Terms of Service" : "Términos de Servicio"}
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

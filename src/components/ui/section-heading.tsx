@@ -24,15 +24,15 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
       className
     )}>
       {subtitle && (
-        <div className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-navy-700 uppercase bg-gold-100 rounded-full mb-3">
+        <div className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-emerald-700 uppercase bg-sand-100 rounded-full mb-3">
           {subtitle}
         </div>
       )}
-      <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-emerald-700 mb-4">
         {title}
       </h2>
       {description && (
-        <p className="text-lg text-navy-600/90 leading-relaxed">
+        <p className="text-lg text-emerald-600/90 leading-relaxed">
           {description}
         </p>
       )}

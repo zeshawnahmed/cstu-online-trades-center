@@ -31,7 +31,7 @@ const JobSearchPage = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-b from-navy-50 to-white">
+      <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
         {/* Hero Section */}
         <section className="pt-32 pb-16 px-4">
           <div className="container mx-auto text-center max-w-3xl">
@@ -39,7 +39,7 @@ const JobSearchPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-700 mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-emerald-700 mb-6"
             >
               {language === 'en' ? 'Job Search Pipeline' : 'Proceso de Búsqueda de Empleo'}
             </motion.h1>
@@ -47,7 +47,7 @@ const JobSearchPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-lg md:text-xl text-navy-600/80 max-w-xl mx-auto"
+              className="text-lg md:text-xl text-emerald-600/80 max-w-xl mx-auto"
             >
               {language === 'en' 
                 ? 'Our mission is to empower you to take on your Job Search with CONFIDENCE.'
@@ -62,8 +62,8 @@ const JobSearchPage = () => {
             {/* Desktop Timeline */}
             <div className="hidden md:block relative py-8">
               {/* Timeline Line */}
-              <div className="absolute top-1/2 left-[10%] right-[10%] h-1 bg-navy-200 transform -translate-y-1/2">
-                <div className="absolute inset-0 bg-gradient-to-r from-navy-400 to-navy-600 rounded-full" />
+              <div className="absolute top-1/2 left-[10%] right-[10%] h-1 bg-emerald-200 transform -translate-y-1/2">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full" />
               </div>
               
               <div className="relative flex justify-between items-start px-[5%]">
@@ -77,7 +77,7 @@ const JobSearchPage = () => {
                   >
                     {/* Phase Label */}
                     <span className={`text-xs font-semibold uppercase tracking-wider mb-6 px-3 py-1 rounded-full ${
-                      index < 2 ? 'bg-navy-100 text-navy-600' : 'bg-navy-600 text-white'
+                      index < 2 ? 'bg-emerald-100 text-emerald-600' : 'bg-emerald-600 text-white'
                     }`}>
                       {item.phase}
                     </span>
@@ -86,20 +86,20 @@ const JobSearchPage = () => {
                     <div className="relative mb-6">
                       <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg border-4 ${
                         index < 2 
-                          ? 'bg-white border-navy-300' 
-                          : 'bg-navy-600 border-navy-500'
+                          ? 'bg-white border-emerald-300' 
+                          : 'bg-emerald-600 border-emerald-500'
                       }`}>
-                        <item.icon className={`w-7 h-7 ${index < 2 ? 'text-navy-600' : 'text-white'}`} />
+                        <item.icon className={`w-7 h-7 ${index < 2 ? 'text-emerald-600' : 'text-white'}`} />
                       </div>
                       {/* Connector dot */}
                       <div className={`absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full ${
-                        index < 2 ? 'bg-navy-400' : 'bg-navy-600'
+                        index < 2 ? 'bg-emerald-400' : 'bg-emerald-600'
                       }`} />
                     </div>
                     
                     {/* Content */}
-                    <h3 className="text-lg font-bold text-navy-700 mb-2">{item.title}</h3>
-                    <p className="text-sm text-navy-500 leading-relaxed max-w-[200px]">{item.description}</p>
+                    <h3 className="text-lg font-bold text-emerald-700 mb-2">{item.title}</h3>
+                    <p className="text-sm text-emerald-500 leading-relaxed max-w-[200px]">{item.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -108,7 +108,7 @@ const JobSearchPage = () => {
             {/* Mobile Timeline */}
             <div className="md:hidden relative pl-8">
               {/* Vertical Line */}
-              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-navy-200 via-navy-400 to-navy-600" />
+              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-200 via-emerald-400 to-emerald-600" />
               
               <div className="space-y-12">
                 {timelineItems.map((item, index) => (
@@ -122,21 +122,21 @@ const JobSearchPage = () => {
                     {/* Icon Circle */}
                     <div className={`absolute -left-8 w-12 h-12 rounded-full flex items-center justify-center shadow-lg ${
                       index < 2 
-                        ? 'bg-white border-3 border-navy-300' 
-                        : 'bg-navy-600 border-3 border-navy-700'
+                        ? 'bg-white border-3 border-emerald-300' 
+                        : 'bg-emerald-600 border-3 border-emerald-700'
                     }`}>
-                      <item.icon className={`w-5 h-5 ${index < 2 ? 'text-navy-500' : 'text-white'}`} />
+                      <item.icon className={`w-5 h-5 ${index < 2 ? 'text-emerald-500' : 'text-white'}`} />
                     </div>
                     
                     {/* Content */}
                     <div className="ml-8">
                       <span className={`text-xs font-semibold uppercase tracking-wider ${
-                        index < 2 ? 'text-navy-400' : 'text-navy-600'
+                        index < 2 ? 'text-emerald-400' : 'text-emerald-600'
                       }`}>
                         {item.phase}
                       </span>
-                      <h3 className="text-lg font-bold text-navy-700 mt-1">{item.title}</h3>
-                      <p className="text-sm text-navy-500 mt-1">{item.description}</p>
+                      <h3 className="text-lg font-bold text-emerald-700 mt-1">{item.title}</h3>
+                      <p className="text-sm text-emerald-500 mt-1">{item.description}</p>
                     </div>
                   </motion.div>
                 ))}

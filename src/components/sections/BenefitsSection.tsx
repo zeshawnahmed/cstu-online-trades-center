@@ -20,7 +20,7 @@ const BenefitsSection = () => {
     {
       icon: DollarSign,
       title: 'Affordable Tuition',
-      description: 'All programs available at a flat rate of $2,500 with payment plans and financial assistance options.',
+      description: 'All programs available at a flat rate of $2,499 with payment plans and financial assistance options.',
     },
     {
       icon: BookOpen,
