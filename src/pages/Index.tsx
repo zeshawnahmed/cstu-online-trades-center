@@ -304,7 +304,7 @@ const Index = () => {
                 },
                 {
                   q: 'Which certification will I prepare to earn?',
-                  a: 'The CACMA by the CCBMA — the premier Medical Assistant credential in California.',
+                  a: 'The CACMA by the CCBMA — the credential recognized by the Medical Board of California.',
                 },
                 {
                   q: 'What are the next steps if I\'m interested?',
