@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MapPin, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import BrandName from './BrandName';
 
 
