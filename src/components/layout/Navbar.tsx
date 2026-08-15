@@ -34,8 +34,10 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="font-display text-lg md:text-xl font-medium tracking-tight text-emerald-700">
-            American Institute of Trades
+            <BrandName className="hidden sm:inline" />
+            <span className="sm:hidden">AIT</span>
           </Link>
+
 
           <nav className="hidden md:flex items-center gap-8">
             {links.map((l) => (
