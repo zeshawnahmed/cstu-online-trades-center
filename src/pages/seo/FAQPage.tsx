@@ -15,7 +15,7 @@ const FAQPage = () => {
       question: "I can't afford it right now, what are my options?",
       answer: (
         <>
-          We get it, money is tight. That's why we offer a tuition payment plan to break the full program cost $2500 into 3 monthly payments of $833.33. Please visit our{" "}
+          We get it, money is tight. That's why we offer a tuition payment plan to break the full program cost $2,499 into 3 monthly payments of $833. Please visit our{" "}
           <Link to="/financial-aid" className="text-primary hover:text-primary/80 underline font-medium">
             Financial Aid page
           </Link>{" "}
@@ -56,7 +56,7 @@ const FAQPage = () => {
             "name": "I can't afford it right now, what are my options?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We get it, money is tight. That's why we offer a tuition payment plan to break the full program cost $2500 into 3 monthly payments of $833.33. Please visit our Financial Aid page for all available options."
+              "text": "We get it, money is tight. That's why we offer a tuition payment plan to break the full program cost $2,499 into 3 monthly payments of $833. Please visit our Financial Aid page for all available options."
             }
           },
           {

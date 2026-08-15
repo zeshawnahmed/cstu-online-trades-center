@@ -45,7 +45,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "Through comprehensive training, you'll develop expertise in residential and commercial HVAC systems, refrigeration principles, electrical components, and EPA regulations.",
           "Upon completion, you'll be prepared for entry level positions with EPA 608 certification training to make you job ready."
         ],
-        price: 'Affordable Tuition - $2500',
+        price: 'Affordable Tuition - $2,499',
         duration: 'Online Self Paced, 12 Weeks',
         certification: 'EPA 608 Certification',
         curriculum: [
@@ -184,7 +184,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "Through our fully online, self-paced curriculum, you'll learn everything from pharmacy law and drug safety to prescription processing and inventory management.",
           "Upon successful completion of the program and passing the PTCB exam, you'll be eligible to work as a California Pharmacy Technician."
         ],
-        price: 'Affordable Tuition - $2500',
+        price: 'Affordable Tuition - $2,499',
         duration: 'Online Self Paced, 8 Weeks',
         certification: 'PTCB Certification Prep',
         curriculum: [
@@ -295,7 +295,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "Through our fully online, self-paced curriculum, you'll learn everything from anatomy and physiology to phlebotomy, EKG, and clinical documentation.",
           "Upon successful completion of the program and passing the NHA exam, you'll earn the Certified Clinical Medical Assistant (CCMA) credential."
         ],
-        price: 'Affordable Tuition - $2500',
+        price: 'Affordable Tuition - $2,499',
         duration: 'Online Self Paced, 8 Weeks',
         certification: 'NHA CCMA Certification Prep',
         curriculum: [
@@ -416,7 +416,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "A través de capacitación integral, desarrollarás experiencia en sistemas HVAC residenciales y comerciales, principios de refrigeración, componentes eléctricos y regulaciones EPA.",
           "Al completar, estarás preparado para puestos de nivel inicial con capacitación de certificación EPA 608 para hacerte listo para el trabajo."
         ],
-        price: 'Matrícula Asequible - $2500',
+        price: 'Matrícula Asequible - $2,499',
         duration: 'En línea a tu ritmo, 12 semanas',
         certification: 'Certificación EPA 608',
         curriculum: [
@@ -555,7 +555,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "A través de nuestro plan de estudios completamente en línea y a tu ritmo, aprenderás todo, desde la ley de farmacia y seguridad de medicamentos hasta el procesamiento de recetas y gestión de inventario.",
           "Al completar exitosamente el programa y aprobar el examen PTCB, serás elegible para trabajar como Técnico de Farmacia en California."
         ],
-        price: 'Matrícula Asequible - $2500',
+        price: 'Matrícula Asequible - $2,499',
         duration: 'En línea a tu ritmo, 8 semanas',
         certification: 'Preparación para Certificación PTCB',
         curriculum: [
@@ -666,7 +666,7 @@ const getProgramData = (language: 'en' | 'es'): Record<string, ProgramDetail> =>
           "A través de nuestro plan de estudios completamente en línea y a tu ritmo, aprenderás todo, desde anatomía y fisiología hasta flebotomía, EKG y documentación clínica.",
           "Al completar exitosamente el programa y aprobar el examen NHA, obtendrás la credencial de Asistente Médico Clínico Certificado (CCMA)."
         ],
-        price: 'Matrícula Asequible - $2500',
+        price: 'Matrícula Asequible - $2,499',
         duration: 'En línea a tu ritmo, 8 semanas',
         certification: 'Preparación para Certificación NHA CCMA',
         curriculum: [

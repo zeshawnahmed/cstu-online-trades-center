@@ -114,8 +114,8 @@ const FinancialAid = () => {
               </h2>
               <p className="text-emerald-700 text-base sm:text-lg leading-relaxed">
                 {language === 'en'
-                  ? "Pay tuition in 3 monthly payments of $833.33 with a debit or credit card on file."
-                  : "Paga la matrícula en 3 pagos mensuales de $833.33 con una tarjeta de débito o crédito en archivo."}
+                  ? "Pay tuition in 3 monthly payments of $833 with a debit or credit card on file."
+                  : "Paga la matrícula en 3 pagos mensuales de $833 con una tarjeta de débito o crédito en archivo."}
               </p>
               <Link to="/contact" className="inline-block mt-4">
                 <Button variant="outline" className="border-sand-400 text-emerald-700 hover:bg-sand-100 font-semibold text-sm sm:text-base">

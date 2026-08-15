@@ -15,7 +15,7 @@ const ProgramsSection = () => {
       description: language === 'en' 
         ? 'Earn the nationally recognized CCMA credential to work as a Clinical Medical Assistant in just 8 weeks with our NHA-approved program.'
         : 'Obtén la credencial CCMA reconocida a nivel nacional para trabajar como Asistente Médico Clínico en solo 8 semanas con nuestro programa aprobado por NHA.',
-      price: language === 'en' ? 'Affordable Tuition - $2500' : 'Matrícula Asequible - $2500',
+      price: language === 'en' ? 'Affordable Tuition - $2,499' : 'Matrícula Asequible - $2,499',
       duration: language === 'en' ? '8 Weeks' : '8 Semanas',
       certification: language === 'en' ? 'NHA CCMA Certification Prep' : 'Preparación para Certificación NHA CCMA',
       imageUrl: '/medical-assistant-program.jpg',
