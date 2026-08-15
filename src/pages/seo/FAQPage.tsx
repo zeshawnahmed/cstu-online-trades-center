@@ -64,7 +64,7 @@ const FAQPage = () => {
             "name": "Which certification will I prepare to earn?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The CACMA by the CCBMA — the premier Medical Assistant credential in California."
+              "text": "The CACMA by the CCBMA — the credential recognized by the Medical Board of California."
             }
           },
           {
