@@ -174,8 +174,8 @@ const Index = () => {
           </motion.h2>
           <motion.p {...fade} transition={{ ...fade.transition, delay: 0.2 }} className="text-lg text-sand-100/80 font-light leading-relaxed mb-6">
             The California Certifying Board for Medical Assistants awards the CACMA — the
-            credential Sacramento employers know. Every week maps to it: clinical skills,
-            injections, blood draws, California MA regulations, and practice testing.
+            credential recognized by the Medical Board of California. Every week maps to it:
+            clinical skills, injections, blood draws, California MA regulations, and practice testing.
           </motion.p>
           <motion.p {...fade} transition={{ ...fade.transition, delay: 0.25 }} className="text-sand-100/70 font-light mb-12">
             Learn it. Practice it. Walk into the CACMA exam prepared.
@@ -231,12 +231,9 @@ const Index = () => {
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <motion.div {...fade}>
             <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6">Your Instructor</p>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-6">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-8">
               Zeshawn Ahmed, <span className="italic">RN</span>
             </h2>
-            <p className="text-emerald-900/70 leading-relaxed mb-8 font-light max-w-xl mx-auto">
-              Registered Nurse. Sacramento-based. Built this program for real working adults.
-            </p>
             <Link to="/instructor" className="inline-flex items-center gap-2 text-sm tracking-wider uppercase text-emerald-700 hover:text-emerald-500 border-b border-emerald-700 pb-1">
               Read more <ArrowRight className="h-3 w-3" />
             </Link>
@@ -307,7 +304,7 @@ const Index = () => {
                 },
                 {
                   q: 'Which certification will I prepare to earn?',
-                  a: 'The CACMA by the CCBMA — the premier Medical Assistant credential in California.',
+                  a: 'The CACMA by the CCBMA — the credential recognized by the Medical Board of California.',
                 },
                 {
                   q: 'What are the next steps if I\'m interested?',

@@ -53,15 +53,28 @@ const MeetInstructor = () => {
       </section>
 
 
-      {/* BIO */}
-      <section className="bg-white py-32 border-t border-emerald-900/10">
-        <div className="container mx-auto px-6 max-w-2xl">
-          <motion.div {...fade} className="space-y-6 text-lg text-emerald-900/80 font-light leading-relaxed">
+      {/* PHOTO + BIO */}
+      <section className="bg-white py-20 md:py-28 border-t border-emerald-900/10">
+        <div className="container mx-auto px-6 max-w-4xl grid md:grid-cols-[minmax(0,320px)_1fr] gap-10 md:gap-14 items-start">
+          <motion.div
+            {...fade}
+            className="aspect-[4/5] w-full border border-emerald-900/10 bg-emerald-700/5 flex items-center justify-center"
+          >
+            <p className="text-[10px] tracking-[0.25em] uppercase text-emerald-800/40 text-center px-4">
+              Instructor photo<br />coming soon
+            </p>
+          </motion.div>
+          <motion.div {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="space-y-6 text-lg text-emerald-900/80 font-light leading-relaxed">
             <p>
-              Registered Nurse based in Sacramento. Built this program for working adults who need a direct, no-nonsense path to certification.
+              Licensed Registered Nurse with several years of experience in healthcare, working
+              shoulder to shoulder with Medical Assistants every day.
             </p>
             <p>
-              Small cohorts. Hands-on skills. CACMA-ready in five weeks.
+              A Master's in Education shaped how this program is built: fun, practical, and
+              effective. You learn by doing — real skills, real feedback, real momentum.
+            </p>
+            <p>
+              Small cohorts. Hands-on labs. CACMA-ready in five weeks.
             </p>
           </motion.div>
         </div>
@@ -76,7 +89,8 @@ const MeetInstructor = () => {
               { k: 'Registered Nurse', v: 'Actively practicing in the Sacramento region' },
               { k: 'UC Berkeley', v: 'Undergraduate' },
               { k: 'Sacramento State', v: 'Nursing' },
-              { k: 'CCBMA', v: 'CACMA exam preparation · BPPE approval pending' },
+              { k: "Master's in Education", v: 'Curriculum built to be fun, practical, and effective' },
+              { k: 'CCBMA', v: 'CACMA prep — recognized by the Medical Board of California' },
             ].map((item, i) => (
               <motion.div key={i} {...fade} transition={{ ...fade.transition, delay: i * 0.08 }} className="border-t border-sand-400/30 pt-5">
                 <p className="font-display text-2xl font-light mb-2">{item.k}</p>
