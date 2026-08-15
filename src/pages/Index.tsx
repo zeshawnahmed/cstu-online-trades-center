@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import {
@@ -19,9 +19,29 @@ const fade = {
   transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
 };
 
+const highlights = [
+  {
+    t: 'Online with weekly in-person skills lab',
+    d: 'Coursework online, hands-on practice each week at Capsity Coworking in downtown Sacramento.',
+  },
+  {
+    t: 'Instructional tutoring and support',
+    d: 'Direct access to your instructor for one-on-one tutoring and guidance from week one.',
+  },
+  {
+    t: 'Mostly online for working professionals',
+    d: 'Study around your job and family. The schedule is built for working adults.',
+  },
+  {
+    t: 'Designed to build competency and pass the CACMA exam',
+    d: 'Every week ends with a skills lab and a practice test, so you sit for the exam prepared.',
+  },
+];
+
 const Index = () => {
-  const seoTitle = 'CCMA Program · Sacramento · American Institute of Trades';
-  const seoDescription = 'A modern, NHA-approved Certified Clinical Medical Assistant program. Online coursework with in-person sessions in downtown Sacramento.';
+  const seoTitle = 'Medical Assistant Program Sacramento · CACMA Exam Prep';
+  const seoDescription =
+    'A 5-week Medical Assistant program in Sacramento preparing you for the CCBMA CACMA certification. Online coursework with a weekly in-person skills lab. Tuition $2,499.';
 
   return (
     <Layout>
@@ -61,7 +81,8 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-emerald-800/70 max-w-xl mx-auto mb-12 font-light leading-relaxed"
           >
-            Hybrid schedule for working adults. Six weeks. Guided by a Registered Nurse in downtown Sacramento.
+            Five weeks. Hybrid schedule for working adults. Built to prepare you for the
+            CCBMA CACMA certification exam — guided by a Registered Nurse in downtown Sacramento.
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -74,9 +95,9 @@ const Index = () => {
                 Request Info <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <Link to="/instructor">
+            <Link to="/curriculum">
               <Button size="lg" variant="ghost" className="text-emerald-800 hover:bg-transparent hover:text-emerald-600 rounded-none px-6 py-6 text-sm tracking-wider uppercase font-medium underline underline-offset-8 decoration-1">
-                Meet the Instructor
+                See the Curriculum
               </Button>
             </Link>
           </motion.div>
@@ -97,13 +118,12 @@ const Index = () => {
         </div>
       </section>
 
-
       {/* CREDIBILITY LINE */}
       <section className="bg-white py-24 border-t border-emerald-900/10">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="grid md:grid-cols-3 gap-12 md:gap-8">
             {[
-              { k: 'NHA', v: 'Approved curriculum' },
+              { k: 'CCBMA', v: 'Prepares you for the CACMA exam' },
               { k: 'BPPE', v: 'Approval pending' },
               { k: 'RN', v: 'Led by a Registered Nurse' },
             ].map((item, i) => (
@@ -116,27 +136,88 @@ const Index = () => {
         </div>
       </section>
 
-      {/* PROGRAM */}
+      {/* PROGRAM HIGHLIGHTS */}
+      <section className="bg-sand-50 py-28 border-t border-emerald-900/10">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6 text-center">
+            Program Highlights
+          </motion.p>
+          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-3xl md:text-4xl font-light text-emerald-700 text-center leading-tight mb-14">
+            What you get in five weeks.
+          </motion.h2>
+          <div className="grid sm:grid-cols-2 gap-x-10 gap-y-10">
+            {highlights.map((h, i) => (
+              <motion.div key={h.t} {...fade} transition={{ ...fade.transition, delay: i * 0.08 }}>
+                <div className="flex items-start gap-3 mb-3">
+                  <Check className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <h3 className="font-display text-xl font-medium text-emerald-800 leading-snug">{h.t}</h3>
+                </div>
+                <p className="text-emerald-900/65 font-light leading-relaxed pl-8">{h.d}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CCBMA / PROGRAM */}
       <section className="bg-emerald-700 text-sand-50 py-32">
         <div className="container mx-auto px-6 max-w-3xl text-center">
-          <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-sand-400 mb-6">The Program</motion.p>
+          <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-sand-400 mb-6">The Credential</motion.p>
           <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-4xl md:text-5xl font-light leading-tight mb-8">
-            A focused path to the CCMA credential.
+            Built around the <span className="italic">CCBMA</span> exam.
           </motion.h2>
-          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.2 }} className="text-lg text-sand-100/80 font-light leading-relaxed mb-12">
-            Clinical foundations. Phlebotomy. EKG. Patient care. Exam preparation. Built by clinicians, taught in small cohorts, structured around your life.
+          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.2 }} className="text-lg text-sand-100/80 font-light leading-relaxed mb-6">
+            The California Certifying Board for Medical Assistants (CCBMA) awards the CACMA —
+            the California Certified Medical Assistant credential employers here know and trust.
+            Every week of our program maps to it: clinical skills, injections, blood draws,
+            California MA regulations, and full-length practice testing.
           </motion.p>
-          <motion.div {...fade} transition={{ ...fade.transition, delay: 0.3 }} className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-sand-100/70 tracking-wide">
-            <span>6 weeks</span>
+          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.25 }} className="text-sand-100/70 font-light mb-12">
+            Learn it. Practice it. Walk into the CACMA exam prepared.
+          </motion.p>
+          <motion.div {...fade} transition={{ ...fade.transition, delay: 0.3 }} className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-sand-100/70 tracking-wide mb-12">
+            <span>5 weeks</span>
             <span className="text-sand-400">·</span>
-            <span>Hybrid</span>
+            <span>Online + weekly skills lab</span>
             <span className="text-sand-400">·</span>
-            <span>Online</span>
-            <span className="text-sand-400">·</span>
-            <span>$2,500</span>
-            <span className="text-sand-400">·</span>
-            <span>Payment plans</span>
+            <span>Sacramento</span>
           </motion.div>
+          <motion.div {...fade} transition={{ ...fade.transition, delay: 0.35 }}>
+            <Link to="/curriculum">
+              <Button size="lg" className="bg-sand-100 hover:bg-sand-50 text-emerald-800 rounded-none px-10 py-6 text-sm tracking-wider uppercase font-medium">
+                View Full Curriculum <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* TUITION */}
+      <section className="bg-white py-28 border-t border-emerald-900/10">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6">Tuition</motion.p>
+          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-14">
+            Clear pricing. No surprises.
+          </motion.h2>
+
+          <div className="grid sm:grid-cols-2 gap-6 text-left">
+            <motion.div {...fade} transition={{ ...fade.transition, delay: 0.15 }} className="border border-emerald-900/15 bg-sand-50 p-8">
+              <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-4">Pay in Full</p>
+              <p className="font-display text-5xl font-light text-emerald-700 mb-2">$2,499</p>
+              <p className="text-sm text-emerald-900/60">One payment · total program cost</p>
+            </motion.div>
+            <motion.div {...fade} transition={{ ...fade.transition, delay: 0.25 }} className="border border-emerald-900/15 bg-sand-50 p-8">
+              <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-4">Payment Plan</p>
+              <p className="font-display text-5xl font-light text-emerald-700 mb-2">
+                3 × $833
+              </p>
+              <p className="text-sm text-emerald-900/60">Three payments · $2,499 total</p>
+            </motion.div>
+          </div>
+
+          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.3 }} className="text-sm text-emerald-900/55 mt-8">
+            Tuition covers instruction, weekly skills labs, practice testing, and CACMA exam preparation.
+          </motion.p>
         </div>
       </section>
 
@@ -156,7 +237,6 @@ const Index = () => {
             </Link>
           </motion.div>
         </div>
-
       </section>
 
       {/* LOCATION */}
@@ -209,15 +289,19 @@ const Index = () => {
               {[
                 {
                   q: 'Do you offer an externship?',
-                  a: 'We do not operate our own externship site. The program prepares you for the NHA CCMA exam, and we guide you toward local clinical volunteer and shadowing opportunities in the Sacramento area.',
+                  a: 'We do not operate our own externship site. The program prepares you for the CCBMA CACMA exam, and we guide you toward local clinical volunteer and shadowing opportunities in the Sacramento area.',
                 },
                 {
                   q: 'How self-paced is the program?',
-                  a: 'Coursework is online and asynchronous, so you study on your schedule. Optional in-person sessions at Capsity Coworking are scheduled weekly for review and skills practice.',
+                  a: 'Coursework is online and asynchronous, so you study on your schedule. A weekly in-person skills lab at Capsity Coworking covers hands-on practice and review.',
                 },
                 {
                   q: 'What does BPPE approval pending mean?',
                   a: 'We have submitted our application to the California Bureau for Private Postsecondary Education and are awaiting approval. Enrollment is limited while the review is in process.',
+                },
+                {
+                  q: 'How much is tuition?',
+                  a: 'Tuition is $2,499 total. You can pay in full or use our payment plan of three payments of $833.',
                 },
               ].map((item, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="border-b border-emerald-900/10">
