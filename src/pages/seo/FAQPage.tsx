@@ -12,36 +12,28 @@ import {
 const FAQPage = () => {
   const faqs = [
     {
-      question: "I can't afford it right now, what are my options?",
+      question: "Do you offer financial aid?",
       answer: (
         <>
-          We get it, money is tight. That's why we offer a tuition payment plan to break the full program cost $2,499 into 3 monthly payments of $833. Please visit our{" "}
+          We do not offer FAFSA. We offer a flexible payment plan of three payments. Students may also use a private student loan. See our{" "}
           <Link to="/financial-aid" className="text-primary hover:text-primary/80 underline font-medium">
             Financial Aid page
           </Link>{" "}
-          for all available options.
+          for details.
         </>
       )
     },
     {
-      question: "Do you guys accept FAFSA loans or any state tuition waivers?",
-      answer: (
-        <>
-          We currently do not accept any FAFSA loans or any state or federal tuition waivers. Please see our{" "}
-          <Link to="/financial-aid" className="text-primary hover:text-primary/80 underline font-medium">
-            Financial Aid page
-          </Link>{" "}
-          for more information.
-        </>
-      )
+      question: "Is the program online?",
+      answer: "Hybrid. The majority is online, with a weekly skills lab near downtown Sacramento."
     },
     {
-      question: "Are you guys legit?",
-      answer: "Our institution is in compliance with the California Bureau of Post Secondary Education and as applicable programs are board-approved."
+      question: "Which certification will I prepare to earn?",
+      answer: "The CACMA by the CCBMA — the premier Medical Assistant credential in California."
     },
     {
-      question: "I didn't get my email with next steps after submitting contact form?",
-      answer: "Please check your spam, junk, or promotions folder as important program emails may end up there."
+      question: "What are the next steps if I'm interested?",
+      answer: "Fill out the contact form on our website. An admissions rep will be in touch."
     }
   ];
 
@@ -53,34 +45,34 @@ const FAQPage = () => {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "I can't afford it right now, what are my options?",
+            "name": "Do you offer financial aid?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We get it, money is tight. That's why we offer a tuition payment plan to break the full program cost $2,499 into 3 monthly payments of $833. Please visit our Financial Aid page for all available options."
+              "text": "We do not offer FAFSA. We offer a flexible payment plan of three payments. Students may also use a private student loan. See our Financial Aid page for details."
             }
           },
           {
             "@type": "Question",
-            "name": "Do you guys accept FAFSA loans or any state tuition waivers?",
+            "name": "Is the program online?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We currently do not accept any FAFSA loans or any state or federal tuition waivers. Please see our Financial Aid page for more information."
+              "text": "Hybrid. The majority is online, with a weekly skills lab near downtown Sacramento."
             }
           },
           {
             "@type": "Question",
-            "name": "Are you guys legit?",
+            "name": "Which certification will I prepare to earn?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Our institution is in compliance with the California Bureau of Post Secondary Education and as applicable programs are board-approved."
+              "text": "The CACMA by the CCBMA — the premier Medical Assistant credential in California."
             }
           },
           {
             "@type": "Question",
-            "name": "I didn't get my email with next steps after submitting contact form?",
+            "name": "What are the next steps if I'm interested?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Please check your spam, junk, or promotions folder as important program emails may end up there."
+              "text": "Fill out the contact form on our website. An admissions rep will be in touch."
             }
           }
         ]
@@ -88,8 +80,8 @@ const FAQPage = () => {
       {
         "@type": "WebPage",
         "@id": "https://www.americanskilledtradeuniversity.edu/faq",
-        "name": "FAQ | Frequently Asked Questions | American Institute of Trades Sacramento",
-        "description": "Frequently asked questions about HVAC training, tuition payment options, and job search support at American Institute of Trades in Sacramento, California.",
+        "name": "FAQ | Medical Assistant Program | American Institute of Trades Sacramento",
+        "description": "Frequently asked questions about the 5-week Medical Assistant program, tuition payment options, and CCBMA CACMA exam prep at AIT Sacramento.",
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [

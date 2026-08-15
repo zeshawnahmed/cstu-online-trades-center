@@ -58,10 +58,10 @@ const MeetInstructor = () => {
         <div className="container mx-auto px-6 max-w-2xl">
           <motion.div {...fade} className="space-y-6 text-lg text-emerald-900/80 font-light leading-relaxed">
             <p>
-              Born and raised in Sacramento. Educated at UC Berkeley and Sacramento State. A Registered Nurse who has spent years at the bedside.
+              Registered Nurse based in Sacramento. Built this program for working adults who need a direct, no-nonsense path to certification.
             </p>
             <p>
-              I built this program to be the class I wished I'd taken: clear, current, and paced for real life. Small cohorts. No filler. A direct path to certification.
+              Small cohorts. Hands-on skills. CACMA-ready in five weeks.
             </p>
           </motion.div>
         </div>
