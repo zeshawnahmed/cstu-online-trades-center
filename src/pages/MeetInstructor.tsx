@@ -89,6 +89,7 @@ const MeetInstructor = () => {
               { k: 'Registered Nurse', v: 'Actively practicing in the Sacramento region' },
               { k: 'UC Berkeley', v: 'Undergraduate' },
               { k: 'Sacramento State', v: 'Nursing' },
+              { k: "Master's in Education", v: 'Curriculum built to be fun, practical, and effective' },
               { k: 'CCBMA', v: 'CACMA prep — recognized by the Medical Board of California' },
             ].map((item, i) => (
               <motion.div key={i} {...fade} transition={{ ...fade.transition, delay: i * 0.08 }} className="border-t border-sand-400/30 pt-5">
