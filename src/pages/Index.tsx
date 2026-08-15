@@ -235,7 +235,7 @@ const Index = () => {
               Zeshawn Ahmed, <span className="italic">RN</span>
             </h2>
             <p className="text-emerald-900/70 leading-relaxed mb-8 font-light max-w-xl mx-auto">
-              Sacramento-born. UC Berkeley and Sac State educated. Bedside-tested.
+              Registered Nurse. Sacramento-based. Built this program for real working adults.
             </p>
             <Link to="/instructor" className="inline-flex items-center gap-2 text-sm tracking-wider uppercase text-emerald-700 hover:text-emerald-500 border-b border-emerald-700 pb-1">
               Read more <ArrowRight className="h-3 w-3" />
@@ -252,7 +252,7 @@ const Index = () => {
             Capsity Coworking.<br /><span className="italic">Downtown Sacramento.</span>
           </motion.h2>
           <motion.p {...fade} transition={{ ...fade.transition, delay: 0.2 }} className="text-emerald-900/60 font-light mb-10">
-            Online first. In person when it matters.
+            Mostly online. Weekly hands-on lab in Sacramento.
           </motion.p>
           <motion.div
             {...fade}
@@ -293,20 +293,25 @@ const Index = () => {
             <Accordion type="single" collapsible className="border-t border-emerald-900/10">
               {[
                 {
-                  q: 'Do you offer an externship?',
-                  a: 'No in-house externship. We prepare you for the CACMA exam and point you to local clinical volunteer and shadowing options.',
+                  q: 'Do you offer financial aid?',
+                  a: (
+                    <>
+                      We do not offer FAFSA. We offer a flexible payment plan of three payments. Students may also use a private student loan. See our{' '}
+                      <Link to="/financial-aid" className="underline hover:text-emerald-500">Financial Aid page</Link>.
+                    </>
+                  ),
                 },
                 {
-                  q: 'How self-paced is the program?',
-                  a: 'Online and asynchronous, plus one weekly in-person skills lab.',
+                  q: 'Is the program online?',
+                  a: 'Hybrid. The majority is online, with a weekly skills lab near downtown Sacramento.',
                 },
                 {
-                  q: 'What does BPPE approval pending mean?',
-                  a: 'Our application is with the California Bureau for Private Postsecondary Education. Enrollment is limited during review.',
+                  q: 'Which certification will I prepare to earn?',
+                  a: 'The CACMA by the CCBMA — the premier Medical Assistant credential in California.',
                 },
                 {
-                  q: 'How much is tuition?',
-                  a: '$2,499 total — pay in full or three payments of $833.',
+                  q: 'What are the next steps if I\'m interested?',
+                  a: 'Fill out the contact form on our website. An admissions rep will be in touch.',
                 },
               ].map((item, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="border-b border-emerald-900/10">
