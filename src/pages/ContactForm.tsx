@@ -404,10 +404,10 @@ const ContactForm = () => {
                       {language === 'en' ? "Questions? Call Admissions:" : "¿Preguntas? Llama a Admisiones:"}
                     </p>
                     <a 
-                      href="tel:916-343-8014" 
+                      href="tel:916-572-6514" 
                       className="text-lg sm:text-xl font-bold text-sand-500 hover:text-sand-500 transition-colors"
                     >
-                      916-343-8014
+                      916-572-6514
                     </a>
                   </div>
                 </>

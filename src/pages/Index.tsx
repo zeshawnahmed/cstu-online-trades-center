@@ -330,7 +330,7 @@ const Index = () => {
                 Contact Admissions <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <p className="text-sand-100/60 text-sm mt-6 tracking-wide">or call 916-343-8014</p>
+            <p className="text-sand-100/60 text-sm mt-6 tracking-wide">or call 916-572-6514</p>
           </motion.div>
         </div>
       </section>

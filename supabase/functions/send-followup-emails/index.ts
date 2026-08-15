@@ -134,7 +134,7 @@ Option 2: Tuition payment plan: 3 payments of $833.33</p>
 
 <h3>Questions or Assistance</h3>
 
-<p>If you have any questions or would like to speak with an admissions representative, please call 916-343-8014.</p>
+<p>If you have any questions or would like to speak with an admissions representative, please call 916-572-6514.</p>
 
 <p>Additional financial aid and tuition assistance options are available on our website.</p>
 
@@ -143,7 +143,7 @@ Option 2: Tuition payment plan: 3 payments of $833.33</p>
 American Institute of Trades (AIT)<br>
 ${programShortName}<br>
 <a href="https://www.levelupait.com">levelupait.com</a><br>
-916-343-8014</p>
+916-572-6514</p>
       `
     };
   } else if (programInterest === 'medical-assistant') {
@@ -197,7 +197,7 @@ Option 2: Tuition payment plan: 3 payments of $833.33</p>
 
 <h3>Questions or Assistance</h3>
 
-<p>If you have any questions or would like to speak with an admissions representative, please call 916-343-8014.</p>
+<p>If you have any questions or would like to speak with an admissions representative, please call 916-572-6514.</p>
 
 <p>Additional financial aid and tuition payment assistance options are available on our website.</p>
 
@@ -206,7 +206,7 @@ Option 2: Tuition payment plan: 3 payments of $833.33</p>
 American Institute of Trades (AIT)<br>
 ${programShortName}<br>
 <a href="https://www.levelupait.com">levelupait.com</a><br>
-916-343-8014</p>
+916-572-6514</p>
       `
     };
   } else {
@@ -259,7 +259,7 @@ Option 2: Tuition payment plan: 3 payments of $833.33</p>
 
 <h3>Questions or Assistance</h3>
 
-<p>If you have any questions or would like to speak with an admissions representative, please call 916-343-8014.</p>
+<p>If you have any questions or would like to speak with an admissions representative, please call 916-572-6514.</p>
 
 <p>Additional financial aid and tuition payment assistance options are available on our website.</p>
 
@@ -268,7 +268,7 @@ Option 2: Tuition payment plan: 3 payments of $833.33</p>
 American Institute of Trades (AIT)<br>
 ${programShortName}<br>
 <a href="https://www.levelupait.com">levelupait.com</a><br>
-916-343-8014</p>
+916-572-6514</p>
       `
     };
   }
