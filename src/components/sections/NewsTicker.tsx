@@ -24,9 +24,9 @@ const NewsTicker = () => {
   ];
 
   return (
-    <div className="bg-navy-700 text-white py-2 overflow-hidden relative">
+    <div className="bg-emerald-700 text-white py-2 overflow-hidden relative">
       <div className="flex items-center">
-        <div className="bg-gold-400 text-navy-900 px-4 py-1 font-bold text-sm whitespace-nowrap">
+        <div className="bg-sand-400 text-emerald-900 px-4 py-1 font-bold text-sm whitespace-nowrap">
           {language === 'en' ? 'AIT NEWS' : 'NOTICIAS AIT'}
         </div>
         <div className="flex-1 overflow-hidden">

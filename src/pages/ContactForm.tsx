@@ -184,23 +184,23 @@ const ContactForm = () => {
             >
               {!isSubmitted ? (
                 <>
-                  <h1 className="text-2xl sm:text-3xl font-bold text-navy-700 mb-4 sm:mb-6 text-center">
+                  <h1 className="text-2xl sm:text-3xl font-bold text-emerald-700 mb-4 sm:mb-6 text-center">
                     {language === 'en' ? "Contact Us" : "Contáctanos"}
                   </h1>
-                  <p className="text-sm sm:text-base text-navy-600 mb-6 sm:mb-8 text-center px-2 sm:px-0">
+                  <p className="text-sm sm:text-base text-emerald-600 mb-6 sm:mb-8 text-center px-2 sm:px-0">
                     {language === 'en' 
                       ? "Please fill out the below form completely and Admissions Rep will email next steps."
                       : "Por favor complete el siguiente formulario y un representante de admisiones le enviará los próximos pasos por correo electrónico."}
                   </p>
                   
                   {/* FAQ Info Alert - Mobile Optimized */}
-                  <div className="bg-gold-50 border border-gold-200 rounded-lg p-3 sm:p-4 mb-6 sm:mb-8 flex items-start">
-                    <Info className="h-5 w-5 text-gold-500 mt-0.5 mr-2 sm:mr-3 flex-shrink-0" />
-                    <p className="text-sm sm:text-base text-navy-700">
+                  <div className="bg-sand-100 border border-sand-200 rounded-lg p-3 sm:p-4 mb-6 sm:mb-8 flex items-start">
+                    <Info className="h-5 w-5 text-sand-500 mt-0.5 mr-2 sm:mr-3 flex-shrink-0" />
+                    <p className="text-sm sm:text-base text-emerald-700">
                       {language === 'en' 
                         ? "View answers to Frequently Asked Questions "
                         : "Ver respuestas a Preguntas Frecuentes "}
-                      <Link to="/faq" className="text-gold-600 hover:text-gold-700 underline font-medium">
+                      <Link to="/faq" className="text-sand-500 hover:text-sand-500 underline font-medium">
                         {language === 'en' ? 'here' : 'aquí'}
                       </Link>
                     </p>
@@ -208,7 +208,7 @@ const ContactForm = () => {
                   
                   <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                     <div>
-                      <label htmlFor="name" className="block text-navy-700 font-medium mb-1 sm:mb-2 text-sm sm:text-base">
+                      <label htmlFor="name" className="block text-emerald-700 font-medium mb-1 sm:mb-2 text-sm sm:text-base">
                         {language === 'en' ? "Your Name" : "Tu Nombre"} <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -218,12 +218,12 @@ const ContactForm = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent text-sm sm:text-base"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-navy-700 font-medium mb-1 sm:mb-2 text-sm sm:text-base">
+                      <label htmlFor="email" className="block text-emerald-700 font-medium mb-1 sm:mb-2 text-sm sm:text-base">
                         {language === 'en' ? "Email Address" : "Correo Electrónico"} <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -233,7 +233,7 @@ const ContactForm = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent text-sm sm:text-base"
                       />
                       <p className="text-xs sm:text-sm text-gray-500 mt-1">
                         {language === 'en' 
@@ -243,7 +243,7 @@ const ContactForm = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-navy-700 font-medium mb-1 sm:mb-2 text-sm sm:text-base">
+                      <label htmlFor="phone" className="block text-emerald-700 font-medium mb-1 sm:mb-2 text-sm sm:text-base">
                         {language === 'en' ? "Phone Number" : "Número de Teléfono"} <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -253,12 +253,12 @@ const ContactForm = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent text-sm sm:text-base"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="programInterest" className="block text-navy-700 font-medium mb-2">
+                      <label htmlFor="programInterest" className="block text-emerald-700 font-medium mb-2">
                         {language === 'en' ? "Program of Interest" : "Programa de Interés"} <span className="text-red-500">*</span>
                       </label>
                       <Select
@@ -266,7 +266,7 @@ const ContactForm = () => {
                         onValueChange={(value) => setFormData(prev => ({ ...prev, programInterest: value }))}
                         required
                       >
-                        <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent bg-white">
+                        <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent bg-white">
                           <SelectValue placeholder={language === 'en' ? "Select a program" : "Selecciona un programa"} />
                         </SelectTrigger>
                         <SelectContent className="bg-white border border-gray-300 shadow-lg z-50">
@@ -278,7 +278,7 @@ const ContactForm = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-navy-700 font-medium mb-2">
+                      <label htmlFor="message" className="block text-emerald-700 font-medium mb-2">
                         {language === 'en' ? "Message" : "Mensaje"} <span className="text-red-500">*</span>
                       </label>
                       <textarea
@@ -289,12 +289,12 @@ const ContactForm = () => {
                         onChange={handleChange}
                         required
                         placeholder={language === 'en' ? "Please tell us more about yourself and career goals" : "Por favor cuéntanos más sobre ti y tus metas profesionales"}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="howDidYouHear" className="block text-navy-700 font-medium mb-2 text-sm sm:text-base">
+                      <label htmlFor="howDidYouHear" className="block text-emerald-700 font-medium mb-2 text-sm sm:text-base">
                         {language === 'en' ? "How did you learn about us?" : "¿Cómo te enteraste de nosotros?"} <span className="text-red-500">*</span>
                       </label>
                       <Select
@@ -302,7 +302,7 @@ const ContactForm = () => {
                         onValueChange={(value) => handleSelectChange('howDidYouHear', value)}
                         required
                       >
-                        <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent bg-white">
+                        <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent bg-white">
                           <SelectValue placeholder={language === 'en' ? "Select an option" : "Selecciona una opción"} />
                         </SelectTrigger>
                         <SelectContent className="bg-white border border-gray-300 shadow-lg z-50">
@@ -318,9 +318,9 @@ const ContactForm = () => {
                     </div>
                     
                     {formData.howDidYouHear === 'referred' && (
-                      <div className="space-y-4 p-4 bg-gold-50 border border-gold-200 rounded-lg">
+                      <div className="space-y-4 p-4 bg-sand-100 border border-sand-200 rounded-lg">
                         <div>
-                          <label htmlFor="referrerName" className="block text-navy-700 font-medium mb-2 text-sm sm:text-base">
+                          <label htmlFor="referrerName" className="block text-emerald-700 font-medium mb-2 text-sm sm:text-base">
                             {language === 'en' ? "Who referred you?" : "¿Quién te refirió?"}
                           </label>
                           <input
@@ -330,11 +330,11 @@ const ContactForm = () => {
                             value={formData.referrerName}
                             onChange={handleChange}
                             placeholder={language === 'en' ? "Enter referrer's name" : "Ingresa el nombre de quien te refirió"}
-                            className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
+                            className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent text-sm sm:text-base"
                           />
                         </div>
                         <div>
-                          <label htmlFor="referralCode" className="block text-navy-700 font-medium mb-2 text-sm sm:text-base">
+                          <label htmlFor="referralCode" className="block text-emerald-700 font-medium mb-2 text-sm sm:text-base">
                             {language === 'en' ? "Referral Code (if applicable)" : "Código de Referido (si aplica)"}
                           </label>
                           <input
@@ -344,7 +344,7 @@ const ContactForm = () => {
                             value={formData.referralCode}
                             onChange={handleChange}
                             placeholder={language === 'en' ? "Enter referral code" : "Ingresa el código de referido"}
-                            className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
+                            className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent text-sm sm:text-base"
                           />
                         </div>
                       </div>
@@ -352,7 +352,7 @@ const ContactForm = () => {
                     
                     {formData.howDidYouHear === 'other' && (
                       <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
-                        <label htmlFor="otherSource" className="block text-navy-700 font-medium mb-2 text-sm sm:text-base">
+                        <label htmlFor="otherSource" className="block text-emerald-700 font-medium mb-2 text-sm sm:text-base">
                           {language === 'en' ? "Please specify where you learned about us" : "Por favor especifica dónde te enteraste de nosotros"}
                         </label>
                         <input
@@ -362,7 +362,7 @@ const ContactForm = () => {
                           value={formData.otherSource}
                           onChange={handleChange}
                           placeholder={language === 'en' ? "e.g., Friend, YouTube, Google, etc." : "ej., Amigo, YouTube, Google, etc."}
-                          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent text-sm sm:text-base"
+                          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent text-sm sm:text-base"
                         />
                       </div>
                     )}
@@ -374,9 +374,9 @@ const ContactForm = () => {
                           type="checkbox"
                           checked={formData.smsConsent}
                           onChange={(e) => setFormData(prev => ({ ...prev, smsConsent: e.target.checked }))}
-                          className="mt-1 mr-3 h-5 w-5 rounded border-gray-300 text-gold-500 focus:ring-gold-400"
+                          className="mt-1 mr-3 h-5 w-5 rounded border-gray-300 text-sand-500 focus:ring-sand-400"
                         />
-                        <span className="text-sm text-navy-700">
+                        <span className="text-sm text-emerald-700">
                           {language === 'en' 
                             ? "I agree to receive SMS updates. Msg & data rates may apply. Reply STOP to opt out."
                             : "Acepto recibir SMS. Pueden aplicarse tarifas. Responda STOP para cancelar."
@@ -388,7 +388,7 @@ const ContactForm = () => {
                     <div className="pt-4">
                       <Button 
                         type="submit"
-                        className="w-full bg-gold-400 hover:bg-gold-500 text-navy-900 font-bold text-lg py-6"
+                        className="w-full bg-sand-400 hover:bg-sand-500 text-emerald-900 font-bold text-lg py-6"
                         disabled={isSubmitting}
                       >
                         {isSubmitting 
@@ -400,12 +400,12 @@ const ContactForm = () => {
                   
                   {/* Admissions Phone Number */}
                   <div className="mt-6 text-center">
-                    <p className="text-sm sm:text-base text-navy-600">
+                    <p className="text-sm sm:text-base text-emerald-600">
                       {language === 'en' ? "Questions? Call Admissions:" : "¿Preguntas? Llama a Admisiones:"}
                     </p>
                     <a 
                       href="tel:916-343-8014" 
-                      className="text-lg sm:text-xl font-bold text-gold-600 hover:text-gold-700 transition-colors"
+                      className="text-lg sm:text-xl font-bold text-sand-500 hover:text-sand-500 transition-colors"
                     >
                       916-343-8014
                     </a>
@@ -416,22 +416,22 @@ const ContactForm = () => {
                   <div className="flex justify-center mb-6">
                     <CheckCircle className="h-20 w-20 text-green-500" />
                   </div>
-                  <h2 className="text-3xl font-bold text-navy-700 mb-4">
+                  <h2 className="text-3xl font-bold text-emerald-700 mb-4">
                     {language === 'en' ? "Thank You!" : "¡Gracias!"}
                   </h2>
-                  <p className="text-xl text-navy-600 mb-2">
+                  <p className="text-xl text-emerald-600 mb-2">
                     {language === 'en'
                       ? "Please check your email for next steps!"
                       : "¡Por favor revisa tu correo electrónico para los próximos pasos!"}
                   </p>
-                  <p className="text-base text-navy-500 mb-8">
+                  <p className="text-base text-emerald-500 mb-8">
                     {language === 'en'
                       ? "Please check spam, junk, or promotions folder if you don't see it."
                       : "Por favor revisa la carpeta de spam, correo no deseado o promociones si no lo ves."}
                   </p>
                   <Button 
                     onClick={() => window.location.href = '/'}
-                    className="bg-navy-600 hover:bg-navy-700 text-white font-medium"
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium"
                   >
                     {language === 'en' ? "Return to Home" : "Volver al Inicio"}
                   </Button>

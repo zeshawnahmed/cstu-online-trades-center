@@ -50,7 +50,7 @@ const ProgramsSection = () => {
         
         {/* Prominent Admissions Contact - Mobile Optimized */}
         <div className="text-center mb-8">
-          <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-navy-600 hover:bg-gold-500 transition-colors">
+          <Link to="/contact" className="bg-sand-400 text-emerald-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-emerald-600 hover:bg-sand-500 transition-colors">
             <p className="text-base sm:text-lg font-bold mb-1">
               {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
             </p>
@@ -80,7 +80,7 @@ const ProgramsSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gold-400 hover:bg-gold-500 text-navy-800 font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-lg sm:text-xl w-full sm:w-auto min-w-[280px]"
+                className="bg-sand-400 hover:bg-sand-500 text-emerald-800 font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-lg sm:text-xl w-full sm:w-auto min-w-[280px]"
               >
                 {language === 'en' ? 'Financial Aid Assistance' : 'Asistencia de Ayuda Financiera'}
               </motion.button>
@@ -89,7 +89,7 @@ const ProgramsSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-navy-700 hover:bg-navy-600 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-lg text-base sm:text-lg w-full sm:w-auto min-w-[280px]"
+                className="bg-emerald-700 hover:bg-emerald-600 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-lg text-base sm:text-lg w-full sm:w-auto min-w-[280px]"
               >
                 {language === 'en' ? 'Alumni Portal Login' : 'Inicio de Sesión Portal de Exalumnos'}
               </motion.button>

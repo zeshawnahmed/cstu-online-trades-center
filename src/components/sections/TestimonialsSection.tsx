@@ -50,11 +50,11 @@ const TestimonialsSection = () => {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 relative"
             >
-              <div className="absolute top-6 right-6 text-gold-400">
+              <div className="absolute top-6 right-6 text-sand-400">
                 <Quote className="h-10 w-10 transform rotate-180 opacity-20" />
               </div>
               
-              <p className="text-navy-600 mb-6 relative z-10">
+              <p className="text-emerald-600 mb-6 relative z-10">
                 "{testimonial.quote}"
               </p>
               
@@ -67,8 +67,8 @@ const TestimonialsSection = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="font-medium text-navy-700">{testimonial.name}</h4>
-                  <p className="text-sm text-navy-500">
+                  <h4 className="font-medium text-emerald-700">{testimonial.name}</h4>
+                  <p className="text-sm text-emerald-500">
                     {testimonial.role}, {testimonial.company}
                   </p>
                 </div>

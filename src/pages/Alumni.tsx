@@ -17,7 +17,7 @@ const Alumni = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 flex flex-col">
       {/* Header */}
       <header className="p-4 sm:p-6">
         <Link to="/" className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors">
@@ -34,10 +34,10 @@ const Alumni = () => {
           transition={{ duration: 0.5 }}
           className="w-full max-w-md"
         >
-          <Card className="border-navy-600/50 bg-navy-800/50 backdrop-blur-sm shadow-2xl">
+          <Card className="border-emerald-600/50 bg-emerald-800/50 backdrop-blur-sm shadow-2xl">
             <CardHeader className="text-center space-y-4 pb-6">
-              <div className="mx-auto w-16 h-16 bg-gold-400 rounded-full flex items-center justify-center">
-                <GraduationCap className="h-8 w-8 text-navy-900" />
+              <div className="mx-auto w-16 h-16 bg-sand-400 rounded-full flex items-center justify-center">
+                <GraduationCap className="h-8 w-8 text-emerald-900" />
               </div>
               <div>
                 <CardTitle className="text-2xl sm:text-3xl font-bold text-white">
@@ -61,7 +61,7 @@ const Alumni = () => {
                       placeholder="Enter your username"
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
-                      className="pl-10 bg-navy-700/50 border-navy-600 text-white placeholder:text-white/40 focus:border-gold-400 focus:ring-gold-400/20"
+                      className="pl-10 bg-emerald-700/50 border-emerald-600 text-white placeholder:text-white/40 focus:border-sand-400 focus:ring-sand-400/20"
                     />
                   </div>
                 </div>
@@ -76,28 +76,28 @@ const Alumni = () => {
                       placeholder="Enter your password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      className="pl-10 bg-navy-700/50 border-navy-600 text-white placeholder:text-white/40 focus:border-gold-400 focus:ring-gold-400/20"
+                      className="pl-10 bg-emerald-700/50 border-emerald-600 text-white placeholder:text-white/40 focus:border-sand-400 focus:ring-sand-400/20"
                     />
                   </div>
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full bg-gold-400 hover:bg-gold-500 text-navy-900 font-semibold py-3"
+                  className="w-full bg-sand-400 hover:bg-sand-500 text-emerald-900 font-semibold py-3"
                 >
                   Sign In
                 </Button>
               </form>
 
               {/* Request Access Info */}
-              <div className="pt-4 border-t border-navy-600/50">
+              <div className="pt-4 border-t border-emerald-600/50">
                 <div className="flex items-start gap-3 text-center">
                   <div className="flex-1">
                     <p className="text-white/80 text-sm leading-relaxed">
                       Current and former alumni, to request access please email{' '}
                       <a 
                         href="mailto:admin@levelupait.com" 
-                        className="text-gold-400 hover:text-gold-300 font-medium underline underline-offset-2"
+                        className="text-sand-400 hover:text-sand-300 font-medium underline underline-offset-2"
                       >
                         admin@levelupait.com
                       </a>

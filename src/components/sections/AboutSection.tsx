@@ -8,19 +8,19 @@ import { Button } from '@/components/ui/button';
 const AboutSection = () => {
   const features = [
     {
-      icon: <Clock className="h-5 w-5 text-gold-500" />,
+      icon: <Clock className="h-5 w-5 text-sand-500" />,
       text: 'Self-paced, flexible online learning'
     },
     {
-      icon: <CheckCircle className="h-5 w-5 text-gold-500" />,
+      icon: <CheckCircle className="h-5 w-5 text-sand-500" />,
       text: 'Job-ready skills and certifications'
     },
     {
-      icon: <Users className="h-5 w-5 text-gold-500" />,
+      icon: <Users className="h-5 w-5 text-sand-500" />,
       text: 'Job Site/Field training through externships'
     },
     {
-      icon: <Award className="h-5 w-5 text-gold-500" />,
+      icon: <Award className="h-5 w-5 text-sand-500" />,
       text: 'Industry-recognized credentials'
     },
   ];
@@ -47,7 +47,7 @@ const AboutSection = () => {
               </div>
               
               {/* Stats Card */}
-              <div className="absolute -bottom-10 -right-10 bg-navy-700 text-white p-6 rounded-xl shadow-xl max-w-xs">
+              <div className="absolute -bottom-10 -right-10 bg-emerald-700 text-white p-6 rounded-xl shadow-xl max-w-xs">
                 <p className="text-2xl font-bold mb-2">Sacramento Roots</p>
                 <p className="text-gray-300">
                   Founded in the heart of California's capital, with a mission to provide accessible skilled trades education.
@@ -71,7 +71,7 @@ const AboutSection = () => {
               className="mb-6"
             />
             
-            <p className="text-navy-600 mb-6">
+            <p className="text-emerald-600 mb-6">
               Our programs are designed with working adults in mind, offering self-paced learning that fits your schedule while ensuring you develop the practical skills employers are looking for.
             </p>
             
@@ -86,12 +86,12 @@ const AboutSection = () => {
                   viewport={{ once: true }}
                 >
                   <div className="mr-3 mt-1">{feature.icon}</div>
-                  <p className="text-navy-700">{feature.text}</p>
+                  <p className="text-emerald-700">{feature.text}</p>
                 </motion.div>
               ))}
             </div>
             
-            <Button className="bg-navy-600 hover:bg-navy-700 text-white font-medium">
+            <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium">
               Learn More About Us
             </Button>
           </motion.div>

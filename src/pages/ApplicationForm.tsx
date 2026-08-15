@@ -72,19 +72,19 @@ const ContactForm = () => {
             >
               {!isSubmitted ? (
                 <>
-                  <h1 className="text-3xl font-bold text-navy-700 mb-6 text-center">
+                  <h1 className="text-3xl font-bold text-emerald-700 mb-6 text-center">
                     {language === 'en' ? "Contact Us" : "Contáctanos"}
                   </h1>
-                  <p className="text-navy-600 mb-8 text-center">
+                  <p className="text-emerald-600 mb-8 text-center">
                     {language === 'en' 
                       ? "Have questions about our programs? Send us a message and we'll get back to you as soon as possible."
                       : "¿Tienes preguntas sobre nuestros programas? Envíanos un mensaje y te responderemos lo antes posible."}
                   </p>
                   
                   {/* Financial Aid Info Alert */}
-                  <div className="bg-gold-50 border border-gold-200 rounded-lg p-4 mb-8 flex items-start">
-                    <Info className="h-5 w-5 text-gold-500 mt-0.5 mr-3 flex-shrink-0" />
-                    <p className="text-navy-700">
+                  <div className="bg-sand-100 border border-sand-200 rounded-lg p-4 mb-8 flex items-start">
+                    <Info className="h-5 w-5 text-sand-500 mt-0.5 mr-3 flex-shrink-0" />
+                    <p className="text-emerald-700">
                       {language === 'en' 
                         ? "Interested in Financial Aid? Let us know and we'll provide you with all available options."
                         : "¿Interesado en ayuda financiera? Háganoslo saber y le proporcionaremos todas las opciones disponibles."}
@@ -93,7 +93,7 @@ const ContactForm = () => {
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <label htmlFor="name" className="block text-navy-700 font-medium mb-2">
+                      <label htmlFor="name" className="block text-emerald-700 font-medium mb-2">
                         {language === 'en' ? "Your Name" : "Tu Nombre"}
                       </label>
                       <input
@@ -102,12 +102,12 @@ const ContactForm = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-navy-700 font-medium mb-2">
+                      <label htmlFor="email" className="block text-emerald-700 font-medium mb-2">
                         {language === 'en' ? "Email Address" : "Correo Electrónico"}
                       </label>
                       <input
@@ -116,12 +116,12 @@ const ContactForm = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-navy-700 font-medium mb-2">
+                      <label htmlFor="phone" className="block text-emerald-700 font-medium mb-2">
                         {language === 'en' ? "Phone Number" : "Número de Teléfono"}
                       </label>
                       <input
@@ -130,12 +130,12 @@ const ContactForm = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-navy-700 font-medium mb-2">
+                      <label htmlFor="message" className="block text-emerald-700 font-medium mb-2">
                         {language === 'en' ? "Message" : "Mensaje"}
                       </label>
                       <textarea
@@ -144,7 +144,7 @@ const ContactForm = () => {
                         rows={4}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand-400 focus:border-transparent"
                       />
                     </div>
                     
@@ -155,9 +155,9 @@ const ContactForm = () => {
                         name="interestedInFinancialAid"
                         checked={formData.interestedInFinancialAid}
                         onChange={handleCheckboxChange}
-                        className="h-5 w-5 text-gold-500 rounded border-gray-300 focus:ring-gold-400 mt-1"
+                        className="h-5 w-5 text-sand-500 rounded border-gray-300 focus:ring-sand-400 mt-1"
                       />
-                      <label htmlFor="interestedInFinancialAid" className="ml-3 block text-navy-700">
+                      <label htmlFor="interestedInFinancialAid" className="ml-3 block text-emerald-700">
                         {language === 'en' 
                           ? "I'm interested in learning about financial aid options"
                           : "Estoy interesado en conocer las opciones de ayuda financiera"}
@@ -167,7 +167,7 @@ const ContactForm = () => {
                     <div className="pt-4">
                       <Button 
                         type="submit" 
-                        className="w-full bg-gold-400 hover:bg-gold-500 text-navy-900 font-bold text-lg py-6"
+                        className="w-full bg-sand-400 hover:bg-sand-500 text-emerald-900 font-bold text-lg py-6"
                         disabled={isSubmitting}
                       >
                         {isSubmitting 
@@ -182,17 +182,17 @@ const ContactForm = () => {
                   <div className="flex justify-center mb-6">
                     <CheckCircle className="h-20 w-20 text-green-500" />
                   </div>
-                  <h2 className="text-3xl font-bold text-navy-700 mb-4">
+                  <h2 className="text-3xl font-bold text-emerald-700 mb-4">
                     {language === 'en' ? "Thank You!" : "¡Gracias!"}
                   </h2>
-                  <p className="text-xl text-navy-600 mb-8">
+                  <p className="text-xl text-emerald-600 mb-8">
                     {language === 'en'
                       ? "Your message has been sent. We'll get back to you soon!"
                       : "Tu mensaje ha sido enviado. ¡Nos pondremos en contacto contigo pronto!"}
                   </p>
                   <Button 
                     onClick={() => window.location.href = '/'}
-                    className="bg-navy-600 hover:bg-navy-700 text-white font-medium"
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium"
                   >
                     {language === 'en' ? "Return to Home" : "Volver al Inicio"}
                   </Button>

@@ -15,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
 
   return (
     <section className="relative min-h-screen flex items-center bg-hero-pattern bg-cover bg-center text-white pt-20">
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-900/50 to-navy-900/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/50 to-emerald-900/80"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
@@ -26,7 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
           >
             {/* Prominent Admissions Contact - Mobile Optimized */}
             <div className="mb-6 sm:mb-8">
-              <Link to="/contact" className="bg-gold-400 text-navy-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-white hover:bg-gold-500 transition-colors">
+              <Link to="/contact" className="bg-sand-400 text-emerald-800 font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg inline-block border-2 border-white hover:bg-sand-500 transition-colors">
                 <p className="text-xs sm:text-sm font-bold mb-1">
                   {language === 'en' ? 'TO GET STARTED' : 'PARA COMENZAR'}
                 </p>
@@ -55,7 +55,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.3 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-2 sm:px-3 py-2 rounded-lg backdrop-blur-sm text-xs sm:text-sm text-center"
+                className="bg-sand-400/90 text-emerald-900 font-semibold px-2 sm:px-3 py-2 rounded-lg backdrop-blur-sm text-xs sm:text-sm text-center"
               >
                 {t('becomeJobReady')}
               </motion.div>
@@ -64,7 +64,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.5 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-2 sm:px-3 py-2 rounded-lg backdrop-blur-sm text-xs sm:text-sm text-center"
+                className="bg-sand-400/90 text-emerald-900 font-semibold px-2 sm:px-3 py-2 rounded-lg backdrop-blur-sm text-xs sm:text-sm text-center"
               >
                 {t('onlineSelfPaced')}
               </motion.div>
@@ -73,7 +73,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.9 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-2 sm:px-3 py-2 rounded-lg backdrop-blur-sm text-xs sm:text-sm text-center"
+                className="bg-sand-400/90 text-emerald-900 font-semibold px-2 sm:px-3 py-2 rounded-lg backdrop-blur-sm text-xs sm:text-sm text-center"
               >
                 {language === 'en' ? 'Financial Aid Available' : 'Ayuda Financiera Disponible'}
               </motion.div>
@@ -82,7 +82,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 1.1 }}
-                className="bg-gold-400/90 text-navy-900 font-semibold px-2 sm:px-3 py-2 rounded-lg backdrop-blur-sm text-xs sm:text-sm text-center"
+                className="bg-sand-400/90 text-emerald-900 font-semibold px-2 sm:px-3 py-2 rounded-lg backdrop-blur-sm text-xs sm:text-sm text-center"
               >
                 {language === 'en' ? 'Job Search Support' : 'Apoyo en Búsqueda de Empleo'}
               </motion.div>
@@ -97,7 +97,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToPrograms }) => {
             >
               <Button 
                 onClick={scrollToPrograms}
-                className="bg-gold-400 hover:bg-gold-500 text-navy-900 font-bold px-6 sm:px-8 py-4 sm:py-6 text-lg sm:text-xl w-full sm:w-auto max-w-xs sm:max-w-none"
+                className="bg-sand-400 hover:bg-sand-500 text-emerald-900 font-bold px-6 sm:px-8 py-4 sm:py-6 text-lg sm:text-xl w-full sm:w-auto max-w-xs sm:max-w-none"
               >
                 {t('explorePrograms')} <ArrowDown className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
