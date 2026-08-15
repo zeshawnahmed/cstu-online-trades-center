@@ -50,6 +50,11 @@ const Navbar = () => {
                 {l.label}
               </Link>
             ))}
+            <Link to="/financial-aid">
+              <Button variant="outline" className="border-emerald-700 text-emerald-700 hover:bg-emerald-700 hover:text-sand-50 rounded-none px-5 text-xs tracking-[0.18em] uppercase">
+                Financial Aid
+              </Button>
+            </Link>
             <Link to="/contact">
               <Button className="bg-emerald-700 hover:bg-emerald-800 text-sand-50 rounded-none px-6 text-xs tracking-[0.18em] uppercase">
                 Request Info
