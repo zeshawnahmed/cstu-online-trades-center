@@ -81,7 +81,7 @@ const FAQPage = () => {
         "@type": "WebPage",
         "@id": "https://www.americanskilledtradeuniversity.edu/faq",
         "name": "FAQ | Medical Assistant Program | American Institute of Trades Sacramento",
-        "description": "Frequently asked questions about the 5-week Medical Assistant program, tuition payment options, and CCBMA CACMA exam prep at AIT Sacramento.",
+        "description": "Frequently asked questions about the 5-week Medical Assistant program, tuition payment options, and CCBMA CACMA exam prep for the credential recognized by the Medical Board of California at AIT Sacramento.",
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
