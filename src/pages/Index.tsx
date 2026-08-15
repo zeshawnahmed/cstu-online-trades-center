@@ -21,22 +21,27 @@ const fade = {
 
 const highlights = [
   {
-    t: 'Online with weekly in-person skills lab',
-    d: 'Coursework online, hands-on practice each week at Capsity Coworking in downtown Sacramento.',
+    t: 'Online + weekly skills lab',
+    d: 'Coursework online. Hands-on practice each week in downtown Sacramento.',
   },
   {
-    t: 'Instructional tutoring and support',
-    d: 'Direct access to your instructor for one-on-one tutoring and guidance from week one.',
+    t: 'Tutoring and support',
+    d: 'One-on-one time with your instructor from week one.',
   },
   {
-    t: 'Mostly online for working professionals',
-    d: 'Study around your job and family. The schedule is built for working adults.',
+    t: 'Built for working adults',
+    d: 'Study around your job and family.',
   },
   {
-    t: 'Designed to build competency and pass the CACMA exam',
-    d: 'Every week ends with a skills lab and a practice test, so you sit for the exam prepared.',
+    t: 'CACMA exam ready',
+    d: 'Weekly skills labs and practice tests.',
+  },
+  {
+    t: 'Resume + interviewing workshop',
+    d: 'Build your resume and practice interviews before you apply.',
   },
 ];
+
 
 const Index = () => {
   const seoTitle = 'Medical Assistant Program Sacramento · CACMA Exam Prep';
