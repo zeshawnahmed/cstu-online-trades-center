@@ -96,13 +96,13 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.35 }}
             className="flex flex-col sm:flex-row gap-3 justify-center"
           >
-            <Link to="/contact">
-              <Button size="lg" className="bg-emerald-700 hover:bg-emerald-800 text-sand-50 rounded-none px-10 py-6 text-sm tracking-wider uppercase font-medium">
+            <Link to="/contact" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-auto bg-emerald-700 hover:bg-emerald-800 text-sand-50 rounded-none px-10 py-6 text-sm tracking-wider uppercase font-medium">
                 Request Info <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <Link to="/curriculum">
-              <Button size="lg" variant="ghost" className="text-emerald-800 hover:bg-transparent hover:text-emerald-600 rounded-none px-6 py-6 text-sm tracking-wider uppercase font-medium underline underline-offset-8 decoration-1">
+            <Link to="/curriculum" className="w-full sm:w-auto">
+              <Button size="lg" variant="ghost"  className="text-emerald-800 hover:bg-transparent hover:text-emerald-600 rounded-none px-6 py-6 text-sm tracking-wider uppercase font-medium underline underline-offset-8 decoration-1">
                 See the Curriculum
               </Button>
             </Link>
@@ -143,12 +143,12 @@ const Index = () => {
       </section>
 
       {/* PROGRAM HIGHLIGHTS */}
-      <section className="bg-sand-50 py-28 border-t border-emerald-900/10">
+      <section className="bg-sand-50 py-20 md:py-28 border-t border-emerald-900/10">
         <div className="container mx-auto px-6 max-w-4xl">
           <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6 text-center">
             Program Highlights
           </motion.p>
-          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-3xl md:text-4xl font-light text-emerald-700 text-center leading-tight mb-14">
+          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-2xl sm:text-3xl md:text-4xl font-light text-emerald-700 text-center leading-tight mb-14">
             What you get in five weeks.
           </motion.h2>
           <div className="grid sm:grid-cols-2 gap-x-10 gap-y-10">
@@ -166,17 +166,16 @@ const Index = () => {
       </section>
 
       {/* CCBMA / PROGRAM */}
-      <section className="bg-emerald-700 text-sand-50 py-32">
+      <section className="bg-emerald-700 text-sand-50 py-20 md:py-32">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-sand-400 mb-6">The Credential</motion.p>
-          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-4xl md:text-5xl font-light leading-tight mb-8">
+          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-3xl sm:text-4xl md:text-5xl font-light leading-tight mb-8">
             Built around the <span className="italic">CCBMA</span> exam.
           </motion.h2>
           <motion.p {...fade} transition={{ ...fade.transition, delay: 0.2 }} className="text-lg text-sand-100/80 font-light leading-relaxed mb-6">
-            The California Certifying Board for Medical Assistants (CCBMA) awards the CACMA —
-            the California Certified Medical Assistant credential employers here know and trust.
-            Every week of our program maps to it: clinical skills, injections, blood draws,
-            California MA regulations, and full-length practice testing.
+            The California Certifying Board for Medical Assistants awards the CACMA — the
+            credential Sacramento employers know. Every week maps to it: clinical skills,
+            injections, blood draws, California MA regulations, and practice testing.
           </motion.p>
           <motion.p {...fade} transition={{ ...fade.transition, delay: 0.25 }} className="text-sand-100/70 font-light mb-12">
             Learn it. Practice it. Walk into the CACMA exam prepared.
@@ -199,10 +198,10 @@ const Index = () => {
       </section>
 
       {/* TUITION */}
-      <section className="bg-white py-28 border-t border-emerald-900/10">
+      <section className="bg-white py-20 md:py-28 border-t border-emerald-900/10">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6">Tuition</motion.p>
-          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-14">
+          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-14">
             Clear pricing. No surprises.
           </motion.h2>
 
@@ -222,21 +221,21 @@ const Index = () => {
           </div>
 
           <motion.p {...fade} transition={{ ...fade.transition, delay: 0.3 }} className="text-sm text-emerald-900/55 mt-8">
-            Tuition covers instruction, weekly skills labs, practice testing, and CACMA exam preparation.
+            Covers instruction, weekly skills labs, practice testing, CACMA prep, and the resume &amp; interviewing workshop.
           </motion.p>
         </div>
       </section>
 
       {/* INSTRUCTOR */}
-      <section className="bg-sand-50 py-32">
+      <section className="bg-sand-50 py-20 md:py-32">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <motion.div {...fade}>
             <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6">Your Instructor</p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-6">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-6">
               Zeshawn Ahmed, <span className="italic">RN</span>
             </h2>
             <p className="text-emerald-900/70 leading-relaxed mb-8 font-light max-w-xl mx-auto">
-              Sacramento-born. UC Berkeley and Sac State educated. Bedside-tested. Teaching the class he wished he'd had.
+              Sacramento-born. UC Berkeley and Sac State educated. Bedside-tested.
             </p>
             <Link to="/instructor" className="inline-flex items-center gap-2 text-sm tracking-wider uppercase text-emerald-700 hover:text-emerald-500 border-b border-emerald-700 pb-1">
               Read more <ArrowRight className="h-3 w-3" />
@@ -246,14 +245,14 @@ const Index = () => {
       </section>
 
       {/* LOCATION */}
-      <section className="bg-white py-32 border-t border-emerald-900/10">
+      <section className="bg-white py-20 md:py-32 border-t border-emerald-900/10">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6">Where</motion.p>
-          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-6">
+          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-6">
             Capsity Coworking.<br /><span className="italic">Downtown Sacramento.</span>
           </motion.h2>
           <motion.p {...fade} transition={{ ...fade.transition, delay: 0.2 }} className="text-emerald-900/60 font-light mb-10">
-            Online first. In-person when it matters.
+            Online first. In person when it matters.
           </motion.p>
           <motion.div
             {...fade}
@@ -295,19 +294,19 @@ const Index = () => {
               {[
                 {
                   q: 'Do you offer an externship?',
-                  a: 'We do not operate our own externship site. The program prepares you for the CCBMA CACMA exam, and we guide you toward local clinical volunteer and shadowing opportunities in the Sacramento area.',
+                  a: 'No in-house externship. We prepare you for the CACMA exam and point you to local clinical volunteer and shadowing options.',
                 },
                 {
                   q: 'How self-paced is the program?',
-                  a: 'Coursework is online and asynchronous, so you study on your schedule. A weekly in-person skills lab at Capsity Coworking covers hands-on practice and review.',
+                  a: 'Online and asynchronous, plus one weekly in-person skills lab.',
                 },
                 {
                   q: 'What does BPPE approval pending mean?',
-                  a: 'We have submitted our application to the California Bureau for Private Postsecondary Education and are awaiting approval. Enrollment is limited while the review is in process.',
+                  a: 'Our application is with the California Bureau for Private Postsecondary Education. Enrollment is limited during review.',
                 },
                 {
                   q: 'How much is tuition?',
-                  a: 'Tuition is $2,499 total. You can pay in full or use our payment plan of three payments of $833.',
+                  a: '$2,499 total — pay in full or three payments of $833.',
                 },
               ].map((item, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="border-b border-emerald-900/10">
@@ -325,9 +324,9 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-emerald-800 py-32">
+      <section className="bg-emerald-800 py-20 md:py-32">
         <div className="container mx-auto px-6 max-w-2xl text-center">
-          <motion.h2 {...fade} className="font-display text-4xl md:text-5xl font-light text-sand-50 leading-tight mb-10">
+          <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-sand-50 leading-tight mb-10">
             Start when you're ready.
           </motion.h2>
           <motion.div {...fade} transition={{ ...fade.transition, delay: 0.15 }}>
@@ -336,7 +335,9 @@ const Index = () => {
                 Contact Admissions <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <p className="text-sand-100/60 text-sm mt-6 tracking-wide">or call 916-572-6514</p>
+            <p className="text-sand-100/60 text-sm mt-6 tracking-wide">
+              The contact form is the fastest way to reach us · or call 916-572-6514
+            </p>
           </motion.div>
         </div>
       </section>
