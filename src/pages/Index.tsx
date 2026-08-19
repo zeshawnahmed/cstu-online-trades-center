@@ -222,7 +222,7 @@ const Index = () => {
             <motion.div {...fade} transition={{ ...fade.transition, delay: 0.15 }} className="border border-emerald-900/15 bg-sand-50 p-8">
               <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-4">Pay in Full</p>
               <p className="font-display text-5xl font-light text-emerald-700 mb-2">$2,499</p>
-              <p className="text-sm text-emerald-900/60">One payment · total program cost</p>
+              <p className="text-sm text-emerald-900/60">One payment · total program tuition</p>
             </motion.div>
             <motion.div {...fade} transition={{ ...fade.transition, delay: 0.25 }} className="border border-emerald-900/15 bg-sand-50 p-8">
               <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-4">Payment Plan</p>
