@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { ArrowRight, Check } from 'lucide-react';
+import programVideo from '@/assets/program-video.mp4.asset.json';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import {
@@ -115,11 +116,23 @@ const Index = () => {
         <div className="container mx-auto px-6 max-w-4xl">
           <motion.div
             {...fade}
-            className="aspect-video w-full border border-emerald-900/10 bg-emerald-700/5 flex items-center justify-center"
+            className="aspect-video w-full bg-emerald-900 overflow-hidden shadow-xl border border-emerald-900/10"
           >
-            <p className="text-xs tracking-[0.25em] uppercase text-emerald-800/40">
-              Program video coming soon
-            </p>
+            <video
+              src={programVideo.url}
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              preload="auto"
+              aria-label="Medical Assistant program overview video"
+            >
+              <p className="text-sm text-sand-100/80 text-center py-12">
+                Your browser does not support the video tag.
+              </p>
+            </video>
           </motion.div>
         </div>
       </section>
