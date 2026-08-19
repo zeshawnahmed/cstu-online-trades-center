@@ -26,8 +26,8 @@ const highlights = [
     d: 'Coursework online. Hands-on practice each week in downtown Sacramento.',
   },
   {
-    t: 'Tutoring and support',
-    d: 'One-on-one time with your instructor from week one.',
+    t: 'Tutoring and instructional support',
+    d: 'Guidance from your instructor from week one.',
   },
   {
     t: 'Built for working adults',
@@ -35,11 +35,15 @@ const highlights = [
   },
   {
     t: 'CACMA exam ready',
-    d: 'Prepare for the CACMA — recognized by the Medical Board of California.',
+    d: 'Prepare for the CACMA — recognized by the Medical Board of California — with plenty of practice questions.',
   },
   {
     t: 'Resume + interviewing workshop',
     d: 'Build your resume and practice interviews before you apply.',
+  },
+  {
+    t: 'Focused, structured program',
+    d: 'One goal: pass the exam and start your career as an MA.',
   },
 ];
 
