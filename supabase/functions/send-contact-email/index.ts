@@ -304,74 +304,47 @@ const handler = async (req: Request): Promise<Response> => {
     } else if (programInterest === 'medical-assistant') {
       userSubject = "Next Steps - California Certified Medical Assistant Program";
       userEmailContent = `
-        <p>Thank you for your interest in the California Certified Medical Assistant Program at American Institute of Trades (AIT). We're glad you reached out.</p>
-        
-        <h3>What You'll Learn</h3>
-        
-        <p>This program prepares you for the <strong>California Certified Medical Assistant (CACMA)</strong> exam, administered by the <strong>California Certifying Board for Medical Assistants (CCBMA)</strong> — the credential recognized by the Medical Board of California.</p>
-        
-        <p>The 5-week curriculum:</p>
-        
-        <ul>
-          <li><strong>Week 1 — Patient Care &amp; Safety:</strong> vital signs, medical terminology, infection control, patient safety</li>
-          <li><strong>Week 2 — Clinical Testing:</strong> blood glucose, urinalysis, specimen collection &amp; handling</li>
-          <li><strong>Week 3 — Medications &amp; Injections:</strong> medication safety, IM/SubQ/ID injections, skin testing</li>
-          <li><strong>Week 4 — Blood Draws:</strong> venipuncture, order of draw, blood tubes, collection safety</li>
-          <li><strong>Week 5 — Final Exam Prep:</strong> medical office, emergencies, California MA regulations, CACMA review, final skills check-off, and the resume &amp; interviewing workshop</li>
-        </ul>
-        
-        <p>Each week includes a hands-on lab and a practice test.</p>
-        
-        <p>View the full week-by-week curriculum here: <a href="https://www.levelupait.com/curriculum">levelupait.com/curriculum</a><br>
-        All coursework is designed to help you feel confident and exam-ready.</p>
+        <p>Thank you for your interest in the California Certified Medical Assistant Program at American Institute of Trades (AIT).</p>
 
-        
+        <p>This program prepares you for the <strong>California Certified Medical Assistant (CACMA)</strong> exam, administered by the <strong>California Certifying Board for Medical Assistants (CCBMA)</strong> — the credential recognized by the Medical Board of California.</p>
+
+        <h3>5-Week Curriculum</h3>
+        <ul>
+          <li><strong>Week 1:</strong> Patient care, vital signs, medical terminology, infection control</li>
+          <li><strong>Week 2:</strong> Clinical testing — blood glucose, urinalysis, specimen handling</li>
+          <li><strong>Week 3:</strong> Medications &amp; injections — IM/SubQ/ID, skin testing</li>
+          <li><strong>Week 4:</strong> Blood draws — venipuncture, order of draw, blood tubes</li>
+          <li><strong>Week 5:</strong> CACMA exam prep, California MA regulations, final skills check-off, resume &amp; interviewing workshop</li>
+        </ul>
+        <p>View the full curriculum: <a href="https://www.levelupait.com/curriculum">levelupait.com/curriculum</a></p>
+
         <h3>Program Format</h3>
-        
         <ul>
           <li>Hybrid schedule built for busy professionals</li>
-          <li>Mostly online coursework with a weekly in-person skills lab near downtown Sacramento at Capsity Coworking</li>
+          <li>Mostly online with weekly in-person skills lab near downtown Sacramento at Capsity Coworking</li>
           <li>Enroll anytime — no fixed start dates</li>
-          <li>Job search support provided near program completion</li>
+          <li>Tutoring and instructional support throughout the program</li>
+          <li>Plenty of CACMA practice questions and exam prep</li>
+          <li>Resume &amp; interviewing workshop included</li>
         </ul>
-        
-        <h3>Program Highlights</h3>
-        
-        <ul>
-          <li><strong>Focused, structured program</strong> — One goal: help you pass the CACMA exam and start your career as an MA</li>
-          <li><strong>Tutoring and instructional support</strong> — Get support throughout your program</li>
-          <li><strong>CACMA exam ready</strong> — Plenty of practice questions and exam preparation</li>
-          <li><strong>Resume &amp; interviewing workshop</strong> — Prepare to present yourself to employers</li>
-        </ul>
-        
+
         <h3>Tuition</h3>
-        
         <ul>
-          <li>Total program tuition: $2,499</li>
+          <li>Total tuition: $2,499</li>
           <li>Payment plan: 3 payments of $833</li>
         </ul>
-        
+
         <h3>Next Steps</h3>
-        
-        <p>To keep the enrollment process efficient, we only work with students who are ready to move forward. <u>If you are prepared to enroll, please reply to this email confirming your preferred tuition option:</u></p>
-        
-        <p>Option 1: Full tuition payment of $2,499<br>
-        Option 2: Tuition payment plan — 3 payments of $833</p>
-        
-        <p>We will then email you a Student Enrollment Agreement to review and sign along with a link to make your first tuition payment.</p>
-        
-        <p>Once the Enrollment Agreement and initial tuition payment are complete, access to the program materials will be provided. Remaining tuition payments are due according to the selected option. An admissions representative will also schedule time to connect after enrollment is confirmed.</p>
-        
-        <h3>Questions or Assistance</h3>
-        
-        <p>If you have any questions or would like to speak with an admissions representative, please call 916-572-6514.</p>
-        
-        <p>Additional financial aid and tuition payment assistance options are available on our website.</p>
-        
+        <p>Ready to enroll? Reply with your preferred tuition option:</p>
+        <p>Option 1: Full payment of $2,499<br>
+        Option 2: 3 payments of $833</p>
+        <p>We will send you a Student Enrollment Agreement and a link for your first payment. Once complete, you will receive access to program materials.</p>
+
+        <p>Questions? Call or text 916-572-6514.</p>
+
         <p>Best regards,<br>
         <strong>Admissions Team</strong><br>
         American Institute of Trades (AIT)<br>
-        California Certified Medical Assistant Program<br>
         <a href="https://www.levelupait.com">levelupait.com</a><br>
         916-572-6514</p>
       `;
