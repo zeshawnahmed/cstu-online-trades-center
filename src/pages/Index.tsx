@@ -27,7 +27,7 @@ const highlights = [
   },
   {
     t: 'Tutoring and instructional support',
-    d: 'Guidance from your instructor from week one.',
+    d: 'Get support throughout your program.',
   },
   {
     t: 'Built for working adults',
@@ -193,9 +193,6 @@ const Index = () => {
             credential recognized by the Medical Board of California. Every week maps to it:
             clinical skills, injections, blood draws, California MA regulations, and practice testing.
           </motion.p>
-          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.25 }} className="text-sand-100/70 font-light mb-12">
-            Learn it. Practice it. Walk into the CACMA exam prepared — for the credential recognized by the Medical Board of California.
-          </motion.p>
           <motion.div {...fade} transition={{ ...fade.transition, delay: 0.3 }} className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-sand-100/70 tracking-wide mb-12">
             <span>5 weeks</span>
             <span className="text-sand-400">·</span>
@@ -218,14 +215,14 @@ const Index = () => {
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6">Tuition</motion.p>
           <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-14">
-            Clear pricing. No surprises.
+            Clear tuition. No surprises.
           </motion.h2>
 
           <div className="grid sm:grid-cols-2 gap-6 text-left">
             <motion.div {...fade} transition={{ ...fade.transition, delay: 0.15 }} className="border border-emerald-900/15 bg-sand-50 p-8">
               <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-4">Pay in Full</p>
               <p className="font-display text-5xl font-light text-emerald-700 mb-2">$2,499</p>
-              <p className="text-sm text-emerald-900/60">One payment · total program cost</p>
+              <p className="text-sm text-emerald-900/60">One payment · total program tuition</p>
             </motion.div>
             <motion.div {...fade} transition={{ ...fade.transition, delay: 0.25 }} className="border border-emerald-900/15 bg-sand-50 p-8">
               <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-4">Payment Plan</p>
@@ -235,10 +232,6 @@ const Index = () => {
               <p className="text-sm text-emerald-900/60">Three payments · $2,499 total</p>
             </motion.div>
           </div>
-
-          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.3 }} className="text-sm text-emerald-900/55 mt-8">
-            Covers instruction, weekly skills labs, practice testing, CACMA prep for the credential recognized by the Medical Board of California, and the resume &amp; interviewing workshop.
-          </motion.p>
         </div>
       </section>
 
