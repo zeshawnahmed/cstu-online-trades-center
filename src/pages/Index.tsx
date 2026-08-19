@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { ArrowRight, Check } from 'lucide-react';
-import programVideo from '@/assets/program-video.mp4.asset.json';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import {
