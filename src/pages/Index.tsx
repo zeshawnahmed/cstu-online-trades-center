@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { ArrowRight, Check } from 'lucide-react';
-import programVideo from '@/assets/program-video.mp4.asset.json';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import {
@@ -123,14 +122,14 @@ const Index = () => {
             className="aspect-video w-full bg-emerald-900 overflow-hidden shadow-xl border border-emerald-900/10"
           >
             <video
-              src={programVideo.url}
               className="w-full h-full object-cover"
               loop
               playsInline
               controls
-              preload="auto"
+              preload="metadata"
               aria-label="Medical Assistant program overview video"
             >
+              <source src="/program-video.mp4" type="video/mp4" />
               <p className="text-sm text-sand-100/80 text-center py-12">
                 Your browser does not support the video tag.
               </p>
