@@ -30,7 +30,7 @@ const highlights = [
     d: 'Get support throughout your program.',
   },
   {
-    t: 'Built for working adults',
+    t: 'Built for busy professionals',
     d: 'Study around your job and family.',
   },
   {
