@@ -125,7 +125,6 @@ const Index = () => {
             <video
               src={programVideo.url}
               className="w-full h-full object-cover"
-              muted
               loop
               playsInline
               controls
