@@ -193,9 +193,6 @@ const Index = () => {
             credential recognized by the Medical Board of California. Every week maps to it:
             clinical skills, injections, blood draws, California MA regulations, and practice testing.
           </motion.p>
-          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.25 }} className="text-sand-100/70 font-light mb-12">
-            Learn it. Practice it. Walk into the CACMA exam prepared — for the credential recognized by the Medical Board of California.
-          </motion.p>
           <motion.div {...fade} transition={{ ...fade.transition, delay: 0.3 }} className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-sand-100/70 tracking-wide mb-12">
             <span>5 weeks</span>
             <span className="text-sand-400">·</span>
