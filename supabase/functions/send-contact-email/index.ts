@@ -316,7 +316,7 @@ const handler = async (req: Request): Promise<Response> => {
           <li><strong>Week 4:</strong> Blood draws — venipuncture, order of draw, blood tubes</li>
           <li><strong>Week 5:</strong> CACMA exam prep, California MA regulations, final skills check-off, resume &amp; interviewing workshop</li>
         </ul>
-        <p>View the full curriculum: <a href="https://www.levelupait.com/curriculum">levelupait.com/curriculum</a></p>
+        <p>View the full curriculum: <a href="https://cstu-online-trades-center.lovable.app/curriculum">cstu-online-trades-center.lovable.app/curriculum</a></p>
 
         <h3>Program Format</h3>
         <ul>
@@ -345,7 +345,7 @@ const handler = async (req: Request): Promise<Response> => {
         <p>Best regards,<br>
         <strong>Admissions Team</strong><br>
         American Institute of Trades (AIT)<br>
-        <a href="https://www.levelupait.com">levelupait.com</a><br>
+        <a href="https://cstu-online-trades-center.lovable.app">cstu-online-trades-center.lovable.app</a><br>
         916-572-6514</p>
       `;
     }
