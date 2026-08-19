@@ -232,10 +232,6 @@ const Index = () => {
               <p className="text-sm text-emerald-900/60">Three payments · $2,499 total</p>
             </motion.div>
           </div>
-
-          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.3 }} className="text-sm text-emerald-900/55 mt-8">
-            Covers instruction, weekly skills labs, practice testing, CACMA prep for the credential recognized by the Medical Board of California, and the resume &amp; interviewing workshop.
-          </motion.p>
         </div>
       </section>
 
