@@ -310,20 +310,21 @@ const handler = async (req: Request): Promise<Response> => {
         
         <p>This program prepares you for the <strong>California Certified Medical Assistant (CACMA)</strong> exam, administered by the <strong>California Certifying Board for Medical Assistants (CCBMA)</strong> — the credential recognized by the Medical Board of California.</p>
         
-        <p>The curriculum includes:</p>
+        <p>The 5-week curriculum:</p>
         
         <ul>
-          <li>Foundational clinical knowledge and medical terminology</li>
-          <li>Anatomy, physiology, and body systems</li>
-          <li>Infection control and patient safety (OSHA standards)</li>
-          <li>Patient care and clinical procedures</li>
-          <li>Phlebotomy and specimen collection</li>
-          <li>EKG and diagnostic testing</li>
-          <li>Administrative and professional responsibilities</li>
+          <li><strong>Week 1 — Patient Care &amp; Safety:</strong> vital signs, medical terminology, infection control, patient safety</li>
+          <li><strong>Week 2 — Clinical Testing:</strong> blood glucose, urinalysis, specimen collection &amp; handling</li>
+          <li><strong>Week 3 — Medications &amp; Injections:</strong> medication safety, IM/SubQ/ID injections, skin testing</li>
+          <li><strong>Week 4 — Blood Draws:</strong> venipuncture, order of draw, blood tubes, collection safety</li>
+          <li><strong>Week 5 — Final Exam Prep:</strong> medical office, emergencies, California MA regulations, CACMA review, final skills check-off, and the resume &amp; interviewing workshop</li>
         </ul>
         
-        <p>The full curriculum is available on <a href="https://www.levelupait.com">our website</a>.<br>
+        <p>Each week includes a hands-on lab and a practice test.</p>
+        
+        <p>View the full week-by-week curriculum here: <a href="https://www.levelupait.com/curriculum">levelupait.com/curriculum</a><br>
         All coursework is designed to help you feel confident and exam-ready.</p>
+
         
         <h3>Program Format</h3>
         
