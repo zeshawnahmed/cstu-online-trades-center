@@ -244,9 +244,9 @@ const Index = () => {
           <motion.div {...fade}>
             <p className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6">Your Instructor</p>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-8">
-              Zeshawn Ahmed, <span className="italic">RN</span>
+              Shawn Ahmed, <span className="italic">RN</span>
             </h2>
-            <p className="text-emerald-900/60 tracking-wide">Registered Nurse · Master's in Education · Sacramento</p>
+            <p className="text-emerald-900/70 tracking-wide font-medium">Registered Nurse · Master's in Education · Sacramento</p>
 
           </motion.div>
         </div>
