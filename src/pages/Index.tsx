@@ -215,7 +215,7 @@ const Index = () => {
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-emerald-700 mb-6">Tuition</motion.p>
           <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-emerald-700 leading-tight mb-14">
-            Clear pricing. No surprises.
+            Clear tuition. No surprises.
           </motion.h2>
 
           <div className="grid sm:grid-cols-2 gap-6 text-left">
