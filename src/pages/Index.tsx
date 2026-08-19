@@ -27,7 +27,7 @@ const highlights = [
   },
   {
     t: 'Tutoring and instructional support',
-    d: 'Guidance from your instructor from week one.',
+    d: 'Get support throughout your program.',
   },
   {
     t: 'Built for working adults',
