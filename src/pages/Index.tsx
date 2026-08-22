@@ -342,13 +342,17 @@ const Index = () => {
       {/* CTA */}
       <section className="bg-emerald-800 py-20 md:py-32">
         <div className="container mx-auto px-6 max-w-2xl text-center">
-          <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-sand-50 leading-tight mb-10">
-            Start when you're ready.
+          <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-sand-400 mb-6">Next Cohort</motion.p>
+          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-sand-50 leading-tight mb-6">
+            Join the waitlist.
           </motion.h2>
-          <motion.div {...fade} transition={{ ...fade.transition, delay: 0.15 }}>
+          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.15 }} className="text-sand-100/70 font-light mb-10">
+            Our first cohort is expected to launch next month, pending BPPE approval. Fill out the contact form to reserve your spot.
+          </motion.p>
+          <motion.div {...fade} transition={{ ...fade.transition, delay: 0.2 }}>
             <Link to="/contact">
               <Button size="lg" className="bg-sand-100 hover:bg-sand-50 text-emerald-800 rounded-none px-12 py-6 text-sm tracking-wider uppercase font-medium">
-                Contact Admissions <ArrowRight className="ml-2 h-4 w-4" />
+                Join Waitlist <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
             <p className="text-sand-100/60 text-sm mt-6 tracking-wide">
