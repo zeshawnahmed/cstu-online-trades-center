@@ -88,10 +88,18 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-emerald-800/70 max-w-xl mx-auto mb-10 font-light leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-emerald-800/70 max-w-xl mx-auto mb-6 font-light leading-relaxed"
           >
             Five weeks. Hybrid schedule for busy professionals. CCBMA CACMA exam prep
             for the credential recognized by the Medical Board of California.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100/60 text-emerald-800 text-sm font-medium tracking-wide mb-10"
+          >
+            Cohort launches next month — pending BPPE approval. Join the waitlist below.
           </motion.p>
 
           <motion.div
