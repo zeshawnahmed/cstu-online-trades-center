@@ -322,7 +322,7 @@ const Index = () => {
                 },
                 {
                   q: 'What are the next steps if I\'m interested?',
-                  a: 'Fill out the contact form on our website. An admissions rep will be in touch.',
+                  a: 'Fill out the contact form to join the waitlist. An admissions rep will be in touch once BPPE approval is finalized.',
                 },
               ].map((item, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="border-b border-emerald-900/10">
