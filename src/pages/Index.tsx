@@ -88,10 +88,18 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-emerald-800/70 max-w-xl mx-auto mb-10 font-light leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-emerald-800/70 max-w-xl mx-auto mb-6 font-light leading-relaxed"
           >
             Five weeks. Hybrid schedule for busy professionals. CCBMA CACMA exam prep
             for the credential recognized by the Medical Board of California.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100/60 text-emerald-800 text-sm font-medium tracking-wide mb-10"
+          >
+            Cohort launches next month — pending BPPE approval. Join the waitlist below.
           </motion.p>
 
           <motion.div
@@ -314,7 +322,7 @@ const Index = () => {
                 },
                 {
                   q: 'What are the next steps if I\'m interested?',
-                  a: 'Fill out the contact form on our website. An admissions rep will be in touch.',
+                  a: 'Fill out the contact form to join the waitlist. An admissions rep will be in touch once BPPE approval is finalized.',
                 },
               ].map((item, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="border-b border-emerald-900/10">
@@ -334,13 +342,17 @@ const Index = () => {
       {/* CTA */}
       <section className="bg-emerald-800 py-20 md:py-32">
         <div className="container mx-auto px-6 max-w-2xl text-center">
-          <motion.h2 {...fade} className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-sand-50 leading-tight mb-10">
-            Start when you're ready.
+          <motion.p {...fade} className="text-xs tracking-[0.25em] uppercase text-sand-400 mb-6">Next Cohort</motion.p>
+          <motion.h2 {...fade} transition={{ ...fade.transition, delay: 0.1 }} className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-sand-50 leading-tight mb-6">
+            Join the waitlist.
           </motion.h2>
-          <motion.div {...fade} transition={{ ...fade.transition, delay: 0.15 }}>
+          <motion.p {...fade} transition={{ ...fade.transition, delay: 0.15 }} className="text-sand-100/70 font-light mb-10">
+            Our first cohort is expected to launch next month, pending BPPE approval. Fill out the contact form to reserve your spot.
+          </motion.p>
+          <motion.div {...fade} transition={{ ...fade.transition, delay: 0.2 }}>
             <Link to="/contact">
               <Button size="lg" className="bg-sand-100 hover:bg-sand-50 text-emerald-800 rounded-none px-12 py-6 text-sm tracking-wider uppercase font-medium">
-                Contact Admissions <ArrowRight className="ml-2 h-4 w-4" />
+                Join Waitlist <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
             <p className="text-sand-100/60 text-sm mt-6 tracking-wide">
