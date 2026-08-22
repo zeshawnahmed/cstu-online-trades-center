@@ -189,8 +189,8 @@ const ContactForm = () => {
                   </h1>
                   <p className="text-sm sm:text-base text-emerald-600 mb-6 sm:mb-8 text-center px-2 sm:px-0">
                     {language === 'en' 
-                      ? "Please fill out the below form completely and Admissions Rep will email next steps."
-                      : "Por favor complete el siguiente formulario y un representante de admisiones le enviará los próximos pasos por correo electrónico."}
+                      ? "Join the waitlist for our upcoming Medical Assistant cohort expected to launch next month, pending BPPE approval. Fill out the form below and an Admissions Rep will email next steps."
+                      : "Únase a la lista de espera para nuestro próximo grupo de Asistente Médico que se espera comience el próximo mes, pendiente de aprobación de BPPE. Complete el siguiente formulario y un representante de admisiones le enviará los próximos pasos."}
                   </p>
                   
                   {/* FAQ Info Alert - Mobile Optimized */}
