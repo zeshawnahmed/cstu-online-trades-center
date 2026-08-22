@@ -302,9 +302,11 @@ const handler = async (req: Request): Promise<Response> => {
         916-572-6514</p>
       `;
     } else if (programInterest === 'medical-assistant') {
-      userSubject = "Next Steps - California Certified Medical Assistant Program";
+      userSubject = "Waitlist Confirmation - California Certified Medical Assistant Program";
       userEmailContent = `
         <p>Thank you for your interest in the California Certified Medical Assistant Program at American Institute of Trades (AIT).</p>
+
+        <p>You have been added to the waitlist for our upcoming cohort, expected to launch next month pending approval from the California Bureau for Postsecondary Education (BPPE).</p>
 
         <p>This program prepares you for the <strong>California Certified Medical Assistant (CACMA)</strong> exam, administered by the <strong>California Certifying Board for Medical Assistants (CCBMA)</strong> — the credential recognized by the Medical Board of California.</p>
 
@@ -322,7 +324,6 @@ const handler = async (req: Request): Promise<Response> => {
         <ul>
           <li>Hybrid schedule built for busy professionals</li>
           <li>Mostly online with weekly in-person skills lab near downtown Sacramento at Capsity Coworking</li>
-          <li>Enroll anytime — no fixed start dates</li>
           <li>Tutoring and instructional support throughout the program</li>
           <li>Plenty of CACMA practice questions and exam prep</li>
           <li>Resume &amp; interviewing workshop included</li>
@@ -335,11 +336,7 @@ const handler = async (req: Request): Promise<Response> => {
         </ul>
 
         <h3>Next Steps</h3>
-        <p>Ready to enroll? Reply with your preferred tuition option:</p>
-        <p>Option 1: Full payment of $2,499<br>
-        Option 2: 3 payments of $833</p>
-        <p>We will send you a Student Enrollment Agreement and a link for your first payment. Once complete, you will receive access to program materials.</p>
-
+        <p>An Admissions Representative will email you soon with waitlist updates and next steps once BPPE approval is finalized.</p>
         <p>Questions? Call or text 916-572-6514.</p>
 
         <p>Best regards,<br>
